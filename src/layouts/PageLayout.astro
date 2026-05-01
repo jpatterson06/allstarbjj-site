@@ -1,6 +1,5 @@
 ---
-// Base layout used by every page. Owns <head> meta + header + footer.
-// Pages pass title/description for SEO; defaults work for marketing pages.
+// Base layout — <head> meta + header + footer.
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -14,8 +13,8 @@ export interface Props {
 
 const {
   title,
-  description = 'All Star Martial Arts — BJJ, Muay Thai, MMA + Kids classes in Union, NJ. Free 2-week trial. Family-owned, beginner-friendly.',
-  ogImage = '/images/og-default.jpg',
+  description = 'All Star Martial Arts — Brazilian Jiu Jitsu, Muay Thai, MMA + Kids classes in Union, NJ. Free 2-week trial. Family-owned. Beginner-friendly.',
+  ogImage = 'https://allstarbjj.com/wp-content/uploads/sites/861/2025/09/Adult-BJJ-1.jpg',
   noindex = false,
 } = Astro.props;
 
@@ -38,7 +37,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="All Star Martial Arts" />
@@ -48,13 +47,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Bebas Neue display font (matches command center brand) -->
+    <!-- Roboto + Roboto Condensed (matches current allstarbjj.com) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <!-- LocalBusiness schema (sitewide) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MartialArtsSchool",
+      "name": "All Star Martial Arts",
+      "url": "https://allstarbjj.com",
+      "telephone": "+1-908-241-1719",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1031 Stuyvesant Ave",
+        "addressLocality": "Union",
+        "addressRegion": "NJ",
+        "postalCode": "07083",
+        "addressCountry": "US"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Jamal Patterson",
+        "jobTitle": "Founder & Head Instructor"
+      },
+      "foundingDate": "2011",
+      "areaServed": ["Union", "Springfield", "Cranford", "Maplewood", "Millburn", "Mountainside", "Roselle Park", "Westfield"]
+    })} />
   </head>
 
-  <body class="bg-white text-brand-black font-sans antialiased">
+  <body class="bg-white text-brand-black antialiased">
     <Header />
     <main>
       <slot />

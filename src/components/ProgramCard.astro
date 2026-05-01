@@ -1,28 +1,32 @@
 ---
-// Single program card — used in grid on homepage + service overview pages
+// Program card — photo on top, label + blurb below. Used in homepage grid + service overview pages.
 export interface Props {
   title: string;
   ages: string;
   href: string;
   blurb: string;
-  emoji: string;
-  accent?: string;
+  image: string;
 }
-const { title, ages, href, blurb, emoji, accent = 'brand-red' } = Astro.props;
+const { title, ages, href, blurb, image } = Astro.props;
 ---
 
-<a href={href} class="group block bg-white border border-gray-200 hover:border-brand-red hover:shadow-xl transition-all rounded-lg overflow-hidden">
-  <div class={`p-6 border-l-4 border-${accent}`}>
-    <div class="flex items-baseline gap-3 mb-2">
-      <span class="text-3xl">{emoji}</span>
-      <div>
-        <div class="font-display text-2xl text-brand-black leading-none">{title}</div>
-        <div class="text-xs text-gray-500 mt-1">{ages}</div>
-      </div>
-    </div>
-    <p class="text-sm text-gray-600 mb-4">{blurb}</p>
-    <div class="text-sm font-bold text-brand-red group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-      Learn more <span>→</span>
+<a href={href} class="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all border border-brand-gray-mid hover:border-brand-navy">
+  <!-- Image -->
+  <div class="aspect-[4/3] bg-brand-gray-light overflow-hidden">
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      loading="lazy"
+    />
+  </div>
+  <!-- Body -->
+  <div class="p-5 md:p-6">
+    <div class="text-xs font-bold uppercase tracking-widest text-brand-navy mb-1">{ages}</div>
+    <h3 class="font-display text-2xl md:text-3xl text-brand-black mb-3 group-hover:text-brand-navy transition-colors">{title}</h3>
+    <p class="text-sm text-brand-gray leading-relaxed mb-4">{blurb}</p>
+    <div class="text-sm font-bold text-brand-navy uppercase tracking-wider inline-flex items-center gap-1">
+      Learn more <span class="group-hover:translate-x-1 transition-transform">→</span>
     </div>
   </div>
 </a>

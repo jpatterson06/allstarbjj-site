@@ -1,5 +1,6 @@
 ---
-// Hero — headline + CTA + lead-capture form. Used on home + town pages.
+// Hero — full-width photo background with dark overlay + headline + CTAs.
+// Matches the "photo-heavy with dark overlay" pattern from current site.
 export interface Props {
   eyebrow?: string;
   headline: string;
@@ -10,68 +11,49 @@ export interface Props {
 }
 
 const {
-  eyebrow = "Union, NJ · Family-owned since 2002",
+  eyebrow = "Union, NJ · Family-owned since 2011",
   headline,
   sub,
   ctaHref = '/trial/',
   ctaLabel = 'Claim Your Free 2-Week Trial',
-  bgImage = '/images/hero-default.jpg',
+  bgImage = 'https://allstarbjj.com/wp-content/uploads/sites/861/2025/09/Adult-BJJ-1.jpg',
 } = Astro.props;
 ---
 
 <section class="relative bg-brand-black text-white overflow-hidden">
   <!-- Background image with dark overlay -->
   <div class="absolute inset-0 z-0" aria-hidden="true">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black/95 to-brand-red/40"></div>
-    <!-- Pattern dots for texture when no image is loaded -->
-    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <img
+      src={bgImage}
+      alt=""
+      class="w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/40"></div>
   </div>
 
-  <div class="container-page relative z-10 py-20 md:py-32 grid md:grid-cols-2 gap-10 items-center">
-    <!-- Left: headline + CTA -->
-    <div>
+  <div class="container-page relative z-10 py-24 md:py-36 lg:py-44">
+    <div class="max-w-3xl">
       {eyebrow && (
-        <div class="inline-block mb-4 px-3 py-1 bg-brand-red text-white text-xs font-bold uppercase tracking-widest rounded">
+        <div class="inline-block mb-5 px-3 py-1 bg-brand-navy text-white text-[11px] font-bold uppercase tracking-[0.2em] rounded">
           {eyebrow}
         </div>
       )}
-      <h1 class="font-display text-5xl md:text-7xl leading-none mb-6 text-white">
-        <slot name="headline">{headline}</slot>
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase font-black leading-[1.05] mb-5 text-white">
+        {headline}
       </h1>
-      <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-xl">
+      <p class="text-base md:text-lg text-gray-100 mb-8 max-w-2xl leading-relaxed">
         {sub}
       </p>
-      <div class="flex flex-wrap gap-4">
-        <a href={ctaHref} class="btn-primary">{ctaLabel}</a>
-        <a href="tel:+19086412769" class="btn-outline border-white text-white hover:bg-white hover:text-brand-black">📞 (908) 641-2769</a>
+      <div class="flex flex-wrap gap-3">
+        <a href={ctaHref} class="btn-red">{ctaLabel}</a>
+        <a href="tel:+19082411719" class="btn-outline">📞 (908) 241-1719</a>
       </div>
-      <div class="mt-6 flex items-center gap-2 text-sm text-gray-300">
+      <div class="mt-7 flex items-center gap-2 text-sm text-gray-200">
         <span class="text-brand-gold">★★★★★</span>
-        <span>Trusted by hundreds of NJ families</span>
+        <span>Trusted by hundreds of NJ families since 2011</span>
       </div>
-    </div>
-
-    <!-- Right: feature card -->
-    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 md:p-8">
-      <div class="font-display text-2xl text-brand-gold mb-4">What you get</div>
-      <ul class="space-y-3 text-gray-100">
-        <li class="flex items-start gap-3">
-          <span class="text-brand-gold text-xl flex-none">✓</span>
-          <span><strong>2 full weeks</strong> — every class, every program, no catch</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-gold text-xl flex-none">✓</span>
-          <span><strong>Beginner-friendly</strong> — every black belt started where you are</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-gold text-xl flex-none">✓</span>
-          <span><strong>All gear provided</strong> — bring comfy clothes + water, that's it</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-gold text-xl flex-none">✓</span>
-          <span><strong>No pressure to join</strong> — you decide after 2 weeks</span>
-        </li>
-      </ul>
     </div>
   </div>
 </section>

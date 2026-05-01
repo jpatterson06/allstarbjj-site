@@ -4,19 +4,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        // All Star BJJ brand palette
+        // All Star BJJ brand palette — matched from current allstarbjj.com
         brand: {
-          red: '#dc2626',          // primary CTAs, accents
-          'red-dark': '#991b1b',   // hover state
-          black: '#0a0a0a',        // headers, dark sections
-          gray: '#1f2937',         // softer dark
-          gold: '#fbbf24',         // star icon, highlights
-          cream: '#fef9f5',        // soft off-white background
+          navy: '#002D4D',          // primary — header, CTAs, accents
+          'navy-dark': '#0B4269',   // hover state
+          black: '#1B1D1B',         // body text, dark sections
+          gold: '#fbbf24',          // accent (star icon, highlights)
+          red: '#dc2626',           // secondary CTA accent
+          gray: '#3B3B3B',          // body sub-text
+          'gray-light': '#F8F8F8',  // section backgrounds
+          'gray-mid': '#EAEAEA',    // divider lines
         },
       },
       fontFamily: {
-        display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        // Display — condensed, all-caps headings (like current site)
+        display: ['"Roboto Condensed"', 'Impact', 'sans-serif'],
+        // Body — clean, readable
+        sans: ['Roboto', 'Arial', 'Helvetica', 'sans-serif'],
       },
       maxWidth: {
         'page': '1200px',

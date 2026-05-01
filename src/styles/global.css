@@ -5,28 +5,36 @@
 /* Brand defaults */
 @layer base {
   body {
-    @apply text-brand-black;
+    @apply text-brand-black bg-white;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-wide;
+    @apply font-display font-bold uppercase tracking-wide;
   }
 }
 
 @layer components {
-  /* Primary red CTA button — used everywhere */
+  /* Primary navy CTA — used everywhere */
   .btn-primary {
-    @apply inline-block bg-brand-red hover:bg-brand-red-dark text-white font-bold uppercase tracking-wider px-8 py-4 rounded-md transition-colors duration-150;
+    @apply inline-block bg-brand-navy hover:bg-brand-navy-dark text-white font-bold uppercase tracking-wider text-sm md:text-base px-7 py-3.5 rounded-md transition-colors duration-150;
   }
-  /* Outline button for secondary CTAs */
+  /* Red CTA — secondary, used for trial / urgency */
+  .btn-red {
+    @apply inline-block bg-brand-red hover:bg-red-700 text-white font-bold uppercase tracking-wider text-sm md:text-base px-7 py-3.5 rounded-md transition-colors duration-150;
+  }
+  /* Outline button (white on dark / navy on light) */
   .btn-outline {
-    @apply inline-block border-2 border-brand-black hover:bg-brand-black hover:text-white text-brand-black font-bold uppercase tracking-wider px-8 py-4 rounded-md transition-colors duration-150;
+    @apply inline-block border-2 border-white text-white hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider text-sm md:text-base px-7 py-3.5 rounded-md transition-colors duration-150;
   }
-  /* Section padding helper */
+  /* Section padding */
   .section-pad {
-    @apply py-16 md:py-24;
+    @apply py-14 md:py-20;
   }
   /* Page-width container */
   .container-page {
     @apply max-w-page mx-auto px-4 md:px-6;
+  }
+  /* Eyebrow label */
+  .eyebrow {
+    @apply text-brand-navy font-bold text-xs uppercase tracking-[0.2em] mb-3;
   }
 }

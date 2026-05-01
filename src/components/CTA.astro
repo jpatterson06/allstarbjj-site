@@ -1,26 +1,32 @@
 ---
-// Bottom-of-page CTA band — used to close the deal at the end of every page
+// Bottom-of-page CTA band — closes every page with a clear next-step.
 export interface Props {
   headline?: string;
   sub?: string;
   ctaHref?: string;
   ctaLabel?: string;
+  bgImage?: string;
 }
 const {
-  headline = 'Ready to start?',
-  sub = 'First 2 weeks are on us. No commitment, no pressure. Comfy clothes + water — we got the rest.',
+  headline = 'Get Started Today',
+  sub = 'First 2 weeks are on us. No commitment. Comfy clothes + water — we got the rest.',
   ctaHref = '/trial/',
   ctaLabel = 'Claim Your Free 2-Week Trial',
+  bgImage = 'https://allstarbjj.com/wp-content/uploads/sites/861/2025/09/Adult-1.jpg',
 } = Astro.props;
 ---
 
-<section class="bg-brand-red text-white">
-  <div class="container-page py-16 md:py-20 text-center">
-    <h2 class="font-display text-4xl md:text-6xl mb-4">{headline}</h2>
-    <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">{sub}</p>
-    <div class="flex flex-wrap gap-4 justify-center">
-      <a href={ctaHref} class="bg-white text-brand-red font-bold uppercase tracking-wider px-8 py-4 rounded-md hover:bg-brand-cream transition-colors">{ctaLabel}</a>
-      <a href="tel:+19086412769" class="border-2 border-white text-white font-bold uppercase tracking-wider px-8 py-4 rounded-md hover:bg-white hover:text-brand-red transition-colors">📞 (908) 641-2769</a>
+<section class="relative bg-brand-navy text-white overflow-hidden">
+  <div class="absolute inset-0 z-0" aria-hidden="true">
+    <img src={bgImage} alt="" class="w-full h-full object-cover opacity-25" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-navy/95 via-brand-navy/85 to-brand-navy/95"></div>
+  </div>
+  <div class="container-page relative z-10 py-16 md:py-20 text-center">
+    <h2 class="font-display text-4xl md:text-6xl uppercase font-black mb-4">{headline}</h2>
+    <p class="text-base md:text-lg text-white/90 mb-8 max-w-2xl mx-auto">{sub}</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href={ctaHref} class="btn-red">{ctaLabel}</a>
+      <a href="tel:+19082411719" class="btn-outline">📞 (908) 241-1719</a>
     </div>
   </div>
 </section>

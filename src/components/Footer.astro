@@ -1,5 +1,5 @@
 ---
-// Site footer — address, hours, programs, legal links, social
+// Site footer — address, hours, programs, towns, legal links.
 const programs = [
   { href: '/adult-bjj/',       label: 'Adult Brazilian Jiu Jitsu' },
   { href: '/adult-muay-thai/', label: 'Adult Muay Thai' },
@@ -20,29 +20,30 @@ const towns = [
 ];
 ---
 
-<footer class="bg-brand-black text-white mt-16">
-  <div class="container-page py-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+<footer class="bg-brand-black text-white mt-0">
+  <div class="container-page py-14 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
     <!-- Brand column -->
     <div class="col-span-2">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="text-brand-gold text-3xl">★</span>
-        <span class="font-display text-3xl text-brand-red leading-none">All Star BJJ</span>
-      </div>
-      <p class="text-sm text-gray-300 mb-4 max-w-md">
-        Family-owned martial arts in Union, NJ since 2002. Brazilian Jiu Jitsu,
-        Muay Thai, MMA + Kids classes for ages 4 and up. Free 2-week trial — no
-        commitment, no pressure.
+      <img
+        src="https://allstarbjj.com/wp-content/uploads/sites/861/2025/09/allstar-ma.png"
+        alt="All Star Martial Arts"
+        class="h-16 w-auto mb-4 brightness-0 invert"
+      />
+      <p class="text-sm text-gray-300 mb-5 max-w-md leading-relaxed">
+        Family-owned martial arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai,
+        MMA + Kids classes for ages 4 and up. Free 2-week trial — no commitment,
+        no pressure.
       </p>
-      <div class="text-sm space-y-1">
-        <div>📍 1031 Stuyvesant Ave, Union, NJ 07083</div>
-        <div>📞 <a href="tel:+19086412769" class="hover:text-brand-red">(908) 641-2769</a></div>
-        <div>📧 <a href="mailto:info@allstarbjj.com" class="hover:text-brand-red">info@allstarbjj.com</a></div>
+      <div class="text-sm space-y-2">
+        <div class="flex items-start gap-2"><span class="text-brand-gold">📍</span> 1031 Stuyvesant Ave, Union, NJ 07083</div>
+        <div class="flex items-start gap-2"><span class="text-brand-gold">📞</span> <a href="tel:+19082411719" class="hover:text-brand-gold transition-colors">(908) 241-1719</a></div>
+        <div class="flex items-start gap-2"><span class="text-brand-gold">📧</span> <a href="mailto:info@allstarbjj.com" class="hover:text-brand-gold transition-colors">info@allstarbjj.com</a></div>
       </div>
     </div>
 
     <!-- Programs column -->
     <div>
-      <div class="font-display text-xl text-brand-gold mb-3">Programs</div>
+      <div class="font-display text-lg uppercase text-brand-gold mb-4 tracking-wider">Programs</div>
       <ul class="space-y-2 text-sm">
         {programs.map((p) => (
           <li><a href={p.href} class="text-gray-300 hover:text-white transition-colors">{p.label}</a></li>
@@ -52,7 +53,7 @@ const towns = [
 
     <!-- Towns column -->
     <div>
-      <div class="font-display text-xl text-brand-gold mb-3">Areas Served</div>
+      <div class="font-display text-lg uppercase text-brand-gold mb-4 tracking-wider">Areas Served</div>
       <ul class="space-y-2 text-sm">
         {towns.map((t) => (
           <li><a href={t.href} class="text-gray-300 hover:text-white transition-colors">{t.label}</a></li>

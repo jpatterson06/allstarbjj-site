@@ -4,34 +4,78 @@ import Hero from '../components/Hero.astro';
 import ProgramCard from '../components/ProgramCard.astro';
 import CTA from '../components/CTA.astro';
 
+// Program cards — using real photos from the existing WordPress site
+const IMG_BASE = 'https://allstarbjj.com/wp-content/uploads/sites/861';
 const programs = [
-  { emoji: '🥋', title: 'Adult BJJ',       ages: 'Ages 16+',          href: '/adult-bjj/',       blurb: 'Brazilian Jiu Jitsu — the gentle art. Beginner-friendly. Every black belt in here started right where you are.', accent: 'brand-red' },
-  { emoji: '🥊', title: 'Adult Muay Thai', ages: 'Ages 16+',          href: '/adult-muay-thai/', blurb: 'Striking + conditioning + stress relief. You don\'t need to be in shape — you\'ll get in shape.', accent: 'brand-red' },
-  { emoji: '🤼', title: 'Adult MMA',       ages: 'Ages 16+',          href: '/adult-mma/',       blurb: 'The full mix: striking + grappling + clinch. Well-rounded skill set, builds real ability.', accent: 'brand-red' },
-  { emoji: '🦁', title: 'Lions',           ages: 'Kids ages 7-13',    href: '/kids/lions/',      blurb: 'Real techniques, more structured than Cubs. Confidence + bullyproofing + discipline.', accent: 'brand-gold' },
-  { emoji: '🐯', title: 'Cubs',            ages: 'Kids ages 4-7',     href: '/kids/cubs/',       blurb: 'Age-appropriate fun + structure. Confidence, listening skills, energy burn — and a lot of laughing.', accent: 'brand-gold' },
-  { emoji: '🎉', title: 'Birthday Parties',ages: 'Ages 4-13',         href: '/birthday-parties/',blurb: 'A martial-arts-themed birthday party they\'ll never forget. Games, mat time, pizza, the works.', accent: 'brand-gold' },
+  {
+    title: 'Adult BJJ',
+    ages: 'Ages 16+',
+    href: '/adult-bjj/',
+    blurb: 'Brazilian Jiu Jitsu — the gentle art. Beginner-friendly. Every black belt in here started right where you are. Free 2-week trial.',
+    image: `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`,
+  },
+  {
+    title: 'Adult Muay Thai',
+    ages: 'Ages 16+',
+    href: '/adult-muay-thai/',
+    blurb: 'Striking, conditioning, and stress relief. You don\'t need to be in shape — you\'ll get in shape. Bring water + comfy clothes.',
+    image: `${IMG_BASE}/2025/10/Adult-Muay-Thai-8.jpg`,
+  },
+  {
+    title: 'Adult MMA',
+    ages: 'Ages 16+',
+    href: '/adult-mma/',
+    blurb: 'The full mix: striking + grappling + clinch. Coached by Jamal Patterson — pro MMA fighter (6-3) who has cornered UFC fighters.',
+    image: `${IMG_BASE}/2025/09/MMA-1.jpg`,
+  },
+  {
+    title: 'Lions',
+    ages: 'Kids ages 7-13',
+    href: '/kids/lions/',
+    blurb: 'Real techniques. Confidence + bullyproofing + discipline. The structure kids that age need with the energy they want.',
+    image: `${IMG_BASE}/2025/10/Kids-Martial-Arts-3.jpg`,
+  },
+  {
+    title: 'Cubs',
+    ages: 'Kids ages 4-7',
+    href: '/kids/cubs/',
+    blurb: 'Age-appropriate fun + structure. Confidence, listening skills, energy burn — and a lot of laughing on the mats.',
+    image: `${IMG_BASE}/2025/10/Preschool-Martial-Arts-1.jpg`,
+  },
+  {
+    title: 'Birthday Parties',
+    ages: 'Ages 4-13',
+    href: '/birthday-parties/',
+    blurb: 'A martial-arts-themed birthday party they\'ll never forget. Games, mat time, pizza, the works. We handle everything.',
+    image: `${IMG_BASE}/2025/09/Kid-3.jpg`,
+  },
 ];
+
+const heroImg = `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`;
+const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
 ---
 
 <PageLayout
-  title="All Star Martial Arts — Union, NJ | BJJ, Muay Thai, MMA + Kids Classes"
-  description="Free 2-week trial at All Star Martial Arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai, MMA + kids classes. Family-owned since 2002. Beginner-friendly."
+  title="Martial Arts in Union, NJ — All Star | BJJ, Muay Thai, MMA + Kids Classes"
+  description="Free 2-week trial at All Star Martial Arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai, MMA + kids classes (ages 4-13). Family-owned since 2011. Beginner-friendly."
+  ogImage={heroImg}
 >
   <Hero
-    eyebrow="Union, NJ · Family-owned since 2002"
-    headline="Union's home for serious martial arts — and serious fun."
-    sub="Brazilian Jiu Jitsu, Muay Thai, MMA, and kids classes for ages 4 and up. Your first two weeks are free. No catch, no pressure — just get on the mats."
+    eyebrow="Union, NJ · Family-owned since 2011"
+    headline="Union's Best Martial Arts School"
+    sub="Brazilian Jiu Jitsu, Muay Thai, MMA, and kids classes for ages 4 and up. Coached by pro MMA fighter and Renzo Gracie black belt Jamal Patterson. Your first two weeks are free — no catch, no pressure."
+    bgImage={heroImg}
   />
 
-  <!-- Programs grid -->
-  <section class="section-pad bg-brand-cream">
+  <!-- About our programs -->
+  <section class="section-pad bg-brand-gray-light">
     <div class="container-page">
-      <div class="text-center mb-12">
-        <div class="text-brand-red font-bold text-sm uppercase tracking-widest mb-2">What we offer</div>
-        <h2 class="font-display text-4xl md:text-5xl text-brand-black">Programs for every age, every goal</h2>
+      <div class="text-center mb-10 md:mb-12">
+        <div class="eyebrow">What we offer</div>
+        <h2 class="text-3xl md:text-5xl text-brand-black">About our programs</h2>
+        <div class="w-16 h-1 bg-brand-navy mx-auto mt-4"></div>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {programs.map((p) => <ProgramCard {...p} />)}
       </div>
     </div>
@@ -39,53 +83,57 @@ const programs = [
 
   <!-- About / Coach Jamal block -->
   <section class="section-pad bg-white">
-    <div class="container-page grid md:grid-cols-2 gap-10 items-center">
+    <div class="container-page grid md:grid-cols-2 gap-10 md:gap-16 items-center">
       <div>
-        <div class="text-brand-red font-bold text-sm uppercase tracking-widest mb-2">Meet Coach Jamal</div>
-        <h2 class="font-display text-4xl md:text-5xl text-brand-black mb-6">Real coaching. No ego. No fluff.</h2>
-        <p class="text-gray-700 text-lg mb-4">
-          All Star Martial Arts has been a fixture in Union, NJ for over two decades.
-          We're family-owned. We train serious students and absolute beginners side by
-          side — and the room is better for it.
+        <div class="eyebrow">Meet Coach Jamal</div>
+        <h2 class="text-3xl md:text-5xl text-brand-black mb-5">Real Lineage. Real Coaching.<br/>No Ego.</h2>
+        <p class="text-brand-gray text-base md:text-lg mb-4 leading-relaxed">
+          <strong>Jamal "The Suit" Patterson</strong> is a Renzo Gracie Academy
+          black belt, former pro MMA fighter (6-3, five submission wins), and
+          UWC Light Heavyweight Champion. He's fought in the IFL, Bellator, and
+          UWC — and cornered UFC fighters from amateur debut to pro ranks.
         </p>
-        <p class="text-gray-700 text-lg mb-6">
-          Coach Jamal Patterson runs the BJJ program. The vibe is: <em>coach first, salesperson never.</em>
-          You'll know within one class whether the gym fits.
+        <p class="text-brand-gray text-base md:text-lg mb-6 leading-relaxed">
+          But what matters at All Star is the room. The vibe is <em>coach
+          first, salesperson never</em>. Beginners and advanced students train
+          side by side, and the gym is better for it. You'll know within one
+          class whether it fits.
         </p>
-        <a href="/about-us/" class="btn-outline">Learn more about us</a>
+        <a href="/about-us/" class="btn-primary">Learn more about us</a>
       </div>
-      <div class="bg-brand-black rounded-lg p-8 text-white">
-        <div class="font-display text-3xl text-brand-gold mb-6">Why families pick us</div>
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3">
-            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
-            <div>
-              <div class="font-bold">20+ years in Union</div>
-              <div class="text-sm text-gray-300">Same gym, same family, same values</div>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
-            <div>
-              <div class="font-bold">Beginner-friendly mats</div>
-              <div class="text-sm text-gray-300">Day 1 is supposed to feel weird — that's normal</div>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
-            <div>
-              <div class="font-bold">Kids + Adults under one roof</div>
-              <div class="text-sm text-gray-300">Drop the kids off, train next door — it works</div>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
-            <div>
-              <div class="font-bold">2 full free weeks, then you decide</div>
-              <div class="text-sm text-gray-300">No high-pressure sales pitch. The mats sell themselves.</div>
-            </div>
-          </li>
-        </ul>
+      <div class="relative">
+        <img
+          src={aboutImg}
+          alt="Adult BJJ class at All Star Martial Arts in Union, NJ"
+          class="w-full rounded-lg shadow-lg"
+          loading="lazy"
+        />
+        <div class="absolute -bottom-4 -right-4 bg-brand-navy text-white p-4 md:p-5 rounded-lg shadow-xl hidden md:block">
+          <div class="font-display text-3xl text-brand-gold">★★★★★</div>
+          <div class="text-xs uppercase tracking-wider mt-1">Trusted by hundreds<br/>of NJ families</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why families pick us — stats / proof bar -->
+  <section class="bg-brand-navy text-white py-12 md:py-16">
+    <div class="container-page grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 text-center">
+      <div>
+        <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">13+</div>
+        <div class="text-xs md:text-sm uppercase tracking-widest">Years in Union</div>
+      </div>
+      <div>
+        <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">6-3</div>
+        <div class="text-xs md:text-sm uppercase tracking-widest">Pro MMA Record</div>
+      </div>
+      <div>
+        <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">★</div>
+        <div class="text-xs md:text-sm uppercase tracking-widest">Renzo Gracie<br/>Black Belt</div>
+      </div>
+      <div>
+        <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">2 wks</div>
+        <div class="text-xs md:text-sm uppercase tracking-widest">Free Trial<br/>No Commitment</div>
       </div>
     </div>
   </section>

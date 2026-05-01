@@ -1,49 +1,64 @@
 ---
-// Site header — logo + main nav. Sticky so trial CTA is always visible.
+// Site header — logo + main nav + sticky CTA.
 const navItems = [
   { href: '/about-us/',         label: 'About' },
   { href: '/adult-bjj/',        label: 'Adult BJJ' },
   { href: '/adult-muay-thai/',  label: 'Muay Thai' },
   { href: '/adult-mma/',        label: 'MMA' },
   { href: '/kids/',             label: 'Kids' },
+  { href: '/birthday-parties/', label: 'Parties' },
   { href: '/blog/',             label: 'Blog' },
 ];
 ---
 
-<header class="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
-  <div class="container-page flex items-center justify-between py-3 md:py-4">
-    <a href="/" class="flex items-center gap-2 group">
-      <span class="text-brand-gold text-2xl group-hover:scale-110 transition-transform">★</span>
-      <span class="font-display text-2xl md:text-3xl text-brand-red leading-none">All Star BJJ</span>
+<!-- Top bar — phone + address (matches current site's announcement bar) -->
+<div class="bg-brand-navy text-white text-xs md:text-sm">
+  <div class="container-page py-2 flex justify-between items-center gap-3">
+    <div class="hidden sm:block tracking-wide">📍 1031 Stuyvesant Ave, Union, NJ 07083</div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+19082411719" class="font-bold hover:text-brand-gold transition-colors">📞 (908) 241-1719</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main header -->
+<header class="sticky top-0 z-40 bg-white border-b border-brand-gray-mid shadow-sm">
+  <div class="container-page flex items-center justify-between py-3 md:py-4 gap-4">
+    <a href="/" class="flex items-center gap-2 group flex-none">
+      <img
+        src="https://allstarbjj.com/wp-content/uploads/sites/861/2025/09/allstar-ma.png"
+        alt="All Star Martial Arts"
+        class="h-12 md:h-16 w-auto"
+      />
     </a>
 
     <!-- Desktop nav -->
-    <nav class="hidden md:flex items-center gap-6">
+    <nav class="hidden lg:flex items-center gap-5 xl:gap-7">
       {navItems.map((item) => (
-        <a href={item.href} class="text-sm font-bold uppercase tracking-wide text-brand-black hover:text-brand-red transition-colors">
+        <a href={item.href} class="text-sm font-bold uppercase tracking-wider text-brand-black hover:text-brand-navy transition-colors">
           {item.label}
         </a>
       ))}
-      <a href="/trial/" class="btn-primary text-sm py-2 px-5">Free 2-Week Trial</a>
+      <a href="/trial/" class="btn-red text-sm py-2 px-5">Free Trial</a>
     </nav>
 
     <!-- Mobile menu button -->
-    <button id="mobile-menu-toggle" aria-label="Open menu" class="md:hidden p-2">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    <button id="mobile-menu-toggle" aria-label="Open menu" class="lg:hidden p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </div>
 
   <!-- Mobile nav drawer -->
-  <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
-    <div class="container-page py-4 flex flex-col gap-3">
+  <nav id="mobile-menu" class="hidden lg:hidden border-t border-brand-gray-mid bg-white">
+    <div class="container-page py-4 flex flex-col gap-1">
       {navItems.map((item) => (
-        <a href={item.href} class="text-base font-bold uppercase tracking-wide text-brand-black hover:text-brand-red transition-colors py-2">
+        <a href={item.href} class="text-base font-bold uppercase tracking-wide text-brand-black hover:text-brand-navy transition-colors py-3 border-b border-brand-gray-mid">
           {item.label}
         </a>
       ))}
-      <a href="/trial/" class="btn-primary text-sm py-3 text-center">Free 2-Week Trial</a>
+      <a href="/trial/" class="btn-red text-sm py-3 text-center mt-3">Free 2-Week Trial</a>
     </div>
   </nav>
 </header>
