@@ -1,0 +1,94 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+import CTA from '../components/CTA.astro';
+
+const programs = [
+  { emoji: '🥋', title: 'Adult BJJ',       ages: 'Ages 16+',          href: '/adult-bjj/',       blurb: 'Brazilian Jiu Jitsu — the gentle art. Beginner-friendly. Every black belt in here started right where you are.', accent: 'brand-red' },
+  { emoji: '🥊', title: 'Adult Muay Thai', ages: 'Ages 16+',          href: '/adult-muay-thai/', blurb: 'Striking + conditioning + stress relief. You don\'t need to be in shape — you\'ll get in shape.', accent: 'brand-red' },
+  { emoji: '🤼', title: 'Adult MMA',       ages: 'Ages 16+',          href: '/adult-mma/',       blurb: 'The full mix: striking + grappling + clinch. Well-rounded skill set, builds real ability.', accent: 'brand-red' },
+  { emoji: '🦁', title: 'Lions',           ages: 'Kids ages 7-13',    href: '/kids/lions/',      blurb: 'Real techniques, more structured than Cubs. Confidence + bullyproofing + discipline.', accent: 'brand-gold' },
+  { emoji: '🐯', title: 'Cubs',            ages: 'Kids ages 4-7',     href: '/kids/cubs/',       blurb: 'Age-appropriate fun + structure. Confidence, listening skills, energy burn — and a lot of laughing.', accent: 'brand-gold' },
+  { emoji: '🎉', title: 'Birthday Parties',ages: 'Ages 4-13',         href: '/birthday-parties/',blurb: 'A martial-arts-themed birthday party they\'ll never forget. Games, mat time, pizza, the works.', accent: 'brand-gold' },
+];
+---
+
+<PageLayout
+  title="All Star Martial Arts — Union, NJ | BJJ, Muay Thai, MMA + Kids Classes"
+  description="Free 2-week trial at All Star Martial Arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai, MMA + kids classes. Family-owned since 2002. Beginner-friendly."
+>
+  <Hero
+    eyebrow="Union, NJ · Family-owned since 2002"
+    headline="Union's home for serious martial arts — and serious fun."
+    sub="Brazilian Jiu Jitsu, Muay Thai, MMA, and kids classes for ages 4 and up. Your first two weeks are free. No catch, no pressure — just get on the mats."
+  />
+
+  <!-- Programs grid -->
+  <section class="section-pad bg-brand-cream">
+    <div class="container-page">
+      <div class="text-center mb-12">
+        <div class="text-brand-red font-bold text-sm uppercase tracking-widest mb-2">What we offer</div>
+        <h2 class="font-display text-4xl md:text-5xl text-brand-black">Programs for every age, every goal</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {programs.map((p) => <ProgramCard {...p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Coach Jamal block -->
+  <section class="section-pad bg-white">
+    <div class="container-page grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="text-brand-red font-bold text-sm uppercase tracking-widest mb-2">Meet Coach Jamal</div>
+        <h2 class="font-display text-4xl md:text-5xl text-brand-black mb-6">Real coaching. No ego. No fluff.</h2>
+        <p class="text-gray-700 text-lg mb-4">
+          All Star Martial Arts has been a fixture in Union, NJ for over two decades.
+          We're family-owned. We train serious students and absolute beginners side by
+          side — and the room is better for it.
+        </p>
+        <p class="text-gray-700 text-lg mb-6">
+          Coach Jamal Patterson runs the BJJ program. The vibe is: <em>coach first, salesperson never.</em>
+          You'll know within one class whether the gym fits.
+        </p>
+        <a href="/about-us/" class="btn-outline">Learn more about us</a>
+      </div>
+      <div class="bg-brand-black rounded-lg p-8 text-white">
+        <div class="font-display text-3xl text-brand-gold mb-6">Why families pick us</div>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
+            <div>
+              <div class="font-bold">20+ years in Union</div>
+              <div class="text-sm text-gray-300">Same gym, same family, same values</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
+            <div>
+              <div class="font-bold">Beginner-friendly mats</div>
+              <div class="text-sm text-gray-300">Day 1 is supposed to feel weird — that's normal</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
+            <div>
+              <div class="font-bold">Kids + Adults under one roof</div>
+              <div class="text-sm text-gray-300">Drop the kids off, train next door — it works</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand-gold text-2xl flex-none leading-none">★</span>
+            <div>
+              <div class="font-bold">2 full free weeks, then you decide</div>
+              <div class="text-sm text-gray-300">No high-pressure sales pitch. The mats sell themselves.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</PageLayout>

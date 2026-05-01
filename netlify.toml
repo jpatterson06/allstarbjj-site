@@ -1,0 +1,29 @@
+# Netlify config for allstarbjj.com Astro rebuild
+# Auto-deploy on git push to main
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Trailing-slash redirect — keeps URLs canonical (matches astro build.format = directory)
+[[redirects]]
+  from = "/*/"
+  to = "/:splat/"
+  status = 200
+  force = false
+
+# Headers — security + cache
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

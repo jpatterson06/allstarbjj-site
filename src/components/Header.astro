@@ -1,0 +1,57 @@
+---
+// Site header — logo + main nav. Sticky so trial CTA is always visible.
+const navItems = [
+  { href: '/about-us/',         label: 'About' },
+  { href: '/adult-bjj/',        label: 'Adult BJJ' },
+  { href: '/adult-muay-thai/',  label: 'Muay Thai' },
+  { href: '/adult-mma/',        label: 'MMA' },
+  { href: '/kids/',             label: 'Kids' },
+  { href: '/blog/',             label: 'Blog' },
+];
+---
+
+<header class="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
+  <div class="container-page flex items-center justify-between py-3 md:py-4">
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="text-brand-gold text-2xl group-hover:scale-110 transition-transform">★</span>
+      <span class="font-display text-2xl md:text-3xl text-brand-red leading-none">All Star BJJ</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6">
+      {navItems.map((item) => (
+        <a href={item.href} class="text-sm font-bold uppercase tracking-wide text-brand-black hover:text-brand-red transition-colors">
+          {item.label}
+        </a>
+      ))}
+      <a href="/trial/" class="btn-primary text-sm py-2 px-5">Free 2-Week Trial</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-toggle" aria-label="Open menu" class="md:hidden p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav drawer -->
+  <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <div class="container-page py-4 flex flex-col gap-3">
+      {navItems.map((item) => (
+        <a href={item.href} class="text-base font-bold uppercase tracking-wide text-brand-black hover:text-brand-red transition-colors py-2">
+          {item.label}
+        </a>
+      ))}
+      <a href="/trial/" class="btn-primary text-sm py-3 text-center">Free 2-Week Trial</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

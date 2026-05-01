@@ -1,0 +1,73 @@
+---
+// Site footer — address, hours, programs, legal links, social
+const programs = [
+  { href: '/adult-bjj/',       label: 'Adult Brazilian Jiu Jitsu' },
+  { href: '/adult-muay-thai/', label: 'Adult Muay Thai' },
+  { href: '/adult-mma/',       label: 'Adult MMA' },
+  { href: '/kids/',            label: 'Kids Martial Arts' },
+  { href: '/preschool/',       label: 'Preschool Martial Arts' },
+  { href: '/birthday-parties/',label: 'Birthday Parties' },
+];
+const towns = [
+  { href: '/trial/union/',         label: 'Union' },
+  { href: '/trial/springfield/',   label: 'Springfield' },
+  { href: '/trial/cranford/',      label: 'Cranford' },
+  { href: '/trial/maplewood/',     label: 'Maplewood' },
+  { href: '/trial/millburn/',      label: 'Millburn' },
+  { href: '/trial/mountainside/',  label: 'Mountainside' },
+  { href: '/trial/roselle-park/',  label: 'Roselle Park' },
+  { href: '/trial/westfield/',     label: 'Westfield' },
+];
+---
+
+<footer class="bg-brand-black text-white mt-16">
+  <div class="container-page py-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <!-- Brand column -->
+    <div class="col-span-2">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-brand-gold text-3xl">★</span>
+        <span class="font-display text-3xl text-brand-red leading-none">All Star BJJ</span>
+      </div>
+      <p class="text-sm text-gray-300 mb-4 max-w-md">
+        Family-owned martial arts in Union, NJ since 2002. Brazilian Jiu Jitsu,
+        Muay Thai, MMA + Kids classes for ages 4 and up. Free 2-week trial — no
+        commitment, no pressure.
+      </p>
+      <div class="text-sm space-y-1">
+        <div>📍 1031 Stuyvesant Ave, Union, NJ 07083</div>
+        <div>📞 <a href="tel:+19086412769" class="hover:text-brand-red">(908) 641-2769</a></div>
+        <div>📧 <a href="mailto:info@allstarbjj.com" class="hover:text-brand-red">info@allstarbjj.com</a></div>
+      </div>
+    </div>
+
+    <!-- Programs column -->
+    <div>
+      <div class="font-display text-xl text-brand-gold mb-3">Programs</div>
+      <ul class="space-y-2 text-sm">
+        {programs.map((p) => (
+          <li><a href={p.href} class="text-gray-300 hover:text-white transition-colors">{p.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Towns column -->
+    <div>
+      <div class="font-display text-xl text-brand-gold mb-3">Areas Served</div>
+      <ul class="space-y-2 text-sm">
+        {towns.map((t) => (
+          <li><a href={t.href} class="text-gray-300 hover:text-white transition-colors">{t.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-800">
+    <div class="container-page py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-400">
+      <div>© {new Date().getFullYear()} All Star Martial Arts. All rights reserved.</div>
+      <div class="flex gap-4">
+        <a href="/privacy-policy/"   class="hover:text-white">Privacy Policy</a>
+        <a href="/terms-of-service/" class="hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

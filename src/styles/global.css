@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand defaults */
+@layer base {
+  body {
+    @apply text-brand-black;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wide;
+  }
+}
+
+@layer components {
+  /* Primary red CTA button — used everywhere */
+  .btn-primary {
+    @apply inline-block bg-brand-red hover:bg-brand-red-dark text-white font-bold uppercase tracking-wider px-8 py-4 rounded-md transition-colors duration-150;
+  }
+  /* Outline button for secondary CTAs */
+  .btn-outline {
+    @apply inline-block border-2 border-brand-black hover:bg-brand-black hover:text-white text-brand-black font-bold uppercase tracking-wider px-8 py-4 rounded-md transition-colors duration-150;
+  }
+  /* Section padding helper */
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+  /* Page-width container */
+  .container-page {
+    @apply max-w-page mx-auto px-4 md:px-6;
+  }
+}

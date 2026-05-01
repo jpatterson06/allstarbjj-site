@@ -1,0 +1,77 @@
+---
+// Hero — headline + CTA + lead-capture form. Used on home + town pages.
+export interface Props {
+  eyebrow?: string;
+  headline: string;
+  sub: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+  bgImage?: string;
+}
+
+const {
+  eyebrow = "Union, NJ · Family-owned since 2002",
+  headline,
+  sub,
+  ctaHref = '/trial/',
+  ctaLabel = 'Claim Your Free 2-Week Trial',
+  bgImage = '/images/hero-default.jpg',
+} = Astro.props;
+---
+
+<section class="relative bg-brand-black text-white overflow-hidden">
+  <!-- Background image with dark overlay -->
+  <div class="absolute inset-0 z-0" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black/95 to-brand-red/40"></div>
+    <!-- Pattern dots for texture when no image is loaded -->
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+  </div>
+
+  <div class="container-page relative z-10 py-20 md:py-32 grid md:grid-cols-2 gap-10 items-center">
+    <!-- Left: headline + CTA -->
+    <div>
+      {eyebrow && (
+        <div class="inline-block mb-4 px-3 py-1 bg-brand-red text-white text-xs font-bold uppercase tracking-widest rounded">
+          {eyebrow}
+        </div>
+      )}
+      <h1 class="font-display text-5xl md:text-7xl leading-none mb-6 text-white">
+        <slot name="headline">{headline}</slot>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-xl">
+        {sub}
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href={ctaHref} class="btn-primary">{ctaLabel}</a>
+        <a href="tel:+19086412769" class="btn-outline border-white text-white hover:bg-white hover:text-brand-black">📞 (908) 641-2769</a>
+      </div>
+      <div class="mt-6 flex items-center gap-2 text-sm text-gray-300">
+        <span class="text-brand-gold">★★★★★</span>
+        <span>Trusted by hundreds of NJ families</span>
+      </div>
+    </div>
+
+    <!-- Right: feature card -->
+    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 md:p-8">
+      <div class="font-display text-2xl text-brand-gold mb-4">What you get</div>
+      <ul class="space-y-3 text-gray-100">
+        <li class="flex items-start gap-3">
+          <span class="text-brand-gold text-xl flex-none">✓</span>
+          <span><strong>2 full weeks</strong> — every class, every program, no catch</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-brand-gold text-xl flex-none">✓</span>
+          <span><strong>Beginner-friendly</strong> — every black belt started where you are</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-brand-gold text-xl flex-none">✓</span>
+          <span><strong>All gear provided</strong> — bring comfy clothes + water, that's it</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-brand-gold text-xl flex-none">✓</span>
+          <span><strong>No pressure to join</strong> — you decide after 2 weeks</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

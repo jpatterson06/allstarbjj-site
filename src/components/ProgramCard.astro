@@ -1,0 +1,28 @@
+---
+// Single program card — used in grid on homepage + service overview pages
+export interface Props {
+  title: string;
+  ages: string;
+  href: string;
+  blurb: string;
+  emoji: string;
+  accent?: string;
+}
+const { title, ages, href, blurb, emoji, accent = 'brand-red' } = Astro.props;
+---
+
+<a href={href} class="group block bg-white border border-gray-200 hover:border-brand-red hover:shadow-xl transition-all rounded-lg overflow-hidden">
+  <div class={`p-6 border-l-4 border-${accent}`}>
+    <div class="flex items-baseline gap-3 mb-2">
+      <span class="text-3xl">{emoji}</span>
+      <div>
+        <div class="font-display text-2xl text-brand-black leading-none">{title}</div>
+        <div class="text-xs text-gray-500 mt-1">{ages}</div>
+      </div>
+    </div>
+    <p class="text-sm text-gray-600 mb-4">{blurb}</p>
+    <div class="text-sm font-bold text-brand-red group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+      Learn more <span>→</span>
+    </div>
+  </div>
+</a>
