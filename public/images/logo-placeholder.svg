@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="500" height="360">
+  <!-- ALL letterform — three black mountain peaks -->
+  <g fill="#1B1D1B">
+    <polygon points="180,640 280,140 380,640 340,640 290,250 240,640" />
+    <polygon points="380,640 480,140 580,640 540,640 490,250 440,640" />
+    <polygon points="580,640 680,140 780,640 740,640 690,250 640,640" />
+  </g>
+  <!-- Blue star -->
+  <g fill="#1F3FB5">
+    <polygon points="380,510 410,420 500,420 425,365 455,275 380,330 305,275 335,365 260,420 350,420" />
+  </g>
+  <!-- Red gradient stripes -->
+  <g fill="#dc2626">
+    <rect x="540" y="380" width="180" height="22" />
+    <rect x="555" y="420" width="165" height="22" />
+    <rect x="570" y="460" width="150" height="22" />
+    <rect x="585" y="500" width="135" height="22" />
+  </g>
+  <!-- Wordmark -->
+  <line x1="80" y1="660" x2="920" y2="660" stroke="#1B1D1B" stroke-width="3" />
+  <text x="500" y="710" font-family="Arial Black, Helvetica, sans-serif" font-size="60" font-weight="900" fill="#1B1D1B" text-anchor="middle" font-style="italic">ALLSTAR MMA TRAINING FACILITY</text>
+  <line x1="80" y1="720" x2="920" y2="720" stroke="#1B1D1B" stroke-width="3" />
+</svg>

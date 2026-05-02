@@ -1,0 +1,32 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<PageLayout
+  title="Thanks — All Star Martial Arts"
+  description="Thanks for reaching out. Coach Jamal will be in touch shortly to lock in your free 2-week trial."
+  noindex
+>
+  <section class="bg-brand-black text-white py-24 md:py-32">
+    <div class="container-page text-center">
+      <div class="text-brand-gold text-7xl mb-4">★</div>
+      <h1 class="font-display text-4xl md:text-6xl uppercase mb-4">You're In.</h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+        Coach Jamal will be in touch shortly to lock in your free 2-week trial.
+        Check your phone — we usually reach out within a few minutes.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/" class="btn-outline">Back to Home</a>
+        <a href="tel:+19086412769" class="btn-red">📞 Call Us Now (908) 641-2769</a>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    headline="While you wait, take the tour"
+    sub="See our programs, meet Coach Jamal, and read what families are saying about us."
+    ctaLabel="Browse Programs"
+    ctaHref="/about-us/"
+  />
+</PageLayout>
