@@ -51,7 +51,9 @@ const programs = [
   },
 ];
 
-const heroImg = `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`;
+// Hero uses the team formation photo (saved locally — see /public/images/hero-team.jpg).
+// About block uses an adult class shot from the WP media library.
+const heroImg = '/images/hero-team.jpg';
 const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
 ---
 
@@ -60,12 +62,7 @@ const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
   description="Free 2-week trial at All Star Martial Arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai, MMA + kids classes (ages 4-13). Family-owned since 2011. Beginner-friendly."
   ogImage={heroImg}
 >
-  <Hero
-    eyebrow="Union, NJ · Family-owned since 2011"
-    headline="Union's Best Martial Arts School"
-    sub="Brazilian Jiu Jitsu, Muay Thai, MMA, and kids classes for ages 4 and up. Coached by pro MMA fighter and Renzo Gracie black belt Jamal Patterson. Your first two weeks are free — no catch, no pressure."
-    bgImage={heroImg}
-  />
+  <Hero bgImage={heroImg} />
 
   <!-- About our programs -->
   <section class="section-pad bg-brand-gray-light">
