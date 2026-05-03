@@ -1,0 +1,178 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = '/images/mma-team.jpg';
+
+const faqs = [
+  { q: "Do I have to compete?", a: "No. Many of our MMA students never have a competitive match. They just want the full skill set." },
+  { q: "I've never fought. Will I be lost?", a: "No. We start where you are. Most students walk in with one or zero combat-sports backgrounds. The pipeline is built for that." },
+  { q: "How is this different from BJJ + Muay Thai separately?", a: "MMA classes integrate the three disciplines — clinch to takedown to ground. The transitions are the whole point. You can't get that from training the disciplines in isolation." },
+  { q: "Do I need to spar?", a: "Not for months. We don't put new students in live sparring until they have the foundation to do it safely. Even then, you can opt out — many students never spar and get full benefit." },
+  { q: "Will I get hurt?", a: "Combat sports have inherent risk, but our injury rate is low. We control intensity, gear up properly, and don't run a beat-up culture." },
+  { q: "What's the path if I want to compete?", a: "We've taken fighters from first amateur match through pro and into the UFC. We know the route. If you're serious, we'll have that conversation." },
+  { q: "Do I need wrestling experience?", a: "No. We teach takedowns and takedown defense from scratch. Wrestlers have a head start, but most students start without one." },
+  { q: "Can women train MMA here?", a: "Yes. We pair carefully and our culture is respectful. We have women across BJJ, Muay Thai, and MMA." },
+];
+---
+
+<PageLayout
+  title="Adult MMA Classes in Union, NJ — Coached by an IFL & Bellator Veteran | AllStar"
+  description="Adult MMA training in Union, NJ from a coach who fought at the highest levels. IFL, Bellator, UWC champion. Real integration of BJJ, Muay Thai, wrestling. Two weeks free."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="Ages 16+"
+    headline="Adult MMA in Union, NJ"
+    sub="Coached by Jamal Patterson — pro MMA fighter, ADCC veteran, IFL & Bellator alum, UWC light heavyweight champion. Real integration of BJJ, Muay Thai, and wrestling."
+    bgImage={heroImg}
+    programLocked="Adult MMA"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        MMA isn't a martial art. It's a fighting sport that combines three of them: <strong>Brazilian Jiu-Jitsu, Muay Thai, and wrestling</strong>. To do MMA well, you need real foundations in each. Most "MMA gyms" cut corners on at least one. We don't.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        I'm Jamal Patterson — Renzo Gracie black belt, ADCC veteran, pro MMA fighter who fought in the IFL and Bellator, and won the UWC light heavyweight title by first-round guillotine. I've coached fighters from their first amateur match into the UFC. <strong>If you're thinking about MMA seriously, this is the gym in Union, NJ.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Three disciplines -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow text-brand-gold">Three disciplines, one fight</div>
+        <h2 class="text-3xl md:text-4xl">What MMA Actually Is</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg border-t-4 border-brand-gold">
+          <h3 class="text-xl mb-2">Brazilian Jiu-Jitsu</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Ground grappling, submissions, position. The art that makes a smaller person dangerous on their back.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg border-t-4 border-brand-gold">
+          <h3 class="text-xl mb-2">Muay Thai</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Striking — fists, elbows, knees, shins. The standup half of the fight, every range covered.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg border-t-4 border-brand-gold">
+          <h3 class="text-xl mb-2">Wrestling</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Takedowns, takedown defense, top control. The base that decides where the fight happens.</p>
+        </div>
+      </div>
+      <p class="mt-8 text-white/90 leading-relaxed text-center max-w-3xl mx-auto">
+        Real MMA integrates all three so they <em>flow together</em>. A fighter who can only strike loses to a wrestler. A fighter who can only grapple loses to a striker. A complete fighter — with the wrestling base to control where the fight happens — becomes dangerous.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Who this is for</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Five Paths Into the Cage</h2>
+      </div>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-1">You want to compete in MMA</h3>
+          <p class="text-brand-gray leading-relaxed">Amateur or pro path. Either way you'll need real coaching, real partners, and real preparation. We've run this pipeline since 2011.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-1">You've trained one discipline and want to integrate</h3>
+          <p class="text-brand-gray leading-relaxed">BJJ blue belt who wants striking. Kickboxer who wants takedown defense. College wrestler who wants submissions. MMA is where you put it together.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-1">You want to be a complete martial artist</h3>
+          <p class="text-brand-gray leading-relaxed">Some students train MMA without ever competing. They just want the full skill set. Both paths are supported here.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-1">You want fighter conditioning</h3>
+          <p class="text-brand-gray leading-relaxed">MMA conditioning is its own animal — dense, multi-energy-system, sport-specific. Six months in, you're in better shape than 95% of adults you know.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-1">You want to test yourself</h3>
+          <p class="text-brand-gray leading-relaxed">MMA training is humbling in ways no other sport is. If you've felt unchallenged in your fitness journey, this is the cure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three-year pipeline -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">The pipeline</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">How Adults Build Toward MMA</h2>
+      <div class="space-y-5">
+        <div class="bg-white p-6 rounded-lg shadow-sm flex gap-5">
+          <div class="font-display text-4xl text-brand-red shrink-0 w-16">Y1</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Build a BJJ base</h3>
+            <p class="text-brand-gray text-sm md:text-base leading-relaxed">2–3 BJJ classes per week, plus one Muay Thai. The grappling foundation is what most MMA students lack — fix that first.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm flex gap-5">
+          <div class="font-display text-4xl text-brand-red shrink-0 w-16">Y2</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Add full Muay Thai</h3>
+            <p class="text-brand-gray text-sm md:text-base leading-relaxed">2 BJJ + 2 Muay Thai per week. Now you have both bases.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm flex gap-5">
+          <div class="font-display text-4xl text-brand-red shrink-0 w-16">Y3+</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">MMA-specific integration</h3>
+            <p class="text-brand-gray text-sm md:text-base leading-relaxed">1 BJJ + 1 Muay Thai + 2 MMA classes per week. The MMA classes are where it all comes together.</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-brand-gray leading-relaxed mt-8">
+        Some students compress this. Some take longer. The sequence holds: <strong>grappling before striking, then both, then integration</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Coach credentials -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">The coach</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Why AllStar Specifically</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-brand-navy text-white p-6 rounded-lg">
+          <div class="font-display text-3xl text-brand-gold mb-2">ADCC</div>
+          <h3 class="text-lg mb-1">ADCC veteran + pro MMA</h3>
+          <p class="text-white/80 text-sm">Competed at the world championships of grappling. Pro MMA in the IFL, Bellator, UWC light heavyweight title.</p>
+        </div>
+        <div class="bg-brand-navy text-white p-6 rounded-lg">
+          <div class="font-display text-3xl text-brand-gold mb-2">★</div>
+          <h3 class="text-lg mb-1">Renzo Gracie black belt</h3>
+          <p class="text-white/80 text-sm">Same lineage that produced UFC champions and ADCC winners.</p>
+        </div>
+        <div class="bg-brand-navy text-white p-6 rounded-lg">
+          <div class="font-display text-3xl text-brand-gold mb-2">UFC</div>
+          <h3 class="text-lg mb-1">Cornered fighters into the UFC</h3>
+          <p class="text-white/80 text-sm">From first amateur bout through the highest levels of the sport. The path exists at AllStar.</p>
+        </div>
+        <div class="bg-brand-navy text-white p-6 rounded-lg">
+          <div class="font-display text-3xl text-brand-gold mb-2">2011</div>
+          <h3 class="text-lg mb-1">Adult-specific curriculum</h3>
+          <p class="text-white/80 text-sm">Different progression, different intensity, different mat presence than kids classes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. All Disciplines."
+    sub="The trial covers BJJ, Muay Thai, and MMA. Try the full integration. No contract."
+  />
+</PageLayout>

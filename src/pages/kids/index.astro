@@ -1,0 +1,150 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTA from '../../components/CTA.astro';
+import YouTubeShort from '../../components/YouTubeShort.astro';
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = `${IMG}/2025/10/Kids-Martial-Arts-3.jpg`;
+
+const faqs = [
+  { q: "What ages is the Lions program?", a: "Ages 7 to 13. We have a separate Cubs program for kids 4–6 — the curriculum and energy are different at those younger ages." },
+  { q: "My kid is shy / has a lot of energy / is on the spectrum. Will they be okay?", a: "Yes. We've worked with every kind of kid. Shy kids find their voice. High-energy kids find a healthy outlet. Kids with sensory differences thrive when the structure is consistent and the coaches are patient — both of which we are." },
+  { q: "How is BJJ different from karate or Tae Kwon Do?", a: "BJJ is grappling-based. No striking. The whole game is leverage, position, and submission. It's the most effective martial art for kids because it teaches conflict de-escalation through physical control — not by hitting people." },
+  { q: "Will my kid get hurt?", a: "BJJ has lower injury rates than soccer, basketball, or football. We don't strike. We supervise rolling closely. The injury rate at our gym is genuinely low." },
+  { q: "Will this make my kid more aggressive?", a: "Opposite. Kids who train BJJ become calmer and more confident. Bullies tend to back down because the kid carries themselves differently. We teach when not to use what we're learning, not just how to use it." },
+  { q: "What if my kid doesn't like the first class?", a: "Try a few. The first class is overwhelming for most kids. By class three, they usually find their footing." },
+  { q: "Do they need a uniform?", a: "Not for the trial. After they commit, they'll need a gi — about $60 and lasts a year or two." },
+  { q: "How does the schedule work?", a: "Lions classes run 5pm and 6pm most weekdays, with Saturday morning options. Built around school pickup and homework time." },
+];
+---
+
+<PageLayout
+  title="Kids Martial Arts in Union, NJ — Lions Program (Ages 7-13) | AllStar"
+  description="Kids martial arts in Union, NJ. The Lions program (ages 7-13) builds confidence, discipline, and bullyproofing through real Brazilian Jiu-Jitsu. Free 2-week trial."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="Kids ages 7-13"
+    headline="Kids Martial Arts — Lions Program"
+    sub="Real techniques. Real confidence. Real bullyproofing. The structure kids that age need with the energy they want."
+    bgImage={heroImg}
+    programLocked="Lions"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Most kids martial arts programs are babysitting with a uniform. Kids run around. Punch a pad. Get a stripe. Parents pay for the appearance of progress.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        That's not what we do. The Lions program at AllStar teaches <strong>real Brazilian Jiu-Jitsu</strong> — the same lineage and methodology I learned from Renzo Gracie. Adapted for ages 7–13. Built to actually change how your kid moves through the world.
+      </p>
+    </div>
+  </section>
+
+  <!-- Video — see it in action -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page">
+      <div class="text-center mb-8">
+        <div class="eyebrow">See it in action</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Kids on the Mat</h2>
+      </div>
+      <YouTubeShort videoId="5KIOedUNOI8" title="AllStar Kids Martial Arts class" caption="A quick look at our kids program in Union, NJ." />
+    </div>
+  </section>
+
+  <!-- Three pillars -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow text-brand-gold">What kids get out of it</div>
+        <h2 class="text-3xl md:text-4xl">Three Things That Show Up at Home</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg">
+          <div class="text-4xl mb-3">🛡️</div>
+          <h3 class="text-xl mb-2 text-brand-gold">Confidence under pressure</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Not affirmations. Real composure when something hard is happening. Kids who roll on the mat learn that uncomfortable is survivable.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg">
+          <div class="text-4xl mb-3">🎯</div>
+          <h3 class="text-xl mb-2 text-brand-gold">Discipline that travels</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Kids who train BJJ sit better in class. Their teachers notice. Showing up and doing the reps becomes a habit they take into homework, sports, life.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg">
+          <div class="text-4xl mb-3">🦁</div>
+          <h3 class="text-xl mb-2 text-brand-gold">Bullyproofing</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Kids who carry themselves with quiet confidence don't get picked. The skill is the deterrent. We also teach exactly how to de-escalate before it gets physical.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why BJJ for kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Why BJJ specifically</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">The Best Martial Art for Kids — Here's Why</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Most martial arts for kids are striking-based. The kid throws punches and kicks at pads or in the air. Looks impressive. Doesn't teach much.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        BJJ is different. The whole game is <strong>leverage, position, and physical control</strong>. There's no striking. A kid learns to handle a bigger opponent without hitting them — through technique, timing, and calm decision-making.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        That's the lesson that follows them out of the gym. Conflict doesn't have to mean violence. Pressure doesn't have to mean panic. They learn it on the mat first, then everywhere else.
+      </p>
+    </div>
+  </section>
+
+  <!-- What a class looks like -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">What a class looks like</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">A Lions Class, Start to Finish</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Warm-up · 10 min</h3>
+          <p class="text-brand-gray text-sm">Coordination drills, animal walks, energy burn. Kids arrive different speeds — this brings everyone to the same focus level.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Technique · 20 min</h3>
+          <p class="text-brand-gray text-sm">One or two specific moves taught and drilled with a partner. Kids learn fastest when the curriculum is structured and reps are consistent.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Live application · 15 min</h3>
+          <p class="text-brand-gray text-sm">Apply what they learned in controlled positional rounds. Tapping is normal. Nobody gets hurt. Everybody learns.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Game + cooldown · 10 min</h3>
+          <p class="text-brand-gray text-sm">A grappling-themed game to lock in the lesson and end on a high note. Fist bumps. Done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parent expectations -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">For the parents</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">What You'll Notice in 90 Days</h2>
+      <ul class="space-y-3 text-brand-gray text-base md:text-lg leading-relaxed">
+        <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span><span>They walk into rooms differently. More posture. More eye contact.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span><span>They handle frustration without losing it. Tapping out 50 times a week teaches that the world doesn't end when something hard happens.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span><span>They sleep better. Real physical exertion three times a week does that.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span><span>They become someone their younger siblings notice. Older Lions kids start helping younger ones — that pattern shows up at home.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span><span>They actually want to go to class. After a couple weeks, this becomes the thing they're excited about.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. No Pressure."
+    sub="Bring your kid in for two weeks. If it's not the right fit, you owe us nothing. If it is — you'll know."
+  />
+</PageLayout>

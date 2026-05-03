@@ -3,66 +3,60 @@ import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
 import ProgramCard from '../components/ProgramCard.astro';
 import CTA from '../components/CTA.astro';
+import YouTubeShort from '../components/YouTubeShort.astro';
 
 // Program cards — using real photos from the existing WordPress site
 const IMG_BASE = 'https://allstarbjj.com/wp-content/uploads/sites/861';
 const programs = [
   {
-    title: 'Adult BJJ',
+    title: 'Brazilian Jiu Jitsu',
     ages: 'Ages 16+',
     href: '/adult-bjj/',
-    blurb: 'Brazilian Jiu Jitsu — the gentle art. Beginner-friendly. Every black belt in here started right where you are. Free 2-week trial.',
+    blurb: 'The gentle art. Beginner-friendly. Every black belt in here started right where you are. Free 2-week trial.',
     image: `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`,
   },
   {
-    title: 'Adult Muay Thai',
+    title: 'Muay Thai',
     ages: 'Ages 16+',
     href: '/adult-muay-thai/',
     blurb: 'Striking, conditioning, and stress relief. You don\'t need to be in shape — you\'ll get in shape. Bring water + comfy clothes.',
-    image: `${IMG_BASE}/2025/10/Adult-Muay-Thai-8.jpg`,
+    image: '/images/muay-thai-pads.jpg',
   },
   {
-    title: 'Adult MMA',
+    title: 'MMA',
     ages: 'Ages 16+',
     href: '/adult-mma/',
-    blurb: 'The full mix: striking + grappling + clinch. Coached by Jamal Patterson — pro MMA fighter (6-3) who has cornered UFC fighters.',
-    image: `${IMG_BASE}/2025/09/MMA-1.jpg`,
+    blurb: 'The full mix: striking + grappling + clinch. Coached by Jamal Patterson — pro MMA fighter and ADCC veteran who has cornered UFC fighters.',
+    image: '/images/mma-team.jpg',
   },
   {
     title: 'Lions',
     ages: 'Kids ages 7-13',
-    href: '/kids/lions/',
+    href: '/kids/',
     blurb: 'Real techniques. Confidence + bullyproofing + discipline. The structure kids that age need with the energy they want.',
     image: `${IMG_BASE}/2025/10/Kids-Martial-Arts-3.jpg`,
   },
   {
     title: 'Cubs',
-    ages: 'Kids ages 4-7',
-    href: '/kids/cubs/',
+    ages: 'Kids ages 4-6',
+    href: '/preschool/',
     blurb: 'Age-appropriate fun + structure. Confidence, listening skills, energy burn — and a lot of laughing on the mats.',
-    image: `${IMG_BASE}/2025/10/Preschool-Martial-Arts-1.jpg`,
-  },
-  {
-    title: 'Birthday Parties',
-    ages: 'Ages 4-13',
-    href: '/birthday-parties/',
-    blurb: 'A martial-arts-themed birthday party they\'ll never forget. Games, mat time, pizza, the works. We handle everything.',
-    image: `${IMG_BASE}/2025/09/Kid-3.jpg`,
+    image: '/images/preschool-kids.jpg',
   },
 ];
 
-// Hero uses the team formation photo (saved locally — see /public/images/hero-team.jpg).
-// About block uses an adult class shot from the WP media library.
-const heroImg = '/images/hero-team.jpg';
-const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
+// Hero: wide gym shot — adults rolling on the red mats, lineage wall in the back.
+// About block: team WSOF photo with Snoop — strong "real coach, real network" signal.
+const heroImg = '/images/union-mat.jpg';
+const aboutImg = '/images/mma-team.jpg';
 ---
 
 <PageLayout
-  title="Martial Arts in Union, NJ — All Star | BJJ, Muay Thai, MMA + Kids Classes"
-  description="Free 2-week trial at All Star Martial Arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai, MMA + kids classes (ages 4-13). Family-owned since 2011. Beginner-friendly."
+  title="Martial Arts in Union, NJ — AllStar | BJJ, Muay Thai, MMA + Kids Classes"
+  description="Free 2-week trial at AllStar Martial Arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai, MMA + kids classes (ages 4-13). Family-owned since 2011. Beginner-friendly."
   ogImage={heroImg}
 >
-  <Hero bgImage={heroImg} />
+  <Hero bgImage={heroImg} bgPosition="50% 60%" />
 
   <!-- About our programs -->
   <section class="section-pad bg-brand-gray-light">
@@ -86,12 +80,12 @@ const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
         <h2 class="text-3xl md:text-5xl text-brand-black mb-5">Real Lineage. Real Coaching.<br/>No Ego.</h2>
         <p class="text-brand-gray text-base md:text-lg mb-4 leading-relaxed">
           <strong>Jamal "The Suit" Patterson</strong> is a Renzo Gracie Academy
-          black belt, former pro MMA fighter (6-3, five submission wins), and
-          UWC Light Heavyweight Champion. He's fought in the IFL, Bellator, and
-          UWC — and cornered UFC fighters from amateur debut to pro ranks.
+          black belt, ADCC veteran, former pro MMA fighter, and UWC Light
+          Heavyweight Champion. He's fought in the IFL, Bellator, and UWC — and
+          cornered UFC fighters from amateur debut to pro ranks.
         </p>
         <p class="text-brand-gray text-base md:text-lg mb-6 leading-relaxed">
-          But what matters at All Star is the room. The vibe is <em>coach
+          But what matters at AllStar is the room. The vibe is <em>coach
           first, salesperson never</em>. Beginners and advanced students train
           side by side, and the gym is better for it. You'll know within one
           class whether it fits.
@@ -101,7 +95,7 @@ const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
       <div class="relative">
         <img
           src={aboutImg}
-          alt="Adult BJJ class at All Star Martial Arts in Union, NJ"
+          alt="Adult BJJ class at AllStar Martial Arts in Union, NJ"
           class="w-full rounded-lg shadow-lg"
           loading="lazy"
         />
@@ -121,8 +115,8 @@ const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
         <div class="text-xs md:text-sm uppercase tracking-widest">Years in Union</div>
       </div>
       <div>
-        <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">6-3</div>
-        <div class="text-xs md:text-sm uppercase tracking-widest">Pro MMA Record</div>
+        <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">ADCC</div>
+        <div class="text-xs md:text-sm uppercase tracking-widest">Veteran</div>
       </div>
       <div>
         <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">★</div>
@@ -132,6 +126,18 @@ const aboutImg = `${IMG_BASE}/2025/09/Adult-1.jpg`;
         <div class="font-display text-4xl md:text-5xl text-brand-gold mb-1">2 wks</div>
         <div class="text-xs md:text-sm uppercase tracking-widest">Free Trial<br/>No Commitment</div>
       </div>
+    </div>
+  </section>
+
+  <!-- Rules of the Academy -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page">
+      <div class="text-center mb-8">
+        <div class="eyebrow">How we train</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Rules of the Academy</h2>
+        <p class="text-brand-gray mt-3 max-w-xl mx-auto">The culture here isn't an accident. Coach Jamal breaks down exactly how AllStar works — and why it works.</p>
+      </div>
+      <YouTubeShort videoId="MWEknULk4pg" title="AllStar Martial Arts Academy Rules" caption="The culture, the expectations, and what makes AllStar different." />
     </div>
   </section>
 

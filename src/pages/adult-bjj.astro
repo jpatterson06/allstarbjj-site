@@ -1,0 +1,205 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = `${IMG}/2025/09/Adult-BJJ-1.jpg`;
+
+const faqs = [
+  { q: "I've never trained anything. Will I be lost?", a: "No. Most students walk in untrained. We have a structured beginner curriculum. Your first month is humbling. By month three, you're doing fine." },
+  { q: "I'm in my 40s or 50s. Too late?", a: "We have students in their 50s and 60s who started after 40. BJJ rewards technique over strength — age is less of a factor than people assume." },
+  { q: "Is BJJ safe?", a: "Lower injury rates than soccer, basketball, or football. We don't strike. We don't drill anything beginners can't recover from." },
+  { q: "Can I just train for fitness without competing?", a: "Yes. Most adults never compete and get full benefit." },
+  { q: "Can I cross-train Muay Thai too?", a: "Yes. Many of our serious students train both. They reinforce each other." },
+  { q: "Do I need to bring my own gi?", a: "Not for the trial. After the trial, you'll need one — about $80–150 and lasts years." },
+  { q: "What about parking?", a: "Free lot on-site. Adult class entry doesn't conflict with kids pickup." },
+  { q: "Can I observe a class first?", a: "Yes. Walk in any time. We don't hide what we do." },
+];
+---
+
+<PageLayout
+  title="Adult BJJ Classes in Union, NJ — Renzo Gracie Lineage | AllStar"
+  description="Adult Brazilian Jiu-Jitsu classes in Union, NJ from a Renzo Gracie black belt. Real lineage, real instruction, real community. Two weeks free, no contract. Beginners welcome."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="Ages 16+"
+    headline="Adult Brazilian Jiu Jitsu in Union, NJ"
+    sub="Renzo Gracie lineage since 2011. Real coaching. No ego. Free 2-week trial — no contract, no pressure."
+    bgImage={heroImg}
+    programLocked="Adult BJJ"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        You're not here because you want a workout. You can get a workout anywhere. You're here because you want a <strong>skill</strong> — something that compounds, something that lasts, something you'll still be doing in your fifties and sixties when most of your former gym buddies have given up.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        That's what BJJ at AllStar gives you. Real Brazilian Jiu-Jitsu, taught the way Renzo Gracie taught it to me, in a school I've run in Union since 2011.
+      </p>
+    </div>
+  </section>
+
+  <!-- What is BJJ -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">What it actually is</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Real Adult BJJ — Not "BJJ-Inspired Fitness"</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Brazilian Jiu-Jitsu is a grappling-based martial art. No striking. The whole game is leverage, position, and submission. The premise — built into the art a hundred years ago by Helio Gracie because he was a small man — is that <strong>technique should beat strength</strong>. And it does, when it's taught right.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        Our adult program runs separately from kids and from preschoolers. Real adult curriculum. Real adult intensity. Real adult students at every belt level.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Who this is for</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">If You See Yourself Here, Come In</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">The working adult</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Treadmills don't compound. The technique you learn this month will still be in your body in ten years. The fitness benefit is huge. The skill benefit is bigger.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">The "I've thought about it for a year" person</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Most of our students "thought about" BJJ for a year before walking in. The dread on the drive over is universal. Two months in, you wonder why you waited.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">The cross-trainer</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Trained other martial arts and want depth? BJJ has more depth per technique than any martial art I've trained. A decade in, you're still finding new applications.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">The parent setting an example</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Your kids notice. When you train, they understand consistency, discipline, and showing up.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy md:col-span-2">
+          <h3 class="text-xl text-brand-black mb-2">The woman wondering if she'll fit in</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">We have women at every belt level — including a current female brown belt who trains with men twice her size and holds her own. Leverage and technique work, regardless of who's using them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What a class looks like -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow text-brand-gold">What a class looks like</div>
+      <h2 class="text-3xl md:text-4xl mb-8">Your First Six Months — Fundamentals</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg">
+          <div class="font-display text-5xl text-brand-gold mb-2">10<span class="text-xl">min</span></div>
+          <h3 class="text-lg mb-2">Warm-up</h3>
+          <p class="text-white/80 text-sm">Shrimping, rolls, light movement. Get the blood moving.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg">
+          <div class="font-display text-5xl text-brand-gold mb-2">35<span class="text-xl">min</span></div>
+          <h3 class="text-lg mb-2">Technique</h3>
+          <p class="text-white/80 text-sm">Drill 1–2 specific techniques with a partner. This is where the learning happens.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg">
+          <div class="font-display text-5xl text-brand-gold mb-2">15<span class="text-xl">min</span></div>
+          <h3 class="text-lg mb-2">Live rolling</h3>
+          <p class="text-white/80 text-sm">Apply what you learned at controlled intensity. Tapping is normal, expected, respected.</p>
+        </div>
+      </div>
+      <p class="mt-8 text-white/90 leading-relaxed">
+        After six months, you can join general adult classes that include open rolling and more advanced curriculum. You don't have to roll hard your first months. We pair beginners with experienced training partners who guide rather than test. <strong class="text-brand-gold">There's no machismo problem at AllStar.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Lineage -->
+  <section class="section-pad bg-white">
+    <div class="container-page grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="eyebrow">The lineage</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Why Lineage Actually Matters</h2>
+        <p class="text-brand-gray leading-relaxed mb-4">
+          A lot of schools claim BJJ. Few have the line of instruction to back it up.
+        </p>
+        <p class="text-brand-gray leading-relaxed mb-4">
+          I trained directly under Renzo Gracie at his academy in New York. The wall in our gym shows the line: <strong>Helio Gracie → Carlos Gracie → Rolls Gracie → Renzo → me</strong>. The teaching methodology is the one Renzo learned from his uncles and passed to me.
+        </p>
+        <p class="text-brand-gray leading-relaxed">
+          Not a franchise template. Not a third-generation watered-down version. The real thing.
+        </p>
+      </div>
+      <div>
+        <img
+          src={`${IMG}/2025/09/Adult-1.jpg`}
+          alt="Adult Brazilian Jiu-Jitsu class at AllStar Martial Arts in Union, NJ"
+          class="rounded-lg shadow-lg w-full"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why AllStar specifically -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Why AllStar specifically</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Three Reasons Adults Choose Us</h2>
+      </div>
+      <div class="space-y-6">
+        <div class="bg-white p-6 md:p-7 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">A coach who actually competed</h3>
+          <p class="text-brand-gray leading-relaxed">Pro MMA fighter, ADCC veteran, fought in the IFL and Bellator, won the UWC light heavyweight title. The technique I teach was tested under stadium lights with money on the line.</p>
+        </div>
+        <div class="bg-white p-6 md:p-7 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">A real adult curriculum</h3>
+          <p class="text-brand-gray leading-relaxed">Many gyms run adult classes that are "kids classes for big people." We don't. The progression assumes adult learning patterns and adult goals.</p>
+        </div>
+        <div class="bg-white p-6 md:p-7 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">A community that's unusually good</h3>
+          <p class="text-brand-gray leading-relaxed">BJJ communities are tight by nature. Ours is tighter than most. People notice when you don't show up. They tell you you're improving when you don't see it yourself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">What students say</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">From the People on the Mats</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <blockquote class="bg-brand-gray-light p-6 rounded-lg">
+          <div class="text-brand-gold text-xl mb-3">★★★★★</div>
+          <p class="text-brand-gray italic mb-4 text-sm leading-relaxed">"I've been training with Jamal at AllStar for almost 10 years. He's an incredible leader and an even better person — and a beast on the mats on top of that."</p>
+          <footer class="text-brand-black font-bold text-sm">— Matt L., 10-year student</footer>
+        </blockquote>
+        <blockquote class="bg-brand-gray-light p-6 rounded-lg">
+          <div class="text-brand-gold text-xl mb-3">★★★★★</div>
+          <p class="text-brand-gray italic mb-4 text-sm leading-relaxed">"AllStar changed my life. I've made friendships I'll have forever, built real confidence, and the martial arts community here has opened doors for me all over the world."</p>
+          <footer class="text-brand-black font-bold text-sm">— Valentina, BJJ / Muay Thai / MMA</footer>
+        </blockquote>
+        <blockquote class="bg-brand-gray-light p-6 rounded-lg">
+          <div class="text-brand-gold text-xl mb-3">★★★★★</div>
+          <p class="text-brand-gray italic mb-4 text-sm leading-relaxed">"World-class instructors from the Renzo Gracie lineage. Jamal was one of the most accomplished grapplers in the world during his time."</p>
+          <footer class="text-brand-black font-bold text-sm">— Scott A., AllStar student</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. No Contract."
+    sub="Show up. Bring water. We'll handle the rest. If we're not for you, you owe us nothing."
+  />
+</PageLayout>

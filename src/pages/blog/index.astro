@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTA from '../../components/CTA.astro';
+
+const allPosts = await getCollection('blog');
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = `${IMG}/2025/09/Adult-1.jpg`;
+
+const categoryOrder = ['adult-bjj', 'adult-muay-thai', 'adult-mma', 'kids'];
+const categoryLabel: Record<string, string> = {
+  'adult-bjj':       'Adult BJJ',
+  'adult-muay-thai': 'Adult Muay Thai',
+  'adult-mma':       'Adult MMA',
+  'kids':            'Kids Martial Arts',
+};
+const categoryColor: Record<string, string> = {
+  'adult-bjj':       'border-brand-navy',
+  'adult-muay-thai': 'border-brand-red',
+  'adult-mma':       'border-brand-gold',
+  'kids':            'border-green-600',
+};
+
+const grouped = Object.fromEntries(
+  categoryOrder.map((cat) => [
+    cat,
+    allPosts.filter((p) => p.data.category === cat),
+  ])
+);
+---
+
+<PageLayout
+  title="AllStar Blog — Brazilian Jiu-Jitsu, Muay Thai & MMA Insights | Union, NJ"
+  description="Real talk about training, technique, and what it takes to commit to martial arts as an adult or family in Union County, NJ."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="The blog"
+    headline="Real Talk About Training"
+    sub="Honest writing on BJJ, Muay Thai, MMA, and kids martial arts — from Coach Jamal."
+    bgImage={heroImg}
+    showForm={false}
+  />
+
+  {categoryOrder.map((cat) => {
+    const posts = grouped[cat];
+    if (!posts || posts.length === 0) return null;
+    return (
+      <section class="section-pad even:bg-brand-gray-light">
+        <div class="container-page max-w-5xl">
+          <div class="mb-8">
+            <div class="eyebrow">{categoryLabel[cat]}</div>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {posts.map((post) => (
+              <a
+                href={`/blog/${post.slug}/`}
+                class={`block bg-white p-6 rounded-lg shadow-sm border-t-4 ${categoryColor[cat]} hover:shadow-md transition-shadow group`}
+              >
+                <div class="text-xs uppercase tracking-widest font-bold text-brand-navy mb-2">
+                  {categoryLabel[post.data.category]}
+                </div>
+                <h2 class="text-lg text-brand-black mb-3 leading-tight group-hover:text-brand-navy transition-colors">
+                  {post.data.title}
+                </h2>
+                <p class="text-brand-gray text-sm leading-relaxed line-clamp-3">
+                  {post.data.meta_description}
+                </p>
+                <div class="mt-4 text-brand-navy text-sm font-bold">Read &rarr;</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  })}
+
+  <CTA
+    headline="Don't Just Read About It"
+    sub="Two weeks free, no commitment. First class you show up to, everything changes."
+  />
+</PageLayout>

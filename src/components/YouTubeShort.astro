@@ -1,0 +1,32 @@
+---
+// Embedded YouTube Short — vertical 9:16 video centered on the page.
+// Uses youtube-nocookie.com for better privacy (no tracking until play).
+export interface Props {
+  videoId: string;          // e.g. "5KIOedUNOI8"
+  title?: string;           // accessible title for the iframe
+  caption?: string;         // optional small caption below the video
+}
+const {
+  videoId,
+  title = 'AllStar Martial Arts video',
+  caption,
+} = Astro.props;
+---
+
+<div class="flex flex-col items-center">
+  <!-- 9:16 aspect-ratio container, capped at a comfortable height -->
+  <div class="relative w-full max-w-[320px] aspect-[9/16] rounded-lg overflow-hidden shadow-xl bg-black">
+    <iframe
+      src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1`}
+      title={title}
+      class="absolute inset-0 w-full h-full"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {caption && (
+    <p class="text-center text-sm text-brand-gray italic mt-3 max-w-md">{caption}</p>
+  )}
+</div>

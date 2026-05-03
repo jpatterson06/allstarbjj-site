@@ -1,0 +1,33 @@
+---
+// Simple collapsible FAQ block — uses native <details>/<summary>.
+export interface FAQItem {
+  q: string;
+  a: string;
+}
+export interface Props {
+  heading?: string;
+  items: FAQItem[];
+}
+const { heading = 'Frequently Asked Questions', items } = Astro.props;
+---
+
+<section class="section-pad bg-white">
+  <div class="container-page max-w-3xl">
+    <div class="text-center mb-10">
+      <div class="eyebrow">Got questions?</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black">{heading}</h2>
+      <div class="w-16 h-1 bg-brand-navy mx-auto mt-4"></div>
+    </div>
+    <div class="space-y-3">
+      {items.map((it) => (
+        <details class="group bg-brand-gray-light rounded-lg overflow-hidden border border-brand-gray-mid">
+          <summary class="cursor-pointer p-5 font-bold text-brand-black flex justify-between items-center gap-4 list-none">
+            <span class="text-base md:text-lg">{it.q}</span>
+            <span class="text-brand-navy text-2xl font-light shrink-0 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-gray leading-relaxed text-sm md:text-base" set:html={it.a}></div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -13,7 +13,7 @@ export interface Props {
 
 const {
   title,
-  description = 'All Star Martial Arts — Brazilian Jiu Jitsu, Muay Thai, MMA + Kids classes in Union, NJ. Free 2-week trial. Family-owned. Beginner-friendly.',
+  description = 'AllStar Martial Arts — Brazilian Jiu Jitsu, Muay Thai, MMA + Kids classes in Union, NJ. Free 2-week trial. Family-owned. Beginner-friendly.',
   ogImage = 'https://allstarbjj.com/wp-content/uploads/sites/861/2025/09/Adult-BJJ-1.jpg',
   noindex = false,
 } = Astro.props;
@@ -40,7 +40,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     <meta property="og:image" content={ogImage} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="All Star Martial Arts" />
+    <meta property="og:site_name" content="AllStar Martial Arts" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -56,7 +56,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "MartialArtsSchool",
-      "name": "All Star Martial Arts",
+      "name": "AllStar Martial Arts",
       "url": "https://allstarbjj.com",
       "telephone": "+1-908-641-2769",
       "email": "info@allstarbjj.com",

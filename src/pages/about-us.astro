@@ -1,0 +1,202 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTA from '../components/CTA.astro';
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = `${IMG}/2025/11/Jamal-2.jpg`;
+
+// Person schema for Jamal — adds entity data Google uses for authority signals
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jamal Patterson",
+  "alternateName": "Jamal 'The Suit' Patterson",
+  "jobTitle": "Founder & Head Instructor",
+  "worksFor": {
+    "@type": "MartialArtsSchool",
+    "name": "AllStar Martial Arts"
+  },
+  "alumniOf": [
+    { "@type": "Organization", "name": "Renzo Gracie Academy" },
+    { "@type": "CollegeOrUniversity", "name": "Colgate University" },
+    { "@type": "EducationalOrganization", "name": "Blair Academy" }
+  ],
+  "award": [
+    "UWC Light Heavyweight Champion",
+    "Renzo Gracie Black Belt",
+    "ADCC Competitor"
+  ],
+  "knowsAbout": ["Brazilian Jiu-Jitsu", "Mixed Martial Arts", "Muay Thai", "Wrestling"]
+};
+---
+
+<PageLayout
+  title="About Coach Jamal Patterson — Renzo Gracie Black Belt | AllStar, Union NJ"
+  description="Meet Jamal Patterson — Renzo Gracie black belt, IFL & Bellator veteran, UWC light heavyweight champion. Coaching martial arts in Union, NJ since 2011."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="About AllStar"
+    headline="Real Lineage. Real Coaching. No Ego."
+    sub="Coach Jamal Patterson — Renzo Gracie black belt, ADCC veteran, pro MMA fighter, UWC champion, 13+ years coaching in Union, NJ."
+    bgImage={heroImg}
+    showForm={false}
+  />
+
+  <!-- Person schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+  <!-- Bio -->
+  <section class="section-pad bg-white">
+    <div class="container-page grid md:grid-cols-5 gap-10 md:gap-14">
+      <div class="md:col-span-3">
+        <div class="eyebrow">The story</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black mb-5">From Blair to Colgate to Bellator — Now Coaching in Union</h2>
+        <p class="text-brand-gray leading-relaxed mb-4">
+          I'm <strong>Jamal "The Suit" Patterson</strong>. Born in New York, raised in New Jersey. I wrestled at <strong>Blair Academy</strong> — one of the top wrestling programs in the country — then went to <strong>Colgate University</strong>, where I played football and ran track.
+        </p>
+        <p class="text-brand-gray leading-relaxed mb-4">
+          <img
+            src="/images/jamal-story.jpg"
+            alt="Jamal Patterson with a friend, holding up an AllStar MMA Training Facility shirt"
+            class="float-right ml-5 mb-3 w-40 sm:w-48 md:w-56 rounded-lg shadow-md"
+            loading="lazy"
+          />
+          After college I started training Brazilian Jiu-Jitsu at the <strong>Renzo Gracie Academy</strong> in New York. That's where the rest of my career came from. I earned my black belt under Renzo and competed at the <strong>ADCC</strong> — the world championships of submission grappling. I fought as a pro MMA fighter in the <strong>IFL</strong>, <strong>Bellator</strong>, and won the <strong>UWC Light Heavyweight title</strong> with a first-round guillotine choke over Antwain Britt.
+        </p>
+        <p class="text-brand-gray leading-relaxed mb-4">
+          I opened AllStar in Union, NJ in <strong>2011</strong>. Since then I've coached fighters from their first amateur match into the UFC, watched hundreds of adult students earn belts they thought they couldn't, and seen Cubs kids grow up into Lions kids and then into adult students themselves.
+        </p>
+        <p class="text-brand-gray leading-relaxed clear-right">
+          What I care about now is the room. The vibe. The people who walk through the door for the first time and figure out within a class whether this is for them. We're <strong>coach first, salesperson never</strong>. Beginners and advanced students train side by side, and the gym is better for it.
+        </p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src={`${IMG}/2025/11/Jamal-3.jpg`}
+          alt="Jamal Patterson — founder and head instructor of AllStar Martial Arts"
+          class="w-full rounded-lg shadow-lg"
+          loading="lazy"
+        />
+        <div class="bg-brand-navy text-white p-5 rounded-lg mt-4 text-sm">
+          <div class="font-display text-brand-gold uppercase tracking-wider text-xs mb-2">Jamal Patterson</div>
+          <ul class="space-y-1 text-white/90">
+            <li>★ Renzo Gracie black belt</li>
+            <li>★ ADCC veteran</li>
+            <li>★ Pro MMA fighter</li>
+            <li>★ UWC Light Heavyweight Champion</li>
+            <li>★ IFL + Bellator veteran</li>
+            <li>★ Colgate University grad</li>
+            <li>★ Blair Academy wrestler</li>
+            <li>★ Coached UFC fighters</li>
+            <li>★ Coaching since 2011</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lineage -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-8">
+        <div class="eyebrow text-brand-gold">The lineage</div>
+        <h2 class="text-3xl md:text-4xl">Renzo Gracie Academy — Verifiable, Not Just Claimed</h2>
+      </div>
+      <p class="text-white/90 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
+        A lot of schools claim BJJ lineage. Few have the line of instruction to back it up. Mine traces directly through Renzo Gracie — the same line that produced UFC champions, ADCC winners, and the modern face of Brazilian Jiu-Jitsu in America.
+      </p>
+      <div class="bg-white/5 backdrop-blur p-8 rounded-lg">
+        <div class="font-display text-center text-brand-gold uppercase tracking-widest text-xs mb-6">The Line</div>
+        <div class="space-y-3 text-center text-white/95">
+          <div class="font-display text-lg md:text-xl">Helio Gracie</div>
+          <div class="text-brand-gold">↓</div>
+          <div class="font-display text-lg md:text-xl">Carlos Gracie</div>
+          <div class="text-brand-gold">↓</div>
+          <div class="font-display text-lg md:text-xl">Rolls Gracie</div>
+          <div class="text-brand-gold">↓</div>
+          <div class="font-display text-lg md:text-xl">Renzo Gracie</div>
+          <div class="text-brand-gold">↓</div>
+          <div class="font-display text-xl md:text-2xl text-brand-gold">Jamal Patterson</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The network — team WSOF photo -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-5xl">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <img
+            src="/images/mma-team.jpg"
+            alt="Jamal Patterson with the AllStar MMA team and friends — including Snoop Dogg — at a World Series of Fighting event"
+            class="w-full rounded-lg shadow-lg"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <div class="eyebrow">The network</div>
+          <h2 class="text-3xl md:text-4xl text-brand-black mb-5">A Coach With Real Connections</h2>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            AllStar isn't a franchise. It's a real gym with a real network. Over 13+ years of coaching — and a fight career that ran through the IFL, Bellator, UWC, and the World Series of Fighting — I've built relationships with fighters, coaches, and friends across every corner of combat sports.
+          </p>
+          <p class="text-brand-gray leading-relaxed">
+            That network shows up for our students. Guest coaches, seminar opportunities, training partnerships — when the real combat sports world pays attention to a school, it's because the coach is the real deal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The gym -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">The gym</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">What AllStar Is, Practically</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        We're a family-owned martial arts school on West Chestnut Street in Union, NJ — about ten minutes off the Parkway, free parking, full mat space. We run real adult programs in <strong>BJJ, Muay Thai, and MMA</strong>, plus separate kids programs (<strong>Cubs</strong> for ages 4–6 and <strong>Lions</strong> for 7–13).
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        We're not a franchise. We're not a McDojo. We don't sell black belts. We don't push contracts the day you walk in. Everything we teach was tested either in competition, on the mat, or in real adult students' bodies over the last 13 years.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        If you've been curious — that's enough of a reason to come in. The trial is two weeks. Long enough to know.
+      </p>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">What we stand for</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Four Things You'll Notice Quickly</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">Coach first, salesperson never</h3>
+          <p class="text-brand-gray text-sm">No upsell pressure on day one. No 12-month contracts on the way in. We'd rather you stay because you want to than because you're locked in.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">No machismo problem</h3>
+          <p class="text-brand-gray text-sm">Beginners are paired with experienced training partners who guide rather than test. Tapping is normal, expected, respected. Egos check at the door.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">Real curriculum, not workout class</h3>
+          <p class="text-brand-gray text-sm">Adult students aren't doing kids classes for big people. Kids aren't doing dumbed-down adult classes. Each program is built for the people in it.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">A community that's unusually good</h3>
+          <p class="text-brand-gray text-sm">People notice when you don't show up. They tell you you're improving when you don't see it yourself. That's the part that's hardest to manufacture and easiest to feel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    headline="Come See For Yourself"
+    sub="Two weeks free. No commitment. Walk in any time."
+  />
+</PageLayout>

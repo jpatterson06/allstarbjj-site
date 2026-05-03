@@ -1,0 +1,133 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+import YouTubeShort from '../components/YouTubeShort.astro';
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = '/images/preschool-kids.jpg';
+
+const faqs = [
+  { q: "Is 4 too young?", a: "No. The Cubs program is built for ages 4–6 specifically. Curriculum, attention spans, energy management — all calibrated for that age. Our youngest students do remarkably well." },
+  { q: "What if my kid won't listen?", a: "Most preschoolers can't focus for 45 minutes — yet. We meet them where they are. The class is built in short bursts of structure and play. By month two, the focus shows up." },
+  { q: "What's the difference between Cubs and Lions?", a: "Cubs (4–6) is more game-based, with shorter focus windows and more coach attention per kid. Lions (7–13) is real BJJ technique with full positional rolling. Different programs, different pacing." },
+  { q: "Will my kid get hurt?", a: "No striking, no rough rolling at this age. Cubs is mostly games, motor coordination, and intro grappling concepts. The injury rate is lower than playground recess." },
+  { q: "Can siblings train together?", a: "Yes. Many families have a Cubs kid and a Lions kid. Same gym, different classes, same culture." },
+  { q: "How long are Cubs classes?", a: "30–40 minutes — calibrated to preschool attention spans. Long enough to learn, short enough to leave wanting more." },
+  { q: "Do they need a uniform?", a: "Not for the trial. After they commit, a kids gi runs about $50 and lasts a year." },
+  { q: "What if they cry the first day?", a: "Some do. We've seen every version of this. Parents are welcome to stay in the lobby and watch. By week two, almost every kid is running in." },
+];
+---
+
+<PageLayout
+  title="Preschool Martial Arts in Union, NJ — Cubs Program (Ages 4-6) | AllStar"
+  description="Preschool martial arts in Union, NJ. The Cubs program (ages 4-6) builds confidence, listening skills, and coordination through age-appropriate fun + structure. Free 2-week trial."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="Kids ages 4-6"
+    headline="Preschool Martial Arts — Cubs"
+    sub="Age-appropriate fun + structure. Confidence, listening skills, energy burn — and a lot of laughing on the mats."
+    bgImage={heroImg}
+    bgPosition="50% 60%"
+    programLocked="Cubs"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Preschoolers don't need martial arts. They need <strong>structure they can handle, energy outlets that work, and adults who actually like being around little kids.</strong>
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        That's what Cubs is. The mat is the classroom. The games teach focus, the focus teaches confidence, and the confidence is what your kid carries home.
+      </p>
+    </div>
+  </section>
+
+  <!-- Video — see it in action -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page">
+      <div class="text-center mb-8">
+        <div class="eyebrow">See it in action</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Little Ones on the Mat</h2>
+      </div>
+      <YouTubeShort videoId="5KIOedUNOI8" title="AllStar Preschool Martial Arts class" caption="A quick look at our kids program in Union, NJ." />
+    </div>
+  </section>
+
+  <!-- What kids get -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow text-brand-gold">What Cubs builds</div>
+        <h2 class="text-3xl md:text-4xl">The Skills Behind the Skill</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="bg-white/5 backdrop-blur p-5 rounded-lg text-center">
+          <div class="text-3xl mb-2">👂</div>
+          <h3 class="text-base mb-1 text-brand-gold">Listening</h3>
+          <p class="text-white/80 text-xs">Following 2- and 3-step instructions on the mat translates straight to school.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-5 rounded-lg text-center">
+          <div class="text-3xl mb-2">🎯</div>
+          <h3 class="text-base mb-1 text-brand-gold">Focus</h3>
+          <p class="text-white/80 text-xs">Short structured bursts build the attention muscle preschoolers don't have yet.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-5 rounded-lg text-center">
+          <div class="text-3xl mb-2">🤸</div>
+          <h3 class="text-base mb-1 text-brand-gold">Coordination</h3>
+          <p class="text-white/80 text-xs">Crawling patterns, rolling, balance — the motor groundwork for every sport that comes later.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur p-5 rounded-lg text-center">
+          <div class="text-3xl mb-2">😊</div>
+          <h3 class="text-base mb-1 text-brand-gold">Confidence</h3>
+          <p class="text-white/80 text-xs">Praise for showing up. Belt stripes for effort. They walk out feeling capable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What a class looks like -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">What a class looks like</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">A Cubs Class — 30 Minutes of Structured Joy</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Cubs classes are <strong>30 to 40 minutes</strong> — calibrated to preschool attention spans. Coaches keep it moving. Energy stays high. The structure shows up in small consistent ways the kids absorb without realizing.
+      </p>
+      <ul class="space-y-3 text-brand-gray leading-relaxed mb-4">
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">→</span><span><strong>Bow in.</strong> Same way every class. Builds ritual + focus before anything else happens.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">→</span><span><strong>Warm-up games.</strong> Crawling races, animal walks, balance challenges. The "warm-up" is half the lesson.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">→</span><span><strong>One technique.</strong> Just one — taught with a coach demo, drilled with a partner. Cubs learn deeper from one repeated thing than from a buffet of moves.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">→</span><span><strong>Mat game.</strong> A grappling-themed game that secretly reinforces the technique. Kids think they're playing. They're learning.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">→</span><span><strong>Bow out.</strong> Class ends the same way every time. Predictability is the gift you give a 5-year-old.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Parent expectations -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">For the parents</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">The Other Reason Parents Sign Up</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Honest answer? Half the parents who walk in are tired. Their kid has too much energy. Bedtime is a battle. Screen time is winning.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        After a few weeks of Cubs, that math changes. Real physical effort, structured social time, an outlet that's not a tablet. <strong>Kids sleep better. Bedtime gets easier. Mornings are calmer.</strong> The fitness benefit is the obvious sell. The household calm is the surprise.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        And we have a lot of patience for little kids. We genuinely like this age group. It shows.
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. Bring the Energy."
+    sub="No commitment, no pressure. Just bring your kid and water. We'll handle the rest."
+  />
+</PageLayout>

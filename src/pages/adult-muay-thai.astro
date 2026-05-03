@@ -1,0 +1,167 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = '/images/muay-thai-pads.jpg';
+
+const faqs = [
+  { q: "I've never thrown a punch. Is this too advanced?", a: "No. Most students walk in with zero combat sports experience. We teach from the ground up. Your first class will feel awkward and the second will feel less so." },
+  { q: "Will I get hurt?", a: "With proper coaching and gear, no. We control intensity. We don't put new students in sparring. The injury rate at our gym is low." },
+  { q: "Will my knuckles get destroyed?", a: "Not with proper hand wraps and gloves. Always wrap. Always glove up." },
+  { q: "Can I do Muay Thai if I'm 45+?", a: "Yes. We have many adult students over 45. Skip hard sparring, focus on pad work and bag work. The fitness benefit is the same." },
+  { q: "Can women train safely with men?", a: "Yes. We pair carefully. Our culture is respectful. Many women train mixed without issue." },
+  { q: "Will I get bulky?", a: "No. Muay Thai builds lean, functional muscle. You'll get more defined, not bigger." },
+  { q: "Do I need to compete?", a: "No. Most students never compete. The fitness and skill benefits don't require it." },
+  { q: "How is this different from kickboxing?", a: "Muay Thai uses elbows and the clinch; most kickboxing doesn't. It's the more complete striking art." },
+  { q: "Can I cross-train BJJ?", a: "Yes. Most of our serious students do. The trial covers all programs." },
+];
+---
+
+<PageLayout
+  title="Adult Muay Thai Classes in Union, NJ — Real Pad Work, Real Results | AllStar"
+  description="Adult Muay Thai in Union, NJ at a combat-sports gym run by an MMA veteran. Real fundamentals, serious cardio, no fluff. Two weeks free. Beginners welcome."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="Ages 16+"
+    headline="Adult Muay Thai in Union, NJ"
+    sub="The Art of 8 Limbs. Real pad work, serious cardio, no fluff. Free 2-week trial — beginners welcome."
+    bgImage={heroImg}
+    bgPosition="30% 30%"
+    programLocked="Adult Muay Thai"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Most fitness classes give you cardio. A few give you fundamentals. Almost none give you a real <strong>skill</strong>.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Muay Thai gives you all three. Real cardio — the kind that makes stairs feel different. Real fundamentals — punches, kicks, knees, elbows, all the way back to traditional Thai mechanics. And a real skill that holds up at fifty as well as it does at twenty-five, if you train it consistently.
+      </p>
+    </div>
+  </section>
+
+  <!-- 8 Limbs explainer -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow text-brand-gold">The art of 8 limbs</div>
+      <h2 class="text-3xl md:text-4xl mb-6">Why It's the Most Complete Striking Art</h2>
+      <p class="text-white/90 leading-relaxed mb-6">
+        Muay Thai is the national combat sport of Thailand. The "8 limbs" are the eight striking weapons it uses: <strong>two fists, two elbows, two knees, two shins</strong>.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 my-8">
+        <div class="bg-white/5 p-5 rounded-lg text-center"><div class="font-display text-4xl text-brand-gold">2</div><div class="text-xs uppercase tracking-widest mt-1">Fists</div></div>
+        <div class="bg-white/5 p-5 rounded-lg text-center"><div class="font-display text-4xl text-brand-gold">2</div><div class="text-xs uppercase tracking-widest mt-1">Elbows</div></div>
+        <div class="bg-white/5 p-5 rounded-lg text-center"><div class="font-display text-4xl text-brand-gold">2</div><div class="text-xs uppercase tracking-widest mt-1">Knees</div></div>
+        <div class="bg-white/5 p-5 rounded-lg text-center"><div class="font-display text-4xl text-brand-gold">2</div><div class="text-xs uppercase tracking-widest mt-1">Shins</div></div>
+      </div>
+      <p class="text-white/90 leading-relaxed">
+        Boxing uses two limbs. Karate uses four. Muay Thai uses all of them — plus the <strong>clinch</strong>, a close-range grappling-with-strikes phase that doesn't exist in any other striking art. For one striking discipline that covers every range, Muay Thai isn't <em>an</em> answer. It's <em>the</em> answer.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Who this is for</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">If You See Yourself Here, Come In</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">You want serious cardio that doesn't bore you</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">600–1000 calories a class. Every minute is engaging. There's no autopilot zone.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">You want a striker's body composition</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">After 6 months of consistent training, you'll have lean muscle in places you didn't know existed. Most adults drop 10–20 lbs in their first 12 weeks.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">You want real standup self-defense</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">BJJ handles the ground. Muay Thai handles the standup. The clinch and elbows mean it works in close-range situations where most striking arts fail.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">You're competitive by nature</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Pad work and conditioning rounds let you push the gas pedal. The improvement curve is fast and visible.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-red md:col-span-2">
+          <h3 class="text-xl text-brand-black mb-2">You like throwing things hard, with technique</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Some people just want to hit pads. That's a fine reason to train Muay Thai. The pad work is the addiction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Class structure -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">What a class looks like</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">The Adult Class Arc</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg shadow-sm flex gap-4">
+          <div class="font-display text-3xl text-brand-red shrink-0">1</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Warm-up · 10–15 min</h3>
+            <p class="text-brand-gray text-sm">Jump rope, shadowboxing, dynamic stretching.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm flex gap-4">
+          <div class="font-display text-3xl text-brand-red shrink-0">2</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Technique · 20–30 min</h3>
+            <p class="text-brand-gray text-sm">Drill specific strikes or combinations with a partner.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm flex gap-4">
+          <div class="font-display text-3xl text-brand-red shrink-0">3</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Pad work · 15–20 min</h3>
+            <p class="text-brand-gray text-sm">Rounds of throwing combinations on pads, with timed rest. This is where the addiction starts.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm flex gap-4">
+          <div class="font-display text-3xl text-brand-red shrink-0">4</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Conditioning + cooldown · 5–10 min</h3>
+            <p class="text-brand-gray text-sm">Knees, abs, light stretching.</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-brand-gray leading-relaxed mt-8">
+        <strong>You don't spar in your first 6 months.</strong> We don't put new students in live sparring until they have the technical foundation to do it safely. Most adults never spar at all and get the full fitness and skill benefit.
+      </p>
+    </div>
+  </section>
+
+  <!-- 90-day curriculum -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">First 90 days</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">What You'll Learn</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border-l-4 border-brand-navy pl-4 py-2"><strong class="text-brand-black">Stance and footwork</strong><div class="text-brand-gray text-sm">The foundation everything else builds on.</div></div>
+        <div class="border-l-4 border-brand-navy pl-4 py-2"><strong class="text-brand-black">Jab and cross</strong><div class="text-brand-gray text-sm">Proper hip mechanics — not arm-punching.</div></div>
+        <div class="border-l-4 border-brand-navy pl-4 py-2"><strong class="text-brand-black">Round kicks</strong><div class="text-brand-gray text-sm">Lead and rear, full hip rotation, shin contact.</div></div>
+        <div class="border-l-4 border-brand-navy pl-4 py-2"><strong class="text-brand-black">Teep (front push kick)</strong><div class="text-brand-gray text-sm">Distance control, ring craft.</div></div>
+        <div class="border-l-4 border-brand-navy pl-4 py-2"><strong class="text-brand-black">Clinch entries</strong><div class="text-brand-gray text-sm">How to control close range.</div></div>
+        <div class="border-l-4 border-brand-navy pl-4 py-2"><strong class="text-brand-black">Pad-holding</strong><div class="text-brand-gray text-sm">How to be a useful training partner.</div></div>
+      </div>
+      <p class="text-brand-gray leading-relaxed mt-8">
+        After 90 days, you'll be coordinated. After 6 months, you'll be conditioned. After a year, you'll be a real striker with real fundamentals.
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. No Contract."
+    sub="Show up. Bring water. We'll handle the rest. Most adults are addicted to pad work by class three."
+  />
+</PageLayout>

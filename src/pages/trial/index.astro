@@ -1,0 +1,123 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTA from '../../components/CTA.astro';
+import { towns } from '../../lib/towns';
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = `${IMG}/2025/09/Adult-BJJ-1.jpg`;
+
+const faqs = [
+  { q: "What's actually included?", a: "Two weeks of unlimited classes. You can sample any program — Adult BJJ, Adult Muay Thai, Adult MMA, Cubs (kids 4–6), Lions (kids 7–13). Use of a gi and gear during the trial. A pre-class consultation with Coach Jamal or a senior instructor." },
+  { q: "Do I need to pay anything?", a: "No. The trial is genuinely free. No card on file. No locked-in commitment. If you decide it's not for you, you owe us nothing." },
+  { q: "When can I start?", a: "Whenever the next class is on the schedule. After you fill out the form, we'll text you to confirm a class time. Most students start within a few days of submitting." },
+  { q: "I'm an absolute beginner. Will I be lost?", a: "No. Most of our students walk in with zero experience. We have structured beginner curricula. Your first month is humbling. By month three, you're fine." },
+  { q: "Can I bring my kid in for the trial?", a: "Yes. Cubs (ages 4–6) and Lions (ages 7–13) both have free trial access. Same form — just select the kids' program." },
+  { q: "What should I wear / bring?", a: "Comfy athletic clothes, water bottle, and an open mind. We provide a gi and any gear you need during the trial." },
+  { q: "Is there parking?", a: "Free lot on-site at 1166 West Chestnut St, Union, NJ. Easy in, easy out." },
+  { q: "What if I don't live in Union?", a: "Most of our students don't. We have students from Westfield, Springfield, Cranford, Maplewood, Millburn, Mountainside, Roselle Park, and beyond. The drive is worth it." },
+];
+---
+
+<PageLayout
+  title="Free 2-Week Martial Arts Trial in Union, NJ — AllStar"
+  description="Two weeks free at AllStar Martial Arts in Union, NJ. BJJ, Muay Thai, MMA + kids classes. No contract, no pressure. Renzo Gracie black belt instruction."
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow="Free 2-week trial"
+    headline="Two Weeks Free. No Commitment."
+    sub="The best way to know if AllStar is for you is to walk in. Free for two weeks. No card. No contract. No pressure."
+    bgImage={heroImg}
+  />
+
+  <!-- What you get -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">What's included</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Real Access — No Catch</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">🥋</div>
+          <h3 class="text-lg text-brand-black mb-2">Unlimited classes</h3>
+          <p class="text-brand-gray text-sm">All programs, every day, full two weeks.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">🎒</div>
+          <h3 class="text-lg text-brand-black mb-2">Gi + gear loaner</h3>
+          <p class="text-brand-gray text-sm">No gear required. We hook you up for the trial.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">👨‍🏫</div>
+          <h3 class="text-lg text-brand-black mb-2">Pre-class consult</h3>
+          <p class="text-brand-gray text-sm">A few minutes with Coach Jamal or a senior instructor before your first session.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">🚫</div>
+          <h3 class="text-lg text-brand-black mb-2">No commitment</h3>
+          <p class="text-brand-gray text-sm">No card on file. If it's not your fit, you owe nothing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs available -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Choose your program</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">What You Can Try</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="/adult-bjj/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-1">Adult BJJ</h3>
+          <p class="text-brand-gray text-sm">Ages 16+ • Renzo Gracie lineage</p>
+        </a>
+        <a href="/adult-muay-thai/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-1">Adult Muay Thai</h3>
+          <p class="text-brand-gray text-sm">Ages 16+ • Real pad work</p>
+        </a>
+        <a href="/adult-mma/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-brand-black">
+          <h3 class="text-xl text-brand-black mb-1">Adult MMA</h3>
+          <p class="text-brand-gray text-sm">Ages 16+ • IFL/Bellator coaching</p>
+        </a>
+        <a href="/kids/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-1">Lions</h3>
+          <p class="text-brand-gray text-sm">Kids 7–13 • Real BJJ for kids</p>
+        </a>
+        <a href="/preschool/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-1">Cubs</h3>
+          <p class="text-brand-gray text-sm">Kids 4–6 • Confidence + structure</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Towns -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Where you live</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Coming From a Surrounding Town?</h2>
+      <p class="text-brand-gray leading-relaxed mb-6">
+        We have students from across Union County and Essex County. If you're driving in from one of these towns, the drive is short and the trial is the same.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        {towns.map((t) => (
+          <a href={`/trial/${t.slug}/`} class="bg-brand-gray-light hover:bg-brand-navy hover:text-white text-brand-black px-4 py-2 rounded-md text-sm font-bold transition-colors">
+            {t.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Ready? Walk In."
+    sub="Comfy clothes, water bottle, open mind. We'll do the rest."
+  />
+</PageLayout>

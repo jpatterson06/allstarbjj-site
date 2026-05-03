@@ -1,0 +1,101 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/CTA.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+type Props = { post: CollectionEntry<'blog'> };
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const IMG_BASE = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const categoryHeroMap: Record<string, string> = {
+  'adult-bjj':      `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`,
+  'adult-mma':      `${IMG_BASE}/2025/09/Adult-1.jpg`,
+  'adult-muay-thai': `${IMG_BASE}/2025/09/Adult-1.jpg`,
+  'kids':            `${IMG_BASE}/2025/10/Kids-Martial-Arts-3.jpg`,
+};
+const heroImg = categoryHeroMap[post.data.category] ?? `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`;
+
+const categoryLabel: Record<string, string> = {
+  'adult-bjj':       'Adult BJJ',
+  'adult-mma':       'Adult MMA',
+  'adult-muay-thai': 'Adult Muay Thai',
+  'kids':            'Kids Martial Arts',
+};
+const label = categoryLabel[post.data.category] ?? 'AllStar Blog';
+---
+
+<PageLayout title={post.data.title} description={post.data.meta_description} ogImage={heroImg}>
+
+  <!-- Post hero -->
+  <section class="relative bg-brand-black text-white overflow-hidden" style="min-height:260px">
+    <div class="absolute inset-0 z-0" aria-hidden="true">
+      <img src={heroImg} alt="" class="w-full h-full object-cover opacity-30" />
+    </div>
+    <div class="relative z-10 container-page py-14 md:py-20">
+      <div class="max-w-3xl">
+        <div class="eyebrow text-white/70 mb-3">{label}</div>
+        <h1 class="text-3xl md:text-5xl font-display font-black leading-tight">{post.data.title}</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article body -->
+  <article class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-brand-gray mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-navy">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-brand-navy">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-brand-black">{label}</span>
+      </nav>
+
+      <!-- Prose -->
+      <div class="prose prose-lg max-w-none
+        prose-headings:font-display prose-headings:text-brand-black
+        prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-brand-gray prose-p:leading-relaxed
+        prose-a:text-brand-navy prose-a:underline hover:prose-a:text-brand-red
+        prose-strong:text-brand-black
+        prose-ul:text-brand-gray prose-li:my-1
+        prose-blockquote:border-brand-red prose-blockquote:text-brand-gray prose-blockquote:not-italic">
+        <Content />
+      </div>
+
+      <!-- Author block -->
+      <div class="mt-12 pt-8 border-t border-brand-gray-mid flex gap-4 items-start">
+        <img
+          src="/images/jamal-story.jpg"
+          alt="Coach Jamal Patterson"
+          class="w-16 h-16 rounded-full object-cover flex-none"
+          onerror="this.src='https://allstarbjj.com/wp-content/uploads/sites/861/2024/02/Coach-Jamal.jpg'"
+        />
+        <div>
+          <div class="font-bold text-brand-black">Coach Jamal Patterson</div>
+          <div class="text-sm text-brand-gray mt-1">
+            Renzo Gracie black belt. Pro MMA record 6-3 (5 submissions). UWC light heavyweight champion.
+            Running AllStar Martial Arts in Union, NJ since 2011.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <CTA
+    headline="Ready to Get on the Mat?"
+    sub="First two weeks are on us — no commitment, no contract. Just show up."
+  />
+</PageLayout>

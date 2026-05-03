@@ -1,0 +1,152 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTA from '../../components/CTA.astro';
+import { towns, townBySlug } from '../../lib/towns';
+
+export function getStaticPaths() {
+  return towns.map((t) => ({ params: { town: t.slug } }));
+}
+
+const { town: slug } = Astro.params;
+const town = townBySlug(slug!);
+if (!town) throw new Error(`Unknown town slug: ${slug}`);
+
+const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
+const heroImg = town.heroImage ?? `${IMG}/2025/09/Adult-BJJ-1.jpg`;
+const heroPos = town.heroPosition ?? '50% 50%';
+
+const displayName = town.longName ?? town.name;
+const adjacentTowns = town.adjacentSlugs
+  .map((s) => towns.find((t) => t.slug === s))
+  .filter(Boolean);
+
+const faqs = [
+  { q: `How far is the gym from ${town.name}?`, a: `About ${town.driveMin === 0 ? 'right here in Union' : `${town.driveMin} minutes ${town.driveDirection}`}. Free parking on-site at 1166 West Chestnut St.` },
+  { q: "What's included in the free trial?", a: "Two weeks of unlimited classes — adults can try BJJ, Muay Thai, and MMA. Kids can try Cubs (4–6) or Lions (7–13). Use of a gi and gear during the trial. Pre-class consultation with Coach Jamal or a senior instructor. No card required to start." },
+  { q: "What if my kid has never trained?", a: "Most kids walk in untrained. We have a structured beginner curriculum. The first few classes are about getting comfortable. By month two, your kid is part of the room." },
+  { q: "Will I be the only beginner?", a: "No. There are always new students starting. We pair beginners with experienced training partners who guide rather than test. The room is calibrated for it." },
+  { q: "I'm in my 40s/50s — too late?", a: "We have students in their 50s and 60s. BJJ rewards technique over strength, so age is less of a factor than people assume. You set the pace." },
+  { q: "Do you have evening classes?", a: "Yes. Adult classes at 6 PM, 7 PM, and 8 PM most weekdays, plus Saturday morning. Built around working schedules and NYC commutes." },
+  { q: "How do I sign up?", a: "Fill out the form on this page or call (908) 641-2769. We'll text you to confirm a class time." },
+];
+---
+
+<PageLayout
+  title={`Martial Arts in ${displayName}, NJ — Free 2-Week Trial | AllStar`}
+  description={`BJJ, Muay Thai, MMA + Kids classes for ${displayName} families. ${town.driveMin === 0 ? 'In Union, NJ' : `${town.driveMin} min from ${town.name}`}. Renzo Gracie black belt. Two weeks free, no contract.`}
+  ogImage={heroImg}
+>
+  <PageHero
+    eyebrow={`${town.county}`}
+    headline={`Martial Arts in ${town.name}, NJ`}
+    sub={town.hookLine}
+    bgImage={heroImg}
+    bgPosition={heroPos}
+  />
+
+  <!-- Why drive here -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Why {displayName} families drive to AllStar</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">{town.driveMin === 0 ? `Your Neighborhood Gym Since 2011` : `${town.driveMin} Minutes — Worth The Drive`}</h2>
+      <p class="text-brand-gray text-base md:text-lg leading-relaxed mb-5">{town.whyDriveHere}</p>
+      <p class="text-brand-gray text-base md:text-lg leading-relaxed">{town.adultAngle}</p>
+    </div>
+  </section>
+
+  <!-- Programs grid -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">What we teach</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Programs Available to {town.name} Families</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="/adult-bjj/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Adult BJJ</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Brazilian Jiu-Jitsu for adults 16+. Renzo Gracie lineage. Beginners welcome.</p>
+          <div class="text-brand-navy font-bold text-sm mt-3 uppercase tracking-wider">Learn more →</div>
+        </a>
+        <a href="/adult-muay-thai/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-red">
+          <h3 class="text-xl text-brand-black mb-2">Adult Muay Thai</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real pad work, serious cardio, no fluff. The Art of 8 Limbs.</p>
+          <div class="text-brand-navy font-bold text-sm mt-3 uppercase tracking-wider">Learn more →</div>
+        </a>
+        <a href="/adult-mma/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-black">
+          <h3 class="text-xl text-brand-black mb-2">Adult MMA</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Coached by an IFL & Bellator veteran. Real integration of all three disciplines.</p>
+          <div class="text-brand-navy font-bold text-sm mt-3 uppercase tracking-wider">Learn more →</div>
+        </a>
+        <a href="/kids/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Lions (Kids 7–13)</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Confidence, discipline, bullyproofing — through real BJJ.</p>
+          <div class="text-brand-navy font-bold text-sm mt-3 uppercase tracking-wider">Learn more →</div>
+        </a>
+        <a href="/preschool/" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border-t-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs (Kids 4–6)</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Age-appropriate fun + structure. Confidence, listening, coordination.</p>
+          <div class="text-brand-navy font-bold text-sm mt-3 uppercase tracking-wider">Learn more →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach credibility -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl text-center">
+      <div class="eyebrow text-brand-gold">The coach</div>
+      <h2 class="text-3xl md:text-4xl mb-5">Why Lineage Actually Matters</h2>
+      <p class="text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto">
+        I'm Jamal Patterson. I trained directly under <strong>Renzo Gracie</strong> at his academy in New York. I'm an <strong>ADCC veteran</strong> and pro MMA fighter — fought in the IFL and Bellator, won the UWC light heavyweight title on a first-round guillotine. I graduated from Colgate. I've been coaching at AllStar in Union since 2011.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="bg-white/5 p-4 rounded-lg"><div class="font-display text-3xl text-brand-gold">★</div><div class="text-xs uppercase tracking-widest">Renzo Gracie<br/>Black Belt</div></div>
+        <div class="bg-white/5 p-4 rounded-lg"><div class="font-display text-3xl text-brand-gold">ADCC</div><div class="text-xs uppercase tracking-widest">Veteran</div></div>
+        <div class="bg-white/5 p-4 rounded-lg"><div class="font-display text-3xl text-brand-gold">UWC</div><div class="text-xs uppercase tracking-widest">Light Heavy<br/>Champion</div></div>
+        <div class="bg-white/5 p-4 rounded-lg"><div class="font-display text-3xl text-brand-gold">2011</div><div class="text-xs uppercase tracking-widest">In Union<br/>Since</div></div>
+      </div>
+      <a href="/about-us/" class="btn-outline mt-8">Read Coach Jamal's Full Bio</a>
+    </div>
+  </section>
+
+  <!-- Local landmarks reference -->
+  {town.landmarks.length > 0 && (
+    <section class="section-pad bg-white">
+      <div class="container-page max-w-3xl">
+        <div class="eyebrow">If you know {town.name}</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're A Short Drive From All Of Them</h2>
+        <div class="flex flex-wrap gap-2">
+          {town.landmarks.map((l) => (
+            <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Adjacent towns -->
+  {adjacentTowns.length > 0 && (
+    <section class="section-pad bg-brand-gray-light">
+      <div class="container-page max-w-3xl">
+        <div class="eyebrow">Nearby</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Other Towns We Serve</h2>
+        <div class="flex flex-wrap gap-3">
+          {adjacentTowns.map((t) => (
+            <a href={`/trial/${t!.slug}/`} class="bg-white border border-brand-gray-mid hover:border-brand-navy text-brand-black px-5 py-2.5 rounded-md text-sm font-bold transition-colors">
+              {t!.name} →
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline={`Two Weeks Free — ${town.name} Families Welcome`}
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>
