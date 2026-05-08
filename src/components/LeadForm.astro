@@ -81,6 +81,28 @@ const headerLabel = programLocked ? programDisplay[programLocked] ?? programLock
     )}
   </div>
 
+  <!-- A2P 10DLC compliance — required SMS consent checkbox.
+       Twilio reviewers verify this exists on the page that submits to a number
+       registered for SMS. Without it, campaigns get rejected (error 30909).
+       Must be a) checked by user, b) explicit about SMS, c) mention brand name,
+       d) reference msg+data rates, e) provide STOP/HELP keywords. -->
+  <label class="flex items-start gap-2 mt-4 text-[12px] text-white leading-snug cursor-pointer">
+    <input
+      type="checkbox" name="sms_consent" value="yes" required
+      class="mt-0.5 w-4 h-4 flex-none cursor-pointer accent-brand-gold"
+    />
+    <span>
+      I agree to receive recurring automated and personalized text messages
+      from <strong>All Star Martial Arts</strong> at the number provided about my
+      free trial, class schedules, appointment reminders, and customer service.
+      Message frequency varies. <strong>Msg &amp; data rates may apply.</strong>
+      Reply <strong>STOP</strong> to opt out, <strong>HELP</strong> for help.
+      Consent is not required to purchase. View our
+      <a href="/privacy-policy/" class="underline">Privacy Policy</a> &amp;
+      <a href="/terms-of-service/" class="underline">Terms of Service</a>.
+    </span>
+  </label>
+
   <button
     type="submit"
     class="w-full mt-4 bg-brand-black hover:bg-brand-navy text-white font-bold uppercase tracking-wider text-base py-4 rounded-md transition-colors flex items-center justify-center gap-2"
@@ -88,12 +110,4 @@ const headerLabel = programLocked ? programDisplay[programLocked] ?? programLock
     <span class="bg-white text-brand-black rounded-full w-6 h-6 inline-flex items-center justify-center text-xs">→</span>
     Get Started Today
   </button>
-
-  <div class="text-[11px] text-white/90 text-center mt-3 leading-snug">
-    By opting in, you agree to receive periodic text messages & emails from
-    AllStar Martial Arts. Your information will never be shared. Reply STOP
-    to cancel. Standard rates may apply. View our
-    <a href="/terms-of-service/" class="underline">Terms of Service</a> &
-    <a href="/privacy-policy/" class="underline">Privacy Policy</a>.
-  </div>
 </form>
