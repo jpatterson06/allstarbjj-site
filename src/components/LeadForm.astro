@@ -1,35 +1,35 @@
 ---
-// Hero opt-in form — modeled after the current allstarbjj.com red box.
-// On program pages (programLocked set), the header is "[Program] / TRY FREE 2-WEEK TRIAL".
-// Elsewhere (homepage, trial pages), the generic "VIEW OUR SCHEDULE..." header shows.
-// Wired to Netlify Forms — auto-emails Jamal + lands in the Netlify dashboard.
+// Hero opt-in form — wired to /api/lead-capture Netlify function.
+// Saves lead to Supabase and fires the AI follow-up SMS funnel.
 export interface Props {
   programLocked?: string; // pre-fill program when used on a service page
+  sourceTown?: string;    // town slug for attribution (e.g. "union", "springfield")
 }
-const { programLocked } = Astro.props;
+const { programLocked, sourceTown } = Astro.props;
 
-// Display label for the program (used in the header on program pages).
 const programDisplay: Record<string, string> = {
-  'Adult BJJ': 'Brazilian Jiu Jitsu',
-  'Adult Muay Thai': 'Muay Thai',
-  'Adult MMA': 'MMA',
-  'Lions': 'Kids — Lions',
-  'Cubs': 'Preschool — Cubs',
+  'Adult BJJ':        'Brazilian Jiu Jitsu',
+  'Adult Muay Thai':  'Muay Thai',
+  'Adult MMA':        'MMA',
+  'Lions':            'Kids — Lions',
+  'Cubs':             'Preschool — Cubs',
 };
 const headerLabel = programLocked ? programDisplay[programLocked] ?? programLocked : null;
 ---
 
 <form
-  name="lead-trial"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  action="/thanks/"
+  id="lead-form"
   class="bg-brand-red text-white rounded-md shadow-2xl p-6 md:p-7 w-full max-w-sm"
+  novalidate
 >
-  <!-- Netlify Forms hidden fields -->
-  <input type="hidden" name="form-name" value="lead-trial" />
-  <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+  <!-- Honeypot -->
+  <p class="hidden" aria-hidden="true">
+    <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+  </p>
+
+  <!-- Hidden fields for attribution -->
+  {programLocked && <input type="hidden" name="program_of_interest" value={programLocked} />}
+  {sourceTown    && <input type="hidden" name="source_town"         value={sourceTown} />}
 
   <div class="text-center mb-5">
     {headerLabel ? (
@@ -48,24 +48,22 @@ const headerLabel = programLocked ? programDisplay[programLocked] ?? programLock
 
   <div class="space-y-3">
     <input
-      type="text" name="first_name" required placeholder="First Name"
+      type="text" name="first_name" required placeholder="First Name" autocomplete="given-name"
       class="w-full px-4 py-3 bg-white text-brand-black rounded-md text-sm placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-gold"
     />
     <input
-      type="text" name="last_name" required placeholder="Last Name"
+      type="text" name="last_name" required placeholder="Last Name" autocomplete="family-name"
       class="w-full px-4 py-3 bg-white text-brand-black rounded-md text-sm placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-gold"
     />
     <input
-      type="email" name="email" required placeholder="Email Address"
+      type="email" name="email" required placeholder="Email Address" autocomplete="email"
       class="w-full px-4 py-3 bg-white text-brand-black rounded-md text-sm placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-gold"
     />
     <input
-      type="tel" name="phone" required placeholder="Mobile Phone"
+      type="tel" name="phone" required placeholder="Mobile Phone" autocomplete="tel"
       class="w-full px-4 py-3 bg-white text-brand-black rounded-md text-sm placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-gold"
     />
-    {programLocked ? (
-      <input type="hidden" name="program_of_interest" value={programLocked} />
-    ) : (
+    {!programLocked && (
       <select
         name="program_of_interest" required
         class="w-full px-4 py-3 bg-white text-brand-black rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"
@@ -81,11 +79,7 @@ const headerLabel = programLocked ? programDisplay[programLocked] ?? programLock
     )}
   </div>
 
-  <!-- A2P 10DLC compliance — required SMS consent checkbox.
-       Twilio reviewers verify this exists on the page that submits to a number
-       registered for SMS. Without it, campaigns get rejected (error 30909).
-       Must be a) checked by user, b) explicit about SMS, c) mention brand name,
-       d) reference msg+data rates, e) provide STOP/HELP keywords. -->
+  <!-- A2P 10DLC SMS consent — required by Twilio/carriers -->
   <label class="flex items-start gap-2 mt-4 text-[12px] text-white leading-snug cursor-pointer">
     <input
       type="checkbox" name="sms_consent" value="yes" required
@@ -103,11 +97,104 @@ const headerLabel = programLocked ? programDisplay[programLocked] ?? programLock
     </span>
   </label>
 
+  <!-- Error message -->
+  <div id="form-error" class="hidden mt-3 text-sm font-bold text-yellow-300 text-center"></div>
+
   <button
     type="submit"
+    id="form-submit-btn"
     class="w-full mt-4 bg-brand-black hover:bg-brand-navy text-white font-bold uppercase tracking-wider text-base py-4 rounded-md transition-colors flex items-center justify-center gap-2"
   >
     <span class="bg-white text-brand-black rounded-full w-6 h-6 inline-flex items-center justify-center text-xs">→</span>
-    Get Started Today
+    <span id="btn-label">Get Started Today</span>
   </button>
 </form>
+
+<script>
+(function () {
+  const form    = document.getElementById('lead-form');
+  const btn     = document.getElementById('form-submit-btn');
+  const btnLbl  = document.getElementById('btn-label');
+  const errBox  = document.getElementById('form-error');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Bot check
+    const bot = form.querySelector('input[name="bot-field"]');
+    if (bot && bot.value) return;
+
+    // Basic client-side validation
+    const required = ['first_name', 'last_name', 'email', 'phone'];
+    for (const name of required) {
+      const el = form.querySelector(`[name="${name}"]`);
+      if (!el || !el.value.trim()) {
+        showError('Please fill in all required fields.');
+        el?.focus();
+        return;
+      }
+    }
+    const consent = form.querySelector('input[name="sms_consent"]');
+    if (!consent || !consent.checked) {
+      showError('Please check the SMS consent box to continue.');
+      return;
+    }
+
+    // Collect all form fields
+    const data = {};
+    for (const el of form.elements) {
+      if (el.name && el.name !== 'bot-field') {
+        if (el.type === 'checkbox') {
+          data[el.name] = el.checked ? el.value : '';
+        } else {
+          data[el.name] = el.value;
+        }
+      }
+    }
+
+    // Append UTM params from URL
+    const params = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => {
+      if (params.get(k)) data[k] = params.get(k);
+    });
+
+    // Submit
+    btn.disabled = true;
+    clearError();
+    btnLbl.textContent = 'Sending…';
+
+    try {
+      const resp = await fetch('/api/lead-capture', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(data),
+      });
+      const result = await resp.json();
+
+      if (!resp.ok || result.error) {
+        throw new Error(result.error || `Server error (${resp.status})`);
+      }
+
+      // Success — redirect to thank you page
+      window.location.href = '/thanks/';
+
+    } catch (err) {
+      console.error('Lead capture error:', err);
+      showError('Something went wrong. Please try again or call us directly.');
+      btn.disabled = false;
+      btnLbl.textContent = 'Get Started Today';
+    }
+  });
+
+  function showError(msg) {
+    errBox.textContent = msg;
+    errBox.classList.remove('hidden');
+  }
+  function clearError() {
+    errBox.textContent = '';
+    errBox.classList.add('hidden');
+  }
+})();
+</script>

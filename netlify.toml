@@ -8,6 +8,9 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[functions]
+  directory = "netlify/functions"
+
 # Trailing-slash redirect — keeps URLs canonical (matches astro build.format = directory)
 [[redirects]]
   from = "/*/"
