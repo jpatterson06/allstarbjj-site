@@ -177,8 +177,9 @@ const headerLabel = programLocked ? programDisplay[programLocked] ?? programLock
         throw new Error(result.error || `Server error (${resp.status})`);
       }
 
-      // Success — redirect to thank you page
-      window.location.href = '/thanks/';
+      // Success — redirect to schedule page with program pre-selected
+      const prog = data.program_of_interest || '';
+      window.location.href = prog ? '/schedule/?program=' + encodeURIComponent(prog) : '/schedule/';
 
     } catch (err) {
       console.error('Lead capture error:', err);

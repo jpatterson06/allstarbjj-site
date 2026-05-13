@@ -1,0 +1,121 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Book Your Free Trial — All Star Martial Arts"
+  description="Pick a date and time for your free 2-week trial at All Star Martial Arts."
+  noindex
+>
+  <!-- Hero -->
+  <section class="bg-brand-black text-white py-14 md:py-20">
+    <div class="container-page text-center">
+      <div class="text-brand-gold text-6xl mb-3">★</div>
+      <h1 class="font-display text-4xl md:text-6xl uppercase font-black leading-tight mb-3" id="page-heading">
+        Book Your Free Trial
+      </h1>
+      <p class="text-gray-300 text-lg max-w-xl mx-auto">
+        Pick a date and time below — your first class is on us. No experience needed.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's included strip -->
+  <section class="bg-brand-red text-white py-6">
+    <div class="container-page">
+      <ul class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-semibold uppercase tracking-wide">
+        <li>✅ 2 Full Weeks Free</li>
+        <li>✅ All Gear Provided</li>
+        <li>✅ No Experience Needed</li>
+        <li>✅ Cancel Anytime</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Cal.com embed -->
+  <section class="bg-white py-10">
+    <div class="container-page max-w-4xl">
+      <p class="text-center text-brand-gray text-sm mb-6">Select a date and time that works for you:</p>
+      <div id="cal-inline" style="width:100%;min-height:680px;"></div>
+    </div>
+  </section>
+
+  <!-- Reassurance footer strip -->
+  <section class="bg-brand-black text-white py-10">
+    <div class="container-page text-center">
+      <p class="text-gray-400 text-sm mb-4">Questions? We're here.</p>
+      <a href="tel:+19086412769" class="btn-red inline-flex items-center gap-2">
+        📞 Call Us — (908) 641-2769
+      </a>
+    </div>
+  </section>
+</PageLayout>
+
+<script>
+(function () {
+  const CAL_LINKS = {
+    'Adult BJJ':       'adult-brazilian-jiu-jitsu-free-2-week-trial',
+    'Adult Muay Thai': 'adult-muay-thai-free-2-week-trial',
+    'Adult MMA':       'adult-mma-free-2-week-trial',
+    'Lions':           'lions-class-free-2-trial',
+    'Cubs':            'cubs2weektrial',
+  };
+
+  const LABELS = {
+    'Adult BJJ':       'Brazilian Jiu Jitsu',
+    'Adult Muay Thai': 'Muay Thai',
+    'Adult MMA':       'MMA',
+    'Lions':           'Kids — Lions',
+    'Cubs':            'Preschool — Cubs',
+  };
+
+  // Read program from query string
+  const params  = new URLSearchParams(window.location.search);
+  const program = params.get('program') || 'Adult BJJ';
+  const calSlug = CAL_LINKS[program] || CAL_LINKS['Adult BJJ'];
+  const label   = LABELS[program] || 'Martial Arts';
+
+  // Update heading dynamically
+  const heading = document.getElementById('page-heading');
+  if (heading && LABELS[program]) {
+    heading.textContent = 'Book Your Free ' + label + ' Trial';
+  }
+
+  // Load Cal.com embed
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal;
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns   = {};
+        cal.q    = cal.q || [];
+        d.head.appendChild(d.createElement('script')).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const ns  = ar[1];
+        api.q = api.q || [];
+        typeof ns === 'string' ? (cal.ns[ns] = api) && p(api, ar) : p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+  Cal('init', { origin: 'https://cal.com' });
+
+  Cal('inline', {
+    elementOrSelector: '#cal-inline',
+    calLink: 'allstarmartialarts/' + calSlug,
+    layout: 'month_view',
+  });
+
+  Cal('ui', {
+    styles: { branding: { brandColor: '#cc0000' } },
+    hideEventTypeDetails: false,
+  });
+})();
+</script>
