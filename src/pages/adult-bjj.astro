@@ -4,8 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
 
-const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
-const heroImg = `${IMG}/2025/09/Adult-BJJ-1.jpg`;
+const heroImg = '/images/adult-bjj-hero.jpg';
 
 const faqs = [
   { q: "I've never trained anything. Will I be lost?", a: "No. Most students walk in untrained. We have a structured beginner curriculum. Your first month is humbling. By month three, you're doing fine." },
@@ -35,11 +34,8 @@ const faqs = [
   <!-- Intro -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
-      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        You're not here because you want a workout. You can get a workout anywhere. You're here because you want a <strong>skill</strong> — something that compounds, something that lasts, something you'll still be doing in your fifties and sixties when most of your former gym buddies have given up.
-      </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        That's what BJJ at AllStar gives you. Real Brazilian Jiu-Jitsu, taught the way Renzo Gracie taught it to me, in a school I've run in Union since 2011.
+        Adult Brazilian Jiu-Jitsu classes in Union, NJ. Renzo Gracie lineage — directly under Renzo himself. Beginners welcome, no experience needed. Two weeks free, no contract. Evening classes at 6, 7, and 8 PM. Built for working adults and NJ Transit commuters.
       </p>
     </div>
   </section>
@@ -136,7 +132,7 @@ const faqs = [
       </div>
       <div>
         <img
-          src={`${IMG}/2025/09/Adult-1.jpg`}
+          src="/images/adult-class.jpg"
           alt="Adult Brazilian Jiu-Jitsu class at AllStar Martial Arts in Union, NJ"
           class="rounded-lg shadow-lg w-full"
           loading="lazy"

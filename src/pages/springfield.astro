@@ -1,0 +1,117 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "How far is AllStar from Springfield?", a: "About 10 minutes via Route 22 east. 1166 West Chestnut St, Union, NJ 07083. Free parking." },
+  { q: "What programs are available for Springfield families?", a: "Adult BJJ, Muay Thai, and MMA (16+). Kids Lions (7–13) and Cubs (4–6). Seasonal summer camp." },
+  { q: "Can my child start with no martial arts background?", a: "Yes. The kids curriculum starts from zero. White belt, lesson one." },
+  { q: "Is there Muay Thai instruction near Springfield?", a: "AllStar is the closest option offering authentic Muay Thai instruction in the area." },
+  { q: "What's the trial?", a: "Two weeks of unlimited classes. Free. No card required. No contract." },
+  { q: "How do I get started?", a: "Fill out the form or call (908) 641-2769. We'll text you to set up a time." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Springfield, NJ — BJJ, Muay Thai & Kids Classes | AllStar"
+  description="Martial arts classes for Springfield, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="10 minutes on Route 22"
+    headline="Martial Arts in Springfield, NJ"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs 10 minutes from Springfield. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Springfield and Union are practically neighbors. Route 22 connects them in about 10 minutes — sometimes less depending on where in Springfield you're starting. AllStar Martial Arts is right on the Union side of that line.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Springfield families have been training with us for years. Kids in the Lions program who started as white belts are now in the adult class. Adults who signed up on a Tuesday evening recommendation have been showing up twice a week for a decade. That's what happens when the instruction is real and the culture is right.
+      </p>
+    </div>
+  </section>
+
+  <!-- BJJ -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Brazilian Jiu-Jitsu</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Near Springfield, NJ</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Coach Jamal Patterson trained directly under Renzo Gracie in New York. He's an ADCC veteran and fought professionally in the IFL, Bellator, and UWC — where he won the light heavyweight title. That competition background isn't a credential on the wall. It informs the instruction.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        Most martial arts instructors learned recreationally. Jamal's techniques were pressure-tested in professional competition. Springfield students who've trained at both will tell you the depth of instruction is different. Adult BJJ at AllStar: ages 16 and up, beginners welcome, evening classes built for Springfield commuters.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Programs</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts in Springfield, NJ</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">
+        The kids program is structured around real Brazilian Jiu-Jitsu — not karate, not Taekwondo, not cardio-kickboxing for kids. The art that Helio Gracie designed so that a smaller person could control a larger one through technique.
+      </p>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool energy with martial arts structure. Big focus on listening, coordination, and confidence through movement.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real technique, progressive curriculum, stripe and belt system. Springfield parents tell us their kids' teachers notice a difference in focus and composure by October of the school year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Muay Thai + MMA -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="eyebrow text-brand-gold">Muay Thai</div>
+          <h2 class="text-2xl md:text-3xl mb-4">Only Authentic Muay Thai in the Area</h2>
+          <p class="text-white/90 leading-relaxed">
+            Springfield has no Muay Thai gym. Neither does most of Union County. AllStar is the only school in the area offering authentic Muay Thai alongside BJJ. Real pad work, real instruction, adults of all fitness levels welcome.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow text-brand-gold">MMA</div>
+          <h2 class="text-2xl md:text-3xl mb-4">MMA Near Springfield, NJ</h2>
+          <p class="text-white/90 leading-relaxed">
+            Our MMA program combines BJJ, Muay Thai, and wrestling. Coached by Jamal Patterson — pro MMA fighter, IFL and Bellator veteran. Adults 16 and up. Not recreational — structured, progressive, professional-level instruction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">If you know Springfield</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">10 Minutes via Route 22 East</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Springfield Mall", "Jonathan Dayton High School", "Caldwell Elementary", "Sandmeier School", "Walton School", "Gaudineer School", "Mountain Ave", "Morris Ave", "Springfield Library"].map((l) => (
+          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Springfield Families Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>

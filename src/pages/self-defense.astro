@@ -1,0 +1,169 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "Do I need any experience to start?", a: "No. Most students walk in untrained. The beginner curriculum assumes zero background." },
+  { q: "I'm a woman — will I feel comfortable?", a: "Yes. We have women at every belt level. The environment is controlled and respectful. Many women tell us it's the most welcoming gym they've trained at." },
+  { q: "How long before I can actually defend myself?", a: "Most students feel a meaningful difference within 3–4 months of consistent training (2–3x per week). The mental confidence shift often comes faster than the physical skills." },
+  { q: "What's the difference between your self-defense and a workshop?", a: "Live training against a resisting partner. That's the whole difference. It's what makes technique automatic instead of theoretical." },
+  { q: "Can my teenager join?", a: "Yes. Our Lions program (ages 7–13) teaches real self-defense through BJJ. Adults 16+ join the adult program." },
+  { q: "How do I start?", a: "Fill out the trial form or call (908) 641-2769. We'll text you to schedule your first class." },
+];
+---
+
+<PageLayout
+  title="Self-Defense Classes in Union, NJ — Real Skills, Not Choreography | AllStar"
+  description="Self-defense classes in Union, NJ at AllStar Martial Arts. Brazilian Jiu-Jitsu black belt instruction. Adults, teens, and women welcome. Free 2-week trial — no contract."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="Adults, Teens & Women Welcome"
+    headline="Self-Defense Classes in Union, NJ"
+    sub="Real skills, not choreography. Brazilian Jiu-Jitsu black belt instruction. Free 2-week trial — no contract, no pressure."
+    bgImage="/images/adult-bjj-hero.jpg"
+    programLocked="Adult BJJ"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        A few years ago, a woman drove from Cranford to train with us. She'd taken a self-defense workshop at her gym — the kind where you practice wrist grabs in slow motion for 90 minutes and leave feeling like you've learned something. Six months later, she didn't feel safer. She came here.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        That's the difference between a self-defense workshop and real self-defense training. One gives you a certificate. The other changes how you carry yourself.
+      </p>
+    </div>
+  </section>
+
+  <!-- What we actually teach -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">What we actually teach</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Self-Defense Built Into Everything We Do</h2>
+      <p class="text-brand-gray leading-relaxed mb-6">
+        At AllStar Martial Arts in Union, self-defense isn't a program we bolt on. It's the foundation of everything we do. Brazilian Jiu-Jitsu — our main program — was built specifically for self-defense. Helio Gracie designed it because he was a small man who couldn't overpower bigger opponents. The whole art is built around the idea that technique beats strength.
+      </p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">Control on the ground</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Most real confrontations end up there. Most self-defense classes never address it.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">Distance and escape</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Chokes, grabs, pins — we drill getting out of all of it.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">Calm under pressure</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Rolling with a live partner who's trying to submit you teaches you to think clearly when your heart is pounding. That skill transfers.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">Leverage, not strength</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Size stops mattering after a few months of training. Technique takes over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Women's + Teens -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow">Women</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Women's Self-Defense Classes</h2>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            We have women training at every belt level at AllStar — including a current female brown belt who regularly trains with men twice her size and holds her own. Not because she's exceptional. Because the art works.
+          </p>
+          <p class="text-brand-gray leading-relaxed">
+            What a lot of women tell us after a few months: they don't just feel safer. They feel different. More confident walking to their car at night. More grounded when someone gets in their space. That shift is real and it comes from actual training, not choreography.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow">Kids & Teens</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Teen Self-Defense Classes</h2>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            Our Lions program (ages 7–13) teaches real self-defense through Brazilian Jiu-Jitsu. Not karate. Not Taekwondo. BJJ — the most practically tested martial art for self-defense situations.
+          </p>
+          <p class="text-brand-gray leading-relaxed">
+            Bullying is one of the most common reasons parents bring their kids here. Not so the kid can fight — so the kid doesn't have to. The confidence that comes from knowing you can handle yourself is the best bully repellent there is.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What a class looks like -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow text-brand-gold">What a class looks like</div>
+      <h2 class="text-3xl md:text-4xl mb-8">Adult Self-Defense Classes — What to Expect</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/5 p-6 rounded-lg">
+          <div class="font-display text-5xl text-brand-gold mb-2">10<span class="text-xl">min</span></div>
+          <h3 class="text-lg mb-2">Warm-up</h3>
+          <p class="text-white/80 text-sm">Shrimping, rolls, movement drills. Gets the body ready and teaches foundational mechanics at the same time.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <div class="font-display text-5xl text-brand-gold mb-2">35<span class="text-xl">min</span></div>
+          <h3 class="text-lg mb-2">Technique</h3>
+          <p class="text-white/80 text-sm">Coach Jamal or a senior instructor walks through 1–2 specific techniques — a takedown, an escape, a control position.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <div class="font-display text-5xl text-brand-gold mb-2">15<span class="text-xl">min</span></div>
+          <h3 class="text-lg mb-2">Live rolling</h3>
+          <p class="text-white/80 text-sm">Apply what you learned against a resisting partner. The intensity is calibrated to your level. Beginners work with experienced partners who guide, not overwhelm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach + Workshops comparison -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow">About Coach Jamal</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Real Credentials. Real Training.</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former pro MMA fighter — IFL, Bellator, UWC Light Heavyweight Champion. He graduated from Colgate and has been coaching at AllStar in Union since 2011. His techniques were tested in professional competition. What he teaches in class is what he used when money was on the line.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow">Workshops vs. Real Training</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">The Real Difference</h2>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            Workshops teach you to react to a specific scenario. Training teaches you to react to anything. The difference is live training — working with a partner who isn't cooperating.
+          </p>
+          <p class="text-brand-gray leading-relaxed">
+            Come train with us for two weeks. Free. No contract. You'll know by the end of the first class whether this is different.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serving area -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Serving Union County</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Self-Defense for the Whole Family</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">AllStar Martial Arts has been in Union since 2011. Free parking on-site. Adult evening classes start at 6 PM — built for working schedules and NJ Transit commuters.</p>
+      <div class="flex flex-wrap gap-2">
+        {["Union", "Cranford", "Westfield", "Springfield", "Kenilworth", "Maplewood", "Millburn", "Mountainside", "Roselle Park", "Summit", "Chatham", "Livingston"].map((l) => (
+          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. No Commitment."
+    sub="Real self-defense classes in Union, NJ. Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. Family-owned since 2011."
+  />
+</PageLayout>

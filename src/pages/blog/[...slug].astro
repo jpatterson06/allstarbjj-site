@@ -15,14 +15,13 @@ type Props = { post: CollectionEntry<'blog'> };
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-const IMG_BASE = 'https://allstarbjj.com/wp-content/uploads/sites/861';
 const categoryHeroMap: Record<string, string> = {
-  'adult-bjj':      `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`,
-  'adult-mma':      `${IMG_BASE}/2025/09/Adult-1.jpg`,
-  'adult-muay-thai': `${IMG_BASE}/2025/09/Adult-1.jpg`,
-  'kids':            `${IMG_BASE}/2025/10/Kids-Martial-Arts-3.jpg`,
+  'adult-bjj':       '/images/adult-bjj-hero.jpg',
+  'adult-mma':       '/images/adult-class.jpg',
+  'adult-muay-thai': '/images/adult-class.jpg',
+  'kids':            '/images/kids-martial-arts.jpg',
 };
-const heroImg = categoryHeroMap[post.data.category] ?? `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`;
+const heroImg = categoryHeroMap[post.data.category] ?? '/images/adult-bjj-hero.jpg';
 
 const categoryLabel: Record<string, string> = {
   'adult-bjj':       'Adult BJJ',
@@ -80,7 +79,7 @@ const label = categoryLabel[post.data.category] ?? 'AllStar Blog';
           src="/images/jamal-story.jpg"
           alt="Coach Jamal Patterson"
           class="w-16 h-16 rounded-full object-cover flex-none"
-          onerror="this.src='https://allstarbjj.com/wp-content/uploads/sites/861/2024/02/Coach-Jamal.jpg'"
+          onerror="this.src='/images/jamal-2.jpg'"
         />
         <div>
           <div class="font-bold text-brand-black">Coach Jamal Patterson</div>

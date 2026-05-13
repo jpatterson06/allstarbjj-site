@@ -4,7 +4,6 @@ import LeadForm from '../../components/LeadForm.astro';
 import FAQ from '../../components/FAQ.astro';
 import { towns } from '../../lib/towns';
 
-const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
 
 const faqs = [
   { q: "What's actually included?", a: "Two weeks of unlimited classes. You can sample any program — Adult BJJ, Adult Muay Thai, Adult MMA, Cubs (kids 4–6), Lions (kids 7–13). Use of a gi and gear during the trial. A pre-class consultation with Coach Jamal or a senior instructor." },
@@ -27,7 +26,7 @@ const testimonials = [
 <PageLayout
   title="Free 2-Week Martial Arts Trial in Union, NJ — AllStar"
   description="Get 2 full weeks free at AllStar Martial Arts in Union, NJ. BJJ, Muay Thai, MMA + kids classes. No contract, no credit card, no pressure."
-  ogImage={`${IMG}/2025/09/Adult-BJJ-1.jpg`}
+  ogImage={"/images/adult-bjj-hero.jpg"}
 >
 
   <!-- HERO + FORM -->
@@ -91,7 +90,7 @@ const testimonials = [
       <div class="flex flex-col md:flex-row gap-10 items-center">
         <div class="flex-1">
           <img
-            src={`${IMG}/2025/09/Adult-BJJ-1.jpg`}
+            src={"/images/adult-bjj-hero.jpg"}
             alt="AllStar BJJ class in action"
             class="rounded-xl w-full object-cover shadow-lg"
             loading="lazy"

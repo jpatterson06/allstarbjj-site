@@ -3,8 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CTA from '../components/CTA.astro';
 
-const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
-const heroImg = `${IMG}/2025/11/Jamal-2.jpg`;
+const heroImg = '/images/jamal-2.jpg';
 
 // Person schema for Jamal — adds entity data Google uses for authority signals
 const personSchema = {
@@ -74,7 +73,7 @@ const personSchema = {
       </div>
       <div class="md:col-span-2">
         <img
-          src={`${IMG}/2025/11/Jamal-3.jpg`}
+          src="/images/jamal-3.jpg"
           alt="Jamal Patterson — founder and head instructor of AllStar Martial Arts"
           class="w-full rounded-lg shadow-lg"
           loading="lazy"

@@ -5,15 +5,13 @@ import ProgramCard from '../components/ProgramCard.astro';
 import CTA from '../components/CTA.astro';
 import YouTubeShort from '../components/YouTubeShort.astro';
 
-// Program cards — using real photos from the existing WordPress site
-const IMG_BASE = 'https://allstarbjj.com/wp-content/uploads/sites/861';
 const programs = [
   {
     title: 'Brazilian Jiu Jitsu',
     ages: 'Ages 16+',
     href: '/adult-bjj/',
     blurb: 'The gentle art. Beginner-friendly. Every black belt in here started right where you are. Free 2-week trial.',
-    image: `${IMG_BASE}/2025/09/Adult-BJJ-1.jpg`,
+    image: '/images/adult-bjj-hero.jpg',
   },
   {
     title: 'Muay Thai',
@@ -34,7 +32,7 @@ const programs = [
     ages: 'Kids ages 7-13',
     href: '/kids/',
     blurb: 'Real techniques. Confidence + bullyproofing + discipline. The structure kids that age need with the energy they want.',
-    image: `${IMG_BASE}/2025/10/Kids-Martial-Arts-3.jpg`,
+    image: '/images/kids-martial-arts.jpg',
   },
   {
     title: 'Cubs',
@@ -56,6 +54,21 @@ const aboutImg = '/images/mma-team.jpg';
   description="Free 2-week trial at AllStar Martial Arts in Union, NJ. Brazilian Jiu Jitsu, Muay Thai, MMA + kids classes (ages 4-13). Family-owned since 2011. Beginner-friendly."
   ogImage={heroImg}
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "AllStar Martial Arts",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1166 West Chestnut St",
+      "addressLocality": "Union",
+      "addressRegion": "NJ",
+      "postalCode": "07083"
+    },
+    "telephone": "(908) 641-2769",
+    "url": "https://allstarbjj.com"
+  })} />
+
   <Hero bgImage={heroImg} bgPosition="50% 60%" />
 
   <!-- About our programs -->

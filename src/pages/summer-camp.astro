@@ -1,0 +1,150 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "What ages does camp serve?", a: "Ages 4–12. Cubs (4–6) and Lions (7–12) run as separate groups with age-appropriate curriculum." },
+  { q: "Does my child need any martial arts experience?", a: "No. Most campers start with zero background. The curriculum is built for beginners. Kids who've trained before get more advanced work within their group." },
+  { q: "What should my child bring?", a: "Comfortable clothes, sneakers, water bottle, and a lunch or snack. We provide everything else including loaner gear for technique sessions." },
+  { q: "How many kids are in each group?", a: "We keep groups small intentionally. Instructors know every kid's name by day two." },
+  { q: "Can my child try a day before committing?", a: "Yes. Call us at (908) 641-2769 and we'll set up a trial day." },
+  { q: "What if my child has special needs or sensory sensitivities?", a: "Call us before registering. We want to make sure we can give your child the right experience. We've successfully worked with kids across a range of needs — but we want the conversation first." },
+  { q: "Will camp spots still be available?", a: "We fill up every summer. Spots go fast in spring. If you're reading this in April or May — call now." },
+];
+---
+
+<PageLayout
+  title="Martial Arts Summer Camp Union NJ — Ages 4–12 | AllStar Martial Arts"
+  description="Kids martial arts summer camp in Union, NJ at AllStar Martial Arts. Ages 4–12. Brazilian Jiu-Jitsu, movement, games, and life skills. Family-owned since 2011. Limited spots."
+  ogImage="/images/kids-martial-arts.jpg"
+>
+  <PageHero
+    eyebrow="Ages 4–12 · Limited Spots"
+    headline="Martial Arts Summer Camp in Union, NJ"
+    sub="Real structure. Real skills. Not just a camp logo on a shirt. Ages 4–12. Limited enrollment — spots fill every year."
+    bgImage="/images/kids-martial-arts.jpg"
+    bgPosition="50% 30%"
+    programLocked="Lions"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Every summer, parents in Union County face the same problem. Work doesn't stop. Camp waitlists fill up in February. And half the options out there are glorified daycare with a logo on the shirt.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Last summer, a dad from Westfield called us in June — panicking, two weeks before camp started, because his son's spot fell through. His kid had never done martial arts. He just needed somewhere structured, safe, and actually good. His son came back the next summer. And the summer after that. That's what we built AllStar Summer Camp to be.
+      </p>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">What a day looks like</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Martial Arts Summer Camp — What We Do</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">Morning warm-up</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Movement drills, stretching, partner games. Gets the energy out in a structured way.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">Technique block</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Age-appropriate BJJ or Muay Thai basics. Cubs focus on motor skills and simple movements. Lions get real technique — takedowns, escapes, control positions.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-lg text-brand-black mb-2">Games and challenges</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Martial arts games that reinforce what was taught. Kids don't realize they're drilling — they think they're playing.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-lg text-brand-black mb-2">Life skills segment</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Discipline, respect, focus, handling frustration. The same values we teach year-round, delivered in a way that actually lands with kids.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Age groups -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">Age groups</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Two Programs, One Camp</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-brand-gray-light p-8 rounded-lg border-t-4 border-brand-gold">
+          <div class="font-display text-5xl text-brand-gold mb-3">4–6</div>
+          <h3 class="text-2xl text-brand-black mb-3">Cubs</h3>
+          <p class="text-brand-gray leading-relaxed">Everything is built around attention spans that last about four minutes. Short activities, high energy, lots of positive reinforcement. Focus on listening skills, coordination, and following directions — which parents tell us translates directly into the school year.</p>
+        </div>
+        <div class="bg-brand-gray-light p-8 rounded-lg border-t-4 border-brand-navy">
+          <div class="font-display text-5xl text-brand-navy mb-3">7–12</div>
+          <h3 class="text-2xl text-brand-black mb-3">Lions</h3>
+          <p class="text-brand-gray leading-relaxed">Real technique, real structure, real challenges. Kids this age rise to expectations when you set them high. By the end of camp, Lions are doing takedowns, escapes, and basic grappling sequences. They earn a stripe on their camp belt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why martial arts camp -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow text-brand-gold">Why martial arts camp</div>
+      <h2 class="text-3xl md:text-4xl mb-8">What Martial Arts Gives Kids That Standard Camp Doesn't</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white/5 p-6 rounded-lg">
+          <h3 class="text-lg mb-2">Failure tolerance</h3>
+          <p class="text-white/80 text-sm leading-relaxed">BJJ is hard. You tap. You lose position. You try again. Kids learn — in a safe environment — that failure isn't permanent. That lesson shows up everywhere else in their lives.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <h3 class="text-lg mb-2">Physical confidence</h3>
+          <p class="text-white/80 text-sm leading-relaxed">Not gym-class confidence. Real confidence — knowing that you can handle your body, handle contact, handle pressure.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <h3 class="text-lg mb-2">Focus on demand</h3>
+          <p class="text-white/80 text-sm leading-relaxed">A parent from Springfield told us her daughter's teachers noticed a difference in the fall. She was more focused, less reactive. That came from drilling techniques that require attention.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <h3 class="text-lg mb-2">Bully-proofing</h3>
+          <p class="text-white/80 text-sm leading-relaxed">Not through aggression — through confidence. Kids who know they can handle themselves don't need to prove it. That changes the social dynamic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serving area -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Serving Union County</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">We Draw Kids From Across Union County Every Summer</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">AllStar Summer Camp is at 1166 West Chestnut St, Union, NJ 07083. Free parking on-site. 10–15 minutes from most Union County towns.</p>
+      <div class="flex flex-wrap gap-2">
+        {["Union", "Westfield", "Cranford", "Springfield", "Kenilworth", "Maplewood", "Millburn", "Mountainside", "Roselle Park", "Summit", "Chatham", "Livingston"].map((l) => (
+          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- After camp -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">After camp</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Year-Round Kids Programs at AllStar</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">Many of our summer camp kids join our year-round programs in September. The transition is easy because they already know the gym, the coaches, and the other kids.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="/preschool/" class="bg-white border border-brand-gray-mid hover:border-brand-navy text-brand-black px-5 py-2.5 rounded-md text-sm font-bold transition-colors">Cubs (Ages 4–6) →</a>
+        <a href="/kids/" class="bg-white border border-brand-gray-mid hover:border-brand-navy text-brand-black px-5 py-2.5 rounded-md text-sm font-bold transition-colors">Lions (Ages 7–13) →</a>
+        <a href="/adult-bjj/" class="bg-white border border-brand-gray-mid hover:border-brand-navy text-brand-black px-5 py-2.5 rounded-md text-sm font-bold transition-colors">Adult BJJ →</a>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Spots Are Limited — Register Before They Fill"
+    sub="AllStar Summer Camp fills up every year, usually by April or May. Call (908) 641-2769 or fill out the form."
+  />
+</PageLayout>

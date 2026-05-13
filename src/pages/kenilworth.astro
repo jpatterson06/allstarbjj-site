@@ -1,0 +1,114 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "How far is AllStar from Kenilworth?", a: "Under 5 minutes for most Kenilworth addresses. 1166 West Chestnut St, Union, NJ 07083. Free parking on-site." },
+  { q: "How does AllStar compare to Rolling Bear BJJ?", a: "Both are real BJJ schools. The distinction is coaching background — Jamal Patterson competed professionally at the highest levels. We also offer Muay Thai and MMA, which Rolling Bear does not." },
+  { q: "What programs run in the evenings?", a: "Adult BJJ, Muay Thai, and MMA run evenings Monday through Friday at 6, 7, and 8 PM. Kids classes run late afternoon." },
+  { q: "Do I need gear to start?", a: "Not for the trial. We provide everything for your first two weeks." },
+  { q: "Can I try a class before committing?", a: "That's the whole point of the trial. Come in, try it, decide." },
+  { q: "How do I start?", a: "Fill out the form on this page or call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Kenilworth, NJ — BJJ, MMA & Muay Thai | AllStar"
+  description="Martial arts classes for Kenilworth, NJ residents at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="5 minutes from Kenilworth"
+    headline="Martial Arts in Kenilworth, NJ"
+    sub="5 minutes from your front door. BJJ, Muay Thai, MMA, and Kids programs. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Kenilworth is one of the closest towns to AllStar — under five minutes in most cases. You're practically neighbors.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Which makes it surprising how many Kenilworth residents have never walked through the door. AllStar Martial Arts is at 1166 West Chestnut St in Union — just across the Kenilworth border. Brazilian Jiu-Jitsu, Muay Thai, MMA, and kids programs. Coached by a Renzo Gracie black belt who fought professionally in the IFL and Bellator. Free 2-week trial.
+      </p>
+    </div>
+  </section>
+
+  <!-- BJJ -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Brazilian Jiu-Jitsu</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Near Kenilworth, NJ</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Rolling Bear BJJ is in Kenilworth — they're a real school and worth mentioning honestly. They run a solid program with over 40 classes monthly.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        The specific difference at AllStar: Coach Jamal Patterson's competition background. ADCC veteran. Professional fights in the IFL and Bellator. UWC light heavyweight champion. That level of competition experience changes how technique is explained and drilled. Kenilworth members who've trained at both have made that comparison themselves. We're also a few minutes closer for most Kenilworth residents than the Rolling Bear location.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Programs</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts Near Kenilworth, NJ</h2>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool martial arts with big energy and short attention spans in mind. Coordination, listening, confidence — through movement and games. Parents notice results fast.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real BJJ for kids who are ready to work. Progressive belt system, real techniques, real challenge. Common reasons Kenilworth parents enroll: after-school structure, bully concerns, building confidence, and finding an activity their kid will actually stick with.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Muay Thai + MMA -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="eyebrow text-brand-gold">Muay Thai</div>
+          <h2 class="text-2xl md:text-3xl mb-4">Closest Muay Thai to Kenilworth</h2>
+          <p class="text-white/90 leading-relaxed">
+            Kenilworth has no Muay Thai gym. The closest authentic Muay Thai instruction is AllStar — five minutes away. Real pad work, real instruction, adults of all fitness levels welcome. Kickboxing studios give you choreography. Muay Thai at AllStar gives you a skill.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow text-brand-gold">MMA</div>
+          <h2 class="text-2xl md:text-3xl mb-4">MMA Near Kenilworth, NJ</h2>
+          <p class="text-white/90 leading-relaxed">
+            Our MMA program combines BJJ, Muay Thai, and wrestling. Coached by Jamal Patterson. Adults 16 and up. The closest MMA coaching by a professional fight veteran available to Kenilworth residents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">If you know Kenilworth</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Five Minutes From All Of It</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Kenilworth Town Center", "Boulevard Elementary", "Harding Elementary", "David Brearley High School", "Kenilworth Community Pool", "Kenilworth Recreation", "Boulevard Ave", "Route 22 corridor"].map((l) => (
+          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Kenilworth Residents Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>

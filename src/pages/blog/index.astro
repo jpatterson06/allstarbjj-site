@@ -6,8 +6,7 @@ import CTA from '../../components/CTA.astro';
 
 const allPosts = await getCollection('blog');
 
-const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
-const heroImg = `${IMG}/2025/09/Adult-1.jpg`;
+const heroImg = '/images/adult-class.jpg';
 
 const categoryOrder = ['adult-bjj', 'adult-muay-thai', 'adult-mma', 'kids'];
 const categoryLabel: Record<string, string> = {

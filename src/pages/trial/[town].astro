@@ -13,8 +13,7 @@ const { town: slug } = Astro.params;
 const town = townBySlug(slug!);
 if (!town) throw new Error(`Unknown town slug: ${slug}`);
 
-const IMG = 'https://allstarbjj.com/wp-content/uploads/sites/861';
-const heroImg = town.heroImage ?? `${IMG}/2025/09/Adult-BJJ-1.jpg`;
+const heroImg = town.heroImage ?? '/images/adult-bjj-hero.jpg';
 const heroPos = town.heroPosition ?? '50% 50%';
 
 const displayName = town.longName ?? town.name;
