@@ -1,0 +1,109 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "What ages does the after-school program serve?", a: "Cubs is ages 4–6. Lions is ages 7–13. Both programs run after school and in the early evening." },
+  { q: "Do kids need prior experience?", a: "No. Most kids start with no martial arts background. The curriculum is built for beginners at every age." },
+  { q: "What if my kid has trouble focusing or sitting still?", a: "Those are often the kids who benefit most. BJJ requires active engagement — you can't zone out when someone is trying to put you in a position. That engagement is what builds the focus over time." },
+  { q: "Will my kid get hurt?", a: "Contact is controlled and supervised. New students are paired carefully. The environment is designed for safe, progressive development." },
+  { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract. Call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="After School Martial Arts in Union, NJ — Ages 4–13 | AllStar"
+  description="After-school martial arts for kids ages 4–13 in Union, NJ at AllStar Martial Arts. Brazilian Jiu-Jitsu. Structure, discipline, real skills. Free 2-week trial."
+  ogImage="/images/kids-martial-arts.jpg"
+>
+  <PageHero
+    eyebrow="Ages 4–13 | After School"
+    headline="After-School Martial Arts in Union, NJ"
+    sub="Structure, discipline, and real skills after school. BJJ for kids ages 4–13. Coach Jamal Patterson. Free 2-week trial — no contract."
+    bgImage="/images/kids-martial-arts.jpg"
+    programLocked="Lions"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        The window between school and dinner is either productive or it isn't. For a lot of families in Union, it's where homework gets avoided, screens get stared at, and kids come home wired with nowhere to put it.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        AllStar's after-school program gives that time a structure. Kids come in, they move, they focus, they learn something real. They go home tired in the right way — not overstimulated, but physically worked and mentally settled.
+      </p>
+    </div>
+  </section>
+
+  <!-- What happens in class -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">What happens in class</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Structure From Bell to Bell</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Physical movement first</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Kids sit all day. Classes start with conditioning — running, jumping, movement patterns — to shake off the school-day stillness before we ask them to focus on technique.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Technique and learning</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Brazilian Jiu-Jitsu taught progressively. Real positions, real escapes, real takedowns — broken into age-appropriate chunks with clear progression.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Controlled sparring</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Live drilling where kids test what they've learned against resistance. This is where the confidence builds — not from being told they're doing great, but from actually handling something difficult.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Cool-down and focus</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Class ends structured. Kids leave calmer than they arrived. That transition matters for the dinner table and the homework session that follows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discipline transfer -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow text-brand-gold">Why it shows up at school</div>
+      <h2 class="text-3xl md:text-4xl mb-6">The Discipline Transfer</h2>
+      <p class="text-white/90 leading-relaxed mb-5">
+        The same focus it takes to learn a jiu-jitsu technique — listen, repeat, adapt, try again — is the same focus that math and reading require.
+      </p>
+      <p class="text-white/90 leading-relaxed">
+        AllStar parents consistently report that within 60–90 days of consistent training, teachers notice a difference. Not just in how their kid handles conflict at recess. In how they sit. How they listen. How they respond when a subject gets hard. Martial arts doesn't teach discipline as a concept. It requires it, class after class, until it becomes a habit of mind.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cubs vs Lions -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Two programs, two age groups</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Choose the Right Fit</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-brand-gray-light p-8 rounded-lg border-t-4 border-brand-gold">
+          <h3 class="text-2xl text-brand-black mb-3">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray leading-relaxed mb-4">Classes are 30 minutes, structured around age-appropriate movement, listening games, coordination activities, and basic jiu-jitsu concepts. At this age, the goal is foundation: body awareness, following instruction, and physical confidence.</p>
+          <a href="/preschool/" class="text-brand-navy font-bold text-sm hover:underline">Learn more about Cubs →</a>
+        </div>
+        <div class="bg-brand-gray-light p-8 rounded-lg border-t-4 border-brand-navy">
+          <h3 class="text-2xl text-brand-black mb-3">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray leading-relaxed mb-4">Real Brazilian Jiu-Jitsu — the same art that adults train, adjusted for developmental stage. Belt progression is real. Milestones are earned. Kids who've been in Lions for two or three years are noticeably more capable — physically, socially, and under pressure.</p>
+          <a href="/kids/" class="text-brand-navy font-bold text-sm hover:underline">Learn more about Lions →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. After-School Slots Available."
+    sub="After-school martial arts in Union, NJ. Ages 4–13. Real skills, real discipline. No commitment."
+  />
+</PageLayout>

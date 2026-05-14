@@ -1,0 +1,119 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "Is it safe to train with men?", a: "Yes. Partners are paired carefully, especially for beginners. The culture at AllStar is specifically controlled to prevent the macho nonsense that exists at some gyms." },
+  { q: "Do I need to be strong or athletic?", a: "No. That's the whole point of BJJ. The art is built for people who can't overpower their opponent. Fitness builds as you train." },
+  { q: "Am I too old to start?", a: "We have women starting in their 40s and 50s. BJJ rewards technique over athleticism. Age is less of a factor than people assume." },
+  { q: "What do I wear?", a: "Comfortable athletic clothes for your first class. You'll need a gi after the trial — about $80–$150 and lasts years." },
+  { q: "Free trial?", a: "Two weeks, unlimited classes. No card required, no contract. Call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="BJJ for Women in Union, NJ — Real Training, Real Results | AllStar"
+  description="Women's Brazilian Jiu-Jitsu classes in Union, NJ at AllStar Martial Arts. Renzo Gracie lineage. Beginners welcome. Self-defense, fitness, confidence. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="Women Welcome at Every Level"
+    headline="BJJ for Women in Union, NJ"
+    sub="Real training, real results. Renzo Gracie lineage. Beginners welcome. Self-defense, fitness, confidence — free 2-week trial, no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+    programLocked="Adult BJJ"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        AllStar has a current female brown belt who trains regularly with men twice her size and holds her own. Not because she's exceptional — because the art works. Leverage and technique beat size and strength when they're taught right.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        That's the premise of Brazilian Jiu-Jitsu: a smaller person can control a larger one through technique. Helio Gracie built the art around it because he was a small man. It works for women for the same reason.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why women train BJJ -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Why women train BJJ at AllStar</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Four Reasons That Actually Hold Up</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Self-defense</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">BJJ is the most tested self-defense art for smaller people against larger opponents. It addresses the ground — where most real confrontations end up — which most self-defense classes never touch.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Fitness</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">Every class burns 400–700 calories. The core strength, flexibility, and body composition changes that come from regular training are significant. And it never feels like exercise.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Confidence</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">After six months of rolling with partners who are trying to submit you, pressure stops being scary. That shift carries into every part of life.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Community</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">BJJ communities are tight. AllStar's is tighter than most. Women who train here find training partners who look out for them, not through them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow text-brand-gold">What to expect</div>
+      <h2 class="text-3xl md:text-4xl mb-8">Starting BJJ as a Woman — Month by Month</h2>
+      <div class="space-y-5">
+        <div class="bg-white/5 p-6 rounded-lg flex gap-5">
+          <div class="font-display text-2xl text-brand-gold shrink-0 w-24">Day 1</div>
+          <p class="text-white/90 leading-relaxed">You'll feel lost. You'll tap a lot. You'll leave sore in places you didn't know existed. This is normal and universal — every person on the mat has been exactly where you are.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg flex gap-5">
+          <div class="font-display text-2xl text-brand-gold shrink-0 w-24">Month 1</div>
+          <p class="text-white/90 leading-relaxed">The movements start to make sense. You build a few techniques you can rely on. The soreness becomes familiar.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg flex gap-5">
+          <div class="font-display text-2xl text-brand-gold shrink-0 w-24">3 months</div>
+          <p class="text-white/90 leading-relaxed">You notice you're calmer under pressure. Not just on the mat.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg flex gap-5">
+          <div class="font-display text-2xl text-brand-gold shrink-0 w-24">6 months</div>
+          <p class="text-white/90 leading-relaxed">You're a real practitioner. You have a game. You have preferences. You have training partners who make you better.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg flex gap-5">
+          <div class="font-display text-2xl text-brand-gold shrink-0 w-24">1 year</div>
+          <p class="text-white/90 leading-relaxed">Most women who make it a year don't stop. It becomes part of how they identify.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environment -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">The environment at AllStar</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Safe, Structured, and Calibrated</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Coach Jamal Patterson sets the culture, and the culture doesn't have an ego problem. New students — women especially — are paired with experienced training partners who guide rather than test. There's no machismo tolerated on the mat.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        Women train in the same classes as men at AllStar. There's no separate women's program because there doesn't need to be — the environment makes mixed training feel comfortable from day one. But if you want to ease in slowly, we can accommodate that too.
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. No Contract."
+    sub="Women's BJJ in Union, NJ. Real training, real results. Beginners welcome at every age."
+  />
+</PageLayout>

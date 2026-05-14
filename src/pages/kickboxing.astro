@@ -1,0 +1,119 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "Do I need experience?", a: "No. Most students walk in having never thrown a real punch. The curriculum starts from zero." },
+  { q: "Will I spar?", a: "Not until you're ready — typically 6+ months in, and only if you want to. Most adults never spar." },
+  { q: "How many calories do I burn?", a: "600–1,000 per class depending on intensity. One of the highest calorie burns of any workout format." },
+  { q: "Can I do kickboxing and BJJ together?", a: "Yes. Many AllStar members cross-train both. They complement each other — striking plus grappling covers the full picture." },
+  { q: "Free trial?", a: "Two weeks unlimited. No card, no contract. Call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Kickboxing Classes in Union, NJ — Real Striking, Not Cardio | AllStar"
+  description="Kickboxing and Muay Thai classes in Union, NJ at AllStar Martial Arts. Adults 16+. Beginners welcome. 600–1,000 calories a class. Free 2-week trial — no contract."
+  ogImage="/images/muay-thai-pads.jpg"
+>
+  <PageHero
+    eyebrow="Ages 16+"
+    headline="Kickboxing Classes in Union, NJ"
+    sub="Real Muay Thai striking — not cardio kickboxing. 600–1,000 calories a class. Beginners welcome. Free 2-week trial — no contract."
+    bgImage="/images/muay-thai-pads.jpg"
+    bgPosition="30% 30%"
+    programLocked="Adult Muay Thai"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        Most people searching "kickboxing near me" want one of two things: a serious workout, or a real striking skill. The fitness kickboxing studios give you the first one. AllStar gives you both.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        What we teach is Muay Thai — the striking art of Thailand that uses fists, elbows, knees, and shins. It's what most people picture when they think kickboxing, but with more technique, more weapons, and a conditioning demand that makes every other workout feel easy by comparison.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's included -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">What's actually included</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Kickboxing Classes Union NJ — Real Fundamentals</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-lg text-brand-black mb-2">Punches</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Jab, cross, hook, uppercut. Proper hip mechanics, not arm-punching.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-lg text-brand-black mb-2">Kicks</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Lead and rear round kicks, teep (front push kick), low kicks. Full hip rotation, shin contact.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-lg text-brand-black mb-2">Elbows and Knees</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">The clinch weapons that separate Muay Thai from every other striking art.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-red">
+          <h3 class="text-lg text-brand-black mb-2">Pad Rounds</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Timed rounds hitting pads with a partner. This is where the conditioning and the addiction both happen.</p>
+        </div>
+      </div>
+      <p class="text-brand-gray leading-relaxed mt-6">
+        You don't spar your first 6 months. Most adults never spar at all and get the full benefit — real technique, serious fitness, a skill that holds up for life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Weight loss + women -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow text-brand-gold">Weight Loss</div>
+          <h2 class="text-2xl md:text-3xl mb-4">Kickboxing for Weight Loss — Union NJ</h2>
+          <p class="text-white/90 leading-relaxed mb-3">
+            600–1,000 calories per class. Three classes a week. By month three, the body composition changes are visible without a diet overhaul.
+          </p>
+          <p class="text-white/90 leading-relaxed">
+            Adults who tried kickboxing studios and quit out of boredom find they can't stop coming to AllStar. Every minute of class is engaged, skill-focused, and moving.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow text-brand-gold">Women</div>
+          <h2 class="text-2xl md:text-3xl mb-4">Kickboxing for Women — Union NJ</h2>
+          <p class="text-white/90 leading-relaxed mb-3">
+            We have women training in every program at AllStar — including Muay Thai. The environment is controlled, respectful, and calibrated for it.
+          </p>
+          <p class="text-white/90 leading-relaxed">
+            Women who train Muay Thai at AllStar for 6 months consistently describe the same shift: they're in the best shape of their life, and they feel genuinely capable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kickboxing vs Muay Thai -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">The difference</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kickboxing vs. Muay Thai</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Kickboxing typically means punches and kicks only. Muay Thai adds elbows, knees, and clinch work — making it the most complete striking art. AllStar teaches Muay Thai, which gives you more weapons and more range coverage than standard kickboxing.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        When people search "kickboxing classes Union NJ" they usually want what we offer: real striking instruction with a high cardio demand. That's exactly what the Muay Thai program delivers.
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. Real Striking."
+    sub="Kickboxing and Muay Thai in Union, NJ. Beginners welcome. No contract, no pressure."
+  />
+</PageLayout>

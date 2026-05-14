@@ -1,0 +1,100 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "How far is AllStar from Maplewood?", a: "About 15 minutes via Route 22 west. 1166 West Chestnut St, Union, NJ 07083." },
+  { q: "What programs run evenings?", a: "Adult BJJ, Muay Thai, and MMA at 6, 7, and 8 PM most weekdays. Kids classes run late afternoon." },
+  { q: "Do I need experience?", a: "No. Most students — adults and kids — start with none." },
+  { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract." },
+  { q: "How do I start?", a: "Fill out the form on this page or call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Maplewood, NJ — BJJ, Muay Thai & Kids | AllStar"
+  description="Martial arts classes for Maplewood, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="15 Minutes from Maplewood"
+    headline="Martial Arts in Maplewood, NJ"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. 15 minutes on Route 22. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        Maplewood families tend to do their research before committing. So here's the short version: AllStar Martial Arts is 15 minutes from Maplewood on Route 22, coached by a Renzo Gracie black belt and former professional MMA fighter, and offers something nobody else in the corridor has — Muay Thai alongside BJJ and MMA.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Maplewood has options for fitness boxing and karate. It doesn't have authentic Muay Thai. And it doesn't have a BJJ instructor with ADCC competition history teaching adults and kids in the same room.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow">Brazilian Jiu-Jitsu</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">BJJ for Maplewood Adults</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Adult BJJ at AllStar: ages 16 and up, beginners welcome, evening classes built for the working adult who commutes from Maplewood into Newark or NYC. The Renzo Gracie lineage is real — Helio → Carlos → Rolls → Renzo → Coach Jamal. You'll feel the difference in how technique is taught within the first month.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow">Muay Thai</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Muay Thai Near Maplewood</h2>
+          <p class="text-brand-gray leading-relaxed">
+            AllStar is the closest authentic Muay Thai program to Maplewood. Real pad work, not cardio kickboxing. Adults burn 600–1,000 calories a class. Many Maplewood members cross-train Muay Thai and BJJ together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Martial Arts</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Kids Martial Arts for Maplewood Families</h2>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Short classes, big energy, real structure. Parents from Maplewood tell us the listening skills transfer immediately into school.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real BJJ. Real confidence. Real bully prevention — through earned confidence, not just a talk. Kids from Maplewood have been a part of AllStar for years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow text-brand-gold">If you know Maplewood</div>
+      <h2 class="text-2xl md:text-3xl mb-5">You Know These Spots — We're 15 Minutes Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Maplewood Village", "Dunn Memorial Pool", "Jefferson Elementary", "Seth Boyden Elementary", "Columbia High School", "Maplewood Community Pool", "Memorial Park", "Baker Street corridor"].map((l) => (
+          <span class="bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+      <p class="text-white/80 mt-5 text-sm">15 minutes on Route 22. Free parking when you arrive.</p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Maplewood Families Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>

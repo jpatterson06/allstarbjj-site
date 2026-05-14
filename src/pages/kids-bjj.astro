@@ -1,0 +1,116 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "What age can my child start?", a: "Cubs begins at age 4. Lions runs from 7 to 13." },
+  { q: "My kid has never done any martial arts — is that okay?", a: "Yes. Everyone starts from zero. The program is built for beginners at every level." },
+  { q: "Is BJJ safe for kids?", a: "Yes. Grappling sports have lower injury rates than most team sports. Tapping out stops the action immediately. Partners are matched carefully." },
+  { q: "How long before I see results?", a: "Most parents notice posture and confidence changes within 60 days of consistent training. Technique takes longer — by 6 months, kids have a real game." },
+  { q: "What's the belt system like?", a: "Cubs use stripes on a white belt. Lions progress through white, grey, yellow, orange, and green belts before transitioning to adult ranks. Each belt is earned through consistent attendance and demonstrated technique." },
+  { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract. Call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Kids BJJ in Union, NJ — Cubs & Lions Programs | AllStar Martial Arts"
+  description="Kids Brazilian Jiu-Jitsu in Union, NJ. Cubs (ages 4–6) and Lions (ages 7–13). Renzo Gracie lineage. Coach Jamal Patterson. Real BJJ, real confidence. Free 2-week trial."
+  ogImage="/images/kids-martial-arts.jpg"
+>
+  <PageHero
+    eyebrow="Ages 4–13 | Cubs & Lions"
+    headline="Kids BJJ in Union, NJ"
+    sub="Real Jiu-Jitsu for kids ages 4–13. Cubs program (4–6) and Lions program (7–13). Renzo Gracie lineage. Free 2-week trial — no contract."
+    bgImage="/images/kids-martial-arts.jpg"
+    programLocked="Lions"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        Most kids' martial arts programs teach kids to look like martial artists. AllStar teaches kids to be one.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        The difference shows up in sparring. Kids who've been through real BJJ instruction can control a bigger kid. Coach Jamal's kids program — built on Renzo Gracie's curriculum and 15 years of coaching kids in Union — is the real version.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why BJJ for kids -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">Why Brazilian Jiu-Jitsu for kids</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Four Things Other Martial Arts Don't Deliver</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">It's honest</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">BJJ has a live testing element built in. You learn a technique, drill it, apply it against a partner who isn't cooperating. Real capability vs. performed capability.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">It's safe</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">BJJ is grappling — no striking. Control positions, escapes, takedowns. Kids tap out when uncomfortable and training resets. Lower injury rate than soccer or basketball.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">It transfers</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">The discipline, focus, and persistence required to learn jiu-jitsu carries into school, relationships, and how kids handle anything hard. Parents see it within 90 days.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Real confidence</h3>
+          <p class="text-brand-gray leading-relaxed text-sm">Not the participation-trophy kind. The kind that comes from being able to handle a physical confrontation — which means kids who train BJJ almost never have to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow text-brand-gold">Two programs</div>
+        <h2 class="text-3xl md:text-4xl">Cubs and Lions</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white/5 p-8 rounded-lg">
+          <h3 class="text-2xl text-brand-gold mb-4">Cubs — Ages 4–6</h3>
+          <p class="text-white/90 leading-relaxed mb-4">Cubs is AllStar's Brazilian Jiu-Jitsu program for preschool through kindergarten-aged kids. Classes are 30 minutes, high-energy, and built around the developmental reality of a 4 to 6-year-old.</p>
+          <p class="text-white/85 text-sm leading-relaxed">What Cubs teaches: body awareness, coordination, listening to instruction, and the beginning concepts of BJJ — falling safely, moving on the ground, basic positions. Kids who start in Cubs and roll into Lions at 7 are noticeably ahead.</p>
+        </div>
+        <div class="bg-white/5 p-8 rounded-lg">
+          <h3 class="text-2xl text-brand-gold mb-4">Lions — Ages 7–13</h3>
+          <p class="text-white/90 leading-relaxed mb-4">Lions is AllStar's primary kids BJJ program. Real Brazilian Jiu-Jitsu, taught progressively, with a belt system that means something.</p>
+          <ul class="space-y-2 text-white/85 text-sm">
+            <li>✓ Takedowns and stand-up</li>
+            <li>✓ Ground positions — mount, guard, side control, back control</li>
+            <li>✓ Submissions — arm locks and chokes, taught safely</li>
+            <li>✓ Controlled live sparring</li>
+            <li>✓ Progressive belt system — earned, not given</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What parents notice -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">What parents notice</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">The First 90 Days</h2>
+      <ul class="space-y-4 text-brand-gray leading-relaxed">
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>Their kid stands differently. More posture. Less looking at the floor. The body language of someone who knows where they stand physically.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>Their kid handles frustration differently. Tapping out 30 times a week teaches kids that pressure is survivable and failure isn't permanent.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>Teachers notice. Not just at recess, but in class. How a kid sits, how they pay attention, how they respond to instruction.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>Other kids notice. The dynamic shifts without a confrontation ever happening. That's bully prevention through competence.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. No Pressure."
+    sub="Kids BJJ in Union, NJ for ages 4–13. Renzo Gracie lineage. Real technique, real confidence."
+  />
+</PageLayout>

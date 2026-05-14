@@ -1,0 +1,113 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "Am I too old to start?", a: "No. We have students who started in their 50s and 60s. The art rewards technique over athleticism." },
+  { q: "Will I get hurt?", a: "Risk exists in any physical activity. BJJ's injury rate is lower than most sports. We don't put new students in hard rolling. You set the pace." },
+  { q: "Do I need to be in shape first?", a: "No. You'll get in shape by training. Starting fit helps, but it's not required." },
+  { q: "How often should I train?", a: "Two to three times per week is ideal for adults over 40 — enough to progress, with enough recovery time." },
+  { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract. Call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="BJJ Over 40 in Union, NJ — Starting BJJ After 40 | AllStar"
+  description="Starting BJJ after 40 in Union, NJ at AllStar Martial Arts. Renzo Gracie black belt. Students in their 50s and 60s train here. Free 2-week trial — no contract."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="Adults 40+ Welcome"
+    headline="Starting BJJ After 40 in Union, NJ"
+    sub="It's not too late. Students in their 50s and 60s train here. Renzo Gracie lineage. Free 2-week trial — no contract, no pressure."
+    bgImage="/images/adult-bjj-hero.jpg"
+    programLocked="Adult BJJ"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        We have students in their 50s and 60s who started after 40. One started at 52 after his doctor told him to find something low-impact. He's been on the mat for six years. He's in better shape than he was at 35.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        The thing most people get wrong about starting BJJ after 40: they assume the body won't cooperate. What actually happens is the opposite — BJJ rewards the qualities that come with age. Patience. Ability to focus. Comfort with discomfort. Willingness to think before reacting.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why BJJ is good for 40+ -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">Why BJJ works for adults over 40</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Five Reasons the Math Works in Your Favor</h2>
+      <div class="space-y-5">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">Technique beats strength</h3>
+          <p class="text-brand-gray leading-relaxed">This isn't a motivational slogan — it's how the art was designed. Helio Gracie built BJJ because he was a small, frail man who couldn't match bigger opponents physically. The art rewards leverage, timing, and position. All of which improve with experience, not youth.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">No striking</h3>
+          <p class="text-brand-gray leading-relaxed">BJJ is grappling only. There's no getting punched in the face. The injury rate is lower than soccer, basketball, or recreational running.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">You set the pace</h3>
+          <p class="text-brand-gray leading-relaxed">Nobody forces you to roll hard. You control intensity. Many older students train at 60–70% and get the full technical benefit without beating their body up.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">The fitness benefit is real</h3>
+          <p class="text-brand-gray leading-relaxed">Flexibility, core strength, cardiovascular health — BJJ builds all three without the joint damage of high-impact sports.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl text-brand-black mb-2">It compounds</h3>
+          <p class="text-brand-gray leading-relaxed">A decade of BJJ builds into something real. Each year you're better than the last. The same can't be said for most fitness routines that plateau within months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What it looks like -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow text-brand-gold">The real timeline</div>
+      <h2 class="text-3xl md:text-4xl mb-8">What Starting BJJ Over 40 Actually Looks Like</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/5 p-6 rounded-lg">
+          <div class="font-display text-3xl text-brand-gold mb-2">Month 1–2</div>
+          <p class="text-white/90 text-sm leading-relaxed">You feel awkward. You tap constantly. You leave sore. The movements start making sense by week four.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <div class="font-display text-3xl text-brand-gold mb-2">Month 3–6</div>
+          <p class="text-white/90 text-sm leading-relaxed">You have a game — a set of positions and submissions you understand and can apply. Body comp improves without trying.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <div class="font-display text-3xl text-brand-gold mb-2">Year 2+</div>
+          <p class="text-white/90 text-sm leading-relaxed">People half your age are having a harder time with you than they expected. The patience advantage is real and growing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach's approach -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Coach Jamal's approach</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Coached for Your Body, Not a 22-Year-Old Competitor</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Jamal has coached students over 40 for his entire career at AllStar. His take: they're often the best students in the room. They listen. They don't ego-trip. They show up consistently. And consistency is what BJJ rewards above everything else.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        He also knows where the bodies break down — knees, shoulders, backs. He adjusts. The curriculum at AllStar for older beginners isn't the same as for 22-year-old competitors. You'll be treated as an adult with a body worth taking care of.
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. Any Age."
+    sub="BJJ after 40 in Union, NJ. Renzo Gracie lineage. Students in their 50s and 60s train here. Come see for yourself."
+  />
+</PageLayout>

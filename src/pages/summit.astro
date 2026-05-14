@@ -1,0 +1,100 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "How far is AllStar from Summit?", a: "About 20 minutes via Route 22 east. 1166 West Chestnut St, Union, NJ 07083." },
+  { q: "Is there Muay Thai near Summit?", a: "AllStar is the closest authentic Muay Thai option to Summit." },
+  { q: "Evening classes available?", a: "Yes — 6, 7, and 8 PM most weekdays. Saturday mornings for adults and kids." },
+  { q: "Free trial?", a: "Two weeks unlimited. No card, no contract." },
+  { q: "How do I start?", a: "Fill out the form or call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Summit, NJ — BJJ, Muay Thai & Kids Classes | AllStar"
+  description="Martial arts classes for Summit, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="20 Minutes from Summit"
+    headline="Martial Arts in Summit, NJ"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. Worth the 20-minute drive. Renzo Gracie black belt. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        Summit families are used to going a bit farther for the right thing — the right school, the right program, the right coach. AllStar Martial Arts is about 20 minutes from Summit on Route 22. What's on the other side: the most credentialed martial arts coaching in Union County, a Muay Thai program nobody else in the area offers, and a kids program that Summit parents consistently tell us changes how their kids carry themselves.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Coach Jamal Patterson — Renzo Gracie black belt, ADCC veteran, IFL and Bellator pro MMA fighter, UWC light heavyweight champion — has been running AllStar in Union since 2011.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow">Adults</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">BJJ for Summit Adults</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Adult Brazilian Jiu-Jitsu, ages 16 and up. Beginners welcome. The Renzo Gracie lineage is direct: Helio → Carlos → Rolls → Renzo → Jamal. Evening classes at 6, 7, and 8 PM built for Summit commuters who take NJ Transit into NYC. Summit adults who train with us often describe the same thing: they tried something closer and it wasn't the same.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow">Muay Thai + MMA</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Muay Thai & MMA Near Summit</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Summit and the Short Hills/Summit corridor have no authentic Muay Thai program. AllStar is the closest option. Adults cross-train Muay Thai and BJJ together — the most complete martial arts program available to Summit residents. Adult MMA coached by Jamal Patterson.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Martial Arts</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Kids Martial Arts for Summit Families</h2>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Coordination, listening, confidence. 30 minutes of structured fun built for preschool attention spans. Summit parents report the listening skills show up in school within weeks.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu with a progressive belt system. Summit kids in this program tend to be motivated — they respond well to a real challenge. The drive from Summit is part of that commitment signal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow text-brand-gold">If you know Summit</div>
+      <h2 class="text-2xl md:text-3xl mb-5">You Know These Spots — We're 20 Minutes Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Downtown Summit", "Summit Train Station", "Brayton Elementary", "Jefferson Elementary", "Summit High School", "Reeves-Reed Arboretum", "Memorial Field", "DeForest Ave"].map((l) => (
+          <span class="bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+      <p class="text-white/80 mt-5 text-sm">About 20 minutes via Route 22. Free parking on-site at AllStar.</p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Summit Families Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>

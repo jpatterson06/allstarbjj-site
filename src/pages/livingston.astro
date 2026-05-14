@@ -1,0 +1,103 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "How far is AllStar from Livingston?", a: "About 15 minutes via Route 10 to Route 22. 1166 West Chestnut St, Union, NJ 07083." },
+  { q: "Do you have women training?", a: "Yes — women at every belt level, including a current female brown belt. The environment is respectful and welcoming." },
+  { q: "Do kids need experience?", a: "No. Everyone starts from zero. The program is built for beginners at every age." },
+  { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract." },
+  { q: "How do I start?", a: "Fill out the form or call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Livingston, NJ — BJJ, Muay Thai & Kids | AllStar"
+  description="Martial arts classes for Livingston, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="15 Minutes from Livingston"
+    headline="Martial Arts in Livingston, NJ"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. 15 minutes on Route 10. Renzo Gracie black belt. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        Livingston families have high expectations. When Livingston parents look at a martial arts gym, they're looking past the logo and the colored belts on the wall. They want to know who's teaching, what they know, and whether it's actually going to develop their kid or just take their money.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        AllStar Martial Arts is about 15 minutes from Livingston on Route 10 to Route 22. Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter who has been coaching in Union since 2011. That's the answer to who's teaching and what they know.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow">Adults</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">BJJ for Livingston Adults</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Adult Brazilian Jiu-Jitsu, ages 16 and up. No experience needed. The Renzo Gracie lineage is direct and documented — Helio Gracie to Renzo to Coach Jamal. Evening classes at 6, 7, and 8 PM built for Livingston commuters. Livingston adults who train with us often started because a friend told them. Word of mouth is how most of our Livingston members found us.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow">Muay Thai + MMA</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Muay Thai & MMA Near Livingston</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Livingston has no authentic Muay Thai program. AllStar is the closest option — 15 minutes. Real pad work, real technique, real conditioning. Adults training Muay Thai at AllStar typically drop 10–20 lbs in the first 12 weeks. Adult MMA coached by Jamal Patterson — the most credentialed MMA coach available to Livingston residents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Martial Arts</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts for Livingston Families</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">
+        Livingston kids are competitive by nature. BJJ rewards that — it has a clear progression, visible milestones, and real feedback. You either got the technique or you didn't. That honesty is what engaged Livingston kids respond to.
+      </p>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Coordination, listening, and confidence through 30-minute structured classes. Short enough for preschool attention spans, long enough to matter.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real BJJ. Progressive belt system. Livingston parents tell us their kids' focus improves in school within the first month. Their teachers notice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow text-brand-gold">If you know Livingston</div>
+      <h2 class="text-2xl md:text-3xl mb-5">You Know These Spots — We're 15 Minutes Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Livingston Mall", "Livingston High School", "Riker Hill Park", "Heritage Middle School", "Mt. Pleasant Elementary", "Northland Elementary", "Livingston Ave", "South Orange Ave corridor"].map((l) => (
+          <span class="bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+      <p class="text-white/80 mt-5 text-sm">15 minutes via Route 10 west to Route 22 west. Free parking at AllStar.</p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Livingston Families Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>

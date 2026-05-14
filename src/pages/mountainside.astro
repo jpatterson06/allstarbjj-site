@@ -1,0 +1,103 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "How far is AllStar from Mountainside?", a: "About 10 minutes. 1166 West Chestnut St, Union, NJ 07083." },
+  { q: "Do kids need experience?", a: "No. White belt, day one — the curriculum starts from the beginning." },
+  { q: "Do I need experience as an adult?", a: "No. Most students walk in with zero martial arts background. The beginner curriculum assumes zero." },
+  { q: "Free trial?", a: "Two weeks unlimited. No card, no contract, no pressure." },
+  { q: "How do I start?", a: "Fill out the form or call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Mountainside, NJ — BJJ, Muay Thai & Kids | AllStar"
+  description="Martial arts classes for Mountainside, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="10 Minutes from Mountainside"
+    headline="Martial Arts in Mountainside, NJ"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. 10 minutes away. Renzo Gracie black belt. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        Mountainside is a small town with high standards. When Mountainside parents look for a martial arts program for their kids — or themselves — they're not looking for the closest option. They're looking for the best one within a reasonable drive.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        AllStar is 10 minutes from Mountainside. Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter who's been coaching in Union since 2011. The drive is worth it.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow">Adults</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">BJJ for Mountainside Adults</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Adult Brazilian Jiu-Jitsu, ages 16 and up. Beginners start from scratch — most adults walk in with zero experience and are comfortable within a few weeks. Evening classes built for the Mountainside commuter schedule. Renzo Gracie lineage means something specific: the teaching methodology goes back to Helio Gracie's original system.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow">Muay Thai</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Muay Thai Near Mountainside</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Mountainside has no Muay Thai gym. AllStar is the closest option — 10 minutes. Real striking art, real conditioning, real technique. Not a cardio class with Thai branding. Adults cross-train Muay Thai and BJJ together — the most complete program available.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Martial Arts</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Kids Martial Arts for Mountainside Families</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">
+        Mountainside kids tend to be in multiple activities. What keeps them at AllStar when other activities fade: they feel themselves getting better. BJJ has one of the highest retention rates of any kids activity because progress is visible, earned, and felt.
+      </p>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Coordination, listening, confidence — 30 minutes of structured movement and games.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real BJJ with a progressive belt system. Mountainside parents consistently report that the focus carries over into school.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow text-brand-gold">If you know Mountainside</div>
+      <h2 class="text-2xl md:text-3xl mb-5">You Know These Spots — We're 10 Minutes Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Mountainside Borough Hall", "Mountainside School", "Echo Lake Park", "Mountainside Pool", "Springfield Ave corridor", "Watchung Reservation entrance"].map((l) => (
+          <span class="bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+      <p class="text-white/80 mt-5 text-sm">10 minutes to AllStar. Free parking on-site.</p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Mountainside Families Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>

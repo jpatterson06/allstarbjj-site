@@ -1,0 +1,102 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "What age should my child start?", a: "Cubs starts at 4. Lions runs from 7–13. Earlier is better — the confidence and body awareness build over years." },
+  { q: "Will my kid learn to fight?", a: "They'll learn to control a physical situation without striking. The goal is de-escalation through confidence, with technique as a backup they almost never need to use." },
+  { q: "What if my kid is shy or anxious?", a: "Those kids often respond best to martial arts. The structure is clear, the progress is visible, and the coaches are patient. Shy kids find their footing faster than most parents expect." },
+  { q: "How long before I see results?", a: "Most parents notice a change in posture and confidence within 60–90 days of consistent training." },
+  { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract. Call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Bully Prevention Program Union NJ — Kids BJJ | AllStar Martial Arts"
+  description="Bully prevention through Brazilian Jiu-Jitsu in Union, NJ. Ages 4–13. AllStar Martial Arts. Real confidence, real skills. Free 2-week trial — no contract."
+  ogImage="/images/kids-martial-arts.jpg"
+>
+  <PageHero
+    eyebrow="Ages 4–13 | Cubs & Lions"
+    headline="Bully Prevention in Union, NJ"
+    sub="Real confidence through real martial arts training. Not a seminar — real BJJ. Ages 4–13. Free 2-week trial, no contract."
+    bgImage="/images/kids-martial-arts.jpg"
+    programLocked="Lions"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        The most common reason parents call us: their kid is being bullied. Or their kid is starting to avoid school. Or their kid is big for their age and worried about becoming the bully.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        All of those are the same problem at the root: a kid who doesn't know where they stand physically, emotionally, or socially. Martial arts — specifically Brazilian Jiu-Jitsu — addresses that root. Not by teaching kids to fight. By teaching them they don't have to.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why BJJ works -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="eyebrow">Why it works</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">The Science Behind the Shift</h2>
+      <p class="text-brand-gray leading-relaxed mb-6">
+        The research on this is consistent: kids who train martial arts are less likely to be bullied and less likely to bully others. The mechanism isn't complicated.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-6">
+        A kid who knows they can physically handle a confrontation carries themselves differently. Shoulders back. Eye contact. No flinching when someone gets in their space. Bullies read body language before they make a move. They don't pick kids who look capable.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        That shift in how a kid carries themselves is the real outcome of martial arts training. It's not taught in a seminar. It's earned on the mat, tap by tap, class by class, until the confidence becomes part of how the kid moves through the world.
+      </p>
+    </div>
+  </section>
+
+  <!-- What kids learn -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow text-brand-gold">What kids learn</div>
+        <h2 class="text-3xl md:text-4xl">Real Bully Prevention — Not a Workshop</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/5 p-6 rounded-lg">
+          <h3 class="text-xl mb-3 text-brand-gold">Lions (7–13)</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Real Brazilian Jiu-Jitsu. Takedowns, escapes, control positions — taught progressively. Kids learn to control a situation without striking. That's de-escalation — knowing you could handle it, so you don't have to.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <h3 class="text-xl mb-3 text-brand-gold">Cubs (4–6)</h3>
+          <p class="text-white/85 text-sm leading-relaxed">Coordination, listening, and physical confidence through age-appropriate movement and games. The bully prevention benefit starts this early — kids who feel capable in their bodies carry themselves differently from preschool onward.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-lg">
+          <h3 class="text-xl mb-3 text-brand-gold">Verbal De-Escalation</h3>
+          <p class="text-white/85 text-sm leading-relaxed">We teach kids when to use what they're learning — and when not to. Confidence is the deterrent. Technique is the backup. Most bullying situations never reach the backup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What parents notice -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">What parents notice</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Within 90 Days of Consistent Training</h2>
+      <ul class="space-y-4 text-brand-gray leading-relaxed">
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>Their kid walks into rooms differently. More eye contact. More posture. Less looking at the floor.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>They handle frustration without losing it. Tapping out 50 times a week teaches that failure isn't permanent and pressure is survivable.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>Teachers notice. Not just in how kids handle conflict — in how they sit in class, pay attention, and respond to instruction.</span></li>
+        <li class="flex gap-3"><span class="text-brand-red font-bold shrink-0">✓</span><span>Other kids notice. The kid who used to get picked on stops getting picked on. The dynamic shifts without a confrontation ever happening.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free. Bring the Kids."
+    sub="Bully prevention through real martial arts training. Union, NJ. Ages 4–13. Family-owned since 2011."
+  />
+</PageLayout>

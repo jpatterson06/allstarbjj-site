@@ -1,0 +1,103 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  { q: "How far is AllStar from Roselle Park?", a: "Under 10 minutes. We share a border with Union. 1166 West Chestnut St, Union, NJ 07083." },
+  { q: "Can siblings join different programs?", a: "Yes — Cubs and Lions run at the same location. Many Roselle Park families have kids in both." },
+  { q: "Do I need experience as an adult?", a: "No. Most students walk in untrained. We have a structured beginner curriculum." },
+  { q: "Free trial?", a: "Two weeks unlimited. No card, no contract." },
+  { q: "How do I start?", a: "Fill out the form or call (908) 641-2769." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Roselle Park, NJ — BJJ, Muay Thai & Kids | AllStar"
+  description="Martial arts classes for Roselle Park, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <PageHero
+    eyebrow="Right Next Door to Roselle Park"
+    headline="Martial Arts in Roselle Park, NJ"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. Under 10 minutes away. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
+        Roselle Park and Union share a border. AllStar Martial Arts is one of the closest quality martial arts gyms to Roselle Park — under 10 minutes for most addresses. If you've been searching for martial arts near you in Roselle Park, you've found it.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter — IFL, Bellator, UWC light heavyweight champion. He's been coaching in Union since 2011. Roselle Park families have been training with us almost from the beginning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="eyebrow">Adults</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">BJJ for Roselle Park Adults</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Adult Brazilian Jiu-Jitsu, ages 16 and up. No experience required. Evening classes at 6, 7, and 8 PM most weekdays — easy from Roselle Park. Real Renzo Gracie lineage, real adult curriculum, real community. Two weeks free, no contract.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow">Muay Thai + MMA</div>
+          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Striking & MMA Near Roselle Park</h2>
+          <p class="text-brand-gray leading-relaxed">
+            Roselle Park has no Muay Thai gym. AllStar is the closest authentic option. Real striking — not fitness boxing. Adult MMA coached by Jamal Patterson — the only professional MMA veteran teaching in Union County.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Martial Arts</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Kids Martial Arts for Roselle Park Families</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">
+        Roselle Park kids join our Lions (7–13) and Cubs (4–6) programs alongside kids from Union, Kenilworth, Cranford, and all over Union County. The community is one of the strongest parts of what we offer — kids make real friendships on the mat.
+      </p>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Listening, coordination, confidence. 30-minute classes perfect for preschoolers.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu. Progressive belt system. After-school timing that works for Roselle Park pickup schedules.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow text-brand-gold">If you know Roselle Park</div>
+      <h2 class="text-2xl md:text-3xl mb-5">You Know These Spots — We're Under 10 Min Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Roselle Park Borough Center", "Warinanco Park", "Roselle Park High School", "Roselle Park Middle School", "Aldene School", "West End Ave", "Chestnut Street corridor"].map((l) => (
+          <span class="bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+      <p class="text-white/80 mt-5 text-sm">Under 10 minutes from most of Roselle Park. Free parking at AllStar.</p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Roselle Park Families Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>
