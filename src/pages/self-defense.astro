@@ -4,158 +4,168 @@ import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
 
+const heroImg = '/images/adult-class.jpg';
+
 const faqs = [
-  { q: "Do I need any experience to start?", a: "No. Most students walk in untrained. The beginner curriculum assumes zero background." },
-  { q: "I'm a woman — will I feel comfortable?", a: "Yes. We have women at every belt level. The environment is controlled and respectful. Many women tell us it's the most welcoming gym they've trained at." },
-  { q: "How long before I can actually defend myself?", a: "Most students feel a meaningful difference within 3–4 months of consistent training (2–3x per week). The mental confidence shift often comes faster than the physical skills." },
-  { q: "What's the difference between your self-defense and a workshop?", a: "Live training against a resisting partner. That's the whole difference. It's what makes technique automatic instead of theoretical." },
-  { q: "Can my teenager join?", a: "Yes. Our Lions program (ages 7–13) teaches real self-defense through BJJ. Adults 16+ join the adult program." },
-  { q: "How do I start?", a: "Fill out the trial form or call (908) 341-1131. We'll text you to schedule your first class." },
+  { q: "Is BJJ really effective for real street situations?", a: "Yes. Most street confrontations end up on the ground. If you can control a larger person's position and submissions, you win without striking. We don't teach \"street fighting\" — we teach leverage and escape, which work everywhere." },
+  { q: "Will I get hurt learning self defense?", a: "Lower injury rates than boxing or kickboxing. We drill technique slowly and control intensity. Tapping (submitting when caught) is a core principle — everyone goes home safe." },
+  { q: "Do I need to be strong or young?", a: "No. Self defense through BJJ works because technique beats strength. We have students 50+ and smaller women who control much larger training partners." },
+  { q: "How long until I can defend myself?", a: "3-6 months: You'll know basic escapes and positioning. 6-12 months: Real confidence in controlled scenarios. The skill compounds — you never forget what you learn." },
+  { q: "Is it practical for women specifically?", a: "Yes. Size doesn't matter in BJJ the way it does in striking arts. A 120-pound woman with 6 months of training can escape or control a 200+ pound attacker because leverage doesn't care about weight." },
+  { q: "Do I have to compete?", a: "No. Self defense training is non-competitive. You learn technique and apply it with partners. No tournaments, no pressure to compete." },
+  { q: "What about multiple attackers?", a: "We focus on 1v1 scenarios because that's 99% of what happens. Multiple attackers changes the math — escape becomes the priority, which we train." },
+  { q: "Can I train self defense and regular BJJ together?", a: "Yes. Adult BJJ classes cover both competition technique and practical applications. There's no conflict — it's the same skillset." },
 ];
 ---
 
 <PageLayout
-  title="Self-Defense Classes in Union, NJ — Real Skills, Not Choreography | AllStar"
-  description="Self-defense classes in Union, NJ at AllStar Martial Arts. Brazilian Jiu-Jitsu black belt instruction. Adults, teens, and women welcome. Free 2-week trial — no contract."
-  ogImage="/images/adult-bjj-hero.jpg"
+  title="Self Defense Classes in Union, NJ | Practical BJJ | AllStar"
+  description="Real self-defense training in Union, NJ through Brazilian Jiu-Jitsu. Practical technique for adults of all ages and sizes. Learn escapes, control, and confidence. Free 2-week trial."
+  ogImage={heroImg}
 >
   <PageHero
-    eyebrow="Adults, Teens & Women Welcome"
-    headline="Self-Defense Classes in Union, NJ"
-    sub="Real skills, not choreography. Brazilian Jiu-Jitsu black belt instruction. Free 2-week trial — no contract, no pressure."
-    bgImage="/images/adult-bjj-hero.jpg"
-    programLocked="Adult BJJ"
+    eyebrow="Ages 16+"
+    headline="Real Self Defense in Union, NJ"
+    sub="Practical Brazilian Jiu-Jitsu. Control without striking. Escape and survive. Works for anyone, regardless of size or strength."
+    bgImage={heroImg}
+    programLocked="Self Defense"
   />
 
   <!-- Intro -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
-      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        A few years ago, a woman drove from Cranford to train with us. She'd taken a self-defense workshop at her gym — the kind where you practice wrist grabs in slow motion for 90 minutes and leave feeling like you've learned something. Six months later, she didn't feel safer. She came here.
-      </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        That's the difference between a self-defense workshop and real self-defense training. One gives you a certificate. The other changes how you carry yourself.
+        Self defense through Brazilian Jiu-Jitsu. Not flashy techniques. Not choreography. Real leverage and positioning that work when it matters. Based on what happens in actual confrontations — which end up on the ground. Taught by a Renzo Gracie black belt and former pro fighter. Beginners welcome. Two weeks free, no contract.
       </p>
     </div>
   </section>
 
-  <!-- What we actually teach -->
+  <!-- Why BJJ for self defense -->
   <section class="section-pad bg-brand-gray-light">
-    <div class="container-page max-w-4xl">
-      <div class="eyebrow">What we actually teach</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Self-Defense Built Into Everything We Do</h2>
-      <p class="text-brand-gray leading-relaxed mb-6">
-        At AllStar Martial Arts in Union, self-defense isn't a program we bolt on. It's the foundation of everything we do. Brazilian Jiu-Jitsu — our main program — was built specifically for self-defense. Helio Gracie designed it because he was a small man who couldn't overpower bigger opponents. The whole art is built around the idea that technique beats strength.
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Why BJJ actually works</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Self Defense That Doesn't Rely on Power or Speed</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Most self-defense classes teach you what to do standing up. The problem: <strong>Most real confrontations don't stay standing.</strong> They end up on the ground. That's where BJJ takes over.
       </p>
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
-          <h3 class="text-lg text-brand-black mb-2">Control on the ground</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Most real confrontations end up there. Most self-defense classes never address it.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
-          <h3 class="text-lg text-brand-black mb-2">Distance and escape</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Chokes, grabs, pins — we drill getting out of all of it.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
-          <h3 class="text-lg text-brand-black mb-2">Calm under pressure</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Rolling with a live partner who's trying to submit you teaches you to think clearly when your heart is pounding. That skill transfers.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
-          <h3 class="text-lg text-brand-black mb-2">Leverage, not strength</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Size stops mattering after a few months of training. Technique takes over.</p>
-        </div>
-      </div>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Brazilian Jiu-Jitsu is built on a principle Helio Gracie understood a hundred years ago: <strong>leverage beats strength.</strong> It's not about being the biggest or fastest. It's about position and technique. A smaller person with proper positioning controls a larger person. Every time.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        We teach you how to escape bad positions, achieve dominant positions, and control someone with submissions. No striking. No high risk. You learn to defuse situations without violence when possible, and win decisively when necessary.
+      </p>
     </div>
   </section>
 
-  <!-- Women's + Teens -->
+  <!-- What makes BJJ different -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-4xl">
-      <div class="grid md:grid-cols-2 gap-10">
-        <div>
-          <div class="eyebrow">Women</div>
-          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Women's Self-Defense Classes</h2>
-          <p class="text-brand-gray leading-relaxed mb-4">
-            We have women training at every belt level at AllStar — including a current female brown belt who regularly trains with men twice her size and holds her own. Not because she's exceptional. Because the art works.
-          </p>
-          <p class="text-brand-gray leading-relaxed">
-            What a lot of women tell us after a few months: they don't just feel safer. They feel different. More confident walking to their car at night. More grounded when someone gets in their space. That shift is real and it comes from actual training, not choreography.
-          </p>
+      <div class="text-center mb-10">
+        <div class="eyebrow">Why this works when other self-defense doesn't</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Leverage Over Strength. Positioning Over Speed.</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">You don't need to be stronger</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Size and strength don't matter in grappling. We teach positioning and leverage. A 120-pound woman escapes a 200-pound attacker because technique works at any scale.</p>
         </div>
-        <div>
-          <div class="eyebrow">Kids & Teens</div>
-          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Teen Self-Defense Classes</h2>
-          <p class="text-brand-gray leading-relaxed mb-4">
-            Our Lions program (ages 7–13) teaches real self-defense through Brazilian Jiu-Jitsu. Not karate. Not Taekwondo. BJJ — the most practically tested martial art for self-defense situations.
-          </p>
-          <p class="text-brand-gray leading-relaxed">
-            Bullying is one of the most common reasons parents bring their kids here. Not so the kid can fight — so the kid doesn't have to. The confidence that comes from knowing you can handle yourself is the best bully repellent there is.
-          </p>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">You don't need perfect reflexes</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Striking arts require split-second reactions. Grappling is slower. You have time to think, to escape, to control. Muscle memory compounds over months and years.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">You practice against real resistance</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Most self-defense classes are choreographed. BJJ training is live rolling — your partner resists. You learn what actually works because you're tested every class.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">You learn escape first</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">Our priority: Get off your back. That's the worst position. Master escaping there and you master survival. Everything else (submissions, control) comes after you can escape.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy md:col-span-2">
+          <h3 class="text-xl text-brand-black mb-2">Works at any age or size</h3>
+          <p class="text-brand-gray text-sm md:text-base leading-relaxed">We have 50+ year old students, women significantly smaller than average attackers, and people with zero athletic background. They all learn to control much larger partners. Leverage doesn't care about demographics.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What a class looks like -->
+  <!-- What you learn -->
   <section class="section-pad bg-brand-navy text-white">
     <div class="container-page max-w-4xl">
-      <div class="eyebrow text-brand-gold">What a class looks like</div>
-      <h2 class="text-3xl md:text-4xl mb-8">Adult Self-Defense Classes — What to Expect</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white/5 p-6 rounded-lg">
-          <div class="font-display text-5xl text-brand-gold mb-2">10<span class="text-xl">min</span></div>
-          <h3 class="text-lg mb-2">Warm-up</h3>
-          <p class="text-white/80 text-sm">Shrimping, rolls, movement drills. Gets the body ready and teaches foundational mechanics at the same time.</p>
+      <div class="eyebrow text-brand-gold">What you actually learn</div>
+      <h2 class="text-3xl md:text-4xl mb-8">The First Six Months: Escape, Position, Control</h2>
+      <div class="space-y-6">
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-lg font-bold mb-2">Month 1-2: Escape the bottom</h3>
+          <p class="text-white/90 leading-relaxed">If someone takes you down, how do you get them off? We drill escapes from under control positions. This is priority one.</p>
         </div>
-        <div class="bg-white/5 p-6 rounded-lg">
-          <div class="font-display text-5xl text-brand-gold mb-2">35<span class="text-xl">min</span></div>
-          <h3 class="text-lg mb-2">Technique</h3>
-          <p class="text-white/80 text-sm">Coach Jamal or a senior instructor walks through 1–2 specific techniques — a takedown, an escape, a control position.</p>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-lg font-bold mb-2">Month 2-4: Control on top</h3>
+          <p class="text-white/90 leading-relaxed">Once you escape, you want the top position. We teach how to achieve it and hold it without exhausting yourself. Position before submissions.</p>
         </div>
-        <div class="bg-white/5 p-6 rounded-lg">
-          <div class="font-display text-5xl text-brand-gold mb-2">15<span class="text-xl">min</span></div>
-          <h3 class="text-lg mb-2">Live rolling</h3>
-          <p class="text-white/80 text-sm">Apply what you learned against a resisting partner. The intensity is calibrated to your level. Beginners work with experienced partners who guide, not overwhelm.</p>
+        <div class="bg-white/5 backdrop-blur p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-lg font-bold mb-2">Month 4-6: Submissions that end it</h3>
+          <p class="text-white/90 leading-relaxed">Once you control someone, submissions are the endgame. Chokes, arm locks, leg locks — techniques that make someone surrender. You only use them if necessary.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Coach + Workshops comparison -->
-  <section class="section-pad bg-brand-gray-light">
-    <div class="container-page max-w-4xl">
-      <div class="grid md:grid-cols-2 gap-10">
-        <div>
-          <div class="eyebrow">About Coach Jamal</div>
-          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Real Credentials. Real Training.</h2>
-          <p class="text-brand-gray leading-relaxed">
-            Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former pro MMA fighter — IFL, Bellator, UWC Light Heavyweight Champion. He graduated from Colgate and has been coaching at AllStar in Union since 2011. His techniques were tested in professional competition. What he teaches in class is what he used when money was on the line.
-          </p>
-        </div>
-        <div>
-          <div class="eyebrow">Workshops vs. Real Training</div>
-          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">The Real Difference</h2>
-          <p class="text-brand-gray leading-relaxed mb-4">
-            Workshops teach you to react to a specific scenario. Training teaches you to react to anything. The difference is live training — working with a partner who isn't cooperating.
-          </p>
-          <p class="text-brand-gray leading-relaxed">
-            Come train with us for two weeks. Free. No contract. You'll know by the end of the first class whether this is different.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Serving area -->
+  <!-- Who this is for -->
   <section class="section-pad bg-white">
-    <div class="container-page max-w-3xl">
-      <div class="eyebrow">Serving Union County</div>
-      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Self-Defense for the Whole Family</h2>
-      <p class="text-brand-gray leading-relaxed mb-5">AllStar Martial Arts has been in Union since 2011. Free parking on-site. Adult evening classes start at 6 PM — built for working schedules and NJ Transit commuters.</p>
-      <div class="flex flex-wrap gap-2">
-        {["Union", "Cranford", "Westfield", "Springfield", "Kenilworth", "Maplewood", "Millburn", "Mountainside", "Roselle Park", "Summit", "Chatham", "Livingston"].map((l) => (
-          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
-        ))}
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Who needs this</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">If Any Of This Sounds Like You</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">The person who wants real confidence</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Not false confidence. Real confidence comes from practicing something difficult until it becomes automatic. Six months of BJJ gives you that.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">The woman who needs to know she can defend herself</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">BJJ isn't about being strong. It's about understanding leverage. Training with larger partners and controlling them proves that size doesn't matter.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">The person who doesn't want to strike</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">No punching. No kicking. No impact on your joints. You control someone with position and submission. Safer on your body long-term.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">The older student building practical skills</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Strength declines with age. Leverage doesn't. BJJ actually improves as you age because experience and technique matter more than athleticism.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy md:col-span-2">
+          <h3 class="text-lg text-brand-black mb-2">The person who's exhausted by hype</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Most self-defense classes overpromise. We don't. We teach slowly. We don't guarantee invincibility. We teach real technique that compounds over months and years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach credibility -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="eyebrow">Why you can trust this instruction</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Trained By A Fighter Who Used This Skill Under Pressure</h2>
+        <p class="text-brand-gray leading-relaxed mb-4">
+          I'm a Renzo Gracie black belt. I've also competed as a professional fighter — IFL, Bellator, UWC light heavyweight champion. The BJJ I teach isn't theory. It's what I used to win fights at the highest levels.
+        </p>
+        <p class="text-brand-gray leading-relaxed mb-4">
+          When you learn from someone who's tested their technique under real pressure with real consequences, you're learning what actually works. Not what looks good. Not choreography. Real technique.
+        </p>
+        <p class="text-brand-gray leading-relaxed">
+          That same technique works for self defense because the fundamentals are the same. Position. Control. Submission. No striking required.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/jamal-3.jpg"
+          alt="Jamal Patterson, Renzo Gracie black belt and self-defense instructor"
+          class="rounded-lg shadow-lg w-full"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
@@ -163,7 +173,7 @@ const faqs = [
   <FAQ items={faqs} />
 
   <CTA
-    headline="Two Weeks Free. No Commitment."
-    sub="Real self-defense classes in Union, NJ. Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. Family-owned since 2011."
+    headline="Two Weeks Free. Learn By Doing."
+    sub="The only way to know if this works is to try it. Come train. Roll with our students. See what leverage actually does. If it's not for you, you owe us nothing."
   />
 </PageLayout>
