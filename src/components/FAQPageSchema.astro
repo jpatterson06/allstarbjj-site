@@ -1,0 +1,32 @@
+---
+// FAQPage schema markup for AI Overview optimization
+// Pass FAQ items and this component outputs proper JSON-LD
+export interface FAQItem {
+  q: string;
+  a: string;
+}
+
+export interface Props {
+  faqs: FAQItem[];
+}
+
+const { faqs } = Astro.props;
+
+// Transform FAQ items into schema format
+const schemaFAQs = faqs.map(item => ({
+  "@type": "Question",
+  "name": item.q,
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": item.a.replace(/<[^>]*>/g, '') // Strip HTML tags for schema
+  }
+}));
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": schemaFAQs
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

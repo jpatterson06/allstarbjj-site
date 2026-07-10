@@ -16,5 +16,8 @@
     "@astrojs/tailwind": "^5.1.4",
     "astro": "^4.16.18",
     "tailwindcss": "^3.4.16"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.62.2"
   }
 }

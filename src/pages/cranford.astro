@@ -2,7 +2,11 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
+
+const city = "Cranford";
 
 const faqs = [
   { q: "How far is AllStar from Cranford?", a: "About 10 minutes via the Garden State Parkway. 1166 West Chestnut St, Union. Free parking on-site." },
@@ -10,7 +14,7 @@ const faqs = [
   { q: "Do I need experience?", a: "No. Most students — adults and kids — start with none." },
   { q: "Can I watch a class before enrolling my child?", a: "Yes. Walk in any time. We don't hide what we do." },
   { q: "What's the free trial?", a: "Two weeks of unlimited classes. Adults can try any program. Kids can try their age group. No card required, no contract, no pressure." },
-  { q: "How do I start?", a: "Fill out the form on this page or call (908) 641-2769. We'll text to confirm a class time." },
+  { q: "How do I start?", a: "Fill out the form on this page or call (908) 341-1131. We'll text to confirm a class time." },
 ];
 ---
 
@@ -19,6 +23,11 @@ const faqs = [
   description="Martial arts classes for Cranford, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
   ogImage="/images/adult-bjj-hero.jpg"
 >
+  <Fragment slot="head">
+    <LocalBusinessSchema city={city} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
   <PageHero
     eyebrow="10 minutes from Cranford"
     headline="Martial Arts in Cranford, NJ"

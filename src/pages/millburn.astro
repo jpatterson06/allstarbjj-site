@@ -3,6 +3,8 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 
 const faqs = [
   { q: "How far is AllStar from Millburn?", a: "About 12–15 minutes via Route 22 west to Union. 1166 West Chestnut St, Union, NJ 07083. Free parking." },
@@ -10,11 +12,18 @@ const faqs = [
   { q: "Do kids need to be athletic to start?", a: "No. The curriculum starts from zero. Coordination and fitness build as part of training." },
   { q: "Can adults try BJJ and Muay Thai at the same time?", a: "Yes — many Millburn members train both. They work well together." },
   { q: "What's included in the free trial?", a: "Two full weeks of unlimited classes. No card, no contract, no obligation." },
-  { q: "How do I enroll?", a: "Fill out the form on this page or call (908) 641-2769. We'll respond same day." },
+  { q: "How do I enroll?", a: "Fill out the form on this page or call (908) 341-1131. We'll respond same day." },
 ];
+
+const city = "Millburn";
 ---
 
-<PageLayout
+<Fragment slot="head">
+    <LocalBusinessSchema city={city} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
+  <PageLayout
   title="Martial Arts in Millburn, NJ — BJJ, Muay Thai & Kids Classes | AllStar"
   description="Martial arts classes for Millburn and Short Hills families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
   ogImage="/images/adult-bjj-hero.jpg"

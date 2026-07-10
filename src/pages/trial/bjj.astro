@@ -1,0 +1,176 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FAQ from '../../components/FAQ.astro';
+import { towns } from '../../lib/towns';
+
+const faqs = [
+  { q: "Do I need any experience to start BJJ?", a: "Zero experience required. Most of our students walk in knowing nothing. We have a structured beginner curriculum and you'll be rolling in your first class." },
+  { q: "Do I need to buy a gi?", a: "No. We provide a gi and all gear you need during the free trial. Just show up in athletic clothes and we handle the rest." },
+  { q: "Do I need to pay anything for the trial?", a: "No. The 2-week trial is genuinely free. No card on file. No locked-in commitment. If it's not for you, you owe us nothing." },
+  { q: "When can I start?", a: "Whenever the next class is on the schedule. After you fill out the form, we'll text you to confirm a class time. Most students start within a few days." },
+  { q: "Is BJJ safe for beginners?", a: "Yes. Our beginner classes are structured so you learn at a safe pace. Coaches control the intensity and partners are coached to go easy with new students." },
+  { q: "Is there parking?", a: "Free lot on-site at 1166 West Chestnut St, Union, NJ. Easy in, easy out." },
+];
+
+const testimonials = [
+  { name: "Marcus T.", program: "Adult BJJ", quote: "Best grappling gym in Jersey. I walked in knowing nothing and was rolling with confidence within weeks." },
+  { name: "Carlos M.", program: "Adult BJJ", quote: "The instructors break everything down step by step. World-class BJJ, genuine community." },
+  { name: "Sarah K.", program: "Adult BJJ", quote: "I was nervous as a woman starting BJJ. Now I wouldn't trade it for anything." },
+];
+---
+
+<PageLayout
+  title="Free 2-Week BJJ Trial in Union, NJ — AllStar Martial Arts"
+  description="Try Adult Brazilian Jiu-Jitsu free for 2 weeks at AllStar Martial Arts in Union, NJ. No experience needed. No contract. Just show up."
+  ogImage={"/images/adult-bjj-hero.jpg"}
+>
+
+  <!-- HERO + FORM -->
+  <section class="bg-brand-black text-white">
+    <div class="container-page py-14 md:py-20">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="flex-1 text-center lg:text-left">
+          <div class="inline-block bg-brand-red text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-5">
+            Limited Spots Available
+          </div>
+          <h1 class="font-display text-4xl md:text-5xl xl:text-6xl uppercase font-black leading-tight mb-5">
+            Try Brazilian Jiu-Jitsu
+            <span class="text-brand-gold">FREE for 2 Weeks</span>
+          </h1>
+          <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
+            The most effective grappling art in the world — taught for real beginners. No experience needed. You'll be rolling in your first class.
+          </p>
+          <div class="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ Beginners welcome</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ Gear provided</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ No contract</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">📍 Union, NJ</span>
+          </div>
+          <div class="flex gap-8 justify-center lg:justify-start text-center">
+            <div>
+              <div class="font-display text-3xl text-brand-gold font-black">500+</div>
+              <div class="text-gray-400 text-xs uppercase tracking-wide">Students trained</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl text-brand-gold font-black">15+</div>
+              <div class="text-gray-400 text-xs uppercase tracking-wide">Years in Union</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl text-brand-gold font-black">5★</div>
+              <div class="text-gray-400 text-xs uppercase tracking-wide">Google rating</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-auto lg:min-w-[340px]">
+          <LeadForm programLocked="Adult BJJ" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED STRIP -->
+  <section class="bg-brand-red text-white py-5">
+    <div class="container-page">
+      <ul class="flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm font-bold uppercase tracking-wide">
+        <li>🥋 Unlimited BJJ Classes for 2 Weeks</li>
+        <li>🎒 Gi + All Gear Provided</li>
+        <li>👨‍🏫 Intro with Coach Jamal</li>
+        <li>🚫 No Card · No Contract · No Pressure</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PHOTO + BENEFITS -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-5xl">
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <div class="flex-1">
+          <img
+            src={"/images/adult-bjj-hero.jpg"}
+            alt="AllStar BJJ class in Union NJ"
+            class="rounded-xl w-full object-cover shadow-lg"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex-1">
+          <h2 class="font-display text-3xl md:text-4xl uppercase font-black text-brand-black mb-4">
+            The Most Complete Grappling System on Earth
+          </h2>
+          <p class="text-brand-gray leading-relaxed mb-5">
+            Brazilian Jiu-Jitsu teaches you how to control, submit, and neutralize any opponent — regardless of size. We teach it from day one, at your pace.
+          </p>
+          <ul class="space-y-3 text-brand-black">
+            <li class="flex items-start gap-3"><span class="text-xl">💪</span> Build real functional strength and conditioning</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🧠</span> Sharpen problem-solving and stay calm under pressure</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🤝</span> Train with a community that has your back</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🥋</span> Renzo Gracie lineage black belt instruction</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🎯</span> Structured beginner program — no flailing around</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">What members say</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Real BJJ Students. Real Results.</h2>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {testimonials.map((t) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-brand-gold text-xl mb-3">★★★★★</div>
+            <p class="text-brand-black leading-relaxed mb-4 italic">"{t.quote}"</p>
+            <div class="font-bold text-brand-black">{t.name}</div>
+            <div class="text-brand-gray text-sm">{t.program}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND FORM -->
+  <section class="section-pad bg-brand-black text-white">
+    <div class="container-page max-w-5xl">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="flex-1 text-center lg:text-left">
+          <h2 class="font-display text-3xl md:text-4xl uppercase font-black text-white mb-3">
+            Ready to Roll?
+          </h2>
+          <p class="text-gray-300 text-lg mb-6">
+            Fill out the form and Coach Jamal will reach out personally to lock in your first BJJ class. Most people start within a few days.
+          </p>
+          <div class="space-y-2 text-gray-300 text-sm">
+            <div>📍 1166 West Chestnut St, Union, NJ 07083</div>
+            <div>📞 <a href="tel:+19083411131" class="underline hover:text-white">(908) 341-1131</a></div>
+          </div>
+        </div>
+        <div class="w-full lg:w-auto lg:min-w-[340px]">
+          <LeadForm programLocked="Adult BJJ" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOWNS -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl text-center">
+      <div class="eyebrow">Nearby towns</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Coming From a Surrounding Town?</h2>
+      <p class="text-brand-gray leading-relaxed mb-6">Students drive in from all over Union and Essex County for our BJJ program. The drive is worth it.</p>
+      <div class="flex flex-wrap gap-2 justify-center">
+        {towns.map((t) => (
+          <a href={`/trial/${t.slug}/`} class="bg-white hover:bg-brand-navy hover:text-white text-brand-black px-4 py-2 rounded-md text-sm font-bold transition-colors shadow-sm">
+            {t.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+</PageLayout>

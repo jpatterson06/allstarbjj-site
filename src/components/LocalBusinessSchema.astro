@@ -1,0 +1,53 @@
+---
+// LocalBusiness schema for location-specific pages
+// Use for city/area pages to claim local authority
+
+export interface Props {
+  city: string;
+  address?: string; // Override if location is in a different town
+  areaServed?: string[];
+  description?: string;
+}
+
+const {
+  city,
+  address = "1166 West Chestnut St, Union, NJ 07083",
+  areaServed = [city, "Union", "Springfield", "Cranford", "Maplewood"],
+  description = `Martial arts classes in ${city} - Brazilian Jiu Jitsu, Muay Thai, MMA, and Kids programs at AllStar Martial Arts.`
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MartialArtsSchool",
+  "name": `AllStar Martial Arts - ${city}`,
+  "description": description,
+  "url": `https://allstarbjj.com/${city.toLowerCase().replace(/\s+/g, '-')}`,
+  "telephone": "+1-908-341-1131",
+  "email": "info@allstarbjj.com",
+  "image": "https://allstarbjj.com/images/adult-bjj-hero.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": address.split(',')[0],
+    "addressLocality": "Union",
+    "addressRegion": "NJ",
+    "postalCode": "07083",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.6976,
+    "longitude": -74.2674
+  },
+  "areaServed": areaServed,
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "80",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

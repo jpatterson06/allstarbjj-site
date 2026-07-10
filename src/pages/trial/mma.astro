@@ -1,0 +1,176 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FAQ from '../../components/FAQ.astro';
+import { towns } from '../../lib/towns';
+
+const faqs = [
+  { q: "Do I need BJJ or striking experience before starting MMA?", a: "No. Our MMA program is designed for people starting from zero. You'll build both your grappling and striking foundations simultaneously." },
+  { q: "How is MMA different from taking separate BJJ and Muay Thai classes?", a: "MMA training integrates both — you learn how to transition between striking and grappling, close the distance, and fight on the ground. It's the complete system." },
+  { q: "Is MMA training dangerous for beginners?", a: "No. We control intensity carefully for new students. Sparring is introduced gradually and only when you're ready. Safety is the top priority." },
+  { q: "Do I need to buy gear for the trial?", a: "No. We provide everything you need during the free trial. Just wear athletic clothes and bring a water bottle." },
+  { q: "Do I need to pay anything for the trial?", a: "No. Two full weeks free. No card on file, no contract, no pressure." },
+  { q: "Is there parking?", a: "Free lot on-site at 1166 West Chestnut St, Union, NJ. Easy in, easy out." },
+];
+
+const testimonials = [
+  { name: "James L.", program: "Adult MMA", quote: "Best MMA gym in the area. The blend of BJJ and Muay Thai is exactly what I was looking for." },
+  { name: "Derrick P.", program: "Adult MMA", quote: "No experience when I started. Coaches take you step by step. Now I'm sparring and loving it." },
+  { name: "Amanda S.", program: "Adult MMA", quote: "MMA gave me confidence I never had. The training is legit and the coaches are patient." },
+];
+---
+
+<PageLayout
+  title="Free 2-Week MMA Trial in Union, NJ — AllStar Martial Arts"
+  description="Try Adult MMA free for 2 weeks at AllStar Martial Arts in Union, NJ. BJJ ground game + Muay Thai striking. Train like a fighter."
+  ogImage={"/images/adult-bjj-hero.jpg"}
+>
+
+  <!-- HERO + FORM -->
+  <section class="bg-brand-black text-white">
+    <div class="container-page py-14 md:py-20">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="flex-1 text-center lg:text-left">
+          <div class="inline-block bg-brand-red text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-5">
+            Limited Spots Available
+          </div>
+          <h1 class="font-display text-4xl md:text-5xl xl:text-6xl uppercase font-black leading-tight mb-5">
+            Train MMA
+            <span class="text-brand-gold">FREE for 2 Weeks</span>
+          </h1>
+          <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
+            The complete fighter's toolkit — BJJ grappling combined with Muay Thai striking. Train like a fighter. Get in the best shape of your life.
+          </p>
+          <div class="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ BJJ + Muay Thai combined</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ All levels</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ No contract</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">📍 Union, NJ</span>
+          </div>
+          <div class="flex gap-8 justify-center lg:justify-start text-center">
+            <div>
+              <div class="font-display text-3xl text-brand-gold font-black">500+</div>
+              <div class="text-gray-400 text-xs uppercase tracking-wide">Students trained</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl text-brand-gold font-black">15+</div>
+              <div class="text-gray-400 text-xs uppercase tracking-wide">Years in Union</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl text-brand-gold font-black">5★</div>
+              <div class="text-gray-400 text-xs uppercase tracking-wide">Google rating</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-auto lg:min-w-[340px]">
+          <LeadForm programLocked="Adult MMA" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED STRIP -->
+  <section class="bg-brand-red text-white py-5">
+    <div class="container-page">
+      <ul class="flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm font-bold uppercase tracking-wide">
+        <li>🥋 Unlimited MMA Classes for 2 Weeks</li>
+        <li>🎒 All Gear Provided</li>
+        <li>👨‍🏫 Intro with Coach Jamal</li>
+        <li>🚫 No Card · No Contract · No Pressure</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PHOTO + BENEFITS -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-5xl">
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <div class="flex-1">
+          <img
+            src={"/images/adult-bjj-hero.jpg"}
+            alt="AllStar MMA training in Union NJ"
+            class="rounded-xl w-full object-cover shadow-lg"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex-1">
+          <h2 class="font-display text-3xl md:text-4xl uppercase font-black text-brand-black mb-4">
+            The Complete Fighting System
+          </h2>
+          <p class="text-brand-gray leading-relaxed mb-5">
+            MMA combines BJJ's ground control with Muay Thai's striking power. Coached by instructors with IFL and Bellator experience, you'll learn to fight and get into the best shape of your life doing it.
+          </p>
+          <ul class="space-y-3 text-brand-black">
+            <li class="flex items-start gap-3"><span class="text-xl">💪</span> Full-body conditioning like nothing else</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🥊</span> Muay Thai striking — punches, kicks, elbows, knees</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🥋</span> BJJ grappling — takedowns, ground control, submissions</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🧠</span> Tactical training — when to strike, when to grapple</li>
+            <li class="flex items-start gap-3"><span class="text-xl">🤝</span> Coached by fighters who competed at the highest levels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-5xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">What members say</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Real MMA Students. Real Results.</h2>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {testimonials.map((t) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-brand-gold text-xl mb-3">★★★★★</div>
+            <p class="text-brand-black leading-relaxed mb-4 italic">"{t.quote}"</p>
+            <div class="font-bold text-brand-black">{t.name}</div>
+            <div class="text-brand-gray text-sm">{t.program}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND FORM -->
+  <section class="section-pad bg-brand-black text-white">
+    <div class="container-page max-w-5xl">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="flex-1 text-center lg:text-left">
+          <h2 class="font-display text-3xl md:text-4xl uppercase font-black text-white mb-3">
+            Ready to Train?
+          </h2>
+          <p class="text-gray-300 text-lg mb-6">
+            Fill out the form and Coach Jamal will reach out personally to lock in your first MMA class. Most people start within a few days.
+          </p>
+          <div class="space-y-2 text-gray-300 text-sm">
+            <div>📍 1166 West Chestnut St, Union, NJ 07083</div>
+            <div>📞 <a href="tel:+19083411131" class="underline hover:text-white">(908) 341-1131</a></div>
+          </div>
+        </div>
+        <div class="w-full lg:w-auto lg:min-w-[340px]">
+          <LeadForm programLocked="Adult MMA" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOWNS -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl text-center">
+      <div class="eyebrow">Nearby towns</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Coming From a Surrounding Town?</h2>
+      <p class="text-brand-gray leading-relaxed mb-6">Students drive in from all over Union and Essex County for MMA training. The drive is short — the trial is free.</p>
+      <div class="flex flex-wrap gap-2 justify-center">
+        {towns.map((t) => (
+          <a href={`/trial/${t.slug}/`} class="bg-white hover:bg-brand-navy hover:text-white text-brand-black px-4 py-2 rounded-md text-sm font-bold transition-colors shadow-sm">
+            {t.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+</PageLayout>

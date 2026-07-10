@@ -1,0 +1,35 @@
+---
+// VideoSchema markup for YouTube embeds
+// Helps Google understand video content for AI Overview
+
+export interface Props {
+  videoId: string;
+  title: string;
+  description?: string;
+  thumbnailUrl?: string;
+  duration?: string; // ISO 8601 format (e.g., "PT5M30S")
+  uploadDate?: string; // ISO 8601 date (e.g., "2024-01-15")
+}
+
+const { 
+  videoId, 
+  title, 
+  description = '',
+  thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+  duration = 'PT3M',
+  uploadDate = new Date().toISOString().split('T')[0]
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": title,
+  ...(description && { "description": description }),
+  "thumbnailUrl": thumbnailUrl,
+  "uploadDate": uploadDate,
+  "duration": duration,
+  "embedUrl": `https://www.youtube.com/embed/${videoId}`
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
