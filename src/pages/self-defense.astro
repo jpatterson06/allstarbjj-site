@@ -1,10 +1,9 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import PageHero from '../components/PageHero.astro';
+import LeadForm from '../components/LeadForm.astro';
 import FAQ from '../components/FAQ.astro';
-import CTA from '../components/CTA.astro';
 
-const heroImg = '/images/adult-class.jpg';
+const heroImg = '/images/gym-hero.jpg'; // Replace with your gym mat photo
 
 const faqs = [
   { q: "Is BJJ really effective for real street situations?", a: "Yes. Most street confrontations end up on the ground. If you can control a larger person's position and submissions, you win without striking. We don't teach \"street fighting\" — we teach leverage and escape, which work everywhere." },
@@ -172,8 +171,28 @@ const faqs = [
 
   <FAQ items={faqs} />
 
-  <CTA
-    headline="Two Weeks Free. Learn By Doing."
-    sub="The only way to know if this works is to try it. Come train. Roll with our students. See what leverage actually does. If it's not for you, you owe us nothing."
-  />
+  <!-- SIGNUP FORM -->
+  <section class="bg-brand-black text-white">
+    <div class="container-page py-14 md:py-20">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="flex-1 text-center lg:text-left">
+          <h2 class="font-display text-4xl md:text-5xl uppercase font-black leading-tight mb-5">
+            Ready to Learn Real
+            <span class="text-brand-gold">Self Defense?</span>
+          </h2>
+          <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
+            Two weeks free. No contract. No pressure. See for yourself why leverage beats strength.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ All levels welcome</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ Real instruction</span>
+            <span class="bg-white/10 text-white text-sm px-4 py-2 rounded-full">✅ Zero commitment</span>
+          </div>
+        </div>
+        <div class="w-full lg:w-auto lg:min-w-[340px]">
+          <LeadForm programLocked="Self Defense" />
+        </div>
+      </div>
+    </div>
+  </section>
 </PageLayout>
