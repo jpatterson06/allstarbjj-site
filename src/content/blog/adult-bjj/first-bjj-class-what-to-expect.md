@@ -147,7 +147,6 @@ Tell the coach before class. We'll work around it.
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
 - [Gi vs No-Gi BJJ for Beginners](/blog/adult-bjj/gi-vs-no-gi-beginners/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 
 ---
 

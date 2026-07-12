@@ -142,7 +142,6 @@ Most fighters lose at some point. Losses don't end careers — they shape them. 
 - [Adult MMA in Union NJ — From Hobbyist to Competitor](/blog/adult-mma/adult-mma-union-nj-hobbyist-to-competitor/)
 - [What MMA Actually Looks Like — Training vs Fighting](/blog/adult-mma/mma-training-vs-fighting/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 - [Adult MMA Classes](/adult-mma-classes-union/)
 
 ---

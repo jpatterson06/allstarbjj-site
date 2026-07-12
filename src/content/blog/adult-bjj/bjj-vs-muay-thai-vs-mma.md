@@ -132,7 +132,6 @@ Yes — but you're missing 50% of what's likely to happen if you ever face a rea
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [BJJ for Self-Defense — What Actually Works](/blog/adult-bjj/bjj-self-defense-what-works/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 - [Adult Muay Thai Classes](/adult-muay-thai-classes-union/)
 - [Adult MMA Classes](/adult-mma-classes-union/)
 

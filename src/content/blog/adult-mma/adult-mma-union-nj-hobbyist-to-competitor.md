@@ -108,7 +108,7 @@ Bottom line: if you train smart, control sparring intensity, and recover properl
 6-3 pro record. Five wins by submission. Fights in the IFL during its peak years. Bellator. UWC champion. The instruction is filtered through real combat experience, not theory.
 
 **Real Renzo Gracie BJJ as the base.**
-Most MMA gyms have weak BJJ programs. Ours is built on direct Renzo Gracie lineage. ([More here.](/about/renzo-gracie-lineage/))
+Most MMA gyms have weak BJJ programs. Ours is built on direct Renzo Gracie lineage.
 
 **Coached fighters into the UFC.**
 The path exists. If amateur-to-UFC is what you want, we know the route.
@@ -166,7 +166,6 @@ With good coaching and controlled sparring: low risk. With reckless training: hi
 - [What MMA Actually Looks Like — Training vs Fighting](/blog/adult-mma/mma-training-vs-fighting/)
 - [How Long Until My First Amateur MMA Fight?](/blog/adult-mma/how-long-until-amateur-mma-fight/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 - [Adult MMA Classes](/adult-mma-classes-union/)
 
 ---

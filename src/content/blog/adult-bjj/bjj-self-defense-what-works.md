@@ -98,7 +98,7 @@ Some BJJ schools train in ways that are useful for self-defense. Some schools tr
 - Promotes belts on time-served, not skill
 - Instructor's lineage can't be verified
 
-At AllStar, we train real. The wall has the lineage. We roll live. We don't sell you fantasy. ([More on our Renzo Gracie lineage](/about/renzo-gracie-lineage/).)
+At AllStar, we train real. The wall has the lineage. We roll live. We don't sell you fantasy.
 
 ## Two Weeks Free. Test It Yourself.
 
@@ -134,7 +134,6 @@ Standing escape from a bear hug or rear hug. Most attacks start with a grab. Mos
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 
 ---
 

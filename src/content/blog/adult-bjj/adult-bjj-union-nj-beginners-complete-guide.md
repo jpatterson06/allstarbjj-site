@@ -95,8 +95,6 @@ I trained directly under Renzo Gracie at his academy in New York. The wall in ou
 
 For a beginner, this means cleaner instruction. The way I show you a guard pass is the way Renzo showed me, which is closer to what works in real competition than what most schools teach.
 
-[Read more about our Renzo Gracie lineage](/about/renzo-gracie-lineage/).
-
 ## Common Adult Beginner Worries
 
 **"I'm too old."**
@@ -147,7 +145,6 @@ Yes. Walk in any time. We don't hide what we do.
 - [Gi vs No-Gi BJJ for Beginners](/blog/adult-bjj/gi-vs-no-gi-beginners/)
 - [BJJ for Self-Defense — What Actually Works](/blog/adult-bjj/bjj-self-defense-what-works/)
 - [BJJ Belt System Explained](/blog/adult-bjj/bjj-belt-system-adults/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 - [Adult BJJ Classes in Union](/adult-bjj-classes-union/)
 
 ---

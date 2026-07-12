@@ -11,6 +11,13 @@
 [functions]
   directory = "netlify/functions"
 
+# Redirect old lineage page to about page
+[[redirects]]
+  from = "/about/renzo-gracie-lineage/*"
+  to = "/about-us/"
+  status = 301
+  force = true
+
 # Trailing-slash redirect — keeps URLs canonical (matches astro build.format = directory)
 [[redirects]]
   from = "/*/"

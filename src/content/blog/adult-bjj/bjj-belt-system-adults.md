@@ -123,7 +123,7 @@ When I tell you I'm a Renzo Gracie black belt, here's what that signifies:
 - That belt traces back through the Gracie family to Helio Gracie
 - My students who I promote inherit this lineage
 
-This is verifiable. The wall in our gym shows the line of instruction. ([More on the lineage](/about/renzo-gracie-lineage/).)
+This is verifiable. The wall in our gym shows the line of instruction.
 
 ## Two Weeks Free. Belts Earned, Not Bought.
 
@@ -160,7 +160,6 @@ No formal test. Promotions happen based on instructor evaluation and consistent 
 ## Related Reading
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
 - [Adult BJJ Classes](/adult-bjj-classes-union/)
 

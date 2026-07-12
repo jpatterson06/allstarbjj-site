@@ -139,7 +139,6 @@ Yes. There are tournaments in both formats. IBJJF (gi-focused) and ADCC (no-gi) 
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Our Renzo Gracie Lineage](/about/renzo-gracie-lineage/)
 
 ---
 
