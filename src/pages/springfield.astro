@@ -2,6 +2,8 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const faqs = [
@@ -19,6 +21,11 @@ const faqs = [
   description="Martial arts classes for Springfield, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
   ogImage="/images/adult-bjj-hero.jpg"
 >
+  <Fragment slot="head">
+    <LocalBusinessSchema city="Springfield" />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
   <PageHero
     eyebrow="10 minutes on Route 22"
     headline="Martial Arts in Springfield, NJ"

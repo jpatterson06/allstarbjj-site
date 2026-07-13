@@ -1,0 +1,131 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import CTA from '../components/CTA.astro';
+
+const city = "Linden";
+const latitude = 40.6209;
+const longitude = -74.2373;
+
+const faqs = [
+  { q: "How far is AllStar from Linden?", a: "About 10 minutes via Route 1 and local roads. 1166 West Chestnut St, Union. Free parking on-site." },
+  { q: "What programs are available?", a: "Adult BJJ, Muay Thai, and MMA (ages 16+). Kids Lions (7–13) and Cubs (4–6). Summer camp runs seasonally." },
+  { q: "Do I need experience?", a: "No. Most students — adults and kids — start with none." },
+  { q: "Can I watch a class before enrolling my child?", a: "Yes. Walk in any time. We don't hide what we do." },
+  { q: "What's the free trial?", a: "Two weeks of unlimited classes. Adults can try any program. Kids can try their age group. No card required, no contract, no pressure." },
+  { q: "How do I start?", a: "Fill out the form on this page or call (908) 341-1131. We'll text to confirm a class time." },
+];
+---
+
+<PageLayout
+  title="Martial Arts in Linden, NJ — BJJ, Muay Thai & Kids Classes | AllStar"
+  description="Martial arts classes for Linden, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <Fragment slot="head">
+    <LocalBusinessSchema city={city} latitude={latitude} longitude={longitude} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="10 minutes from Linden"
+    headline="Martial Arts in Linden, NJ"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. 10 minutes to Union. Free 2-week trial — no contract."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Linden has a strong martial arts community, and more residents are making the short 10-minute drive to AllStar each year. It's a quick trip down Route 1 — just 1166 West Chestnut in Union. Free parking on-site.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        They come because the coaching is different. Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter who fought in the IFL and Bellator. That competition background changes how technique is taught. Students who've been training here for five and ten years will tell you the difference shows up on the mat.
+      </p>
+    </div>
+  </section>
+
+  <!-- BJJ -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Brazilian Jiu-Jitsu</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes Near Linden, NJ</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Brazilian Jiu-Jitsu is our flagship program. Adults 16 and up. Beginners welcome — most students walk in with zero experience.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Plenty of schools in the area teach BJJ — some even share our lineage. The difference is the coach. Jamal's competition resume — ADCC, IFL, Bellator, UWC champion — isn't just a credential on the wall. It informs every technique he teaches.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        Evening classes at 6, 7, and 8 PM most weekdays — built around NJ Transit schedules and working adults who commute. Two weeks free. No contract.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Martial Arts</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts Near Linden, NJ</h2>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool-age energy with martial arts structure. Focus on coordination, listening, and confidence. Short activities, high engagement, constant positive reinforcement.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu technique. Takedowns, escapes, positions. These kids are not doing karate katas — they're learning a system that works. Parents consistently report that the confidence carries into school.</p>
+        </div>
+      </div>
+      <p class="text-brand-gray leading-relaxed mt-5">
+        Bully prevention is a real part of what we teach. When a kid knows they can handle themselves, the dynamic with bullies shifts without a single punch being thrown.
+      </p>
+    </div>
+  </section>
+
+  <!-- Muay Thai + MMA -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="eyebrow text-brand-gold">Muay Thai</div>
+          <h2 class="text-2xl md:text-3xl mb-4">Muay Thai Near Linden, NJ</h2>
+          <p class="text-white/90 leading-relaxed">
+            This is the one nobody else in Union County offers. No other gym in the Linden, Union, or Rahway area offers authentic Muay Thai instruction alongside BJJ. Real pad work, real technique, real conditioning. Beginners are welcome.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow text-brand-gold">MMA</div>
+          <h2 class="text-2xl md:text-3xl mb-4">MMA Classes Near Linden, NJ</h2>
+          <p class="text-white/90 leading-relaxed">
+            Our MMA program puts BJJ, Muay Thai, and wrestling together into one complete system. Coached by Jamal Patterson — pro MMA fighter who has cornered UFC athletes from their amateur debut to the pros. Adults 16 and up.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">If you know Linden</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're 10 Minutes Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Downtown Linden", "Linden Public Library", "Route 1 North", "Tremley Point Road", "Linden High School", "Warinanco Park", "NJ Transit bus hub", "Linden Train Station area"].map((l) => (
+          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Linden Families Welcome"
+    sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
+  />
+</PageLayout>

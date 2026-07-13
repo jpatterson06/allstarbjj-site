@@ -7,13 +7,17 @@ export interface Props {
   address?: string; // Override if location is in a different town
   areaServed?: string[];
   description?: string;
+  latitude?: number;
+  longitude?: number;
 }
 
 const {
   city,
   address = "1166 West Chestnut St, Union, NJ 07083",
   areaServed = [city, "Union", "Springfield", "Cranford", "Maplewood"],
-  description = `Martial arts classes in ${city} - Brazilian Jiu Jitsu, Muay Thai, MMA, and Kids programs at AllStar Martial Arts.`
+  description = `Martial arts classes in ${city} - Brazilian Jiu Jitsu, Muay Thai, MMA, and Kids programs at AllStar Martial Arts.`,
+  latitude = 40.6925196,
+  longitude = -74.2863264
 } = Astro.props;
 
 const schema = {
@@ -35,8 +39,8 @@ const schema = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 40.6925196,
-    "longitude": -74.2863264
+    "latitude": latitude,
+    "longitude": longitude
   },
   "hasMap": "https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9",
   "areaServed": areaServed,

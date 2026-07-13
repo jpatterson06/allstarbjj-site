@@ -2,6 +2,8 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const faqs = [
@@ -18,6 +20,11 @@ const faqs = [
   description="Martial arts classes for Chatham, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
   ogImage="/images/adult-bjj-hero.jpg"
 >
+  <Fragment slot="head">
+    <LocalBusinessSchema city="Chatham" />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
   <PageHero
     eyebrow="20 Minutes from Chatham"
     headline="Martial Arts in Chatham, NJ"
