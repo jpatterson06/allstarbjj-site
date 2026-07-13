@@ -4,6 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import FAQ from '../../components/FAQ.astro';
 import CTA from '../../components/CTA.astro';
 import YouTubeShort from '../../components/YouTubeShort.astro';
+import FAQPageSchema from '../../components/FAQPageSchema.astro';
 
 const heroImg = '/images/kids-martial-arts.jpg';
 
@@ -24,6 +25,9 @@ const faqs = [
   description="Kids martial arts in Union, NJ. The Lions program (ages 7-13) builds confidence, discipline, and bullyproofing through real Brazilian Jiu-Jitsu. Free 2-week trial."
   ogImage={heroImg}
 >
+  <Fragment slot="head">
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
   <PageHero
     eyebrow="Kids ages 7-13"
     headline="Kids Martial Arts — Lions Program"

@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const heroImg = '/images/adult-bjj-hero.jpg';
@@ -23,6 +24,10 @@ const faqs = [
   description="Adult Brazilian Jiu-Jitsu classes in Union, NJ from a Renzo Gracie black belt. Real lineage, real instruction, real community. Two weeks free, no contract. Beginners welcome."
   ogImage={heroImg}
 >
+  <Fragment slot="head">
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
   <PageHero
     eyebrow="Ages 16+"
     headline="Adult Brazilian Jiu Jitsu in Union, NJ"

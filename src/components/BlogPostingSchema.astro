@@ -1,0 +1,62 @@
+---
+// Article/BlogPosting schema for blog posts
+// Includes headline, description, author, datePublished, dateModified, image, articleBody
+
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  post: CollectionEntry<'blog'>;
+  slug: string;
+  heroImg: string;
+}
+
+const { post, slug, heroImg } = Astro.props;
+
+// Build the full article URL
+const articleUrl = `https://allstarbjj.com/blog/${slug}`;
+
+// Extract text content from markdown for articleBody
+// Note: For better SEO, you could pass the full rendered content, but excerpt works for schema
+const description = post.data.meta_description || '';
+
+// Get image URL - check if hero_image is a full URL or just filename
+const imageUrl = heroImg.startsWith('http')
+  ? heroImg
+  : `https://allstarbjj.com${heroImg}`;
+
+// Use current date as fallback for datePublished/Modified
+// In real use, you'd want to track actual publish dates
+const dateModified = new Date().toISOString().split('T')[0];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.data.title,
+  "description": description,
+  "image": imageUrl,
+  "datePublished": dateModified,
+  "dateModified": dateModified,
+  "author": {
+    "@type": "Person",
+    "name": "Jamal Patterson",
+    "url": "https://allstarbjj.com",
+    "description": "Founder & Head Instructor at AllStar Martial Arts. Renzo Gracie black belt, ADCC veteran, former pro MMA fighter (IFL, Bellator), UWC Light Heavyweight Champion"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": articleUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AllStar Martial Arts",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://allstarbjj.com/images/logo.png"
+    },
+    "url": "https://allstarbjj.com"
+  },
+  "articleBody": description // Using meta description as summary; could be enhanced with full article text
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

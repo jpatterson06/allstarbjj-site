@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
 
 const heroImg = '/images/mma-team.jpg';
 
@@ -17,6 +18,10 @@ const faqs = [
   { q: "Can women train MMA here?", a: "Yes. We pair carefully and our culture is respectful. We have women across BJJ, Muay Thai, and MMA." },
 ];
 ---
+
+<Fragment slot="head">
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
 
 <PageLayout
   title="Adult MMA Classes in Union, NJ — Coached by an IFL & Bellator Veteran | AllStar"

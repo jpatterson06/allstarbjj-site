@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const heroImg = '/images/muay-thai-pads.jpg';
@@ -24,6 +25,10 @@ const faqs = [
   description="Adult Muay Thai in Union, NJ at a combat-sports gym run by an MMA veteran. Real fundamentals, serious cardio, no fluff. Two weeks free. Beginners welcome."
   ogImage={heroImg}
 >
+  <Fragment slot="head">
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
   <PageHero
     eyebrow="Ages 16+"
     headline="Adult Muay Thai in Union, NJ"

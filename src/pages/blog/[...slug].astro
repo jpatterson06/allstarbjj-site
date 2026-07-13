@@ -1,6 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import BlogPostingSchema from '../../components/BlogPostingSchema.astro';
 import CTA from '../../components/CTA.astro';
 
 export async function getStaticPaths() {
@@ -33,6 +34,7 @@ const label = categoryLabel[post.data.category] ?? 'AllStar Blog';
 ---
 
 <PageLayout title={post.data.title} description={post.data.meta_description} ogImage={heroImg}>
+  <BlogPostingSchema slot="head" post={post} slug={post.slug} heroImg={heroImg} />
 
   <!-- Post hero -->
   <section class="relative bg-brand-black text-white overflow-hidden" style="min-height:260px">
