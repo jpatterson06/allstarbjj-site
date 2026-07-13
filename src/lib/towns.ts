@@ -16,6 +16,7 @@ export interface Town {
   priority: 'highest' | 'high' | 'medium';
   heroImage?: string;     // optional hero photo override (e.g. "/images/union-mat.jpg")
   heroPosition?: string;  // optional CSS object-position for hero
+  metaDescription: string; // unique, <160 char meta description with city, distance, programs, value prop
 }
 
 export const towns: Town[] = [
@@ -33,6 +34,7 @@ export const towns: Town[] = [
     priority: 'highest',
     heroImage: '/images/union-mat.jpg',
     heroPosition: '50% 60%',
+    metaDescription: 'Brazilian Jiu-Jitsu in Union, NJ since 2011. BJJ, Muay Thai, MMA + Kids classes. Renzo Gracie black belt. Free 2-week trial, no contract.',
   },
   {
     slug: 'springfield',
@@ -46,6 +48,7 @@ export const towns: Town[] = [
     landmarks: ['Baltusrol Golf Club', 'Cannon Ball House', 'Meisel Park', 'Mountain Avenue'],
     adjacentSlugs: ['union', 'millburn', 'mountainside', 'maplewood'],
     priority: 'high',
+    metaDescription: 'BJJ, Muay Thai, MMA in Springfield, NJ — 6 min from Union. Renzo Gracie black belt coaching. Kids classes available. Free 2-week trial.',
   },
   {
     slug: 'cranford',
@@ -59,6 +62,7 @@ export const towns: Town[] = [
     landmarks: ['Downtown Cranford', 'Nomahegan Park', 'Rahway River', 'Cranford Train Station'],
     adjacentSlugs: ['westfield', 'roselle-park', 'union'],
     priority: 'high',
+    metaDescription: 'Martial Arts in Cranford, NJ — 10 min from Union. BJJ, Muay Thai, MMA & Kids classes. ADCC veteran coach. Free 2-week trial, no contract.',
   },
   {
     slug: 'westfield',
@@ -72,6 +76,7 @@ export const towns: Town[] = [
     landmarks: ['Downtown Westfield (Quimby St, Elm St, East Broad)', 'Tamaques Park', 'Mindowaskin Park', 'Echo Lake Country Club', 'Westfield Train Station'],
     adjacentSlugs: ['cranford', 'mountainside', 'springfield'],
     priority: 'highest',
+    metaDescription: 'Renzo Gracie BJJ + Muay Thai in Westfield, NJ, 12 min from Union. Adults & kids classes. IFL & Bellator veteran. Free 2-week trial.',
   },
   {
     slug: 'mountainside',
@@ -85,6 +90,7 @@ export const towns: Town[] = [
     landmarks: ['Watchung Reservation', 'Echo Lake Park', "Children's Specialized Hospital", 'Deerfield School'],
     adjacentSlugs: ['westfield', 'springfield', 'union'],
     priority: 'medium',
+    metaDescription: 'Brazilian Jiu-Jitsu in Mountainside, NJ — 10 min away. Adults & kids classes, Muay Thai, MMA. Renzo Gracie black belt. Free 2-week trial.',
   },
   {
     slug: 'maplewood',
@@ -99,6 +105,7 @@ export const towns: Town[] = [
     landmarks: ['Maplewood Village', 'Memorial Park', 'South Mountain Reservation', 'Maplewood Train Station'],
     adjacentSlugs: ['millburn', 'springfield'],
     priority: 'high',
+    metaDescription: 'BJJ, Muay Thai, MMA in Maplewood, NJ — 15 min from Union. Adults & kids Gi + No-Gi classes. Renzo Gracie lineage. Free 2-week trial.',
   },
   {
     slug: 'millburn',
@@ -113,6 +120,7 @@ export const towns: Town[] = [
     landmarks: ['The Mall at Short Hills', 'Taylor Park', 'Millburn Train Station', 'Paper Mill Playhouse'],
     adjacentSlugs: ['springfield', 'maplewood'],
     priority: 'highest',
+    metaDescription: 'Renzo Gracie BJJ & Muay Thai in Short Hills, NJ — 12 min from Union. Adult & kids classes. ADCC veteran. Free 2-week trial, no contract.',
   },
   {
     slug: 'roselle-park',
@@ -126,6 +134,7 @@ export const towns: Town[] = [
     landmarks: ['Casano Community Center', 'Roselle Park Train Station', 'Westfield Avenue', 'Veterans Memorial Park'],
     adjacentSlugs: ['union', 'cranford', 'kenilworth'],
     priority: 'medium',
+    metaDescription: 'Brazilian Jiu-Jitsu in Roselle Park, NJ — 6 min from Union. BJJ, Muay Thai, MMA & kids classes. Renzo Gracie black belt. Free trial.',
   },
 
   {
@@ -140,6 +149,7 @@ export const towns: Town[] = [
     landmarks: ['Summit Train Station', 'Downtown Summit (Springfield Ave)', 'Reeves-Reed Arboretum', 'Overlook Medical Center', 'Kent Place School'],
     adjacentSlugs: ['chatham', 'new-providence', 'westfield'],
     priority: 'highest',
+    metaDescription: 'Real BJJ in Summit, NJ — 15 min from Union. Renzo Gracie black belt, ADCC veteran. Adults & kids classes. Muay Thai, MMA. Free trial.',
   },
   {
     slug: 'chatham',
@@ -153,6 +163,7 @@ export const towns: Town[] = [
     landmarks: ['Chatham Borough Train Station', 'Main Street Chatham', 'Fishawack Trail', 'Chatham High School', 'Noe Pond Club'],
     adjacentSlugs: ['summit', 'millburn'],
     priority: 'high',
+    metaDescription: 'Brazilian Jiu-Jitsu in Chatham, NJ — 18 min away. Renzo Gracie lineage, ADCC veteran coach. BJJ, Muay Thai, MMA. Free 2-week trial.',
   },
   {
     slug: 'livingston',
@@ -166,6 +177,7 @@ export const towns: Town[] = [
     landmarks: ['Livingston Mall', 'Livingston High School', 'Becker Park', 'Riker Hill Art Park', 'Memorial Oval'],
     adjacentSlugs: ['millburn', 'maplewood', 'springfield'],
     priority: 'high',
+    metaDescription: 'Real BJJ in Livingston, NJ — 18 min from Union. Renzo Gracie black belt coaching. BJJ, Muay Thai, MMA & kids. Free 2-week trial.',
   },
   {
     slug: 'kenilworth',
@@ -179,6 +191,7 @@ export const towns: Town[] = [
     landmarks: ['Kenilworth Town Hall', 'Boulevard', 'Kean University', 'Townley Presbyterian Church'],
     adjacentSlugs: ['union', 'roselle-park'],
     priority: 'high',
+    metaDescription: 'Brazilian Jiu-Jitsu in Kenilworth, NJ — 8 min from Union. Renzo Gracie lineage. BJJ, Muay Thai, MMA & kids classes. Free trial.',
   },
 ];
 

@@ -19,6 +19,16 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+// Google Analytics 4 Configuration
+// Get your GA4 Measurement ID from Google Analytics Console
+// Instructions:
+// 1. Go to https://analytics.google.com/
+// 2. Create a new property for allstarbjj.com
+// 3. Get your Measurement ID (looks like: G-XXXXXXXXXX)
+// 4. Add it to .env file as: PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+// 5. Build/deploy the site
+const ga4MeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 
 <!doctype html>
@@ -26,7 +36,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon links supporting multiple formats -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon-192.png" />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
@@ -46,6 +61,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
 
     <!-- Roboto + Roboto Condensed (matches current allstarbjj.com) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,6 +69,63 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet" />
 
     <slot name="head" />
+
+    <!-- Google Analytics 4 - gtag.js -->
+    {ga4MeasurementId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`}></script>
+        <script define:vars={{ ga4MeasurementId }}>
+          // Initialize Google Analytics 4
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', ga4MeasurementId, {
+            page_path: window.location.pathname,
+            page_title: document.title,
+          });
+
+          // Track page views automatically (gtag.js does this by default with 'config')
+
+          // Track button/link clicks on elements with data-track-event attribute
+          // Usage: <button data-track-event="button_name" data-track-label="Button Label">Click me</button>
+          document.addEventListener('click', function(e) {
+            const el = e.target.closest('[data-track-event]');
+            if (el) {
+              const eventName = el.getAttribute('data-track-event');
+              const eventLabel = el.getAttribute('data-track-label') || el.textContent?.trim() || 'unknown';
+              if (eventName && typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                  'event_label': eventLabel,
+                  'event_category': 'engagement'
+                });
+              }
+            }
+          }, true);
+
+          // Track form submissions on forms with data-track-form attribute
+          // Usage: <form data-track-form="contact_form">...</form>
+          document.addEventListener('submit', function(e) {
+            const form = e.target;
+            if (form && form.hasAttribute('data-track-form')) {
+              const formName = form.getAttribute('data-track-form');
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                  'event_label': formName,
+                  'event_category': 'engagement'
+                });
+              }
+            }
+          }, true);
+        </script>
+      </>
+    )}
+    {!ga4MeasurementId && (
+      <script>
+        console.warn('Google Analytics 4: PUBLIC_GA_MEASUREMENT_ID not configured in .env file. GA4 tracking disabled.');
+      </script>
+    )}
 
     <!-- LocalBusiness schema (sitewide) -->
     <script type="application/ld+json" set:html={JSON.stringify({

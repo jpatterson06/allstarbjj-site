@@ -1,0 +1,377 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import CTA from '../components/CTA.astro';
+
+const city = "Union";
+
+const faqs = [
+  { q: "What's at the Union location?", a: "This is AllStar's headquarters — the only fully staffed location with all programs. Brazilian Jiu-Jitsu, Muay Thai, MMA, Kids programs (Cubs 4-6, Lions 7-13), and summer camps. 1166 West Chestnut St, Union, NJ 07083. Free parking." },
+  { q: "Where is AllStar located in Union?", a: "1166 West Chestnut St, Union, NJ 07083. From Route 22, head south. Free on-site parking. 10 minutes from downtown Union." },
+  { q: "What time are classes?", a: "Adult classes: 6, 7, and 8 PM most weekdays. Kids classes: 4:30 and 6 PM. Saturday: 10 AM and noon. Class schedule is online — check our current session for specific program times." },
+  { q: "Do I need experience to start?", a: "No. Most adults and kids start with zero experience. Day one, you'll train with beginners and intermediate students on the same mat. Coach Jamal structures classes so everyone progresses." },
+  { q: "What's the free trial?", a: "Two weeks of unlimited classes. Adults can try any program: BJJ, Muay Thai, or MMA. Kids try their age group (Cubs 4-6, Lions 7-13). No card required, no contract, no credit card. Walk in or call (908) 341-1131." },
+  { q: "How much does membership cost?", a: "Pricing depends on which program and frequency. BJJ membership is most popular. Our instructors can walk you through options after your free trial. No long-term contracts required." },
+  { q: "Can I watch a class before enrolling?", a: "Absolutely. Walk in any weekday evening (6-8 PM) or Saturday morning. You'll see real students training. We don't hide what we do." },
+  { q: "Is there a kids trial?", a: "Yes — same as adults. Two weeks of unlimited classes in your child's age group (Cubs 4-6 or Lions 7-13). No commitment. Many parents watch from the lobby." },
+  { q: "How do I start?", a: "Fill out the form on this page, call (908) 341-1131, or walk in during class times. We'll confirm a class time via text. That's it." },
+  { q: "Who's the head coach?", a: "Jamal Patterson — Renzo Gracie black belt, ADCC veteran, former pro MMA fighter (IFL, Bellator, UWC Light Heavyweight Champion). He's been running AllStar since 2011." },
+];
+
+const testimonials = [
+  {
+    name: "Mike T.",
+    role: "Adult BJJ, 5 years",
+    quote: "Started with zero experience. Five years later, the technique is sharper than anything I've seen in other schools. Coach Jamal's competition background shows in every drill."
+  },
+  {
+    name: "Sarah K.",
+    role: "Parent, Lions program",
+    quote: "Our son was getting bullied. After 3 months here, his confidence is completely different. He's not throwing punches — he's just *different*. The school noticed."
+  },
+  {
+    name: "Tony M.",
+    role: "Adult Muay Thai",
+    quote: "This is the only spot in Union County teaching real Muay Thai. Pad work is legit. Conditioning is no joke. Best training decision I made."
+  },
+  {
+    name: "Jennifer L.",
+    role: "Parent, Cubs program",
+    quote: "Our 5-year-old loves it. The instructors keep them engaged, positive reinforcement the whole time, and we see real progress. Can't ask for more."
+  }
+];
+---
+
+<PageLayout
+  title="Brazilian Jiu-Jitsu & Martial Arts in Union, NJ | AllStar Martial Arts HQ"
+  description="AllStar Martial Arts headquarters in Union, NJ. BJJ, Muay Thai, MMA, Kids (ages 4-13). Renzo Gracie black belt coaching. Free 2-week trial, no contract."
+  ogImage="/images/adult-bjj-hero.jpg"
+>
+  <Fragment slot="head">
+    <LocalBusinessSchema
+      city={city}
+      latitude={40.6925196}
+      longitude={-74.2863264}
+      description="AllStar Martial Arts headquarters in Union, NJ. Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs led by Renzo Gracie black belt Jamal Patterson."
+    />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
+  <!-- Hero: Headquarters positioning -->
+  <PageHero
+    eyebrow="AllStar Headquarters"
+    headline="Martial Arts in Union, NJ — The Home of AllStar"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs (ages 4-13). Led by Renzo Gracie black belt and pro MMA veteran Jamal Patterson. Free 2-week trial."
+    bgImage="/images/adult-bjj-hero.jpg"
+  />
+
+  <!-- Intro: Why Union, why AllStar -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Union, NJ is home. AllStar Martial Arts has been here since 2011 — first location, still the flagship. This is where students come to train with Jamal Patterson, a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter who fought in the IFL and Bellator and won the UWC Light Heavyweight Championship.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        What makes AllStar different isn't the location. It's the coach. Jamal's competition resume isn't just on the wall — it informs every technique taught, every drill programmed, every class structured. Students training here for five, ten, even fifteen years will tell you: the competition background changes everything.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Union families, commuters from Cranford, Springfield, and beyond come here because the coaching is real. And because the mat isn't intimidating for beginners — most students train alongside people starting from zero.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs Overview -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-12">
+        <div class="eyebrow">All Programs at One Location</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black mb-4">Everything You Need — Union</h2>
+        <p class="text-brand-gray text-lg">Adult programs, kids programs, all-levels instruction, all in one gym.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- BJJ -->
+        <div class="bg-white p-8 rounded-lg border-l-4 border-brand-navy shadow-sm">
+          <h3 class="text-2xl text-brand-black mb-3">Brazilian Jiu-Jitsu</h3>
+          <p class="text-brand-gray mb-4 text-sm leading-relaxed">
+            Our flagship program. Adults 16+. Evening classes at 6, 7, 8 PM. Beginners welcome — technique-driven instruction suited to all levels.
+          </p>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> All skill levels
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Competition-ready coaching
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> 2-week free trial
+          </div>
+        </div>
+
+        <!-- Muay Thai -->
+        <div class="bg-white p-8 rounded-lg border-l-4 border-brand-gold shadow-sm">
+          <h3 class="text-2xl text-brand-black mb-3">Muay Thai</h3>
+          <p class="text-brand-gray mb-4 text-sm leading-relaxed">
+            The art nobody else in Union County offers. Real pad work. Real technique. Real conditioning. Authentic instruction from day one.
+          </p>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Authentic technique
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Pad work & drills
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Competition pathway
+          </div>
+        </div>
+
+        <!-- MMA -->
+        <div class="bg-white p-8 rounded-lg border-l-4 border-brand-navy shadow-sm">
+          <h3 class="text-2xl text-brand-black mb-3">MMA</h3>
+          <p class="text-brand-gray mb-4 text-sm leading-relaxed">
+            Complete fighting system. BJJ, Muay Thai, wrestling combined. Coached by Jamal — pro MMA fighter, cornerman to UFC athletes.
+          </p>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Multi-discipline training
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Pro-level instruction
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Ages 16+
+          </div>
+        </div>
+
+        <!-- Kids -->
+        <div class="bg-white p-8 rounded-lg border-l-4 border-brand-gold shadow-sm">
+          <h3 class="text-2xl text-brand-black mb-3">Kids Martial Arts</h3>
+          <p class="text-brand-gray mb-4 text-sm leading-relaxed">
+            Cubs (4-6) and Lions (7-13). Real techniques, real structure, real confidence-building. Bully prevention integrated.
+          </p>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Two age groups
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Confidence & discipline
+          </div>
+          <div class="flex items-center gap-2 text-brand-navy text-sm font-medium">
+            <span class="text-brand-gold">✓</span> Watch during class
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Programs -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Adults — BJJ, Muay Thai, MMA</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Adult Martial Arts — Union</h2>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl text-brand-black mb-3">Brazilian Jiu-Jitsu for Adults</h3>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            Brazilian Jiu-Jitsu is our foundation. Most students start with zero experience. You'll train in small groups, drilling positions, escapes, submissions — building a system that works. Evening classes run 6, 7, and 8 PM to fit working schedules.
+          </p>
+          <p class="text-brand-gray leading-relaxed">
+            The difference is the coach. Jamal's competition background — ADCC, pro MMA (IFL, Bellator), UWC champion — isn't decoration. Every technique is tested against resistance. Every drill prepares for real scenarios.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-brand-black mb-3">Muay Thai for Adults</h3>
+          <p class="text-brand-gray leading-relaxed">
+            This is unique to AllStar in Union County. You won't find authentic Muay Thai instruction anywhere else nearby. Real pad work — not cardio kickboxing. Real technique from day one. Standing clinch work, elbow strikes, shin conditioning. Beginners are welcome and will find their level.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-brand-black mb-3">MMA for Adults</h3>
+          <p class="text-brand-gray leading-relaxed">
+            Complete fighting system. BJJ in the first half — core to everything. Muay Thai and wrestling in the second half. Built for athletes who want a full toolbox. Coached by Jamal, who's cornered UFC fighters from amateur debut through the pros. Ages 16 and up.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids Programs -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Programs</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Martial Arts for Kids — Union</h2>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed mb-3">Preschool-age energy with martial arts structure. Short activities, high engagement, constant positive reinforcement. Focus on coordination, listening, and confidence. Most parents watch from the lobby during class.</p>
+          <div class="text-xs text-brand-navy font-medium">Classes: Weekday afternoons, Saturday mornings</div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed mb-3">Real Brazilian Jiu-Jitsu technique. Not katas. Takedowns, escapes, positions, submissions. These kids learn a system that works. Parents consistently report the confidence carries into school — better focus, better social dynamics, better ability to handle conflict.</p>
+          <div class="text-xs text-brand-navy font-medium">Classes: Weekday afternoons & evenings, Saturday mornings</div>
+        </div>
+      </div>
+
+      <div class="bg-brand-gold/10 p-6 rounded-lg border border-brand-gold/30">
+        <h3 class="text-lg text-brand-black mb-3">Bully Prevention — Real Impact</h3>
+        <p class="text-brand-gray leading-relaxed">
+          When a kid knows they can handle themselves physically, the dynamic with bullies shifts without a single punch. We teach kids to be confident, calm, and capable. That changes everything.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Union Section -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">About AllStar</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Why Union? Why AllStar?</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg text-brand-navy font-semibold mb-2">Headquarters Since 2011</h3>
+          <p class="text-brand-gray leading-relaxed">
+            AllStar opened in Union in 2011. This is the original location, the flagship gym, the place where Jamal trains and teaches. Every instructor on staff has trained under Jamal's direct coaching.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg text-brand-navy font-semibold mb-2">Competition-Grade Coaching</h3>
+          <p class="text-brand-gray leading-relaxed">
+            You're training under a Renzo Gracie black belt with an ADCC medal, a pro MMA record in top organizations (IFL, Bellator), and a UWC championship. That competition resume changes how technique is taught. No shortcuts. No improvisation.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg text-brand-navy font-semibold mb-2">All Programs, All Ages</h3>
+          <p class="text-brand-gray leading-relaxed">
+            BJJ, Muay Thai, MMA for adults. Cubs and Lions for kids. Summer camps. Everything runs out of Union. You're not driving between locations.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg text-brand-navy font-semibold mb-2">No Contracts, No Pressure</h3>
+          <p class="text-brand-gray leading-relaxed">
+            Two weeks free. No card required. No commitment. You show up, train, see if it fits. Most people stay because it works — not because they're locked in.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg text-brand-navy font-semibold mb-2">Real Students at All Levels</h3>
+          <p class="text-brand-gray leading-relaxed">
+            Day one, you train with other beginners and intermediate students. No isolation in beginner-only classes. Real partners at your level every session.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-12">
+        <div class="eyebrow text-brand-gold">What Students Say</div>
+        <h2 class="text-3xl md:text-4xl mb-4">Real Voices from Union</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {testimonials.map((t) => (
+          <div class="bg-white/10 p-8 rounded-lg border border-white/20">
+            <p class="text-white/90 italic leading-relaxed mb-4 text-lg">"{t.quote}"</p>
+            <div>
+              <p class="text-white font-semibold">{t.name}</p>
+              <p class="text-brand-gold text-sm">{t.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Logistics -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Location & Logistics</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-8">The Gym — Union, NJ</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h3 class="text-lg text-brand-black font-semibold mb-3">Address</h3>
+          <p class="text-brand-gray text-sm leading-relaxed mb-2">
+            1166 West Chestnut Street<br />
+            Union, NJ 07083
+          </p>
+          <p class="text-brand-gray text-xs">Free on-site parking</p>
+        </div>
+
+        <div>
+          <h3 class="text-lg text-brand-black font-semibold mb-3">Contact</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">
+            <strong>Phone:</strong> (908) 341-1131<br />
+            <strong>Email:</strong> info@allstarbjj.com
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-brand-gray-light p-6 rounded-lg">
+        <h3 class="text-lg text-brand-black font-semibold mb-3">Get Here</h3>
+        <p class="text-brand-gray text-sm leading-relaxed mb-4">
+          From Route 22, head south on West Chestnut. 10 minutes from downtown Union. Free on-site parking. Easy drop-off for kids.
+        </p>
+        <p class="text-brand-gray text-sm leading-relaxed">
+          <strong>Map:</strong> <a href="https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9" class="text-brand-navy underline hover:no-underline">Open in Google Maps</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Landmarks -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">If You Know Union</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're Right Here</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Kearny Avenue", "Route 22", "West Chestnut Street", "Union High School", "Marshall Field", "Union Center", "County Avenue", "Frelinghuysen Avenue"].map((l) => (
+          <span class="bg-white text-brand-gray px-4 py-2 rounded-full text-sm border border-brand-gray-light">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Times Overview -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">When We Train</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-6">Class Schedule — Union</h2>
+
+      <div class="space-y-4">
+        <div class="bg-brand-gray-light p-4 rounded-lg">
+          <p class="font-semibold text-brand-black mb-1">Adult Programs (BJJ, Muay Thai, MMA)</p>
+          <p class="text-brand-gray text-sm">Monday-Friday: 6:00 PM, 7:00 PM, 8:00 PM<br />Saturday: 10:00 AM, 12:00 PM</p>
+        </div>
+
+        <div class="bg-brand-gray-light p-4 rounded-lg">
+          <p class="font-semibold text-brand-black mb-1">Kids Programs (Cubs 4-6, Lions 7-13)</p>
+          <p class="text-brand-gray text-sm">Monday-Friday: 4:30 PM, 6:00 PM<br />Saturday: 10:00 AM, 11:00 AM</p>
+        </div>
+
+        <p class="text-brand-gray text-sm italic">
+          Schedule varies by session. Confirm current times before your first class. Call (908) 341-1131 or fill the form below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Start at AllStar — Two Weeks Free"
+    sub="Adults, kids, all programs. Free trial, no card required, no contract. Show up. Bring water. We'll handle the rest."
+  />
+</PageLayout>

@@ -1,0 +1,60 @@
+GOOGLE ANALYTICS 4 - QUICK START
+================================
+
+What was set up:
+- GA4 gtag.js script in src/layouts/PageLayout.astro (main layout for all pages)
+- Environment variable configuration (.env)
+- Automatic page view tracking
+- Click tracking for buttons/links (with data-track-event attribute)
+- Form submission tracking (with data-track-form attribute)
+- Complete documentation and examples
+
+FILES CREATED/MODIFIED:
+- .env (YOUR LOCAL CONFIG - never commit to git)
+- .env.example (template for other developers)
+- src/layouts/PageLayout.astro (GA4 script + initialization)
+- src/lib/ga4-tracker.ts (tracking utilities)
+- GA4_SETUP_GUIDE.md (detailed setup instructions)
+- GA4_TRACKING_EXAMPLES.md (copy-paste code examples)
+- GA4_DEPLOYMENT_CHECKLIST.md (step-by-step deployment)
+- GA4_QUICK_REFERENCE.md (quick lookup guide)
+
+NEXT STEPS (in order):
+1. Go to https://analytics.google.com/
+2. Create new property for allstarbjj.com
+3. Copy your Measurement ID (looks like: G-XXXXXXXXXX)
+4. Edit .env file and add your ID:
+   PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+5. Run: npm run build
+6. Deploy to Netlify (or your hosting)
+7. Visit https://allstarbjj.com
+8. Go to Google Analytics > Realtime > Events
+9. Watch events appear as you click buttons and submit forms
+
+TRACKING USAGE:
+Track button clicks:
+  <button data-track-event="button_name" data-track-label="Label">Click</button>
+
+Track form submissions:
+  <form data-track-form="form_name">...</form>
+
+GETTING DATA:
+- Real-time: Shows up within seconds in GA console
+- Full reports: Take 24-48 hours to populate
+- Check Real-time first to verify tracking works
+
+TROUBLESHOOTING:
+Issue: "GA4 tracking disabled" in console
+  → Add Measurement ID to .env and rebuild
+
+Issue: No data in Google Analytics
+  → Wait 24-48 hours, or check Real-time immediately
+
+Issue: Button clicks/forms not tracking
+  → Verify data-track-event/data-track-form spelling
+  → Rebuild and redeploy
+
+See GA4_SETUP_GUIDE.md for complete instructions
+See GA4_TRACKING_EXAMPLES.md for code examples
+See GA4_DEPLOYMENT_CHECKLIST.md for deployment steps
+See GA4_QUICK_REFERENCE.md for quick lookup
