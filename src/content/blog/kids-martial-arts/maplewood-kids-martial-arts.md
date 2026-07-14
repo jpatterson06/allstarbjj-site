@@ -1,6 +1,6 @@
 ---
 title: "Maplewood Kids Martial Arts: Build Confidence & Discipline"
-category: kids-martial-arts
+category: kids
 meta_description: "Looking for kids martial arts in Maplewood, NJ? Brazilian Jiu-Jitsu, karate & self-defense for ages 4-13. Build confidence, discipline, and real skills. Free trial."
 hero_image: kids-martial-arts.jpg
 ---
