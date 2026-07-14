@@ -3,9 +3,16 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
+import TestimonialSchema from '../components/TestimonialSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const heroImg = '/images/adult-bjj-hero.jpg';
+
+const testimonials = [
+  { author: "Matt L., 10-year student", text: "I've been training with Jamal at AllStar for almost 10 years. He's an incredible leader and an even better person — and a beast on the mats on top of that.", rating: 5 },
+  { author: "Valentina, BJJ / Muay Thai / MMA", text: "AllStar changed my life. I've made friendships I'll have forever, built real confidence, and the martial arts community here has opened doors for me all over the world.", rating: 5 },
+  { author: "Scott A., AllStar student", text: "World-class instructors from the Renzo Gracie lineage. Jamal was one of the most accomplished grapplers in the world during his time.", rating: 5 }
+];
 
 const faqs = [
   { q: "I've never trained anything. Will I be lost?", a: "No. Most students walk in untrained. We have a structured beginner curriculum. Your first month is humbling. By month three, you're doing fine." },
@@ -26,12 +33,13 @@ const faqs = [
 >
   <Fragment slot="head">
     <FAQPageSchema faqs={faqs} />
+    <TestimonialSchema testimonials={testimonials} />
   </Fragment>
 
   <PageHero
     eyebrow="Ages 16+"
     headline="Adult Brazilian Jiu Jitsu in Union, NJ"
-    sub="Renzo Gracie lineage since 2011. Real coaching. No ego. Free 2-week trial — no contract, no pressure."
+    sub="Renzo Gracie lineage since 2011. Real coaching. No ego. Schedule your free trial this week — no contract, no pressure."
     bgImage={heroImg}
     programLocked="Adult BJJ"
   />
@@ -40,7 +48,7 @@ const faqs = [
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        Adult Brazilian Jiu-Jitsu classes in Union, NJ. Renzo Gracie lineage — trained directly under Renzo himself. Beginners welcome, no experience needed. Two weeks free, no contract. Evening classes at 6, 7, and 8 PM. Built for working adults and NJ Transit commuters.
+        Adult Brazilian Jiu-Jitsu classes in Union, NJ. Renzo Gracie lineage — trained directly under Renzo himself. Beginners welcome, no experience needed. Lock in your free trial now — no contract. Evening classes at 6, 7, and 8 PM. Built for working adults and NJ Transit commuters.
       </p>
     </div>
   </section>

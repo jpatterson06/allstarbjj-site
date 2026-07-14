@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import Testimonials from '../components/Testimonials.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
 
@@ -12,17 +13,53 @@ const faqs = [
   { q: "What's the belt system like?", a: "Cubs use stripes on a white belt. Lions progress through white, grey, yellow, orange, and green belts before transitioning to adult ranks. Each belt is earned through consistent attendance and demonstrated technique." },
   { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract. Call (908) 341-1131." },
 ];
+
+// Filter testimonials to show only kids/family-focused ones
+const kidsFriendlyTestimonials = [
+  {
+    id: 'parent-1',
+    name: 'Sarah M.',
+    role: 'Parent of Lions student, age 9',
+    quote: 'Our son was shy and anxious in group settings. Three months at AllStar — he stands taller, listens better, and actually wants to come to class. Jamal doesn\'t just teach jiu-jitsu, he builds confidence.',
+    image: '/images/kids-martial-arts.jpg',
+    imageAlt: 'Kids training BJJ at AllStar',
+  },
+  {
+    id: 'parent-2',
+    name: 'Jessica & David K.',
+    role: 'Parents of two Lions students, ages 7 and 11',
+    quote: 'Both kids train here. The discipline transfers home immediately. Teachers at school have asked what we\'re doing differently. Jamal\'s curriculum is legit, and the gym feels safe.',
+    image: '/images/union-mat.jpg',
+    imageAlt: 'AllStar training facility',
+  },
+  {
+    id: 'parent-3',
+    name: 'Maria C.',
+    role: 'Parent of Cubs student, age 5',
+    quote: 'My daughter calls the gym "her place." She\'s more coordinated, more confident, and loves going to class. The Cubs program is age-appropriate without being watered down.',
+    image: '/images/preschool-kids.jpg',
+    imageAlt: 'Cubs class at AllStar',
+  },
+  {
+    id: 'parent-4',
+    name: 'Robert V.',
+    role: 'Parent of Lions student, age 10',
+    quote: 'Real bullying prevention doesn\'t come from lectures. It comes from kids knowing they can handle themselves. My son walks different. That confidence is the gift.',
+    image: '/images/kids-martial-arts.jpg',
+    imageAlt: 'Kids training BJJ at AllStar',
+  },
+];
 ---
 
 <PageLayout
   title="Kids BJJ in Union, NJ — Cubs & Lions Programs | AllStar Martial Arts"
-  description="Kids Brazilian Jiu-Jitsu in Union, NJ. Cubs (ages 4–6) and Lions (ages 7–13). Renzo Gracie lineage. Coach Jamal Patterson. Real BJJ, real confidence. Free 2-week trial."
+  description="Kids Brazilian Jiu-Jitsu in Union, NJ. Cubs (ages 4–6) and Lions (ages 7–13). Renzo Gracie lineage. Coach Jamal Patterson. Real BJJ, real confidence. Secure your child's spot today."
   ogImage="/images/kids-martial-arts.jpg"
 >
   <PageHero
     eyebrow="Ages 4–13 | Cubs & Lions"
     headline="Kids BJJ in Union, NJ"
-    sub="Real Jiu-Jitsu for kids ages 4–13. Cubs program (4–6) and Lions program (7–13). Renzo Gracie lineage. Free 2-week trial — no contract."
+    sub="Real Jiu-Jitsu for kids ages 4–13. Cubs program (4–6) and Lions program (7–13). Renzo Gracie lineage. Secure your child's spot today — no contract."
     bgImage="/images/kids-martial-arts.jpg"
     programLocked="Lions"
   />
@@ -106,6 +143,9 @@ const faqs = [
       </ul>
     </div>
   </section>
+
+  <!-- Parent testimonials -->
+  <Testimonials testimonials={kidsFriendlyTestimonials} maxItems={4} />
 
   <FAQ items={faqs} />
 

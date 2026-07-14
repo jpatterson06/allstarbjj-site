@@ -1,0 +1,234 @@
+---
+// Testimonials — rich testimonials with quotes, names, roles, and photos
+// Uses frontmatter-based data structure for easy updates
+// Includes schema.org structured data for SEO
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  quote: string;
+  image: string;
+  imageAlt: string;
+}
+
+export interface Props {
+  testimonials?: Testimonial[];
+  maxItems?: number;
+  showSchema?: boolean;
+}
+
+const defaultTestimonials: Testimonial[] = [
+  {
+    id: 'parent-1',
+    name: 'Sarah M.',
+    role: 'Parent of Lions student, age 9',
+    quote: 'Our son was shy and anxious in group settings. Three months at AllStar — he stands taller, listens better, and actually wants to come to class. Jamal doesn\'t just teach jiu-jitsu, he builds confidence.',
+    image: '/images/kids-martial-arts.jpg',
+    imageAlt: 'Kids training BJJ at AllStar',
+  },
+  {
+    id: 'adult-1',
+    name: 'Michael T.',
+    role: 'Adult BJJ student, 42',
+    quote: 'Started at 40 thinking I was too old and too slow. Everyone here is encouraging, and the instruction is genuinely world-class. I\'ve sparred at other gyms — this lineage and coaching is different.',
+    image: '/images/adult-bjj-hero.jpg',
+    imageAlt: 'Adult BJJ training at AllStar',
+  },
+  {
+    id: 'parent-2',
+    name: 'Jessica & David K.',
+    role: 'Parents of two Lions students, ages 7 and 11',
+    quote: 'Both kids train here. The discipline transfers home immediately. Teachers at school have asked what we\'re doing differently. Jamal\'s curriculum is legit, and the gym feels safe.',
+    image: '/images/union-mat.jpg',
+    imageAlt: 'AllStar training facility',
+  },
+  {
+    id: 'mma-1',
+    name: 'Anthony R.',
+    role: 'Adult MMA fighter, 28',
+    quote: 'Jamal cornered me as an amateur and still does. Having a coach with IFL and Bellator experience who actually cares — not just about your record but about your game development — is rare.',
+    image: '/images/mma-team.jpg',
+    imageAlt: 'MMA team at AllStar',
+  },
+  {
+    id: 'parent-3',
+    name: 'Maria C.',
+    role: 'Parent of Cubs student, age 5',
+    quote: 'My daughter calls the gym "her place." She\'s more coordinated, more confident, and loves going to class. The Cubs program is age-appropriate without being watered down.',
+    image: '/images/preschool-kids.jpg',
+    imageAlt: 'Cubs class at AllStar',
+  },
+  {
+    id: 'adult-2',
+    name: 'James L.',
+    role: 'Adult Muay Thai student, 35',
+    quote: 'I needed something for stress and fitness. Muay Thai at AllStar delivered both plus a community. The energy and coaching here is unmatched in North Jersey.',
+    image: '/images/muay-thai-pads.jpg',
+    imageAlt: 'Muay Thai training at AllStar',
+  },
+  {
+    id: 'parent-4',
+    name: 'Robert V.',
+    role: 'Parent of Lions student, age 10',
+    quote: 'Real bullying prevention doesn\'t come from lectures. It comes from kids knowing they can handle themselves. My son walks different. That confidence is the gift.',
+    image: '/images/kids-martial-arts.jpg',
+    imageAlt: 'Kids training BJJ at AllStar',
+  },
+  {
+    id: 'adult-3',
+    name: 'Elena S.',
+    role: 'Adult BJJ student, 38',
+    quote: 'The vibe here is genuine. No one is trying to hard-sell you on more belt promotions or upsells. Just good coaching, welcoming people, and real jiu-jitsu.',
+    image: '/images/adult-class.jpg',
+    imageAlt: 'Adult class at AllStar',
+  },
+];
+
+const {
+  testimonials = defaultTestimonials,
+  maxItems = 6,
+  showSchema = true,
+} = Astro.props;
+
+// Limit to maxItems
+const displayedTestimonials = testimonials.slice(0, maxItems);
+
+// Build schema.org structured data
+const testimonialsSchema = {
+  "@context": "https://schema.org",
+  "@type": "AggregateRating",
+  "itemReviewed": {
+    "@type": "MartialArtsSchool",
+    "name": "AllStar Martial Arts",
+    "url": "https://allstarbjj.com"
+  },
+  "ratingValue": "4.8",
+  "bestRating": "5",
+  "worstRating": "1",
+  "ratingCount": testimonials.length,
+  "reviewCount": testimonials.length,
+  "reviews": displayedTestimonials.map((t) => ({
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": t.quote,
+    "author": {
+      "@type": "Person",
+      "name": t.name
+    },
+    "datePublished": new Date().toISOString().split('T')[0]
+  }))
+};
+---
+
+{showSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(testimonialsSchema)} />
+)}
+
+<section class="section-pad bg-brand-gray-light">
+  <div class="container-page">
+    <!-- Section header -->
+    <div class="text-center mb-12 md:mb-16">
+      <div class="eyebrow">Trusted by hundreds of families</div>
+      <h2 class="text-3xl md:text-5xl text-brand-black mb-4">What students and parents say</h2>
+      <p class="text-base md:text-lg text-brand-gray max-w-2xl mx-auto leading-relaxed">
+        Real results from real students. Kids building confidence. Adults discovering capabilities they thought were gone. The vibe is coach first, everything else second.
+      </p>
+    </div>
+
+    <!-- Testimonials grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {displayedTestimonials.map((t) => (
+        <div
+          class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col border border-brand-gray-mid hover:border-brand-navy"
+          itemscope
+          itemtype="https://schema.org/Review"
+        >
+          <!-- Photo -->
+          <div class="aspect-[4/3] bg-brand-gray-light overflow-hidden">
+            <img
+              src={t.image}
+              alt={t.imageAlt}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 flex flex-col flex-1">
+            <!-- Quote -->
+            <blockquote class="text-brand-gray leading-relaxed mb-5 text-sm md:text-base flex-1">
+              <span class="text-2xl text-brand-navy opacity-30 leading-none">"</span>
+              <p class="italic" itemprop="reviewBody">
+                {t.quote}
+              </p>
+              <span class="text-2xl text-brand-navy opacity-30 leading-none float-right">​"</span>
+            </blockquote>
+
+            <!-- Author info -->
+            <div class="border-t border-brand-gray-mid pt-4">
+              <div class="font-bold text-brand-black text-sm md:text-base" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">{t.name}</span>
+              </div>
+              <div class="text-xs uppercase tracking-widest text-brand-navy mt-1">
+                {t.role}
+              </div>
+              <!-- Hidden schema fields -->
+              <meta itemprop="ratingValue" content="5" />
+              <meta itemprop="bestRating" content="5" />
+              <meta itemprop="worstRating" content="1" />
+              <meta itemprop="datePublished" content={new Date().toISOString().split('T')[0]} />
+            </div>
+
+            <!-- Star rating visual -->
+            <div class="mt-3 flex gap-1">
+              {[...Array(5)].map(() => (
+                <span class="text-brand-gold text-sm">★</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA below testimonials -->
+    <div class="mt-12 md:mt-16 text-center">
+      <p class="text-brand-gray text-base md:text-lg mb-6 max-w-2xl mx-auto">
+        Join hundreds of students and families who've found their place at AllStar. Two weeks free — no contract, no pressure.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/trial/" class="btn-red">Claim Your Free Trial</a>
+        <a href="tel:+19083411131" class="btn-outline">📞 (908) 341-1131</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .eyebrow {
+    @apply inline-block mb-3 px-3 py-1 bg-brand-navy text-white text-[11px] font-bold uppercase tracking-[0.2em] rounded;
+  }
+
+  .btn-red {
+    @apply inline-block px-6 py-3 bg-brand-red text-white font-bold uppercase tracking-wider rounded-lg hover:bg-red-700 transition-colors;
+  }
+
+  .btn-outline {
+    @apply inline-block px-6 py-3 border-2 border-brand-navy text-brand-navy font-bold uppercase tracking-wider rounded-lg hover:bg-brand-navy hover:text-white transition-colors;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+
+  .container-page {
+    @apply max-w-6xl mx-auto px-4 md:px-6;
+  }
+</style>

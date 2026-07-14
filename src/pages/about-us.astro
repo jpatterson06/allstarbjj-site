@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import Testimonials from '../components/Testimonials.astro';
 import CTA from '../components/CTA.astro';
 
 const heroImg = '/images/jamal-2.jpg';
@@ -199,6 +200,9 @@ const personSchema = {
       </div>
     </div>
   </section>
+
+  <!-- Testimonials from students across all programs -->
+  <Testimonials maxItems={6} />
 
   <CTA
     headline="Come See For Yourself"

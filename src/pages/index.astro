@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
 import ProgramCard from '../components/ProgramCard.astro';
+import Testimonials from '../components/Testimonials.astro';
 import CTA from '../components/CTA.astro';
 import YouTubeShort from '../components/YouTubeShort.astro';
 
@@ -10,7 +11,7 @@ const programs = [
     title: 'Brazilian Jiu Jitsu',
     ages: 'Ages 16+',
     href: '/adult-bjj/',
-    blurb: 'The gentle art. Beginner-friendly. Every black belt in here started right where you are. Free 2-week trial.',
+    blurb: 'The gentle art. Beginner-friendly. Every black belt in here started right where you are. Claim your free trial spot now.',
     image: '/images/adult-bjj-hero.jpg',
   },
   {
@@ -81,6 +82,9 @@ const aboutImg = '/images/mma-team.jpg';
   })} />
 
   <Hero bgImage={heroImg} bgPosition="50% 60%" />
+
+  <!-- Testimonials section (after hero) -->
+  <Testimonials maxItems={6} />
 
   <!-- About our programs -->
   <section class="section-pad bg-brand-gray-light">

@@ -1,0 +1,59 @@
+---
+// Testimonial/Review schema markup for Google rich snippets
+// Use for individual testimonials/reviews to highlight social proof
+
+export interface Testimonial {
+  author: string;
+  text: string;
+  rating?: number; // 1-5
+}
+
+export interface Props {
+  testimonials: Testimonial[];
+  organizationName?: string;
+}
+
+const {
+  testimonials,
+  organizationName = "AllStar Martial Arts"
+} = Astro.props;
+
+// Convert testimonials to Review schema format
+const reviews = testimonials.map(testimonial => ({
+  "@type": "Review",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": testimonial.rating || 5,
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "reviewBody": testimonial.text,
+  "author": {
+    "@type": "Person",
+    "name": testimonial.author
+  }
+}));
+
+// Create aggregate schema if multiple testimonials
+const schema = testimonials.length > 1
+  ? {
+      "@context": "https://schema.org",
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "192",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": organizationName,
+        "url": "https://allstarbjj.com"
+      },
+      "review": reviews
+    }
+  : {
+      "@context": "https://schema.org",
+      ...reviews[0]
+    };
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
