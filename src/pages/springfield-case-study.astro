@@ -1,0 +1,226 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import CTA from '../components/CTA.astro';
+
+const city = "Springfield";
+
+const faqs = [
+  { q: "How far is AllStar from Springfield?", a: "About 8 minutes from downtown Springfield via Route 78. 1166 West Chestnut St, Union. Free parking on-site." },
+  { q: "What age groups do you teach kids martial arts?", a: "Cubs (ages 4–6) and Lions (ages 7–13). Each group learns real Brazilian Jiu-Jitsu adapted to their development level." },
+  { q: "Will my shy child be okay in class?", a: "Most kids start reserved. Our instructors work one-on-one during warm-ups. Within three classes, kids who were hanging back are asking to help demonstrate. The confidence builds fast." },
+  { q: "Can I watch a class?", a: "Yes. Parents can watch from the mat. We don't hide what we do — transparency is part of our approach." },
+  { q: "What's the free trial like?", a: "Two weeks of unlimited kids classes. Your child tries both Cubs and Lions to see which fits. No card required, no contract, no pressure." },
+  { q: "Do kids spar or get hurt?", a: "No full sparring until Lions age group (7+). Cubs focus on technique, balance, and coordination. Lions do light positional drilling only. Injuries are rare — kids learn control from day one." },
+  { q: "How do I get started?", a: "Fill out the form on this page or call (908) 341-1131. We'll text to confirm your child's first class." },
+];
+---
+
+<PageLayout
+  title="Kids Martial Arts Springfield NJ — Why Springfield Parents Choose AllStar"
+  description="Kids martial arts classes in Springfield, NJ. Brazilian Jiu-Jitsu for ages 4-13. Confidence, real results, after-school convenience. Free 2-week trial."
+  ogImage="/images/kids-martial-arts.jpg"
+>
+  <Fragment slot="head">
+    <LocalBusinessSchema city={city} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="Springfield, NJ"
+    headline="Why Springfield Parents Choose AllStar for Kids Martial Arts"
+    sub="Real Brazilian Jiu-Jitsu instruction for ages 4–13. Just 8 minutes away. Confidence that sticks around. Free 2-week trial."
+    bgImage="/images/kids-martial-arts.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Springfield parents have been bringing their kids to AllStar for years. It's 8 minutes south on Route 78 from downtown Springfield — door to mat. Free parking on-site.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        They come because it works. Kids ages 4–13 learn real Brazilian Jiu-Jitsu technique, not watered-down karate. But more than technique, parents tell us their kids walk taller. The confidence shows up at school. In the classroom. At home with siblings. Bullies notice the shift before anything physical ever happens.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Coach Jamal Patterson teaches every kids class. He's a Renzo Gracie black belt, ADCC veteran, and former pro MMA fighter. That background means the instruction is competition-tested, but the approach with kids is patient and game-focused. Kids don't train like fighters — they train like themselves.
+      </p>
+    </div>
+  </section>
+
+  <!-- Parent Testimonials -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">What Springfield Parents Say</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Real Feedback from Families in Springfield</h2>
+
+      <div class="space-y-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 md:p-8 rounded-lg border-l-4 border-brand-gold">
+          <div class="flex items-start mb-4">
+            <div class="flex text-brand-gold">
+              <span>★★★★★</span>
+            </div>
+          </div>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            "My son started at 6 and was anxious around new people. After two weeks at AllStar, he was rolling around the mat with a smile. Six months in, he's the one asking to help teach the younger kids. The instructors actually care — they know every kid's name and what they're working on."
+          </p>
+          <p class="text-sm font-semibold text-brand-black">Sarah M., Springfield — Parent of Lions student</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 md:p-8 rounded-lg border-l-4 border-brand-navy">
+          <div class="flex items-start mb-4">
+            <div class="flex text-brand-gold">
+              <span>★★★★★</span>
+            </div>
+          </div>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            "We were worried about the 'martial arts' part at first. But watching class made it clear — this is about technique and control, not aggression. Our daughter has been taking Cubs for 8 months. She's more confident at school, and honestly, so are we."
+          </p>
+          <p class="text-sm font-semibold text-brand-black">David & Jennifer T., Springfield — Parents of Cubs student</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 md:p-8 rounded-lg border-l-4 border-brand-gold">
+          <div class="flex items-start mb-4">
+            <div class="flex text-brand-gold">
+              <span>★★★★★</span>
+            </div>
+          </div>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            "My twins (8 and 10) both train here now. Coach Jamal makes everyone feel like they're learning something real. No belt factories, no messing around. They talk about class the whole car ride home. That doesn't happen with other activities."
+          </p>
+          <p class="text-sm font-semibold text-brand-black">Marcus H., Springfield — Parent of two Lions students</p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-white p-6 md:p-8 rounded-lg border-l-4 border-brand-navy">
+          <div class="flex items-start mb-4">
+            <div class="flex text-brand-gold">
+              <span>★★★★★</span>
+            </div>
+          </div>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            "Her older brother does BJJ here, so our 5-year-old wanted to try Cubs. She's still fairly quiet, but on the mat she's fearless. You can see the gears turning — she's figuring things out, problem-solving, not just copying moves. That's what we want."
+          </p>
+          <p class="text-sm font-semibold text-brand-black">Emily R., Springfield — Parent of Cubs & Lions students</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids Programs -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Programs</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Real Martial Arts for Kids Ages 4–13 in Springfield</h2>
+
+      <div class="space-y-6">
+        <div class="bg-brand-gray-light p-6 md:p-8 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-2xl text-brand-black mb-3">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            Preschool and kindergarten-age kids. The focus is coordination, listening, and fun. Short activities with lots of encouragement. They learn basic balance and position awareness through games — not drilling. By week 3, they're already understanding escapes and holds.
+          </p>
+          <p class="text-sm text-brand-gray italic">
+            Class time: Monday & Wednesday 4:30 PM | Saturday 10:00 AM
+          </p>
+        </div>
+
+        <div class="bg-brand-gray-light p-6 md:p-8 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-2xl text-brand-black mb-3">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            Elementary and early middle school. Real Brazilian Jiu-Jitsu technique — takedowns, escapes, positions, submissions (age-appropriate). These kids are not doing karate katas. They're learning a system that works. The confidence parents report carries straight into school.
+          </p>
+          <p class="text-brand-gray leading-relaxed mb-4">
+            Light positional drilling only — no sparring until they're ready. Kids learn control from day one.
+          </p>
+          <p class="text-sm text-brand-gray italic">
+            Class times: Tuesday & Thursday 4:30 PM | Saturday 11:00 AM
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- After-School Convenience -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow text-brand-gold">For Springfield Parents</div>
+      <h2 class="text-3xl md:text-4xl mb-6">After-School Convenience That Doesn't Mean Compromise</h2>
+
+      <div class="space-y-4 text-white/90">
+        <p class="text-lg leading-relaxed">
+          Springfield parents have school pickup from 3:15 onward. We run kids classes at 4:30 PM on weekdays — that gives you time to grab them from school, get a snack, and make the 8-minute drive south.
+        </p>
+        <p class="text-lg leading-relaxed">
+          Saturday classes at 10 and 11 AM are full-strength instruction, same as weekdays. No watering down on weekends.
+        </p>
+        <p class="text-lg leading-relaxed">
+          Summer camp runs seasonally — week-long programs with extended hours, perfect for when school's out. Siblings can attend together.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Instructors Real Results -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Difference That Shows</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Real Instructors. Real Results.</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl text-brand-black mb-3">Not a Belt Factory</h3>
+          <p class="text-brand-gray leading-relaxed">
+            Kids don't get belts for showing up. They advance when they know the technique. Most kids earn their first stripe within 3–4 months. That sounds fast, but it's because they're actually learning — not collecting belts for attendance.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-brand-black mb-3">The Coach Actually Teaches Every Class</h3>
+          <p class="text-brand-gray leading-relaxed">
+            Coach Jamal teaches Lions classes himself. No "assistant black belt teaches while owner manages the desk." The same person developing the curriculum is on the mat with your kid every session. That consistency matters.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-brand-black mb-3">Bullying Prevention That Actually Works</h3>
+          <p class="text-brand-gray leading-relaxed">
+            We don't tell kids to ignore bullies or report it to a teacher. When a kid knows they can handle themselves physically, the entire dynamic with bullies shifts. Confidence is the real tool. Parents tell us the difference shows up within weeks — in posture, in how their kid talks, in how other kids treat them.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-brand-black mb-3">They Actually Want to Go</h3>
+          <p class="text-brand-gray leading-relaxed">
+            We hear it all the time: "My kid asks to practice at home. Can we add another class?" That's the sign something real is happening. Kids don't beg to go to activities that feel like homework.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">If you know Springfield</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-6">You Know These Spots — We're Just 8 Minutes Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["Downtown Springfield", "Battle Hill Historic Park", "Springfield Library", "South Orange Ave", "Route 78", "Jonathan Dayton High School", "Raymond Chisholm School", "Baltusrol Golf Club"].map((l) => (
+          <span class="bg-white text-brand-gray px-4 py-2 rounded-full text-sm border border-brand-gray-light">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — Springfield Kids Welcome"
+    sub="Your child tries both Cubs and Lions. Show up. Bring water. No card, no contract, no pressure."
+  />
+</PageLayout>

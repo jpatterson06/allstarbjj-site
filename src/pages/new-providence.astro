@@ -1,0 +1,132 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import CTA from '../components/CTA.astro';
+
+const city = "New Providence";
+const latitude = 40.6967;
+const longitude = -74.4136;
+
+const faqs = [
+  { q: "How far is AllStar from New Providence?", a: "About 12 minutes via Route 24. 1166 West Chestnut St, Union. Free parking on-site." },
+  { q: "What makes this different from other gyms?", a: "Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and pro MMA fighter with 15+ years coaching. We focus on real skill development, not just activity." },
+  { q: "Do kids need experience?", a: "No. Most kids start from scratch. Our Lions and Cubs programs are built to teach complete beginners from day one." },
+  { q: "How do I know my child is safe?", a: "Small class sizes, certified instruction, and a curriculum that builds confidence while emphasizing control. Parents can watch any class. We've been in Union since 2011." },
+  { q: "What's the free trial?", a: "Two weeks of unlimited classes. No card, no contract, no hidden fees. Try any program you want." },
+  { q: "How do I sign up?", a: "Fill out the form on this page or call (908) 341-1131. We'll text you to confirm a class time." },
+];
+---
+
+<PageLayout
+  title="AllStar Martial Arts Serves New Providence, NJ — BJJ, Muay Thai & Kids Classes"
+  description="Martial arts for New Providence, NJ families. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt instruction. Self-defense and bullying prevention. Free 2-week trial."
+  ogImage="/images/mma-team.jpg"
+>
+  <Fragment slot="head">
+    <LocalBusinessSchema city={city} latitude={latitude} longitude={longitude} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="12 minutes from New Providence"
+    headline="Martial Arts for New Providence Families"
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs. Real instruction from a Renzo Gracie black belt. Free 2-week trial."
+    bgImage="/images/mma-team.jpg"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        New Providence families have choices. What they're looking for isn't just "activity" — it's real instruction, skilled coaches, and something their kids will still be doing years from now. That's what AllStar is. Twelve minutes away in Union, we've been coaching serious martial arts to New Providence families since 2011.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter (IFL, Bellator, UWC Light Heavyweight Champion). That's not a credential on the wall — it shapes every class. Your kids learn from someone who's actually done this at the highest level.
+      </p>
+    </div>
+  </section>
+
+  <!-- BJJ -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Brazilian Jiu-Jitsu</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes for New Providence Adults</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        BJJ is our flagship program. Adults 16 and up. No experience needed — most students walk in brand new and feel comfortable within a few weeks.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Evening classes at 6, 7, and 8 PM most weekdays. Saturday mornings. If you work in the area or commute through Union, our timing works. If you want something that builds real skill over years — not just a workout — this is it.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        New Providence adults tell us the same thing: they came for fitness, they stayed because they got hooked on the problem-solving. BJJ is physical chess. Most people can do it well into their 50s and beyond.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kids -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Kids Programs</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts for New Providence</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">New Providence parents choose AllStar for two things: real instruction and real results. Our kids programs:</p>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Martial arts designed for preschool energy. We teach coordination, listening, and confidence. Short bursts of activity, constant positive reinforcement. Parents report their kids sleep better and listen at home.</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu. Takedowns, escapes, positions, taught progressively. By year one, a Lions student can handle themselves in ways most adults can't. The confidence shows up at school and home.</p>
+        </div>
+      </div>
+      <p class="text-brand-gray leading-relaxed mt-5">
+        The most common reason New Providence parents bring their kids to AllStar: bullying concerns. A child who knows they can physically handle a situation almost never has to. The dynamic shifts just by knowing it.
+      </p>
+    </div>
+  </section>
+
+  <!-- Muay Thai + MMA -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="eyebrow text-brand-gold">Muay Thai</div>
+          <h2 class="text-2xl md:text-3xl mb-4">The One Program Nobody Else Offers</h2>
+          <p class="text-white/90 leading-relaxed">
+            Try finding authentic Muay Thai near New Providence. What you'll find is kickboxing studios and chain gyms. What you won't find is real Muay Thai — pad work, clinch work, real conditioning. We offer it. Adults and teens from New Providence who've tried everywhere else keep coming back.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow text-brand-gold">MMA</div>
+          <h2 class="text-2xl md:text-3xl mb-4">Complete Fighting System</h2>
+          <p class="text-white/90 leading-relaxed">
+            Our MMA program combines BJJ, Muay Thai, and wrestling. Coached by Jamal Patterson — pro fighter who has cornered UFC athletes from amateur to pro. You get the complete picture. Adults 16 and up.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmarks -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">If you know New Providence</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're 12 Minutes Away</h2>
+      <div class="flex flex-wrap gap-2">
+        {["New Providence High School", "Route 24 corridor", "New Providence Commons", "Governor Mountain Park", "Historic New Providence", "New Providence Library", "Echo Lake Park", "Mountain Avenue", "Valley Road"].map((l) => (
+          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="Two Weeks Free — New Providence Families Welcome"
+    sub="Try any program. Bring water. We'll handle the rest. No commitment, no hidden fees."
+  />
+</PageLayout>

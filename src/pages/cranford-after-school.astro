@@ -1,0 +1,200 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import CTA from '../components/CTA.astro';
+
+const city = "Cranford";
+const heroImg = '/images/kids-martial-arts.jpg';
+
+const faqs = [
+  { q: "How far is AllStar from Cranford?", a: "About 10 minutes via Route 22 or the Garden State Parkway. 1166 West Chestnut St, Union. Free parking on-site." },
+  { q: "What time do after-school classes start?", a: "Classes begin at 3:30 PM, with options through 6 PM to fit pickup schedules. Most kids come straight from school." },
+  { q: "Can AllStar work with our school pickup?", a: "Yes. We're flexible with staggered start times and pickup windows. Talk to us about your schedule and we'll make it work." },
+  { q: "What ages are in the after-school program?", a: "Cubs (4–6) and Lions (7–13). Cubs is 30–40 minutes; Lions is 45–50 minutes of real Brazilian Jiu-Jitsu technique." },
+  { q: "Do they need prior experience?", a: "No. Beginners are the norm. Most kids arrive from school with zero martial arts background." },
+  { q: "Will my kid get hurt?", a: "Contact is controlled and age-appropriate. New students are paired carefully with supervision. Kids go home tired, not injured." },
+  { q: "Do you offer team/group discounts?", a: "Yes. Multiple kids from one family? School groups? We have discounts. Call (908) 341-1131 to discuss." },
+  { q: "Free trial?", a: "Two weeks of unlimited classes. No card, no contract, no pressure. Show up, bring water, we handle the rest." },
+];
+---
+
+<PageLayout
+  title="After-School Martial Arts in Cranford, NJ — BJJ for Kids | AllStar"
+  description="After-school martial arts in Cranford, NJ for kids ages 4–13. Brazilian Jiu-Jitsu classes starting at 3:30 PM. Pickup-friendly schedules. Free 2-week trial."
+  ogImage={heroImg}
+>
+  <Fragment slot="head">
+    <LocalBusinessSchema city={city} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="3:30 PM After-School Start"
+    headline="Pick Up. Learn. Thrive."
+    sub="After-school martial arts for Cranford kids (4–13). Real structure, real skills. 10 minutes from downtown Cranford. Free trial."
+    bgImage={heroImg}
+    programLocked="Lions"
+  />
+
+  <!-- Intro -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        The 3:30–6 PM window is critical. Kids are out of school but not home. Screens are pulling, snacks are cheap, and homework can wait. Most families in Cranford are watching this time slip into lost afternoons.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
+        AllStar's after-school program gives that time structure. Kids arrive from school, step on the mat, and for 45 minutes they move, focus, and learn something real. No phone. No screens. Just presence and progress.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why After-School -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-10">
+        <div class="eyebrow">Why After-School at AllStar</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">4 Reasons Cranford Families Choose Us</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">10 minutes from your home</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Union location on Route 22, straight shot up the Garden State Parkway from downtown Cranford. No long drives, no traffic anxiety.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Pickup-friendly schedules</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Classes start at 3:30, 4, and 5 PM. Staggered times so Cranford schools feeding into AllStar don't create a traffic jam. We're flexible.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">Real structure, not babysitting</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Brazilian Jiu-Jitsu taught progressively. Belt progression is real. Parents see measurable skill gain, not just screen time replaced with noise.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg text-brand-black mb-2">One gym for the whole family</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">While kids are in Lions or Cubs, parents can train in adult BJJ, Muay Thai, or MMA. One location, all ages, same culture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cranford HS Partnership -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Established Local Trust</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Cranford High School Partnership</h2>
+      <p class="text-brand-gray leading-relaxed mb-5">
+        AllStar has worked with Cranford schools for years. Kids from Cranford High have trained with Coach Jamal — a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter. Our coaches understand the Cranford community, the schools, and what local families value.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        Teachers and counselors at Cranford schools know AllStar. When they recommend structure and discipline to a family, they often recommend us.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Discounts -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow text-brand-gold">Coming as a Group?</div>
+      <h2 class="text-3xl md:text-4xl mb-6">Team & Multi-Kid Discounts</h2>
+      <p class="text-white/90 leading-relaxed mb-5">
+        Bringing a sibling? A friend group from school? A club or team? We offer sliding discounts for multiple enrollments and group commitments.
+      </p>
+      <p class="text-white/90 leading-relaxed mb-6">
+        Many Cranford families find the group discount cuts their cost in half. It also builds a crew — kids train together, support each other, and stay committed longer.
+      </p>
+      <div class="bg-white/10 backdrop-blur p-6 rounded-lg border border-brand-gold/20">
+        <p class="text-white font-bold mb-2">Talk to us about pricing.</p>
+        <p class="text-white/90 text-sm">Call <strong>(908) 341-1131</strong> to discuss group rates and schedule options for your family.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Times & Pickup -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Easy Logistics</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-6">Class Times & Pickup for Cranford Families</h2>
+      <div class="space-y-5">
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+          <h3 class="text-lg text-brand-black mb-2">Cubs (Ages 4–6)</h3>
+          <p class="text-brand-gray text-sm mb-3">3:30 PM, 4:00 PM, and 5:00 PM slots on weekdays. Classes run 30–40 minutes.</p>
+          <p class="text-brand-gray text-xs font-mono">Monday–Friday | Pick up before 6:30 PM</p>
+        </div>
+        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+          <h3 class="text-lg text-brand-black mb-2">Lions (Ages 7–13)</h3>
+          <p class="text-brand-gray text-sm mb-3">3:30 PM, 4:00 PM, and 5:00 PM. Classes run 45–50 minutes with real BJJ technique and controlled rolling.</p>
+          <p class="text-brand-gray text-xs font-mono">Monday–Friday | Pick up before 7 PM</p>
+        </div>
+      </div>
+      <p class="text-brand-gray text-sm mt-5">
+        All slots include free on-site parking. Drop off and pick up from the same lot. No running between buildings, no searching for spots.
+      </p>
+    </div>
+  </section>
+
+  <!-- What happens in class -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">The 45-Minute Structure</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">What Happens in After-School Class</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-brand-gold text-white rounded-full font-bold">1</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Arrival & Reset</h3>
+            <p class="text-brand-gray text-sm">First 5 minutes: kids decompress from the school day. We let them move, settle, get water. Transition is part of the lesson.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-brand-gold text-white rounded-full font-bold">2</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Warm-up & Conditioning</h3>
+            <p class="text-brand-gray text-sm">10 minutes of movement — crawling patterns, running drills, coordination work. Burns off the pent-up school-day energy.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-brand-gold text-white rounded-full font-bold">3</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Technique & Drilling</h3>
+            <p class="text-brand-gray text-sm">20 minutes of real jiu-jitsu. One technique per class, taught carefully, practiced with partners. Progression is real.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-brand-gold text-white rounded-full font-bold">4</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Controlled Rolling & Games</h3>
+            <p class="text-brand-gray text-sm">10 minutes of live practice. Kids test what they learned against resistance. This is where confidence actually builds.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-brand-gold text-white rounded-full font-bold">5</div>
+          <div>
+            <h3 class="text-lg text-brand-black mb-1">Cool-down & Dismissal</h3>
+            <p class="text-brand-gray text-sm">Final 5 minutes: calm stretch, breathwork, bow out. Kids leave settled, not wired. Parents see a noticeably calmer kid than they dropped off.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Trial CTA -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-2xl text-center">
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-4">Ready to Start?</h2>
+      <p class="text-lg text-brand-gray mb-8">Two weeks of unlimited after-school classes. No card, no contract, no pressure. Bring water. We'll handle the rest.</p>
+      <a href="/trial/" class="inline-block bg-brand-gold hover:bg-brand-gold/90 text-brand-navy font-bold py-4 px-8 rounded-lg text-lg transition">
+        Schedule Intro Class
+      </a>
+      <p class="text-brand-gray text-sm mt-6">Or call <strong>(908) 341-1131</strong> to discuss scheduling and group discounts.</p>
+    </div>
+  </section>
+
+  <FAQ items={faqs} />
+
+  <CTA
+    headline="After-School Martial Arts Starts Now"
+    sub="Cranford families. 10 minutes away. Real structure, real skills. Pick up, learn, thrive."
+  />
+</PageLayout>
