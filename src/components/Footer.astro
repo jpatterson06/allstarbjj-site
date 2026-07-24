@@ -73,6 +73,36 @@ const towns = [
     </div>
   </div>
 
+  <!-- Find us — embedded Google Map + directions (keyless embed, no API key needed) -->
+  <div class="border-t border-gray-800">
+    <div class="container-page py-10 grid md:grid-cols-3 gap-6 md:gap-8 items-center">
+      <div class="md:col-span-1">
+        <div class="font-display text-lg uppercase text-brand-gold mb-3 tracking-wider">Find Us</div>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          AllStar Martial Arts<br />
+          1166 West Chestnut St<br />
+          Union, NJ 07083<br />
+          <span class="text-gray-400">Off Route 22 · Free on-site parking</span>
+        </p>
+        <a
+          href="https://www.google.com/maps/dir/?api=1&amp;destination=1166+West+Chestnut+St,+Union,+NJ+07083"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-brand-gold text-brand-black font-bold text-sm px-5 py-2.5 rounded hover:bg-white transition-colors"
+        >📍 Get Directions</a>
+      </div>
+      <div class="md:col-span-2">
+        <iframe
+          title="Map to AllStar Martial Arts — 1166 West Chestnut St, Union, NJ"
+          src="https://maps.google.com/maps?q=1166%20West%20Chestnut%20St,%20Union,%20NJ%2007083&amp;z=15&amp;output=embed"
+          class="w-full h-56 md:h-64 rounded-lg border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
   <div class="border-t border-gray-800">
     <div class="container-page py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-400">
       <div>© {new Date().getFullYear()} AllStar Martial Arts. All rights reserved.</div>
