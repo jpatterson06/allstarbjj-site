@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 
 const faqs = [
   { q: "Is it safe to train with men?", a: "Yes. Partners are paired carefully, especially for beginners. The culture at AllStar is specifically controlled to prevent the macho nonsense that exists at some gyms." },
@@ -18,6 +19,20 @@ const faqs = [
   description="Women's Brazilian Jiu-Jitsu classes in Union, NJ at AllStar Martial Arts. Renzo Gracie lineage. Beginners welcome. Self-defense, fitness, confidence. Free 2-week trial."
   ogImage="/images/adult-bjj-hero.jpg"
 >
+  <Fragment slot="head">
+    <ServiceSchema
+      serviceName="Women's BJJ Classes"
+      serviceDescription="Women's Brazilian Jiu-Jitsu classes in Union, NJ emphasizing technique, community, and personal empowerment. Real instruction from Renzo Gracie lineage."
+      serviceType="Women's BJJ Classes"
+      pageUrl="/bjj-for-women/"
+    />
+    <ServiceSchema
+      serviceName="Women's Self Defense Classes"
+      serviceDescription="Women-focused self-defense training through practical Brazilian Jiu-Jitsu. Learn real techniques for personal safety regardless of attacker size."
+      serviceType="Women's Self Defense Classes"
+      pageUrl="/bjj-for-women/"
+    />
+  </Fragment>
   <PageHero
     eyebrow="Women Welcome at Every Level"
     headline="BJJ for Women in Union, NJ"

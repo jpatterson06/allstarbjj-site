@@ -1,5 +1,33 @@
+# AllStar Martial Arts — robots.txt
+# All search engines and AI assistants are welcome to crawl and cite this site.
+
 User-agent: *
 Allow: /
 Disallow: /thanks/
+
+# AI / LLM crawlers — explicitly allowed so AI answers can cite AllStar
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
 
 Sitemap: https://allstarbjj.com/sitemap-index.xml

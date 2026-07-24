@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
 import TestimonialSchema from '../components/TestimonialSchema.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const heroImg = '/images/adult-bjj-hero.jpg';
@@ -23,6 +24,7 @@ const faqs = [
   { q: "Do I need to bring my own gi?", a: "Not for the trial. After the trial, you'll need one — about $80–150 and lasts years." },
   { q: "What about parking?", a: "Free lot on-site. Adult class entry doesn't conflict with kids pickup." },
   { q: "Can I observe a class first?", a: "Yes. Walk in any time. We don't hide what we do." },
+  { q: "Where can I find adult BJJ or jiu-jitsu near me?", a: "AllStar Martial Arts is at 1166 West Chestnut St, Union, NJ 07083 — off Route 22, easy for commuters from Springfield, Cranford, Kenilworth, Roselle Park, Westfield, and nearby Union County towns. Adult BJJ runs weekday evenings at 6, 7, and 8 PM." },
 ];
 ---
 
@@ -34,6 +36,38 @@ const faqs = [
   <Fragment slot="head">
     <FAQPageSchema faqs={faqs} />
     <TestimonialSchema testimonials={testimonials} />
+
+    <!-- Service schemas for GMB -->
+    <ServiceSchema
+      serviceName="Adult Gi BJJ Classes"
+      serviceDescription="Adult Brazilian Jiu-Jitsu classes in Union, NJ with Renzo Gracie lineage instruction. Traditional Gi training with technique-focused curriculum for all experience levels."
+      serviceType="Adult Gi BJJ Classes"
+      pageUrl="/adult-bjj/"
+    />
+    <ServiceSchema
+      serviceName="No-Gi Submission Wrestling"
+      serviceDescription="Advanced no-gi submission wrestling and grappling training for adults. Focus on leg lock systems, heel hooks, and submission-oriented ground fighting."
+      serviceType="No-Gi Submission Wrestling"
+      pageUrl="/adult-bjj/"
+    />
+    <ServiceSchema
+      serviceName="BJJ for Adults 40+"
+      serviceDescription="Brazilian Jiu-Jitsu classes specifically designed for adults over 40. Lower impact, technique-focused training that emphasizes longevity and enjoyment."
+      serviceType="BJJ for Adults 40+"
+      pageUrl="/bjj-over-40/"
+    />
+    <ServiceSchema
+      serviceName="Competition Tournament Coaching"
+      serviceDescription="Specialized coaching for BJJ competition training and tournament preparation. Includes technique refinement, match strategy, and conditioning for competitors."
+      serviceType="Competition Tournament Coaching"
+      pageUrl="/adult-bjj/"
+    />
+    <ServiceSchema
+      serviceName="Private 1-on-1 BJJ Coaching"
+      serviceDescription="Private one-on-one Brazilian Jiu-Jitsu lessons with personalized instruction tailored to individual goals and skill level."
+      serviceType="Private 1-on-1 BJJ Coaching"
+      pageUrl="/adult-bjj/"
+    />
   </Fragment>
 
   <PageHero

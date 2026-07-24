@@ -5,6 +5,18 @@ import ProgramCard from '../components/ProgramCard.astro';
 import Testimonials from '../components/Testimonials.astro';
 import CTA from '../components/CTA.astro';
 import YouTubeShort from '../components/YouTubeShort.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+
+// Homepage FAQ — natural-language questions that match how people (and AI search
+// assistants) actually ask for a gym near them. Also feeds FAQ rich results.
+const faqs = [
+  { q: "Where can I find Brazilian Jiu-Jitsu near me in Union, NJ?", a: "AllStar Martial Arts is at 1166 West Chestnut St in Union, NJ 07083 — off Route 22, minutes from Springfield, Cranford, Kenilworth, Roselle Park, and Union County towns nearby. We teach adult and kids Brazilian Jiu-Jitsu under a Renzo Gracie black belt." },
+  { q: "What martial arts classes do you offer?", a: "Brazilian Jiu-Jitsu (BJJ), Muay Thai, and MMA for adults 16+, plus kids martial arts for ages 4–13 (Cubs 4–6 and Lions 7–13). Beginners are welcome in every program." },
+  { q: "Do you have a free trial?", a: "Yes. New students get a free 2-week trial — unlimited classes, no contract and no card required. Call (908) 341-1131 or book online to claim a spot." },
+  { q: "Who teaches at AllStar Martial Arts?", a: "Head instructor and founder Jamal Patterson is a 4th-degree Brazilian Jiu-Jitsu black belt under Renzo Gracie, an ADCC veteran, and a former pro MMA fighter (IFL, Bellator). The gym has served Union, NJ since 2011." },
+  { q: "What towns near Union do you serve?", a: "AllStar serves Union and the surrounding Union and Essex County area, including Springfield, Cranford, Kenilworth, Roselle Park, Mountainside, Westfield, Maplewood, Millburn, Summit, and Scotch Plains." },
+];
 
 const programs = [
   {
@@ -81,7 +93,23 @@ const aboutImg = '/images/mma-team.jpg';
     "sameAs": ["https://www.facebook.com/allstarbjjmma", "https://www.instagram.com/allstar_martialarts/"]
   })} />
 
-  <Hero bgImage={heroImg} bgPosition="50% 60%" />
+  <Hero
+    eyebrow="BJJ • Muay Thai • MMA • Kids — Since 2011"
+    headline="Martial Arts in Union, NJ"
+    bgImage={heroImg}
+    bgPosition="50% 60%"
+  />
+
+  <!-- Intro / summary — first thing after the hero. Written as plain, factual,
+       self-contained sentences so both Google and AI search can quote it. -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl text-center">
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Brazilian Jiu-Jitsu, Muay Thai &amp; MMA in Union, NJ</h2>
+      <p class="text-brand-gray text-base md:text-lg leading-relaxed">
+        AllStar Martial Arts is a family-owned Brazilian Jiu-Jitsu, Muay Thai, and MMA gym in Union, New Jersey, serving Union County since 2011. If you've been searching for jiu-jitsu, kickboxing, or a martial arts class near you, our adult programs (ages 16+) and kids classes (ages 4–13) are taught by Renzo Gracie black belt Jamal Patterson. Beginners welcome — start with a free two-week trial, no contract.
+      </p>
+    </div>
+  </section>
 
   <!-- Testimonials section (after hero) -->
   <Testimonials maxItems={6} />
@@ -91,7 +119,7 @@ const aboutImg = '/images/mma-team.jpg';
     <div class="container-page">
       <div class="text-center mb-10 md:mb-12">
         <div class="eyebrow">What we offer</div>
-        <h2 class="text-3xl md:text-5xl text-brand-black">About our programs</h2>
+        <h2 class="text-3xl md:text-5xl text-brand-black">Our Classes: BJJ, Muay Thai, MMA &amp; Kids Martial Arts</h2>
         <div class="w-16 h-1 bg-brand-navy mx-auto mt-4"></div>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -170,6 +198,10 @@ const aboutImg = '/images/mma-team.jpg';
       <YouTubeShort videoId="MWEknULk4pg" title="AllStar Martial Arts Academy Rules" caption="The culture, the expectations, and what makes AllStar different." />
     </div>
   </section>
+
+  <!-- FAQ — natural-language Q&A for local + AI search, backed by FAQ schema -->
+  <FAQPageSchema faqs={faqs} slot="head" />
+  <FAQ heading="Martial Arts in Union, NJ — FAQ" items={faqs} />
 
   <CTA />
 </PageLayout>

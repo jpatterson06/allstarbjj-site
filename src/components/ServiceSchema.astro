@@ -1,0 +1,72 @@
+---
+interface Props {
+  serviceName: string;
+  serviceDescription: string;
+  serviceType: string; // Maps to GMB service name
+  pageUrl: string;
+  areaServed?: string[]; // Default: Union, surrounding towns
+}
+
+const {
+  serviceName,
+  serviceDescription,
+  serviceType,
+  pageUrl,
+  areaServed = [
+    "Union, NJ",
+    "Westfield, NJ",
+    "Springfield, NJ",
+    "Cranford, NJ",
+    "Maplewood, NJ",
+    "Mountainside, NJ",
+    "Roselle Park, NJ",
+    "Summit, NJ",
+    "Livingston, NJ",
+    "Chatham, NJ",
+    "Millburn, NJ",
+    "Kenilworth, NJ",
+    "Short Hills, NJ",
+    "New Providence, NJ",
+  ],
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": serviceName,
+  "description": serviceDescription,
+  "serviceType": serviceType,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "AllStar Martial Arts",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1166 West Chestnut St",
+      "addressLocality": "Union",
+      "addressRegion": "NJ",
+      "postalCode": "07083",
+      "addressCountry": "US",
+    },
+    "telephone": "(908) 341-1131",
+    "url": "https://allstarbjj.com",
+    "image": "https://allstarbjj.com/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/allstarbjjmma",
+      "https://www.instagram.com/allstar_martialarts/",
+    ],
+  },
+  "areaServed": areaServed.map((area) => ({
+    "@type": "City",
+    "name": area,
+  })),
+  "url": `https://allstarbjj.com${pageUrl}`,
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "Contact for pricing",
+    "description": "Free 2-week trial available",
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

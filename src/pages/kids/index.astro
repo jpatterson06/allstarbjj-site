@@ -5,6 +5,7 @@ import FAQ from '../../components/FAQ.astro';
 import CTA from '../../components/CTA.astro';
 import YouTubeShort from '../../components/YouTubeShort.astro';
 import FAQPageSchema from '../../components/FAQPageSchema.astro';
+import ServiceSchema from '../../components/ServiceSchema.astro';
 
 const heroImg = '/images/kids-martial-arts.jpg';
 
@@ -27,6 +28,38 @@ const faqs = [
 >
   <Fragment slot="head">
     <FAQPageSchema faqs={faqs} />
+
+    <!-- Service schemas for GMB Kids BJJ -->
+    <ServiceSchema
+      serviceName="Kids BJJ Fundamentals (Ages 5-7)"
+      serviceDescription="Kids martial arts for ages 5-7 focusing on fundamental Brazilian Jiu-Jitsu techniques, discipline, and confidence building through play-based learning."
+      serviceType="Kids BJJ Fundamentals (Ages 5-7)"
+      pageUrl="/preschool/"
+    />
+    <ServiceSchema
+      serviceName="Kids BJJ Advanced (Ages 8-12)"
+      serviceDescription="Advanced BJJ program for kids ages 8-12 building on fundamentals with competition training, belt progression, and increased intensity."
+      serviceType="Kids BJJ Advanced (Ages 8-12)"
+      pageUrl="/kids/"
+    />
+    <ServiceSchema
+      serviceName="Teen BJJ (Ages 13-17)"
+      serviceDescription="Brazilian Jiu-Jitsu training for teens ages 13-17 with focus on technique mastery, competitive preparation, and serious skill development."
+      serviceType="Teen BJJ (Ages 13-17)"
+      pageUrl="/kids/"
+    />
+    <ServiceSchema
+      serviceName="Kids Self-Defense (Bully Prevention)"
+      serviceDescription="Kids martial arts program focused on self-defense techniques, bully prevention, confidence building, and situational awareness for children ages 7-13."
+      serviceType="Kids Self-Defense (Bully Prevention)"
+      pageUrl="/bully-prevention/"
+    />
+    <ServiceSchema
+      serviceName="Competition Tournament Coaching"
+      serviceDescription="Youth competition coaching for BJJ tournaments including technique refinement, match strategy, and tournament-specific conditioning."
+      serviceType="Competition Tournament Coaching"
+      pageUrl="/kids/"
+    />
   </Fragment>
   <PageHero
     eyebrow="Kids ages 7-13"
@@ -41,6 +74,29 @@ const faqs = [
     <div class="container-page max-w-3xl">
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
         Kids martial arts in Union, NJ for ages 7–13. Real Brazilian Jiu-Jitsu — confidence, discipline, and bullyproofing through actual technique. Renzo Gracie lineage. Classes weekday afternoons and Saturday mornings. Reserve your child's spot now — no contract. Call (908) 341-1131 or sign up below.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs by age — internal links to the age-specific pages -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-8">
+        <div class="eyebrow">Find the right program</div>
+        <h2 class="text-3xl md:text-4xl text-brand-black">Kids Programs by Age</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/preschool/" class="block bg-white p-6 rounded-lg border-l-4 border-brand-navy shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool martial arts built for little ones: confidence, listening, and coordination through play. <span class="text-brand-navy font-bold">See the Cubs program →</span></p>
+        </a>
+        <a href="/kids/" class="block bg-white p-6 rounded-lg border-l-4 border-brand-red shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
+          <p class="text-brand-gray text-sm leading-relaxed">Our main kids Brazilian Jiu-Jitsu program: real technique, a real belt system, and bullyproofing that lasts. <span class="text-brand-red font-bold">You're here.</span></p>
+        </a>
+      </div>
+      <p class="text-center text-brand-gray text-sm mt-6">
+        Want the details on the martial art itself? <a href="/kids-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Read about kids Brazilian Jiu-Jitsu at AllStar →</a>
       </p>
     </div>
   </section>

@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const heroImg = '/images/muay-thai-pads.jpg';
@@ -17,16 +18,43 @@ const faqs = [
   { q: "Do I need to compete?", a: "No. Most students never compete. The fitness and skill benefits don't require it." },
   { q: "How is this different from kickboxing?", a: "Muay Thai uses elbows and the clinch; most kickboxing doesn't. It's the more complete striking art." },
   { q: "Can I cross-train BJJ?", a: "Yes. Most of our serious students do. The trial covers all programs." },
+  { q: "Where can I find Muay Thai classes near me?", a: "AllStar Martial Arts is at 1166 West Chestnut St, Union, NJ 07083 — off Route 22, an easy drive from Springfield, Cranford, Kenilworth, Roselle Park, and nearby Union County towns. Adult Muay Thai runs weekday evenings; beginners start any week with a free two-week trial." },
 ];
 ---
 
 <PageLayout
-  title="Adult Muay Thai Classes in Union, NJ — Real Pad Work, Real Results | AllStar"
+  title="Muay Thai Classes in Union, NJ | AllStar Martial Arts"
   description="Adult Muay Thai in Union, NJ at a combat-sports gym run by an MMA veteran. Real fundamentals, serious cardio, no fluff. Two weeks free. Beginners welcome."
   ogImage={heroImg}
 >
   <Fragment slot="head">
     <FAQPageSchema faqs={faqs} />
+
+    <!-- Service schemas for GMB Muay Thai -->
+    <ServiceSchema
+      serviceName="Beginner Muay Thai"
+      serviceDescription="Beginner Muay Thai classes in Union, NJ teaching fundamental striking techniques, pad work, and conditioning for adults of all fitness levels."
+      serviceType="Beginner Muay Thai"
+      pageUrl="/adult-muay-thai/"
+    />
+    <ServiceSchema
+      serviceName="Advanced Muay Thai Conditioning"
+      serviceDescription="Advanced Muay Thai conditioning classes with pad work, heavy bag training, and cardio for experienced students and competitors."
+      serviceType="Advanced Muay Thai Conditioning"
+      pageUrl="/adult-muay-thai/"
+    />
+    <ServiceSchema
+      serviceName="Kickboxing Fitness Classes"
+      serviceDescription="High-energy kickboxing fitness classes combining striking training with cardio conditioning for weight loss and overall fitness."
+      serviceType="Kickboxing Fitness Classes"
+      pageUrl="/kickboxing/"
+    />
+    <ServiceSchema
+      serviceName="Weight Loss Martial Arts Program"
+      serviceDescription="Specialized martial arts training program focused on weight loss and body composition change through high-intensity striking and grappling."
+      serviceType="Weight Loss Martial Arts Program"
+      pageUrl="/adult-muay-thai/"
+    />
   </Fragment>
 
   <PageHero

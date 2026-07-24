@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 
 const faqs = [
   { q: "What ages does camp serve?", a: "Ages 4–12. Cubs (4–6) and Lions (7–12) run as separate groups with age-appropriate curriculum." },
@@ -20,6 +21,20 @@ const faqs = [
   description="Kids martial arts summer camp in Union, NJ at AllStar Martial Arts. Ages 4–12. Brazilian Jiu-Jitsu, movement, games, and life skills. Family-owned since 2011. Limited spots."
   ogImage="/images/kids-martial-arts.jpg"
 >
+  <Fragment slot="head">
+    <ServiceSchema
+      serviceName="Summer Martial Arts Camp"
+      serviceDescription="All-day summer martial arts camp in Union, NJ for kids ages 4-13. Combining real instruction with fun activities, games, and skill-building."
+      serviceType="Summer Martial Arts Camp"
+      pageUrl="/summer-camp/"
+    />
+    <ServiceSchema
+      serviceName="Birthday Party Martial Arts"
+      serviceDescription="Martial arts birthday party packages in Union, NJ for kids. Fun, active celebrations featuring real instruction and group martial arts training."
+      serviceType="Birthday Party Martial Arts"
+      pageUrl="/summer-camp/"
+    />
+  </Fragment>
   <PageHero
     eyebrow="Ages 4–12 · Limited Spots"
     headline="Martial Arts Summer Camp in Union, NJ"

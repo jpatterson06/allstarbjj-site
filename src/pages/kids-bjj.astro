@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const faqs = [
@@ -12,6 +13,7 @@ const faqs = [
   { q: "How long before I see results?", a: "Most parents notice posture and confidence changes within 60 days of consistent training. Technique takes longer — by 6 months, kids have a real game." },
   { q: "What's the belt system like?", a: "Cubs use stripes on a white belt. Lions progress through white, grey, yellow, orange, and green belts before transitioning to adult ranks. Each belt is earned through consistent attendance and demonstrated technique." },
   { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract. Call (908) 341-1131." },
+  { q: "Where can I find kids jiu-jitsu near me?", a: "AllStar Martial Arts is at 1166 West Chestnut St, Union, NJ 07083, off Route 22 — serving families in Union, Springfield, Cranford, Kenilworth, Roselle Park, Mountainside, and nearby Union County towns. Kids Brazilian Jiu-Jitsu runs weekday afternoons and Saturday mornings." },
 ];
 
 // Filter testimonials to show only kids/family-focused ones
@@ -52,13 +54,15 @@ const kidsFriendlyTestimonials = [
 ---
 
 <PageLayout
-  title="Kids BJJ in Union, NJ — Cubs & Lions Programs | AllStar Martial Arts"
-  description="Kids Brazilian Jiu-Jitsu in Union, NJ. Cubs (ages 4–6) and Lions (ages 7–13). Renzo Gracie lineage. Coach Jamal Patterson. Real BJJ, real confidence. Secure your child's spot today."
+  title="Kids Brazilian Jiu-Jitsu in Union, NJ — Ages 4–13 | AllStar"
+  description="Kids Brazilian Jiu-Jitsu (BJJ) in Union, NJ. Cubs (ages 4–6) and Lions (ages 7–13). Renzo Gracie lineage, Coach Jamal Patterson. Real jiu-jitsu, real confidence. Free 2-week trial."
   ogImage="/images/kids-martial-arts.jpg"
 >
+  <FAQPageSchema faqs={faqs} slot="head" />
+
   <PageHero
     eyebrow="Ages 4–13 | Cubs & Lions"
-    headline="Kids BJJ in Union, NJ"
+    headline="Kids Brazilian Jiu-Jitsu in Union, NJ"
     sub="Real Jiu-Jitsu for kids ages 4–13. Cubs program (4–6) and Lions program (7–13). Renzo Gracie lineage. Secure your child's spot today — no contract."
     bgImage="/images/kids-martial-arts.jpg"
     programLocked="Lions"
@@ -72,6 +76,9 @@ const kidsFriendlyTestimonials = [
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
         The difference shows up in sparring. Kids who've been through real BJJ instruction can control a bigger kid. Coach Jamal's kids program — built on Renzo Gracie's curriculum and 15 years of coaching kids in Union — is the real version.
+      </p>
+      <p class="text-base text-brand-gray leading-relaxed mt-5">
+        New here? Start with the right age group: <a href="/preschool/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Cubs for ages 4–6</a> or <a href="/kids/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Lions for ages 7–13</a>.
       </p>
     </div>
   </section>

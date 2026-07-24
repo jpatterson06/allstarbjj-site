@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 
 const faqs = [
   { q: "What age should my child start?", a: "Cubs starts at 4. Lions runs from 7–13. Earlier is better — the confidence and body awareness build over years." },
@@ -15,13 +16,21 @@ const faqs = [
 
 <PageLayout
   title="Bully Prevention Program Union NJ — Kids BJJ | AllStar Martial Arts"
-  description="Bully prevention through Brazilian Jiu-Jitsu in Union, NJ. Ages 4–13. AllStar Martial Arts. Real confidence, real skills. Free 2-week trial — no contract."
+  description="Bully prevention through Brazilian Jiu-Jitsu in Union, NJ. Ages 4–13. AllStar Martial Arts. Real confidence, real skills. Secure your child's spot today — no contract."
   ogImage="/images/kids-martial-arts.jpg"
 >
+  <Fragment slot="head">
+    <ServiceSchema
+      serviceName="Kids Self-Defense (Bully Prevention)"
+      serviceDescription="Kids bully-prevention program through martial arts in Union, NJ. Build confidence, resilience, and real self-defense skills for ages 7-13."
+      serviceType="Kids Self-Defense (Bully Prevention)"
+      pageUrl="/bully-prevention/"
+    />
+  </Fragment>
   <PageHero
     eyebrow="Ages 4–13 | Cubs & Lions"
     headline="Bully Prevention in Union, NJ"
-    sub="Real confidence through real martial arts training. Not a seminar — real BJJ. Ages 4–13. Free 2-week trial, no contract."
+    sub="Real confidence through real martial arts training. Not a seminar — real BJJ. Ages 4–13. Secure your child's spot today — no contract."
     bgImage="/images/kids-martial-arts.jpg"
     programLocked="Lions"
   />

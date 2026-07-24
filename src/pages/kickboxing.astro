@@ -2,7 +2,9 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
 import CTA from '../components/CTA.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 
 const faqs = [
   { q: "Do I need experience?", a: "No. Most students walk in having never thrown a real punch. The curriculum starts from zero." },
@@ -10,18 +12,28 @@ const faqs = [
   { q: "How many calories do I burn?", a: "600–1,000 per class depending on intensity. One of the highest calorie burns of any workout format." },
   { q: "Can I do kickboxing and BJJ together?", a: "Yes. Many AllStar members cross-train both. They complement each other — striking plus grappling covers the full picture." },
   { q: "Free trial?", a: "Two weeks unlimited. No card, no contract. Call (908) 341-1131." },
+  { q: "Where can I find kickboxing classes near me?", a: "AllStar Martial Arts is at 1166 West Chestnut St, Union, NJ 07083, off Route 22 — convenient for Springfield, Cranford, Kenilworth, Roselle Park, and nearby Union County towns. Adult kickboxing and Muay Thai run weekday evenings, beginners welcome, with a free two-week trial." },
 ];
 ---
 
 <PageLayout
-  title="Kickboxing Classes in Union, NJ — Real Striking, Not Cardio | AllStar"
-  description="Kickboxing and Muay Thai classes in Union, NJ at AllStar Martial Arts. Adults 16+. Beginners welcome. 600–1,000 calories a class. Free 2-week trial — no contract."
+  title="Kickboxing Classes in Union, NJ | AllStar Martial Arts"
+  description="Kickboxing and Muay Thai classes in Union, NJ at AllStar Martial Arts. Adults 16+. Beginners welcome. 600–1,000 calories a class. Claim your spot today — no contract."
   ogImage="/images/muay-thai-pads.jpg"
 >
+  <Fragment slot="head">
+    <FAQPageSchema faqs={faqs} />
+    <ServiceSchema
+      serviceName="Kickboxing Fitness Classes"
+      serviceDescription="High-energy kickboxing fitness classes combining real striking techniques with cardio conditioning. Perfect for fitness, self-defense, and weight loss."
+      serviceType="Kickboxing Fitness Classes"
+      pageUrl="/kickboxing/"
+    />
+  </Fragment>
   <PageHero
     eyebrow="Ages 16+"
     headline="Kickboxing Classes in Union, NJ"
-    sub="Real Muay Thai striking — not cardio kickboxing. 600–1,000 calories a class. Beginners welcome. Free 2-week trial — no contract."
+    sub="Real Muay Thai striking — not cardio kickboxing. 600–1,000 calories a class. Beginners welcome. Secure your spot today — no contract."
     bgImage="/images/muay-thai-pads.jpg"
     bgPosition="30% 30%"
     programLocked="Adult Muay Thai"

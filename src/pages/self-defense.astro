@@ -3,6 +3,8 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import LeadForm from '../components/LeadForm.astro';
 import FAQ from '../components/FAQ.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 
 const heroImg = '/images/gym-hero.jpg'; // Replace with your gym mat photo
 
@@ -15,6 +17,7 @@ const faqs = [
   { q: "Do I have to compete?", a: "No. Self defense training is non-competitive. You learn technique and apply it with partners. No tournaments, no pressure to compete." },
   { q: "What about multiple attackers?", a: "We focus on 1v1 scenarios because that's 99% of what happens. Multiple attackers changes the math — escape becomes the priority, which we train." },
   { q: "Can I train self defense and regular BJJ together?", a: "Yes. Adult BJJ classes cover both competition technique and practical applications. There's no conflict — it's the same skillset." },
+  { q: "Where can I find self defense classes near me?", a: "AllStar Martial Arts is at 1166 West Chestnut St, Union, NJ 07083, off Route 22 — close to Springfield, Cranford, Kenilworth, Roselle Park, and nearby Union County towns. Adult self-defense through Brazilian Jiu-Jitsu runs weekday evenings, all levels welcome, with a free two-week trial." },
 ];
 ---
 
@@ -23,6 +26,34 @@ const faqs = [
   description="Real self-defense training in Union, NJ through Brazilian Jiu-Jitsu. Practical technique for adults of all ages and sizes. Learn escapes, control, and confidence. Reserve your spot today."
   ogImage={heroImg}
 >
+  <Fragment slot="head">
+    <FAQPageSchema faqs={faqs} />
+    <!-- Service schemas for GMB Self-Defense -->
+    <ServiceSchema
+      serviceName="Self-Defense for Women"
+      serviceDescription="Women's self-defense classes in Union, NJ using Brazilian Jiu-Jitsu techniques. Real practical skills focused on escape, control, and personal safety regardless of attacker size."
+      serviceType="Self-Defense for Women"
+      pageUrl="/self-defense/"
+    />
+    <ServiceSchema
+      serviceName="Workplace Self-Defense"
+      serviceDescription="Professional workplace self-defense training for employees. De-escalation techniques, personal safety awareness, and practical responses to threats."
+      serviceType="Workplace Self-Defense"
+      pageUrl="/self-defense/"
+    />
+    <ServiceSchema
+      serviceName="Home Invasion Defense Scenarios"
+      serviceDescription="Specialized self-defense training focusing on home invasion scenarios and personal safety in residential situations."
+      serviceType="Home Invasion Defense Scenarios"
+      pageUrl="/self-defense/"
+    />
+    <ServiceSchema
+      serviceName="Self-Defense Classes"
+      serviceDescription="Comprehensive self-defense training through practical Brazilian Jiu-Jitsu. Learn real techniques for control, escape, and confidence in dangerous situations."
+      serviceType="Self-Defense Classes"
+      pageUrl="/self-defense/"
+    />
+  </Fragment>
   <PageHero
     eyebrow="Ages 16+"
     headline="Real Self Defense in Union, NJ"
@@ -124,7 +155,7 @@ const faqs = [
         </div>
         <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-lg text-brand-black mb-2">The woman who needs to know she can defend herself</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">BJJ isn't about being strong. It's about understanding leverage. Training with larger partners and controlling them proves that size doesn't matter.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">BJJ isn't about being strong. It's about understanding leverage. Training with larger partners and controlling them proves that size doesn't matter. <a href="/bjj-for-women/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">See our BJJ for women program →</a></p>
         </div>
         <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-lg text-brand-black mb-2">The person who doesn't want to strike</h3>

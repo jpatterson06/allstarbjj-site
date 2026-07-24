@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
+import ServiceSchema from '../components/ServiceSchema.astro';
 
 const heroImg = '/images/mma-team.jpg';
 
@@ -16,15 +17,48 @@ const faqs = [
   { q: "What's the path if I want to compete?", a: "We've taken fighters from first amateur match through pro and into the UFC. We know the route. If you're serious, we'll have that conversation." },
   { q: "Do I need wrestling experience?", a: "No. We teach takedowns and takedown defense from scratch. Wrestlers have a head start, but most students start without one." },
   { q: "Can women train MMA here?", a: "Yes. We pair carefully and our culture is respectful. We have women across BJJ, Muay Thai, and MMA." },
+  { q: "Is there an MMA gym near me in Union, NJ?", a: "Yes — AllStar Martial Arts is a full MMA gym at 1166 West Chestnut St, Union, NJ 07083, off Route 22. We combine Brazilian Jiu-Jitsu, Muay Thai, and wrestling into one program, coached by IFL and Bellator veteran Jamal Patterson. Free two-week trial, no contract." },
 ];
 ---
 
 <Fragment slot="head">
     <FAQPageSchema faqs={faqs} />
+
+    <!-- Service schemas for GMB MMA -->
+    <ServiceSchema
+      serviceName="MMA Stand-Up Training"
+      serviceDescription="Mixed martial arts stand-up training focusing on boxing, kickboxing, and striking fundamentals for MMA competition and fitness."
+      serviceType="MMA Stand-Up Training"
+      pageUrl="/adult-mma/"
+    />
+    <ServiceSchema
+      serviceName="MMA Grappling & Takedowns"
+      serviceDescription="Advanced MMA grappling and takedown training integrating BJJ wrestling and submission techniques for competitive fighters."
+      serviceType="MMA Grappling & Takedowns"
+      pageUrl="/adult-mma/"
+    />
+    <ServiceSchema
+      serviceName="MMA Conditioning & Footwork"
+      serviceDescription="Specialized conditioning and footwork drills designed for fighters. Build fighter-specific cardio, agility, and movement patterns."
+      serviceType="MMA Conditioning & Footwork"
+      pageUrl="/adult-mma/"
+    />
+    <ServiceSchema
+      serviceName="Competitive MMA Fight Prep"
+      serviceDescription="Professional MMA fight camp and preparation coaching for amateur and professional MMA competitors. Complete fight strategy and conditioning."
+      serviceType="Competitive MMA Fight Prep"
+      pageUrl="/adult-mma/"
+    />
+    <ServiceSchema
+      serviceName="Strength & Conditioning for Fighters"
+      serviceDescription="Specialized strength and conditioning programs designed for martial arts athletes and MMA fighters. Build power, endurance, and resilience."
+      serviceType="Strength & Conditioning for Fighters"
+      pageUrl="/adult-mma/"
+    />
   </Fragment>
 
 <PageLayout
-  title="Adult MMA Classes in Union, NJ — Coached by an IFL & Bellator Veteran | AllStar"
+  title="MMA Classes & Gym in Union, NJ | AllStar Martial Arts"
   description="Adult MMA training in Union, NJ from a coach who fought at the highest levels. IFL, Bellator, UWC champion. Real integration of BJJ, Muay Thai, wrestling. Claim your trial spot today."
   ogImage={heroImg}
 >
