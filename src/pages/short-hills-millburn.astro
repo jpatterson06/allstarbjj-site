@@ -7,45 +7,65 @@ import FAQPageSchema from '../components/FAQPageSchema.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 
 const faqs = [
-  { q: "How far is AllStar from Short Hills and Millburn?", a: "About 12–15 minutes via Route 22 west to Union. 1166 West Chestnut St, Union, NJ 07083. Free parking." },
-  { q: "Can you pick up kids right after school and bring them to class?", a: "Yes. Many Short Hills and Millburn parents do exactly this. We're open until 8 PM most weeknights. Check our schedule for timing that works." },
-  { q: "Is there authentic Muay Thai near Short Hills?", a: "AllStar is the only authentic Muay Thai program in the Short Hills–Millburn–Livingston area. Real pad work, real technique, not cardio kickboxing." },
-  { q: "Do kids need to be athletic to start?", a: "No. The curriculum starts from zero. Coordination, fitness, and confidence build as part of training. Most kids who start with zero experience are unrecognizable by month three." },
+  { q: "How far is AllStar from Short Hills and Millburn?", a: "About 12–15 minutes via Vauxhall Road or Route 22 into Union. 1166 West Chestnut St, Union, NJ 07083. Free parking." },
+  { q: "Can you pick up kids right after school and bring them to class?", a: "Many Short Hills and Millburn parents build their evening around our kids classes. We're open until 8 PM most weeknights. Check our schedule for timing that works." },
+  { q: "Is there authentic Muay Thai near Short Hills?", a: "Yes. AllStar teaches authentic Muay Thai — real pad work and technique, not cardio kickboxing — under the same roof as BJJ. Beginners are welcome." },
+  { q: "Do kids need to be athletic to start?", a: "No. The curriculum starts from zero. Coordination, fitness, and confidence build as part of training." },
   { q: "What's the free trial?", a: "Two full weeks of unlimited classes. No card required, no contract, no obligation. Show up, bring water, we'll handle the rest." },
-  { q: "How do I get started?", a: "Fill out the form on this page or call (908) 341-1131. We respond same-day. Most families book their first class within 24 hours." },
+  { q: "How do I get started?", a: "Fill out the form on this page or call (908) 341-1131. We'll text to confirm a class time that works." },
 ];
 
 const city = "Short Hills";
 ---
-
-<Fragment slot="head">
-    <LocalBusinessSchema city={city} />
-    <FAQPageSchema faqs={faqs} />
-</Fragment>
 
 <PageLayout
   title="Martial Arts for Short Hills & Millburn Families — BJJ, Muay Thai, MMA | AllStar"
   description="Martial arts classes for affluent Short Hills and Millburn families. BJJ, Muay Thai, MMA, Kids programs. Renzo Gracie black belt instructor. Free 2-week trial. After-school pickup available."
   ogImage="/images/adult-bjj-hero.jpg"
 >
+  <Fragment slot="head">
+    <LocalBusinessSchema city={city} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
   <PageHero
     eyebrow="Trusted by affluent suburban families"
     headline="AllStar Martial Arts for Short Hills & Millburn Families"
-    sub="Real instruction, about 15 minutes west on Route 22. BJJ, Muay Thai, MMA, and Kids programs for families who are used to holding out for the best. Free 2-week trial — no contract."
+    sub="Real instruction. 15 minutes from home. BJJ, Muay Thai, MMA, and Kids programs built for families who expect the best. Free 2-week trial — no contract."
     bgImage="/images/adult-bjj-hero.jpg"
   />
 
-  <!-- Intro: Why AllStar -->
+  <!-- Intro — accurate description of AllStar + the Short Hills/Millburn connection (verified facts only) -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        Short Hills and Millburn run on a simple instinct: quality is worth going to find. You'll drive past three closer options for the right restaurant, the right pediatrician, the right after-school program — because you learned a long time ago that "nearest" and "best" almost never share an address.
+        AllStar Martial Arts is a family-owned Brazilian Jiu-Jitsu, Muay Thai, and MMA school at 1166 West Chestnut St in Union, NJ — about <strong>12 minutes from Short Hills and Millburn</strong> via Vauxhall Road, with free parking on-site. We've taught adults and kids here since 2011.
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        Martial arts is no different. AllStar is about 15 minutes west on Route 22 into Union — an easy hop off the Millburn side, free parking when you land. And what's waiting is instruction you won't find in your own backyard or over in <a href="/livingston/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Livingston →</a>.
+        Head coach Jamal Patterson is a 4th-degree Brazilian Jiu-Jitsu black belt under Renzo Gracie, an ADCC veteran, and a former professional MMA fighter with wins in the IFL and Bellator. He's a UWC Light Heavyweight Champion and has cornered UFC fighters. That competition background is what sets AllStar apart from the fitness-boxing and add-on BJJ classes closer to home.
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        <strong>Coach Jamal Patterson:</strong> Renzo Gracie black belt, ADCC veteran, professional MMA fighter (IFL, Bellator), UWC light heavyweight champion. Coaching in Union since 2011. This isn't a franchise with a logo package — it's one coach's expertise, and the free <a href="/trial/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">two-week trial →</a> is the cleanest way to judge it for yourself.
+        Adults train BJJ, Muay Thai, kickboxing, and MMA (ages 16+); kids have Cubs (4–6) and Lions (7–13). Every new student starts with a free two-week trial — no contract, no card. Short Hills and Millburn families make the short drive west into Union for it.
+      </p>
+    </div>
+  </section>
+
+  <!-- Google Business location embedded — directions from Short Hills/Millburn to the gym -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-6">
+        <div class="eyebrow">Find us from Short Hills & Millburn</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black">About 12 Minutes via Vauxhall Road</h2>
+      </div>
+      <iframe
+        title="Directions from Short Hills, NJ to AllStar Martial Arts, 1166 West Chestnut St, Union, NJ"
+        src="https://maps.google.com/maps?saddr=Short+Hills,+NJ&amp;daddr=1166+West+Chestnut+St,+Union,+NJ+07083&amp;output=embed"
+        class="w-full h-72 md:h-80 rounded-lg border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p class="text-center mt-4 text-brand-gray">
+        1166 West Chestnut St, Union, NJ 07083 · <a href="https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">View AllStar on Google Maps →</a>
       </p>
     </div>
   </section>
@@ -58,25 +78,25 @@ const city = "Short Hills";
         <div>
           <h3 class="text-xl text-brand-black mb-3 font-semibold">Real Instruction from a Real Professional</h3>
           <p class="text-brand-gray leading-relaxed">
-            You're not paying for a name or a franchise model. You're paying for Jamal's 20+ years of competitive and coaching experience. Every technique on the mat has been tested where it counts — in actual competition. That distinction is the whole thing.
+            You're not paying for a name or a franchise model. You're paying for Jamal's experience as a competitor and coach — a 4th-degree Renzo Gracie black belt, ADCC veteran, and pro MMA fighter. Every technique he teaches has been tested in real competition. That matters.
           </p>
         </div>
         <div>
           <h3 class="text-xl text-brand-black mb-3 font-semibold">Curriculum, Not Babysitting</h3>
           <p class="text-brand-gray leading-relaxed">
-            Kids start at white belt and climb a real ranking system. Six months in, a Lions student (ages 7–13) has genuinely learned takedowns, escapes, submissions, and positional control — skills that outlast a season. That's earned confidence, not the sticker-chart kind.
+            Kids start at white belt and progress through a real belt system. Over time, a Lions student (ages 7–13) learns takedowns, escapes, submissions, and positional control — things they'll remember for life. That's earned confidence, not talked-about confidence.
           </p>
         </div>
         <div>
           <h3 class="text-xl text-brand-black mb-3 font-semibold">Community That Gets It</h3>
           <p class="text-brand-gray leading-relaxed">
-            Our members look a lot like you — working professionals, parents with high standards, people who guard their calendars. You'll roll with folks from your zip code and your values, and none of the tough-guy gym-culture theater.
+            Our members are working professionals and parents with high standards — people who value their time and take training seriously. No gym-culture nonsense.
           </p>
         </div>
         <div>
           <h3 class="text-xl text-brand-black mb-3 font-semibold">A Program That Lasts</h3>
           <p class="text-brand-gray leading-relaxed">
-            Martial arts doesn't churn like the fitness trend of the month. Members here train for decades — we have adults who started in 2012 still on the mats today. That's not luck; it's what real teaching earns.
+            Martial arts isn't like most fitness trends. Members train for years, not months — many stick with it for the long haul. That's not luck; it's a program built on real teaching, and we've been doing it here since 2011.
           </p>
         </div>
       </div>
@@ -89,58 +109,55 @@ const city = "Short Hills";
       <div class="eyebrow">Scheduling That Works</div>
       <h2 class="text-3xl md:text-4xl text-brand-black mb-5">After-School to Training — No Gap</h2>
       <p class="text-brand-gray leading-relaxed mb-6">
-        Short Hills and Millburn parents know the weekday choreography by heart: school pickup, then piano, then travel soccer, then somehow dinner. AllStar is built to slot into that reality instead of fighting it.
+        Short Hills and Millburn parents with busy schedules know the drill: you're picking kids up from school, managing piano lessons, soccer practice, and everything else. AllStar fits into that reality.
       </p>
       <div class="bg-brand-navy text-white p-8 rounded-lg mb-6">
         <h3 class="text-2xl mb-4">We're Built for Your Schedule</h3>
         <ul class="space-y-3 text-white/90">
           <li class="flex items-start">
             <span class="mr-3 text-brand-gold font-bold">✓</span>
-            <span><strong>Kids classes:</strong> 3:45 PM, 4:45 PM, 5:45 PM most weekdays — right-sized windows for school pickups</span>
+            <span><strong>Kids classes:</strong> after-school-friendly weekday windows — right-sized for school pickups</span>
           </li>
           <li class="flex items-start">
             <span class="mr-3 text-brand-gold font-bold">✓</span>
-            <span><strong>Adult evening classes:</strong> 6, 7, 8 PM — train after work or after you've handled kids' activities</span>
+            <span><strong>Adult evening classes:</strong> 6, 7, and 8 PM — train after work or after you've handled the kids' activities</span>
           </li>
           <li class="flex items-start">
             <span class="mr-3 text-brand-gold font-bold">✓</span>
-            <span><strong>Saturday mornings:</strong> Family-friendly option for busy weekdays</span>
+            <span><strong>Free parking on-site:</strong> no circling the block for a spot</span>
           </li>
           <li class="flex items-start">
             <span class="mr-3 text-brand-gold font-bold">✓</span>
-            <span><strong>No rush:</strong> Free parking, lounge for siblings or working parents, clean facilities</span>
+            <span><strong>Free two-week trial:</strong> no contract, no card, no pressure</span>
           </li>
         </ul>
       </div>
       <p class="text-brand-gray leading-relaxed">
-        Plenty of Millburn and Short Hills families run the same loop: school, AllStar at 4:45, home by 6. Others stack the kids' class with their own adult training on one trip. However you want to build it, the schedule bends to you — the same way it does for our <a href="/summit/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Summit families →</a> making a similar drive.
+        Many Millburn and Short Hills families run their kids from school straight to a late-afternoon class and are home for dinner. Others pair the kids' class with their own adult training on the same trip. The schedule is yours to build.
       </p>
     </div>
   </section>
 
-  <!-- Real Results: Testimonials -->
+  <!-- Real Results: what families experience -->
   <section class="section-pad bg-brand-gray-light">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">From Our Community</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Real Results from Short Hills & Millburn Families</h2>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-8">Real Results for Short Hills & Millburn Families</h2>
       <div class="space-y-6">
         <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold shadow-sm">
-          <p class="text-brand-gray leading-relaxed mb-4 text-lg">
-            "My daughter started as the shyest kid in her class. Six months at AllStar and she's leading warm-ups and helping newer kids. She actually believes she can handle herself now. Worth every minute of the drive."
+          <p class="text-brand-gray leading-relaxed text-lg">
+            Kids who walk in shy often end up leading warm-ups and helping newer students. The confidence is earned on the mat, and parents consistently tell us it carries into school.
           </p>
-          <p class="text-brand-black font-semibold">Sarah M. — Millburn, Mom to Lions Student</p>
         </div>
         <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy shadow-sm">
-          <p class="text-brand-gray leading-relaxed mb-4 text-lg">
-            "I tried three other gyms in the area before AllStar. The difference was immediate — Jamal actually teaches technique instead of just yelling 'go harder.' I'm training four days a week now. Best decision."
+          <p class="text-brand-gray leading-relaxed text-lg">
+            Adults who've trained elsewhere tend to notice the difference quickly — Jamal teaches technique and detail, not just "go harder." A lot of them end up training several days a week.
           </p>
-          <p class="text-brand-black font-semibold">David K. — Short Hills, Adult BJJ Student</p>
         </div>
         <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold shadow-sm">
-          <p class="text-brand-gray leading-relaxed mb-4 text-lg">
-            "We do pickup at 3:45, classes at 4:45, and we're home for dinner. Our son loves it. No screaming instructors or weird cult vibe — just real martial arts instruction. Highly recommend."
+          <p class="text-brand-gray leading-relaxed text-lg">
+            Families run school pickup into a late-afternoon kids class and are home for dinner. It's real martial arts instruction in a straightforward, no-nonsense environment — no screaming instructors, no cult vibe.
           </p>
-          <p class="text-brand-black font-semibold">Jennifer & Tom P. — Short Hills, Parents to Cubs & Lions Students</p>
         </div>
       </div>
     </div>
@@ -154,22 +171,22 @@ const city = "Short Hills";
       <div class="space-y-6">
         <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
           <h3 class="text-xl text-brand-black mb-2 font-semibold">Cubs — Ages 4–6</h3>
-          <p class="text-brand-gray text-sm leading-relaxed mb-4">Preschool martial arts. Big energy, short activities, positive reinforcement. Parents notice the listening and focus carry over at home and at school within weeks.</p>
+          <p class="text-brand-gray text-sm leading-relaxed mb-4">Preschool martial arts. Big energy, short activities, positive reinforcement. Parents notice the listening and focus carry over at home and at school.</p>
           <p class="text-brand-gold text-sm font-semibold">Learn more →</p>
         </div>
         <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-xl text-brand-black mb-2 font-semibold">Lions — Ages 7–13</h3>
-          <p class="text-brand-gray text-sm leading-relaxed mb-4">Real Brazilian Jiu-Jitsu. Progressive belt system, genuine technique, real challenge. By six months in, a Lions student can handle themselves physically in ways most adults can't.</p>
+          <p class="text-brand-gray text-sm leading-relaxed mb-4">Real Brazilian Jiu-Jitsu. Progressive belt system, genuine technique, real challenge. Over time, a Lions student builds real skill and the confidence that comes with it.</p>
           <p class="text-brand-gold text-sm font-semibold">Learn more →</p>
         </div>
         <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
           <h3 class="text-xl text-brand-black mb-2 font-semibold">Adult BJJ</h3>
-          <p class="text-brand-gray text-sm leading-relaxed mb-4">Brazilian Jiu-Jitsu for adults 16 and up. No experience needed. Evening and Saturday classes. A skill that compounds over years — you'll still be training in your 50s.</p>
+          <p class="text-brand-gray text-sm leading-relaxed mb-4">Brazilian Jiu-Jitsu for adults 16 and up. No experience needed. Evening classes at 6, 7, and 8 PM most weekdays. A skill that compounds over the years.</p>
           <p class="text-brand-gold text-sm font-semibold">Learn more →</p>
         </div>
         <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-xl text-brand-black mb-2 font-semibold">Muay Thai & MMA</h3>
-          <p class="text-brand-gray text-sm leading-relaxed mb-4">Authentic Muay Thai (no cardio kickboxing) and complete MMA training. The only authentic Muay Thai program in the Short Hills–Millburn area. Adults 16 and up.</p>
+          <p class="text-brand-gray text-sm leading-relaxed mb-4">Authentic Muay Thai (no cardio kickboxing) and complete MMA training. Real pad work and technique under the same roof as your BJJ. Adults 16 and up.</p>
           <p class="text-brand-gold text-sm font-semibold">Learn more →</p>
         </div>
       </div>
@@ -191,16 +208,16 @@ const city = "Short Hills";
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <div class="eyebrow text-brand-gold">Muay Thai</div>
-          <h2 class="text-2xl md:text-3xl mb-4">The Only Authentic Muay Thai Near Short Hills</h2>
+          <h2 class="text-2xl md:text-3xl mb-4">Authentic Muay Thai Near Short Hills</h2>
           <p class="text-white/90 leading-relaxed">
-            Search "Muay Thai Short Hills NJ" or "Muay Thai Millburn" and you land right back here. AllStar is the only real Muay Thai program serving your area — genuine pad work, real clinch technique, honest conditioning. Not cardio kickboxing wearing a Thai name.
+            AllStar teaches authentic Muay Thai under the same roof as your BJJ — real pad work, real clinch technique, real conditioning. Not cardio kickboxing with a Thai name. Adults 16 and up, and beginners are welcome from day one.
           </p>
         </div>
         <div>
           <div class="eyebrow text-brand-gold">MMA</div>
-          <h2 class="text-2xl md:text-3xl mb-4">MMA Self-Defense for Affluent Families</h2>
+          <h2 class="text-2xl md:text-3xl mb-4">MMA Self-Defense — One Complete System</h2>
           <p class="text-white/90 leading-relaxed">
-            Our MMA program combines BJJ, Muay Thai, and wrestling under Jamal Patterson — pro MMA veteran, IFL and Bellator fighter, cornerman to UFC athletes. Adults 16 and up, and the most complete martial arts training within reach of Short Hills, Millburn, and neighboring <a href="/springfield/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Springfield →</a>.
+            Our MMA program combines BJJ, Muay Thai, and wrestling into one system under Jamal Patterson — pro MMA veteran, IFL and Bellator fighter, who has cornered UFC fighters. Adults 16 and up, all levels.
           </p>
         </div>
       </div>
@@ -216,7 +233,7 @@ const city = "Short Hills";
         Short Hills and Millburn landmarks. AllStar is about 15 minutes west on Route 22 from all of them.
       </p>
       <div class="flex flex-wrap gap-2">
-        {["Short Hills Mall", "Millburn High School", "Millburn Downtown", "Short Hills Train Station", "Essex County Country Club", "Gero Park", "Taylor Park", "South Mountain Elementary", "Millburn Middle School"].map((l) => (
+        {["Short Hills Mall", "Millburn High School", "Millburn Downtown", "Short Hills Train Station", "Gero Park", "Taylor Park", "South Mountain Elementary", "Millburn Middle School"].map((l) => (
           <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
         ))}
       </div>

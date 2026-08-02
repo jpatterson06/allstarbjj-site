@@ -10,7 +10,7 @@ const city = "Cranford";
 
 const faqs = [
   { q: "How far is AllStar from Cranford?", a: "About 10 minutes via the Garden State Parkway. 1166 West Chestnut St, Union. Free parking on-site." },
-  { q: "What programs are available?", a: "Adult BJJ, Muay Thai, and MMA (ages 16+). Kids Lions (7–13) and Cubs (4–6). Summer camp runs seasonally." },
+  { q: "What programs are available?", a: "Adult BJJ, Muay Thai, kickboxing, and MMA (ages 16+). Kids Lions (7–13) and Cubs (4–6). Summer camp runs seasonally." },
   { q: "Do I need experience?", a: "No. Most students — adults and kids — start with none." },
   { q: "Can I watch a class before enrolling my child?", a: "Yes. Walk in any time. We don't hide what we do." },
   { q: "What's the free trial?", a: "Two weeks of unlimited classes. Adults can try any program. Kids can try their age group. No card required, no contract, no pressure." },
@@ -20,7 +20,7 @@ const faqs = [
 
 <PageLayout
   title="Martial Arts in Cranford, NJ — BJJ, Muay Thai & Kids Classes | AllStar"
-  description="Martial arts classes for Cranford, NJ families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
+  description="Martial Arts in Cranford, NJ — 10 min from Union. BJJ, Muay Thai, MMA & Kids classes. ADCC veteran coach. Free 2-week trial, no contract."
   ogImage="/images/adult-bjj-hero.jpg"
 >
   <Fragment slot="head">
@@ -35,52 +35,75 @@ const faqs = [
     bgImage="/images/adult-bjj-hero.jpg"
   />
 
-  <!-- Intro -->
+  <!-- Intro — accurate description of AllStar + the Cranford connection (verified facts only) -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        Cranford is a walkable, train-town kind of place — the Raritan Valley Line pulling in beside a downtown that empties out along the Rahway River and Nomahegan Park. AllStar has been part of the routine for Cranford families for over a decade: roughly 10 minutes up the Garden State Parkway from the center of town, door to mat, with free parking waiting. Neighbors in <a href="/garwood/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Garwood</a> and <a href="/westfield/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Westfield</a> share the drive.
+        AllStar Martial Arts is a family-owned Brazilian Jiu-Jitsu, Muay Thai, and MMA school at 1166 West Chestnut St in Union, NJ — about <strong>10 minutes from downtown Cranford</strong>, straight up the Garden State Parkway, with free parking on-site. We've taught adults and kids here since 2011.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Head coach Jamal Patterson is a 4th-degree Brazilian Jiu-Jitsu black belt under Renzo Gracie, an ADCC veteran, and a former professional MMA fighter with wins in the IFL and Bellator. That competition background is what sets AllStar apart from the fitness-boxing and add-on BJJ classes around Cranford.
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        The pull is the coaching. Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter who fought in the IFL and Bellator. That competition background changes how technique is broken down — and students who've trained here for five and ten years will tell you the difference shows up the moment you roll.
+        Adults train BJJ, Muay Thai, kickboxing, and MMA (ages 16+); kids have Cubs (4–6) and Lions (7–13). Every new student starts with a free two-week trial — no contract, no card. Neighbors in <a href="/westfield/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Westfield</a> and <a href="/roselle-park/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Roselle Park</a> make the same short drive.
+      </p>
+    </div>
+  </section>
+
+  <!-- Google Business location embedded — directions from Cranford to the gym -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-6">
+        <div class="eyebrow">Find us from Cranford</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black">10 Minutes Up the Garden State Parkway</h2>
+      </div>
+      <iframe
+        title="Directions from Cranford, NJ to AllStar Martial Arts, 1166 West Chestnut St, Union, NJ"
+        src="https://maps.google.com/maps?saddr=Cranford,+NJ&amp;daddr=1166+West+Chestnut+St,+Union,+NJ+07083&amp;output=embed"
+        class="w-full h-72 md:h-80 rounded-lg border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p class="text-center mt-4 text-brand-gray">
+        1166 West Chestnut St, Union, NJ 07083 · <a href="https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">View AllStar on Google Maps →</a>
       </p>
     </div>
   </section>
 
   <!-- BJJ -->
-  <section class="section-pad bg-brand-gray-light">
+  <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">Brazilian Jiu-Jitsu</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes Near Cranford, NJ</h2>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes for Cranford Adults</h2>
       <p class="text-brand-gray leading-relaxed mb-4">
-        Brazilian Jiu-Jitsu is our flagship program. Adults 16 and up, beginners fully expected — most people walk in with zero experience.
+        Brazilian Jiu-Jitsu is our flagship program — adults 16 and up, beginners fully expected. Most people walk in with zero experience and start with the fundamentals.
       </p>
       <p class="text-brand-gray leading-relaxed mb-4">
-        Plenty of schools in the area teach BJJ, and a few even share our lineage. The difference is the coach. Jamal's competition resume — ADCC, IFL, Bellator, UWC champion — isn't a plaque on the wall; it informs every grip and every transition he teaches. See the full <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ</a> program.
+        Plenty of schools in the area teach BJJ; a few even share our lineage. The difference is the coach. Jamal's competition record — ADCC, IFL, Bellator, UWC Light Heavyweight Champion — informs every position and transition he teaches. See the full <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ</a> program.
       </p>
       <p class="text-brand-gray leading-relaxed">
-        Evening classes at 6, 7, and 8 PM most weekdays — built around Raritan Valley Line schedules and working adults who commute. Two weeks free. No contract.
+        Evening classes at 6, 7, and 8 PM most weekdays, built around working adults who commute. Two weeks free, no contract.
       </p>
     </div>
   </section>
 
   <!-- Kids -->
-  <section class="section-pad bg-white">
+  <section class="section-pad bg-brand-gray-light">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">Kids Martial Arts</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts Near Cranford, NJ</h2>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts for Cranford Families</h2>
       <div class="space-y-5">
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
           <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
           <p class="text-brand-gray text-sm leading-relaxed">Preschool-age energy given some structure. Coordination, listening, and confidence come first, delivered in short, high-engagement bursts with steady positive reinforcement.</p>
         </div>
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu — takedowns, escapes, positions. These aren't karate katas; they're a working system, and Cranford parents keep reporting that the confidence carries from the mat straight into the halls at Cranford High.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu — takedowns, escapes, positions. Not katas; a working system with a real belt progression. Parents consistently tell us the confidence and focus carry off the mat and into school.</p>
         </div>
       </div>
       <p class="text-brand-gray leading-relaxed mt-5">
-        Bully prevention is a real part of what we teach. Once a kid knows they can handle themselves, the dynamic with a bully shifts — usually without a single punch thrown. Take a look at the <a href="/kids/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">kids program</a>.
+        Bully prevention is a real part of what we teach. Once a kid knows they can handle themselves, the dynamic with a bully tends to shift — usually without a single punch thrown. Take a look at the <a href="/kids/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">kids program</a>.
       </p>
     </div>
   </section>
@@ -93,14 +116,14 @@ const faqs = [
           <div class="eyebrow text-brand-gold">Muay Thai</div>
           <h2 class="text-2xl md:text-3xl mb-4">Muay Thai Near Cranford, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            This is the one nobody else in Union County pairs with BJJ. No gym in the Cranford, Union, or Westfield area offers authentic Muay Thai instruction under the same roof. Real pad work, real technique, real conditioning — and beginners are welcome from day one.
+            Authentic Muay Thai under the same roof as your BJJ — real pad work, technique, and conditioning, not cardio kickboxing. Adults 16 and up, and beginners are welcome from day one.
           </p>
         </div>
         <div>
           <div class="eyebrow text-brand-gold">MMA</div>
-          <h2 class="text-2xl md:text-3xl mb-4">MMA Classes Near Cranford, NJ</h2>
+          <h2 class="text-2xl md:text-3xl mb-4">MMA Near Cranford, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            Our MMA program puts BJJ, Muay Thai, and wrestling together into one complete system. Coached by Jamal Patterson — a pro MMA fighter who has cornered UFC athletes from their amateur debut to the pros. Adults 16 and up.
+            Our MMA program combines Brazilian Jiu-Jitsu, Muay Thai, and wrestling into one system, coached by Jamal Patterson — a pro MMA fighter who has cornered UFC fighters. Adults 16 and up, all levels.
           </p>
         </div>
       </div>
@@ -113,7 +136,7 @@ const faqs = [
       <div class="eyebrow">If you know Cranford</div>
       <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're 10 Minutes Away</h2>
       <div class="flex flex-wrap gap-2">
-        {["Downtown Cranford", "Nomahegan Park", "Cranford Train Station", "Rahway River Parkway", "Cranford Municipal Pool", "Orange Ave", "Cranford High School", "Lincoln Elementary"].map((l) => (
+        {["Downtown Cranford", "Nomahegan Park", "Cranford Train Station", "Rahway River", "Cranford High School"].map((l) => (
           <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
         ))}
       </div>

@@ -6,8 +6,10 @@ import FAQPageSchema from '../components/FAQPageSchema.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
+const city = "Livingston";
+
 const faqs = [
-  { q: "How far is AllStar from Livingston?", a: "About 15 minutes via Route 10 down to Route 22. 1166 West Chestnut St, Union, NJ 07083." },
+  { q: "How far is AllStar from Livingston?", a: "About 18 minutes via Eisenhower Parkway. 1166 West Chestnut St, Union, NJ 07083." },
   { q: "Do you have women training?", a: "Yes — women at every belt level, including a current female brown belt. The environment is respectful and welcoming." },
   { q: "Do kids need experience?", a: "No. Everyone starts from zero. The program is built for beginners at every age." },
   { q: "Free trial?", a: "Two weeks, unlimited classes. No card, no contract." },
@@ -21,83 +23,122 @@ const faqs = [
   ogImage="/images/adult-bjj-hero.jpg"
 >
   <Fragment slot="head">
-    <LocalBusinessSchema city="Livingston" />
+    <LocalBusinessSchema city={city} />
     <FAQPageSchema faqs={faqs} />
   </Fragment>
 
   <PageHero
-    eyebrow="15 Minutes from Livingston"
+    eyebrow="18 minutes from Livingston"
     headline="Martial Arts in Livingston, NJ"
-    sub="A 15-minute run down Route 10 to Route 22 gets Livingston families to a Renzo Gracie black belt. BJJ, Muay Thai, MMA, and kids programs. Free 2-week trial — no contract."
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs — about 18 minutes via Eisenhower Parkway from Livingston. Free 2-week trial, no contract."
     bgImage="/images/adult-bjj-hero.jpg"
   />
 
-  <!-- Intro -->
+  <!-- Intro — accurate description of AllStar + the Livingston connection (verified facts only) -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
-      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-5">
-        Livingston parents don't buy the pitch. When a family here shops for a martial arts gym, they look straight past the logo and the wall of colored belts and ask the only questions that matter: who is actually teaching, what have they really done, and is this going to build my kid — or just bill my card?
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        AllStar Martial Arts is a family-owned Brazilian Jiu-Jitsu, Muay Thai, and MMA school at 1166 West Chestnut St in Union, NJ — about <strong>18 minutes from Livingston</strong>, down the Eisenhower Parkway, with free parking on-site. We've taught adults and kids here since 2011.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Head coach Jamal Patterson is a 4th-degree Brazilian Jiu-Jitsu black belt under Renzo Gracie, an ADCC veteran, and a former professional MMA fighter with wins in the IFL and Bellator. That competition background is what sets AllStar apart from the fitness-boxing and add-on BJJ classes around Livingston.
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        AllStar Martial Arts sits about 15 minutes from the Livingston Mall, down Route 10 to Route 22. Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter who has been coaching in Union since 2011 — a family-owned gym, not a franchise. That's your answer to who's teaching and what he's done. Plenty of our Livingston crew first tried it on the <a href="/trial/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">free two-week trial →</a>.
+        Adults train BJJ, Muay Thai, kickboxing, and MMA (ages 16+); kids have Cubs (4–6) and Lions (7–13). Every new student starts with a free two-week trial — no contract, no card. Neighbors in <a href="/millburn/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Millburn</a>, <a href="/maplewood/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Maplewood</a>, and <a href="/springfield/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Springfield</a> make the same short drive.
       </p>
     </div>
   </section>
 
-  <!-- Programs -->
+  <!-- Google Business location embedded — directions from Livingston to the gym -->
   <section class="section-pad bg-brand-gray-light">
     <div class="container-page max-w-4xl">
-      <div class="grid md:grid-cols-2 gap-10">
-        <div>
-          <div class="eyebrow">Adults</div>
-          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">BJJ for Livingston Adults</h2>
-          <p class="text-brand-gray leading-relaxed">
-            Adult Brazilian Jiu-Jitsu, ages 16 and up, no experience required. The Renzo Gracie lineage here is direct and documented — Helio Gracie to Renzo to Coach Jamal. Evening classes at 6, 7, and 8 PM are built around the Livingston commute. Honestly, most Livingston members found us the old-fashioned way: a friend two towns over — often in <a href="/millburn/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Millburn →</a> or <a href="/south-orange/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">South Orange</a> — talked them into showing up once.
-          </p>
-        </div>
-        <div>
-          <div class="eyebrow">Muay Thai + MMA</div>
-          <h2 class="text-2xl md:text-3xl text-brand-black mb-4">Muay Thai &amp; MMA Near Livingston</h2>
-          <p class="text-brand-gray leading-relaxed">
-            Livingston has no authentic Muay Thai program of its own — AllStar is the closest real one at 15 minutes. Real pad work, real technique, real conditioning, with beginners easing in at their own pace. Adult MMA is coached by Jamal Patterson, about the most credentialed MMA coach any Livingston resident can drive to.
-          </p>
-        </div>
+      <div class="text-center mb-6">
+        <div class="eyebrow">Find us from Livingston</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black">18 Minutes via Eisenhower Parkway</h2>
       </div>
+      <iframe
+        title="Directions from Livingston, NJ to AllStar Martial Arts, 1166 West Chestnut St, Union, NJ"
+        src="https://maps.google.com/maps?saddr=Livingston,+NJ&amp;daddr=1166+West+Chestnut+St,+Union,+NJ+07083&amp;output=embed"
+        class="w-full h-72 md:h-80 rounded-lg border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p class="text-center mt-4 text-brand-gray">
+        1166 West Chestnut St, Union, NJ 07083 · <a href="https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">View AllStar on Google Maps →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- BJJ -->
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">Brazilian Jiu-Jitsu</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes for Livingston Adults</h2>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Brazilian Jiu-Jitsu is our flagship program — adults 16 and up, beginners fully expected. Most people walk in with zero experience and start with the fundamentals.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Plenty of schools in the area teach BJJ; a few even share our lineage. The difference is the coach. Jamal's competition record — ADCC, IFL, Bellator, UWC Light Heavyweight Champion — informs every position and transition he teaches. See the full <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ</a> program.
+      </p>
+      <p class="text-brand-gray leading-relaxed">
+        Evening classes at 6, 7, and 8 PM most weekdays, built around working adults who commute. Two weeks free, no contract.
+      </p>
     </div>
   </section>
 
   <!-- Kids -->
-  <section class="section-pad bg-white">
+  <section class="section-pad bg-brand-gray-light">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">Kids Martial Arts</div>
       <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts for Livingston Families</h2>
-      <p class="text-brand-gray leading-relaxed mb-5">
-        Livingston kids are wired to compete, and BJJ rewards exactly that — a clear progression, visible milestones, and feedback that doesn't lie. You either hit the technique or you didn't. That kind of honesty is what keeps a sharp Livingston kid hooked long after the novelty of other activities wears off.
-      </p>
       <div class="space-y-5">
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
           <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Coordination, listening, and confidence through 30-minute structured classes. Short enough for preschool attention spans, long enough to matter.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool-age energy given some structure. Coordination, listening, and confidence come first, delivered in short, high-engagement bursts with steady positive reinforcement.</p>
         </div>
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Real BJJ. Progressive belt system. Livingston parents tell us their kids' focus improves in school within the first month. Their teachers notice.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu — takedowns, escapes, positions. Not katas; a working system with a real belt progression. Parents consistently tell us the confidence and focus carry off the mat and into school.</p>
+        </div>
+      </div>
+      <p class="text-brand-gray leading-relaxed mt-5">
+        Bully prevention is a real part of what we teach. Once a kid knows they can handle themselves, the dynamic with a bully tends to shift — usually without a single punch thrown. Take a look at the <a href="/kids/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">kids program</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Muay Thai + MMA -->
+  <section class="section-pad bg-brand-navy text-white">
+    <div class="container-page max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="eyebrow text-brand-gold">Muay Thai</div>
+          <h2 class="text-2xl md:text-3xl mb-4">Muay Thai Near Livingston, NJ</h2>
+          <p class="text-white/90 leading-relaxed">
+            Authentic Muay Thai under the same roof as your BJJ — real pad work, technique, and conditioning, not cardio kickboxing. Adults 16 and up, and beginners are welcome from day one.
+          </p>
+        </div>
+        <div>
+          <div class="eyebrow text-brand-gold">MMA</div>
+          <h2 class="text-2xl md:text-3xl mb-4">MMA Near Livingston, NJ</h2>
+          <p class="text-white/90 leading-relaxed">
+            Our MMA program combines Brazilian Jiu-Jitsu, Muay Thai, and wrestling into one system, coached by Jamal Patterson — a pro MMA fighter who has cornered UFC fighters. Adults 16 and up, all levels.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Landmarks -->
-  <section class="section-pad bg-brand-navy text-white">
+  <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
-      <div class="eyebrow text-brand-gold">If you know Livingston</div>
-      <h2 class="text-2xl md:text-3xl mb-5">You Know These Spots — We're 15 Minutes Away</h2>
+      <div class="eyebrow">If you know Livingston</div>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're 18 Minutes Away</h2>
       <div class="flex flex-wrap gap-2">
-        {["Livingston Mall", "Livingston High School", "Riker Hill Park", "Heritage Middle School", "Mt. Pleasant Elementary", "Northland Elementary", "Livingston Ave", "South Orange Ave corridor"].map((l) => (
-          <span class="bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm">📍 {l}</span>
+        {["Livingston Mall", "Livingston High School", "Becker Park", "Riker Hill Art Park", "Memorial Oval"].map((l) => (
+          <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
         ))}
       </div>
-      <p class="text-white/80 mt-5 text-sm">15 minutes via Route 10 west to Route 22 west. Free parking at AllStar.</p>
     </div>
   </section>
 

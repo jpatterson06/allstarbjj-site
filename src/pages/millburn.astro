@@ -2,86 +2,109 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
-import CTA from '../components/CTA.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import CTA from '../components/CTA.astro';
+
+const city = "Millburn";
 
 const faqs = [
-  { q: "How far is AllStar from Millburn?", a: "About 12–15 minutes via Route 22 west into Union. 1166 West Chestnut St, Union, NJ 07083. Free parking." },
+  { q: "How far is AllStar from Millburn?", a: "About 12–15 minutes via Route 22 west to Union. 1166 West Chestnut St, Union, NJ 07083. Free parking." },
   { q: "Is there any Muay Thai near Millburn?", a: "AllStar is the closest authentic Muay Thai program to Millburn and Short Hills." },
   { q: "Do kids need to be athletic to start?", a: "No. The curriculum starts from zero. Coordination and fitness build as part of training." },
   { q: "Can adults try BJJ and Muay Thai at the same time?", a: "Yes — many Millburn members train both. They work well together." },
   { q: "What's included in the free trial?", a: "Two full weeks of unlimited classes. No card, no contract, no obligation." },
   { q: "How do I enroll?", a: "Fill out the form on this page or call (908) 341-1131. We'll respond same day." },
 ];
-
-const city = "Millburn";
 ---
 
-<Fragment slot="head">
-    <LocalBusinessSchema city={city} />
-    <FAQPageSchema faqs={faqs} />
-  </Fragment>
-
-  <PageLayout
+<PageLayout
   title="Martial Arts in Millburn, NJ — BJJ, Muay Thai & Kids Classes | AllStar"
   description="Martial arts classes for Millburn and Short Hills families at AllStar Martial Arts in Union. BJJ, Muay Thai, MMA, and Kids programs. Renzo Gracie black belt. Free 2-week trial."
   ogImage="/images/adult-bjj-hero.jpg"
 >
+  <Fragment slot="head">
+    <LocalBusinessSchema city={city} />
+    <FAQPageSchema faqs={faqs} />
+  </Fragment>
+
   <PageHero
-    eyebrow="15 minutes from Millburn"
+    eyebrow="12 minutes from Millburn"
     headline="Martial Arts in Millburn, NJ"
-    sub="Worth the drive, every time. BJJ, Muay Thai, MMA, and kids classes for Millburn and Short Hills families — 15 minutes west on Route 22. Free 2-week trial, no contract."
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs — about 12 minutes from Millburn, down Vauxhall Road into Union. Free 2-week trial, no contract."
     bgImage="/images/adult-bjj-hero.jpg"
   />
 
-  <!-- Intro -->
+  <!-- Intro — accurate description of AllStar + the Millburn connection (verified facts only) -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        Millburn and Short Hills families already know the closest option and the best option rarely share an address. You'll drive past three restaurants to get to the right one and cross town for the better program without blinking — because experience taught you the extra few minutes usually pay for themselves.
+        AllStar Martial Arts is a family-owned Brazilian Jiu-Jitsu, Muay Thai, and MMA school at 1166 West Chestnut St in Union, NJ — about <strong>12 minutes from Millburn</strong>, down Vauxhall Road, with free parking on-site. We've taught adults and kids here since 2011.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Head coach Jamal Patterson is a 4th-degree Brazilian Jiu-Jitsu black belt under Renzo Gracie, an ADCC veteran, and a former professional MMA fighter with wins in the IFL and Bellator. That competition background is what sets AllStar apart from the fitness-boxing and add-on BJJ classes around Millburn.
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        AllStar Martial Arts is about 15 minutes from Millburn, straight down Route 22 west into Union. The drive is easy, the parking is free, and what's waiting on the other end is, by coaching pedigree and program breadth, the best martial arts instruction in Union County. Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former professional MMA fighter who has run this family-owned gym since 2011. Curious families in neighboring <a href="/springfield/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Springfield</a> and <a href="/summit/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Summit →</a> make the same trip.
+        Adults train BJJ, Muay Thai, kickboxing, and MMA (ages 16+); kids have Cubs (4–6) and Lions (7–13). Every new student starts with a free two-week trial — no contract, no card. Neighbors in <a href="/springfield/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Springfield</a> and <a href="/maplewood/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Maplewood</a> make the same short drive.
+      </p>
+    </div>
+  </section>
+
+  <!-- Google Business location embedded — directions from Millburn to the gym -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-6">
+        <div class="eyebrow">Find us from Millburn</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black">12 Minutes Down Vauxhall Road</h2>
+      </div>
+      <iframe
+        title="Directions from Millburn, NJ to AllStar Martial Arts, 1166 West Chestnut St, Union, NJ"
+        src="https://maps.google.com/maps?saddr=Millburn,+NJ&amp;daddr=1166+West+Chestnut+St,+Union,+NJ+07083&amp;output=embed"
+        class="w-full h-72 md:h-80 rounded-lg border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p class="text-center mt-4 text-brand-gray">
+        1166 West Chestnut St, Union, NJ 07083 · <a href="https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">View AllStar on Google Maps →</a>
       </p>
     </div>
   </section>
 
   <!-- BJJ -->
-  <section class="section-pad bg-brand-gray-light">
+  <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">Brazilian Jiu-Jitsu</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes for Millburn & Short Hills Adults</h2>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes for Millburn Adults</h2>
       <p class="text-brand-gray leading-relaxed mb-4">
-        Brazilian Jiu-Jitsu is our main adult program — ages 16 and up, and no experience required. If you've never touched a mat, you're in the majority of new arrivals.
+        Brazilian Jiu-Jitsu is our flagship program — adults 16 and up, beginners fully expected. Most people walk in with zero experience and start with the fundamentals.
       </p>
       <p class="text-brand-gray leading-relaxed mb-4">
-        Millburn adults tend to describe the same arc: they thought about starting for years, drove past a couple of closer options that never quite convinced them, then finally tried AllStar on the <a href="/trial/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">free two-week trial →</a> and knew within a session it was different.
+        Plenty of schools in the area teach BJJ; a few even share our lineage. The difference is the coach. Jamal's competition record — ADCC, IFL, Bellator, UWC Light Heavyweight Champion — informs every position and transition he teaches. See the full <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ</a> program.
       </p>
       <p class="text-brand-gray leading-relaxed">
-        That difference comes from being taught by someone who has actually competed. Jamal's instruction is built on techniques pressure-tested in professional fights, not theory. Evening classes run at 6, 7, and 8 PM most weekdays, plus Saturday mornings — timed for Millburn and Short Hills commuters coming home on the Midtown Direct.
+        Evening classes at 6, 7, and 8 PM most weekdays, built around working adults who commute. Two weeks free, no contract.
       </p>
     </div>
   </section>
 
   <!-- Kids -->
-  <section class="section-pad bg-white">
+  <section class="section-pad bg-brand-gray-light">
     <div class="container-page max-w-3xl">
-      <div class="eyebrow">Kids Programs</div>
+      <div class="eyebrow">Kids Martial Arts</div>
       <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts for Millburn Families</h2>
-      <p class="text-brand-gray leading-relaxed mb-5">
-        Millburn Township runs on strong schools and high expectations for what kids do after the bell, and the children who thrive at AllStar are usually exactly the type Millburn families raise — sharp, competitive, and hungry for a real challenge instead of a participation ribbon.
-      </p>
       <div class="space-y-5">
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
           <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Preschool martial arts. Big energy, short activities, constant positive reinforcement. Parents consistently report that the listening carries over at home and at school.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool-age energy given some structure. Coordination, listening, and confidence come first, delivered in short, high-engagement bursts with steady positive reinforcement.</p>
         </div>
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu. Progressive belt system, genuine technique, real challenge. By six months in, a Lions student from Millburn can handle themselves physically in a way most adults can't. That's the confidence parents are looking for — earned, not talked about.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu — takedowns, escapes, positions. Not katas; a working system with a real belt progression. Parents consistently tell us the confidence and focus carry off the mat and into school.</p>
         </div>
       </div>
+      <p class="text-brand-gray leading-relaxed mt-5">
+        Bully prevention is a real part of what we teach. Once a kid knows they can handle themselves, the dynamic with a bully tends to shift — usually without a single punch thrown. Take a look at the <a href="/kids/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">kids program</a>.
+      </p>
     </div>
   </section>
 
@@ -91,16 +114,16 @@ const city = "Millburn";
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <div class="eyebrow text-brand-gold">Muay Thai</div>
-          <h2 class="text-2xl md:text-3xl mb-4">Closest Muay Thai to Millburn</h2>
+          <h2 class="text-2xl md:text-3xl mb-4">Muay Thai Near Millburn, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            Millburn has no Muay Thai program, and neither does the wider Short Hills, Millburn, and Livingston stretch — there's simply no authentic instruction in that corridor. AllStar is the closest real option: elbows, knees, clinch work, and honest pad rounds, not cardio kickboxing wearing a Thai name.
+            Authentic Muay Thai under the same roof as your BJJ — real pad work, technique, and conditioning, not cardio kickboxing. Adults 16 and up, and beginners are welcome from day one.
           </p>
         </div>
         <div>
           <div class="eyebrow text-brand-gold">MMA</div>
           <h2 class="text-2xl md:text-3xl mb-4">MMA Near Millburn, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            Our MMA program layers BJJ, Muay Thai, and wrestling together under Jamal Patterson — a professional MMA veteran who has cornered UFC athletes. Adults 16 and up. It's the most complete martial arts program a Millburn resident can reach inside a reasonable drive.
+            Our MMA program combines Brazilian Jiu-Jitsu, Muay Thai, and wrestling into one system, coached by Jamal Patterson — a pro MMA fighter who has cornered UFC fighters. Adults 16 and up, all levels.
           </p>
         </div>
       </div>
@@ -111,9 +134,9 @@ const city = "Millburn";
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">If you know Millburn</div>
-      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">About 15 Minutes West on Route 22</h2>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're 12 Minutes Away</h2>
       <div class="flex flex-wrap gap-2">
-        {["Millburn Downtown", "Short Hills Mall", "Millburn High School", "Millburn Middle School", "South Mountain Elementary", "Gero Park", "Taylor Park", "Short Hills Train Station", "Essex County Country Club"].map((l) => (
+        {["The Mall at Short Hills", "Taylor Park", "Millburn Train Station", "Paper Mill Playhouse"].map((l) => (
           <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
         ))}
       </div>
@@ -123,7 +146,7 @@ const city = "Millburn";
   <FAQ items={faqs} />
 
   <CTA
-    headline="Two Weeks Free — Millburn & Short Hills Families Welcome"
+    headline="Two Weeks Free — Millburn Families Welcome"
     sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
   />
 </PageLayout>

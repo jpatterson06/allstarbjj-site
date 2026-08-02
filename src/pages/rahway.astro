@@ -7,8 +7,6 @@ import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
 const city = "Rahway";
-const latitude = 40.6127;
-const longitude = -74.2858;
 
 const faqs = [
   { q: "How far is AllStar from Rahway?", a: "About 8 minutes via Route 1. 1166 West Chestnut St, Union. Free parking on-site." },
@@ -26,63 +24,86 @@ const faqs = [
   ogImage="/images/adult-bjj-hero.jpg"
 >
   <Fragment slot="head">
-    <LocalBusinessSchema city={city} latitude={latitude} longitude={longitude} />
+    <LocalBusinessSchema city={city} />
     <FAQPageSchema faqs={faqs} />
   </Fragment>
 
   <PageHero
     eyebrow="8 minutes from Rahway"
     headline="Martial Arts in Rahway, NJ"
-    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and kids classes — eight minutes north on Route 1 to Union. Free 2-week trial, no contract."
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs — about 8 minutes down Route 1 from downtown Rahway. Free 2-week trial, no contract."
     bgImage="/images/adult-bjj-hero.jpg"
   />
 
-  <!-- Intro -->
+  <!-- Intro — accurate description of AllStar + the Rahway connection (verified facts only) -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        For a Rahway family, AllStar is about as close as a real martial arts gym gets — eight minutes up Route 1 from the train station and the arts district to our mats at 1166 West Chestnut in Union. Free parking, no circling the block. If you're weighing us against options over in <a href="/clark/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Clark</a> or <a href="/linden/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Linden</a>, the short drive is the easy part of the decision.
+        AllStar Martial Arts is a family-owned Brazilian Jiu-Jitsu, Muay Thai, and MMA school at 1166 West Chestnut St in Union, NJ — about <strong>8 minutes from downtown Rahway</strong>, a straight run south on Route 1, with free parking on-site. We've taught adults and kids here since 2011.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Head coach Jamal Patterson is a 4th-degree Brazilian Jiu-Jitsu black belt under Renzo Gracie, an ADCC veteran, and a former professional MMA fighter with wins in the IFL and Bellator. That competition background is what sets AllStar apart from the fitness-boxing and add-on BJJ classes around Rahway.
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        What actually brings people back is the coaching. Coach Jamal Patterson is a Renzo Gracie black belt, ADCC veteran, and former pro MMA fighter who competed in the IFL and Bellator. That competition background changes how technique gets taught — not just what to do, but why it works when someone is fighting back. Students who've trained here five and ten years will point to that difference on the mat.
+        Adults train BJJ, Muay Thai, kickboxing, and MMA (ages 16+); kids have Cubs (4–6) and Lions (7–13). Every new student starts with a free two-week trial — no contract, no card.
+      </p>
+    </div>
+  </section>
+
+  <!-- Google Business location embedded — directions from Rahway to the gym -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-6">
+        <div class="eyebrow">Find us from Rahway</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black">8 Minutes Down Route 1</h2>
+      </div>
+      <iframe
+        title="Directions from Rahway, NJ to AllStar Martial Arts, 1166 West Chestnut St, Union, NJ"
+        src="https://maps.google.com/maps?saddr=Rahway,+NJ&amp;daddr=1166+West+Chestnut+St,+Union,+NJ+07083&amp;output=embed"
+        class="w-full h-72 md:h-80 rounded-lg border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p class="text-center mt-4 text-brand-gray">
+        1166 West Chestnut St, Union, NJ 07083 · <a href="https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">View AllStar on Google Maps →</a>
       </p>
     </div>
   </section>
 
   <!-- BJJ -->
-  <section class="section-pad bg-brand-gray-light">
+  <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">Brazilian Jiu-Jitsu</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes Near Rahway, NJ</h2>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes for Rahway Adults</h2>
       <p class="text-brand-gray leading-relaxed mb-4">
-        Brazilian Jiu-Jitsu is our flagship. Adults 16 and up, and beginners are the norm — most people who walk in have never rolled before. Curious what a first month looks like? Our <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ page</a> lays it out.
+        Brazilian Jiu-Jitsu is our flagship program — adults 16 and up, beginners fully expected. Most people walk in with zero experience and start with the fundamentals.
       </p>
       <p class="text-brand-gray leading-relaxed mb-4">
-        Yes, other schools in the area teach BJJ — a few even share our Renzo Gracie lineage. The separator is the coach. Jamal's resume (ADCC, IFL, Bellator, UWC champion) isn't wall decoration; it's baked into every detail he drills with the class.
+        Plenty of schools in the area teach BJJ; a few even share our lineage. The difference is the coach. Jamal's competition record — ADCC, IFL, Bellator, UWC Light Heavyweight Champion — informs every position and transition he teaches. See the full <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ</a> program.
       </p>
       <p class="text-brand-gray leading-relaxed">
-        Evening classes at 6, 7, and 8 PM most weekdays, built around the NJ Transit commute and working adults hopping off the North Jersey Coast Line. Two weeks free. No contract.
+        Evening classes at 6, 7, and 8 PM most weekdays, built around working adults who commute. Two weeks free, no contract.
       </p>
     </div>
   </section>
 
   <!-- Kids -->
-  <section class="section-pad bg-white">
+  <section class="section-pad bg-brand-gray-light">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">Kids Martial Arts</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts Near Rahway, NJ</h2>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts for Rahway Families</h2>
       <div class="space-y-5">
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
           <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Preschool-age energy with martial arts structure. Focus on coordination, listening, and confidence. Short activities, high engagement, constant positive reinforcement.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool-age energy given some structure. Coordination, listening, and confidence come first, delivered in short, high-engagement bursts with steady positive reinforcement.</p>
         </div>
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu technique. Takedowns, escapes, positions. These kids are not doing karate katas — they're learning a system that works. Parents consistently report that the confidence carries into school.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu — takedowns, escapes, positions. Not katas; a working system with a real belt progression. Parents consistently tell us the confidence and focus carry off the mat and into school.</p>
         </div>
       </div>
       <p class="text-brand-gray leading-relaxed mt-5">
-        Bully prevention is woven into how we coach, not tacked on as a slogan. Once a Rahway kid genuinely knows they can handle themselves, the whole dynamic with a bully shifts — usually without a single punch being thrown. See more on our <a href="/self-defense/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">self-defense page</a>.
+        Bully prevention is a real part of what we teach. Once a kid knows they can handle themselves, the dynamic with a bully tends to shift — usually without a single punch thrown. Take a look at the <a href="/kids/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">kids program</a>.
       </p>
     </div>
   </section>
@@ -95,14 +116,14 @@ const faqs = [
           <div class="eyebrow text-brand-gold">Muay Thai</div>
           <h2 class="text-2xl md:text-3xl mb-4">Muay Thai Near Rahway, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            This is the program almost nobody else in the area runs. Across Rahway, Linden, and the Union corridor, you won't find authentic Muay Thai taught alongside real BJJ the way we do it — actual pad work, actual clinch, actual conditioning. Beginners are welcome and expected.
+            Authentic Muay Thai under the same roof as your BJJ — real pad work, technique, and conditioning, not cardio kickboxing. Adults 16 and up, and beginners are welcome from day one.
           </p>
         </div>
         <div>
           <div class="eyebrow text-brand-gold">MMA</div>
-          <h2 class="text-2xl md:text-3xl mb-4">MMA Classes Near Rahway, NJ</h2>
+          <h2 class="text-2xl md:text-3xl mb-4">MMA Near Rahway, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            Our MMA program fuses BJJ, Muay Thai, and wrestling into one complete system, coached by Jamal Patterson — a pro fighter who has cornered UFC athletes from their amateur debut to the pros. Adults 16 and up.
+            Our MMA program combines Brazilian Jiu-Jitsu, Muay Thai, and wrestling into one system, coached by Jamal Patterson — a pro MMA fighter who has cornered UFC fighters. Adults 16 and up, all levels.
           </p>
         </div>
       </div>

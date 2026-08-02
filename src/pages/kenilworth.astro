@@ -6,9 +6,11 @@ import FAQPageSchema from '../components/FAQPageSchema.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
+const city = "Kenilworth";
+
 const faqs = [
-  { q: "How far is AllStar from Kenilworth?", a: "Under 5 minutes for most Kenilworth addresses. 1166 West Chestnut St, Union, NJ 07083. Free parking on-site." },
-  { q: "How does AllStar compare to Rolling Bear BJJ?", a: "Both are real BJJ schools. The distinction is coaching background — Jamal Patterson competed professionally at the highest levels. We also offer Muay Thai and MMA, which Rolling Bear does not." },
+  { q: "How far is AllStar from Kenilworth?", a: "About 8 minutes via Boulevard. 1166 West Chestnut St, Union, NJ 07083. Free parking on-site." },
+  { q: "What makes AllStar different from other BJJ schools nearby?", a: "Coaching background. Jamal Patterson is a 4th-degree Renzo Gracie black belt, ADCC veteran, and pro MMA fighter, and we teach BJJ, Muay Thai, and MMA under one roof. Come watch a class and compare for yourself." },
   { q: "What programs run in the evenings?", a: "Adult BJJ, Muay Thai, and MMA run evenings Monday through Friday at 6, 7, and 8 PM. Kids classes run late afternoon." },
   { q: "Do I need gear to start?", a: "Not for the trial. We provide everything for your first two weeks." },
   { q: "Can I try a class before committing?", a: "That's the whole point of the trial. Come in, try it, decide." },
@@ -22,58 +24,87 @@ const faqs = [
   ogImage="/images/adult-bjj-hero.jpg"
 >
   <Fragment slot="head">
-    <LocalBusinessSchema city="Kenilworth" />
+    <LocalBusinessSchema city={city} />
     <FAQPageSchema faqs={faqs} />
   </Fragment>
 
   <PageHero
-    eyebrow="5 minutes from Kenilworth"
+    eyebrow="8 minutes from Kenilworth"
     headline="Martial Arts in Kenilworth, NJ"
-    sub="Practically a straight shot down the Boulevard — BJJ, Muay Thai, MMA, and kids programs about 5 minutes from your front door. Free 2-week trial, no contract."
+    sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs — about 8 minutes via Boulevard from Kenilworth. Free 2-week trial, no contract."
     bgImage="/images/adult-bjj-hero.jpg"
   />
 
-  <!-- Intro -->
+  <!-- Intro — accurate description of AllStar + the Kenilworth connection (verified facts only) -->
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
-        Kenilworth and Union basically share a fence line along the Route 22 corridor, which makes AllStar one of the closest gyms in the county to you — under five minutes from most Kenilworth addresses. You're practically neighbors.
+        AllStar Martial Arts is a family-owned Brazilian Jiu-Jitsu, Muay Thai, and MMA school at 1166 West Chestnut St in Union, NJ — about <strong>8 minutes from Kenilworth</strong>, straight down the Boulevard, with free parking on-site. We've taught adults and kids here since 2011.
+      </p>
+      <p class="text-lg md:text-xl text-brand-gray leading-relaxed mb-6">
+        Head coach Jamal Patterson is a 4th-degree Brazilian Jiu-Jitsu black belt under Renzo Gracie, an ADCC veteran, and a former professional MMA fighter with wins in the IFL and Bellator. That competition background is what sets AllStar apart from the fitness-boxing and add-on BJJ classes around Kenilworth.
       </p>
       <p class="text-lg md:text-xl text-brand-gray leading-relaxed">
-        Which is exactly why it's surprising how many Kenilworth residents have never come through the door. AllStar Martial Arts sits at 1166 West Chestnut St in Union, just across the border past the Boulevard. Brazilian Jiu-Jitsu, Muay Thai, MMA, and kids programs, all run by a Renzo Gracie black belt who fought professionally in the IFL and Bellator. It's a family-owned room that's been here since 2011 — and the first two weeks are free. Curious how the <a href="/trial/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">free trial</a> works?
+        Adults train BJJ, Muay Thai, kickboxing, and MMA (ages 16+); kids have Cubs (4–6) and Lions (7–13). Every new student starts with a free two-week trial — no contract, no card. Neighbors in <a href="/union/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Union</a> and <a href="/roselle-park/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Roselle Park</a> make the same short trip.
+      </p>
+    </div>
+  </section>
+
+  <!-- Google Business location embedded — directions from Kenilworth to the gym -->
+  <section class="section-pad bg-brand-gray-light">
+    <div class="container-page max-w-4xl">
+      <div class="text-center mb-6">
+        <div class="eyebrow">Find us from Kenilworth</div>
+        <h2 class="text-2xl md:text-3xl text-brand-black">8 Minutes via the Boulevard</h2>
+      </div>
+      <iframe
+        title="Directions from Kenilworth, NJ to AllStar Martial Arts, 1166 West Chestnut St, Union, NJ"
+        src="https://maps.google.com/maps?saddr=Kenilworth,+NJ&amp;daddr=1166+West+Chestnut+St,+Union,+NJ+07083&amp;output=embed"
+        class="w-full h-72 md:h-80 rounded-lg border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <p class="text-center mt-4 text-brand-gray">
+        1166 West Chestnut St, Union, NJ 07083 · <a href="https://maps.app.goo.gl/cBJKvZMvtEjfTgNY9" target="_blank" rel="noopener" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">View AllStar on Google Maps →</a>
       </p>
     </div>
   </section>
 
   <!-- BJJ -->
-  <section class="section-pad bg-brand-gray-light">
+  <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">Brazilian Jiu-Jitsu</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Near Kenilworth, NJ</h2>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">BJJ Classes for Kenilworth Adults</h2>
       <p class="text-brand-gray leading-relaxed mb-4">
-        Let's be straight: Rolling Bear BJJ is right here in Kenilworth, they're a real school, and they run a solid program with over 40 classes a month. Worth saying honestly.
+        Brazilian Jiu-Jitsu is our flagship program — adults 16 and up, beginners fully expected. Most people walk in with zero experience and start with the fundamentals.
+      </p>
+      <p class="text-brand-gray leading-relaxed mb-4">
+        Plenty of schools in the area teach BJJ; a few even share our lineage. The difference is the coach. Jamal's competition record — ADCC, IFL, Bellator, UWC Light Heavyweight Champion — informs every position and transition he teaches. See the full <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ</a> program.
       </p>
       <p class="text-brand-gray leading-relaxed">
-        The specific difference at AllStar is Coach Jamal Patterson's competition background — ADCC veteran, professional fights in the IFL and Bellator, UWC light heavyweight champion. That depth of competition experience changes how technique gets explained and drilled, and Kenilworth members who've trained at both have drawn that comparison themselves. For most Kenilworth addresses we're also a couple minutes closer. See the full <a href="/adult-bjj/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">adult BJJ</a> program.
+        Evening classes at 6, 7, and 8 PM most weekdays, built around working adults who commute. Two weeks free, no contract.
       </p>
     </div>
   </section>
 
   <!-- Kids -->
-  <section class="section-pad bg-white">
+  <section class="section-pad bg-brand-gray-light">
     <div class="container-page max-w-3xl">
-      <div class="eyebrow">Kids Programs</div>
-      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts Near Kenilworth, NJ</h2>
+      <div class="eyebrow">Kids Martial Arts</div>
+      <h2 class="text-3xl md:text-4xl text-brand-black mb-5">Kids Martial Arts for Kenilworth Families</h2>
       <div class="space-y-5">
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-gold">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-gold">
           <h3 class="text-xl text-brand-black mb-2">Cubs — Ages 4–6</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Preschool martial arts designed around big energy and short attention spans. Coordination, listening, and confidence, built through movement and games — and Kenilworth parents from Boulevard Elementary to Harding notice the results fast.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Preschool-age energy given some structure. Coordination, listening, and confidence come first, delivered in short, high-engagement bursts with steady positive reinforcement.</p>
         </div>
-        <div class="bg-brand-gray-light p-6 rounded-lg border-l-4 border-brand-navy">
+        <div class="bg-white p-6 rounded-lg border-l-4 border-brand-navy">
           <h3 class="text-xl text-brand-black mb-2">Lions — Ages 7–13</h3>
-          <p class="text-brand-gray text-sm leading-relaxed">Real BJJ for kids ready to put in work — progressive belt system, real technique, real challenge. The reasons Kenilworth parents (many with kids headed to David Brearley) sign up: after-school structure, bully concerns, confidence, and an activity their kid will actually stick with.</p>
+          <p class="text-brand-gray text-sm leading-relaxed">Real Brazilian Jiu-Jitsu — takedowns, escapes, positions. Not katas; a working system with a real belt progression. Parents consistently tell us the confidence and focus carry off the mat and into school.</p>
         </div>
       </div>
+      <p class="text-brand-gray leading-relaxed mt-5">
+        Bully prevention is a real part of what we teach. Once a kid knows they can handle themselves, the dynamic with a bully tends to shift — usually without a single punch thrown. Take a look at the <a href="/kids/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">kids program</a>.
+      </p>
     </div>
   </section>
 
@@ -83,16 +114,16 @@ const faqs = [
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <div class="eyebrow text-brand-gold">Muay Thai</div>
-          <h2 class="text-2xl md:text-3xl mb-4">Closest Muay Thai to Kenilworth</h2>
+          <h2 class="text-2xl md:text-3xl mb-4">Muay Thai Near Kenilworth, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            Kenilworth doesn't have a Muay Thai gym, so the closest authentic instruction is right here — about five minutes down the road. Real pad work, real coaching, and adults of every fitness level are welcome. A fitness-studio class hands you choreography; Muay Thai at AllStar hands you an actual skill.
+            Authentic Muay Thai under the same roof as your BJJ — real pad work, technique, and conditioning, not cardio kickboxing. Adults 16 and up, and beginners are welcome from day one.
           </p>
         </div>
         <div>
           <div class="eyebrow text-brand-gold">MMA</div>
           <h2 class="text-2xl md:text-3xl mb-4">MMA Near Kenilworth, NJ</h2>
           <p class="text-white/90 leading-relaxed">
-            Our MMA program blends BJJ, Muay Thai, and wrestling into one system, coached by Jamal Patterson — adults 16 and up. For Kenilworth residents, it's the closest MMA coaching led by a genuine professional fight veteran you'll find. Neighbors in <a href="/roselle-park/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Roselle Park</a> and <a href="/cranford/" class="text-brand-navy font-bold hover:text-brand-gold transition-colors">Cranford</a> train alongside you.
+            Our MMA program combines Brazilian Jiu-Jitsu, Muay Thai, and wrestling into one system, coached by Jamal Patterson — a pro MMA fighter who has cornered UFC fighters. Adults 16 and up, all levels.
           </p>
         </div>
       </div>
@@ -103,9 +134,9 @@ const faqs = [
   <section class="section-pad bg-white">
     <div class="container-page max-w-3xl">
       <div class="eyebrow">If you know Kenilworth</div>
-      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">Five Minutes From All Of It</h2>
+      <h2 class="text-2xl md:text-3xl text-brand-black mb-5">You Know These Spots — We're 8 Minutes Away</h2>
       <div class="flex flex-wrap gap-2">
-        {["Kenilworth Town Center", "Boulevard Elementary", "Harding Elementary", "David Brearley High School", "Kenilworth Community Pool", "Kenilworth Recreation", "Boulevard Ave", "Route 22 corridor"].map((l) => (
+        {["Kenilworth Town Hall", "Boulevard", "Kean University", "Townley Presbyterian Church"].map((l) => (
           <span class="bg-brand-gray-light text-brand-gray px-4 py-2 rounded-full text-sm">📍 {l}</span>
         ))}
       </div>
@@ -115,7 +146,7 @@ const faqs = [
   <FAQ items={faqs} />
 
   <CTA
-    headline="Two Weeks Free — Kenilworth Residents Welcome"
+    headline="Two Weeks Free — Kenilworth Families Welcome"
     sub="Show up. Bring water. We'll handle the rest. No commitment, no pressure."
   />
 </PageLayout>
