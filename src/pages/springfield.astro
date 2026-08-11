@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
+import Testimonials from '../components/Testimonials.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
@@ -29,7 +30,7 @@ const faqs = [
   </Fragment>
 
   <PageHero
-    eyebrow="6 minutes from Springfield"
+    eyebrow="Limited Spots — 6 Minutes from Springfield"
     headline="Martial Arts in Springfield, NJ"
     sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs — about 6 minutes down Morris Avenue from Springfield. Free 2-week trial, no contract."
     bgImage="/images/adult-bjj-hero.jpg"
@@ -142,6 +143,8 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <Testimonials maxItems={4} />
 
   <FAQ items={faqs} />
 
