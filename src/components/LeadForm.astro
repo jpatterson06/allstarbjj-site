@@ -179,9 +179,42 @@ const headerLabel = programLocked ? programDisplay[programLocked] ?? programLock
         throw new Error(result.error || `Server error (${resp.status})`);
       }
 
-      // Success — redirect to schedule page with program pre-selected
-      const prog = data.program_of_interest || '';
-      window.location.href = prog ? '/schedule/?program=' + encodeURIComponent(prog) : '/schedule/';
+      // ── TELL ANALYTICS AN ENQUIRY HAPPENED ────────────────────────────
+      // Added 2026-08-11. Until now nothing on this page ever reported a
+      // lead to GA4. The tracking helper in PageLayout.astro fires on forms
+      // carrying data-track-form, and this form has never had that attribute
+      // — so the "People who contacted you" figure on the command centre was
+      // counting something else entirely: 8 events in a month against 105
+      // real enquiries, and 84 the month before against 852 visits (14.1%,
+      // about double any normal rate). Neither number described human beings.
+      //
+      // generate_lead is GA4's own recommended lead event, so it needs no
+      // custom registration — only a tick in Admin > Events to make it a Key
+      // Event. Fired HERE, on the success path only, so a validation failure
+      // or a server error can never inflate it.
+      //
+      // event_callback + the timeout matter: the redirect below tears the page
+      // down, and without a callback the beacon can be cancelled in flight.
+      // The timeout guarantees we still navigate if gtag is absent or slow —
+      // a customer must never be held up by analytics.
+      const goToSchedule = () => {
+        const prog = data.program_of_interest || '';
+        window.location.href = prog ? '/schedule/?program=' + encodeURIComponent(prog) : '/schedule/';
+      };
+      if (typeof gtag === 'function') {
+        let moved = false;
+        const once = () => { if (!moved) { moved = true; goToSchedule(); } };
+        gtag('event', 'generate_lead', {
+          form_name:  'lead_form',
+          program:    data.program_of_interest || '(none selected)',
+          lead_source: (new URLSearchParams(window.location.search)).get('utm_source') || 'website',
+          event_callback: once,
+          event_timeout: 1200,
+        });
+        setTimeout(once, 1200);
+      } else {
+        goToSchedule();
+      }
 
     } catch (err) {
       console.error('Lead capture error:', err);
