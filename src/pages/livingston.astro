@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
+import Testimonials from '../components/Testimonials.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
@@ -28,7 +29,7 @@ const faqs = [
   </Fragment>
 
   <PageHero
-    eyebrow="18 minutes from Livingston"
+    eyebrow="Limited Spots — 18 Minutes from Livingston"
     headline="Martial Arts in Livingston, NJ"
     sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs — about 18 minutes via Eisenhower Parkway from Livingston. Free 2-week trial, no contract."
     bgImage="/images/adult-bjj-hero.jpg"
@@ -141,6 +142,8 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <Testimonials maxItems={4} />
 
   <FAQ items={faqs} />
 

@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
+import Testimonials from '../components/Testimonials.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 
 const faqs = [
@@ -239,6 +240,8 @@ const city = "Short Hills";
       </div>
     </div>
   </section>
+
+  <Testimonials maxItems={4} />
 
   <FAQ items={faqs} />
 

@@ -3,6 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import FAQ from '../components/FAQ.astro';
 import FAQPageSchema from '../components/FAQPageSchema.astro';
+import Testimonials from '../components/Testimonials.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import CTA from '../components/CTA.astro';
 
@@ -31,7 +32,7 @@ const faqs = [
   </Fragment>
 
   <PageHero
-    eyebrow="15 minutes from South Orange"
+    eyebrow="Limited Spots — 15 Minutes from South Orange"
     headline="Martial Arts in South Orange, NJ"
     sub="Brazilian Jiu-Jitsu, Muay Thai, MMA, and Kids programs — about 15 minutes from downtown South Orange via local roads and Route 78. Free 2-week trial, no contract."
     bgImage="/images/adult-bjj-hero.jpg"
@@ -144,6 +145,8 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <Testimonials maxItems={4} />
 
   <FAQ items={faqs} />
 
