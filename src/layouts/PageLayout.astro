@@ -29,6 +29,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 // 4. Add it to .env file as: PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 // 5. Build/deploy the site
 const ga4MeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+
+// Google Tag Manager container for allstarbjj.com.
+// Hardcoded on purpose with an env override: an unset variable here would
+// silently disable every marketing tag on the site, which is exactly the
+// failure that went unnoticed before. Override with PUBLIC_GTM_CONTAINER_ID
+// only if the container itself ever changes.
+const gtmContainerId = import.meta.env.PUBLIC_GTM_CONTAINER_ID || 'GTM-5NLG8SD';
 ---
 
 <!doctype html>
@@ -69,6 +76,14 @@ const ga4MeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet" />
 
     <slot name="head" />
+
+    <!-- Google Tag Manager -->
+    {gtmContainerId && (
+      <script define:vars={{ gtmContainerId }}>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',gtmContainerId);
+      </script>
+    )}
+    <!-- End Google Tag Manager -->
 
     <!-- Google Analytics 4 - gtag.js -->
     {ga4MeasurementId && (
@@ -178,6 +193,18 @@ const ga4MeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
   </head>
 
   <body class="bg-white text-brand-black antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    {gtmContainerId && (
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${gtmContainerId}`}
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        ></iframe>
+      </noscript>
+    )}
+    <!-- End Google Tag Manager (noscript) -->
     <Header />
     <main>
       <slot />
