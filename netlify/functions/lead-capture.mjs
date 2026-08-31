@@ -10,6 +10,13 @@
 const CC_URL    = process.env.COMMAND_CENTER_URL || 'https://jovial-crostata-5c5080.netlify.app';
 const CC_SECRET = process.env.INTERNAL_API_SECRET || 'allstar2026';
 
+// The command center went multi-tenant (Andre Gusmao Academy onboarded onto
+// JFive alongside All Star), so it now refuses any lead that doesn't say
+// which gym it belongs to. This site only ever serves All Star BJJ leads,
+// so the id is fixed here server-side — never taken from the visitor's
+// request — to prevent a client-supplied gym_id from ever overriding it.
+const GYM_ID = process.env.GYM_ID || '6e97ae1c-a46d-464b-a1e1-5f26f2899964';
+
 export default async (request) => {
   if (request.method === 'OPTIONS') {
     return respond(204, '');
@@ -49,7 +56,7 @@ export default async (request) => {
         'Content-Type':   'application/json',
         'x-internal-key': CC_SECRET,
       },
-      body: JSON.stringify(fields),
+      body: JSON.stringify({ ...fields, gym_id: GYM_ID }),
     });
 
     const result = await ccResp.json();
