@@ -1,0 +1,40 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/CTA.astro';
+import { knowledge } from '../../lib/knowledge';
+const title = 'Martial Arts Knowledge Center | AllStar Union NJ';
+const description = 'Straight answers about BJJ, Muay Thai, MMA, kids classes, cost and the free trial from AllStar Martial Arts in Union, NJ.';
+const list = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'AllStar Martial Arts Knowledge Center',
+  url: 'https://allstarbjj.com/knowledge/',
+  hasPart: knowledge.map((k) => ({ '@type': 'WebPage', name: k.q, url: `https://allstarbjj.com/knowledge/${k.slug}/` })),
+};
+---
+
+<PageLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(list)} />
+  </Fragment>
+  <section class="bg-brand-gray-light border-b border-gray-200">
+    <nav aria-label="Breadcrumb" class="container-page max-w-3xl py-3 text-sm text-brand-gray">
+      <a href="/" class="hover:underline">Home</a> <span aria-hidden="true">/</span> <span>Knowledge</span>
+    </nav>
+  </section>
+  <section class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">AllStar Martial Arts, Union NJ</div>
+      <h1 class="text-3xl md:text-5xl text-brand-black mb-4">Martial Arts Knowledge Center</h1>
+      <p class="text-lg text-brand-gray leading-relaxed mb-8">
+        One question per page, answered straight. Start with the <a href="/trial/" class="underline font-semibold">free 2-week trial</a> or explore <a href="/adult-bjj/" class="underline font-semibold">adult BJJ</a>.
+      </p>
+      <ul class="space-y-3">
+        {knowledge.map((k) => (
+          <li><a href={`/knowledge/${k.slug}/`} class="text-xl text-brand-navy underline font-semibold">{k.q}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+  <CTA headline="Try It Free" sub="2 weeks of unlimited classes. No credit card. No contract." />
+</PageLayout>

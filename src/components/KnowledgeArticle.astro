@@ -1,0 +1,91 @@
+---
+// One direct question per page: answer first, short supporting detail, FAQPage JSON-LD
+// generated from the same data that renders the visible text.
+import PageLayout from '../layouts/PageLayout.astro';
+import CTA from './CTA.astro';
+import FAQPageSchema from './FAQPageSchema.astro';
+import { knowledge, bySlug } from '../lib/knowledge';
+
+export interface Props { slug: string }
+const { slug } = Astro.props;
+const item = bySlug[slug];
+const url = `https://allstarbjj.com/knowledge/${slug}/`;
+const allFaqs = [{ q: item.q, a: item.a }, ...item.faqs];
+const related = item.related.map((s) => bySlug[s]).filter(Boolean);
+const breadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://allstarbjj.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Knowledge', item: 'https://allstarbjj.com/knowledge/' },
+    { '@type': 'ListItem', position: 3, name: item.navLabel, item: url },
+  ],
+};
+---
+
+<PageLayout title={item.title} description={item.description}>
+  <Fragment slot="head">
+    <FAQPageSchema faqs={allFaqs} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbs)} />
+  </Fragment>
+
+  <section class="bg-brand-gray-light border-b border-gray-200">
+    <nav aria-label="Breadcrumb" class="container-page max-w-3xl py-3 text-sm text-brand-gray">
+      <a href="/" class="hover:underline">Home</a> <span aria-hidden="true">/</span>
+      <a href="/knowledge/" class="hover:underline">Knowledge</a> <span aria-hidden="true">/</span>
+      <span>{item.navLabel}</span>
+    </nav>
+  </section>
+
+  <article class="section-pad bg-white">
+    <div class="container-page max-w-3xl">
+      <div class="eyebrow">AllStar Martial Arts, Union NJ</div>
+      <h1 class="text-3xl md:text-5xl text-brand-black mb-6">{item.q}</h1>
+      <p class="text-lg md:text-xl text-brand-black leading-relaxed mb-8 font-semibold">{item.a}</p>
+
+      {item.sections.map((s) => (
+        <section class="mb-8">
+          <h2 class="text-2xl text-brand-black mb-3">{s.h}</h2>
+          {s.p && <p class="text-brand-gray leading-relaxed">{s.p}</p>}
+          {s.items && (
+            <ul class="list-disc pl-6 space-y-1 text-brand-gray leading-relaxed">
+              {s.items.map((i) => <li>{i}</li>)}
+            </ul>
+          )}
+        </section>
+      ))}
+
+      {item.faqs.length > 0 && (
+        <section class="mb-8">
+          <h2 class="text-2xl text-brand-black mb-3">More quick answers</h2>
+          <dl class="space-y-4">
+            {item.faqs.map((f) => (
+              <div>
+                <dt class="font-bold text-brand-black">{f.q}</dt>
+                <dd class="text-brand-gray leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
+      <section class="mb-8 bg-brand-gray-light p-6 rounded-lg">
+        <h2 class="text-2xl text-brand-black mb-3">Next step</h2>
+        <p class="text-brand-gray mb-3">Ready to try it? Start with the <a href="/trial/" class="underline font-semibold">free 2-week trial</a> or see our <a href="/adult-bjj/" class="underline font-semibold">adult BJJ program</a>. Questions? Call <a href="tel:+19083411131" class="underline">(908) 341-1131</a>.</p>
+        <ul class="list-disc pl-6 text-brand-gray">
+          {item.learnMore.map((l) => <li><a href={l.href} class="underline">{l.label}</a></li>)}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl text-brand-black mb-3">Related questions</h2>
+        <ul class="list-disc pl-6 space-y-1 text-brand-gray">
+          {related.map((r) => <li><a href={`/knowledge/${r.slug}/`} class="underline">{r.navLabel}</a></li>)}
+          <li><a href="/knowledge/" class="underline">All knowledge articles</a></li>
+        </ul>
+      </section>
+    </div>
+  </article>
+
+  <CTA headline="Try It Free" sub="2 weeks of unlimited classes. No credit card. No contract." />
+</PageLayout>
