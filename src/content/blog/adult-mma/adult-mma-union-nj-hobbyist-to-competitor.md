@@ -1,7 +1,7 @@
 ---
 title: "Adult MMA in Union, NJ — From Hobbyist to Competitor"
 category: adult-mma
-meta_description: "Starting MMA training in Union, NJ as an adult? What it really looks like, what it costs, and the hobbyist-to-competitor pipeline. From an IFL & Bellator veteran."
+meta_description: "Starting MMA training in Union, NJ as an adult? What it looks like, what it costs, and the hobbyist-to-competitor path. From an IFL & Bellator veteran."
 hero_image: jamal-patterson-coaching-bjj-renzo-gracie-lineage-union-nj.jpg
 ---
 

@@ -63,7 +63,7 @@ export const towns: Town[] = [
     landmarks: ['Downtown Cranford', 'Nomahegan Park', 'Rahway River', 'Cranford Train Station'],
     adjacentSlugs: ['westfield', 'roselle-park', 'union'],
     priority: 'high',
-    metaDescription: 'Martial Arts in Cranford, NJ — 10 min from Union. BJJ, Muay Thai, MMA & Kids classes. ADCC veteran coach. Free 2-week trial, no contract.',
+    metaDescription: 'Claim your free 2-week trial near Cranford, NJ. Try BJJ, Muay Thai or MMA 10 minutes away in Union. Gear provided, no card, no contract.',
   },
   {
     slug: 'westfield',

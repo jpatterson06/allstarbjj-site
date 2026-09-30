@@ -1,7 +1,7 @@
 ---
-title: "What to Expect in Your First Muay Thai Class — A Real Walkthrough"
+title: "What to Expect in Your First Muay Thai Class"
 category: adult-muay-thai
-meta_description: "Nervous about your first Muay Thai class? Here's exactly what happens — minute by minute, demystified. From an MMA veteran with thousands of hours of pad work."
+meta_description: "Nervous about your first Muay Thai class? Here's exactly what happens, minute by minute. From an MMA veteran with thousands of hours of pad work."
 hero_image: muay-thai-head-kick-allstar-union.jpg
 ---
 

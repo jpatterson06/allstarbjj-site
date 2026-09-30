@@ -1,7 +1,7 @@
 ---
 title: "Your First MMA Class in Chatham, NJ: What Actually Happens"
 category: adult-mma
-meta_description: "Nervous about walking into an MMA gym? Here's the real minute-by-minute breakdown of a first class at All Star Martial Arts — no gear needed, no sparring, no judgment."
+meta_description: "Nervous about walking into an MMA gym? Here's the minute-by-minute breakdown of a first class at All Star Martial Arts. No gear, no sparring, no judgment."
 hero_image: mma-training-allstar-union.jpg
 pubDate: 2026-08-17
 ---

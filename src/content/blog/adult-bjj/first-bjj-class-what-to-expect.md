@@ -1,7 +1,7 @@
 ---
 title: "What to Expect in Your First BJJ Class — A Real Walkthrough"
 category: adult-bjj
-meta_description: "Nervous about your first Brazilian Jiu-Jitsu class? Here's exactly what happens, minute by minute — from a Renzo Gracie black belt who's seen 1000+ first days."
+meta_description: "Nervous about your first BJJ class? Here's exactly what happens, minute by minute, from a Renzo Gracie black belt who's seen 1000+ first days."
 hero_image: bjj-rolling-gi-allstar-union.jpg
 ---
 

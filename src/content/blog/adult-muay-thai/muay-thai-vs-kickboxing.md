@@ -1,7 +1,7 @@
 ---
 title: "Muay Thai vs Kickboxing — What's the Real Difference?"
 category: adult-muay-thai
-meta_description: "Muay Thai vs kickboxing — actual differences, not the basic ones. Which is better for fitness, self-defense, and adult beginners. From an MMA veteran's perspective."
+meta_description: "Muay Thai vs kickboxing: the real differences. Which is better for fitness, self-defense, and adult beginners. From an MMA veteran's perspective."
 hero_image: muay-thai-head-kick-allstar-union.jpg
 ---
 

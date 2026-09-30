@@ -1,7 +1,7 @@
 ---
-title: "Muay Thai for Fat Loss — What Actually Works (And What Doesn't)"
+title: "Muay Thai for Fat Loss — What Actually Works"
 category: adult-muay-thai
-meta_description: "Muay Thai for fat loss — actual results, real timelines, what affects them. From an MMA veteran who's coached hundreds of adults through body composition changes."
+meta_description: "Muay Thai for fat loss: actual results, real timelines, what affects them. From an MMA veteran who's coached hundreds of adults through body changes."
 hero_image: muay-thai-class-action-allstar-union.jpg
 ---
 

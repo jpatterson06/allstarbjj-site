@@ -1,5 +1,5 @@
 ---
-title: "The BJJ Belt System Explained — For Adults Considering Starting"
+title: "The BJJ Belt System Explained — For Adults Starting Out"
 category: adult-bjj
 meta_description: "How long to BJJ blue belt, purple, brown, black? What each belt actually means. Honest timeline from a Renzo Gracie black belt — no shortcuts, no fluff."
 hero_image: bjj-rolling-female-brown-belt-allstar.jpg

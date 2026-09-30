@@ -7,3 +7,19 @@
 /preschool-martial-arts-classes-union/ /preschool/    301
 /summer-camp-union/                /summer-camp/      301
 /martial-arts-classes/                 /preschool/        301
+
+# Old WordPress-era URLs still getting Google impressions (added 2026-09-30)
+/bjj-classes-near-me-union/        /adult-bjj/        301
+/bjj-classes-near-me-union         /adult-bjj/        301
+/pre-school-jiu-jitsu/*            /preschool/        301
+/pre-school-jiu-jitsu              /preschool/        301
+/kids-martial-arts/*               /kids/             301
+/kids-martial-arts                 /kids/             301
+/birthday-parties-union/           /kids/             301
+/birthday-parties-union            /kids/             301
+/kids-calendar-schedule-free-two-weeks/ /kids/        301
+/kids-calendar-schedule-free-two-weeks  /kids/        301
+/two-weeks-free-trial-kenilworth-union-new-jersey/ /trial/kenilworth/ 301
+/two-weeks-free-trial-kenilworth-union-new-jersey  /trial/kenilworth/ 301
+/contact-page/                     /                  301
+/contact-page                      /                  301

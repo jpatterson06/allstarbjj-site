@@ -1,5 +1,5 @@
 ---
-title: "BJJ for Self-Defense — What Actually Works on the Street (And What Doesn't)"
+title: "BJJ for Self-Defense — What Actually Works on the Street"
 category: adult-bjj
 meta_description: "Is BJJ good for self-defense? Honest answer from a Renzo Gracie black belt with pro fight experience. What works, what doesn't, what the videos get wrong."
 hero_image: bjj-rolling-female-brown-belt-allstar.jpg

@@ -1,5 +1,5 @@
 ---
-title: "Real Renzo Gracie BJJ vs McDojo: How to Vet a Gym in Livingston, NJ"
+title: "Real Renzo Gracie BJJ vs McDojo: Vet a Gym in Livingston, NJ"
 category: adult-bjj
 meta_description: "Livingston, NJ parents and adults: here's exactly how to spot a real Renzo Gracie lineage BJJ school before you sign a contract this fall. No fluff."
 hero_image: bjj-class-allstar-union.jpg

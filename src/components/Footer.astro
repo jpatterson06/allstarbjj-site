@@ -21,6 +21,31 @@ const towns = [
   { href: '/trial/chatham/',        label: 'Chatham' },
   { href: '/trial/livingston/',     label: 'Livingston' },
 ];
+const serveLinks = [
+  { href: '/union/',               label: 'Union' },
+  { href: '/springfield/',         label: 'Springfield' },
+  { href: '/cranford/',            label: 'Cranford' },
+  { href: '/westfield/',           label: 'Westfield' },
+  { href: '/mountainside/',        label: 'Mountainside' },
+  { href: '/maplewood/',           label: 'Maplewood' },
+  { href: '/millburn/',            label: 'Millburn' },
+  { href: '/short-hills-millburn/', label: 'Short Hills' },
+  { href: '/south-orange/',        label: 'South Orange' },
+  { href: '/roselle-park/',        label: 'Roselle Park' },
+  { href: '/summit/',              label: 'Summit' },
+  { href: '/chatham/',             label: 'Chatham' },
+  { href: '/livingston/',          label: 'Livingston' },
+  { href: '/kenilworth/',          label: 'Kenilworth' },
+  { href: '/new-providence/',      label: 'New Providence' },
+  { href: '/clark/',               label: 'Clark' },
+  { href: '/garwood/',             label: 'Garwood' },
+  { href: '/linden/',              label: 'Linden' },
+  { href: '/rahway/',              label: 'Rahway' },
+  { href: '/scotch-plains/',       label: 'Scotch Plains' },
+  { href: '/kickboxing/',          label: 'Kickboxing' },
+  { href: '/after-school/',        label: 'After-School Program' },
+  { href: '/summer-camp/',         label: 'Summer Camp' },
+];
 ---
 
 <footer class="bg-brand-black text-white mt-0">
@@ -67,6 +92,18 @@ const towns = [
       <div class="font-display text-lg uppercase text-brand-gold mb-4 tracking-wider">Areas Served</div>
       <ul class="space-y-2 text-sm">
         {towns.map((t) => (
+          <li><a href={t.href} class="text-gray-300 hover:text-white transition-colors">{t.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Areas we serve — sitewide internal links to town, program and seasonal pages -->
+  <div class="border-t border-gray-800">
+    <div class="container-page py-8">
+      <div class="font-display text-lg uppercase text-brand-gold mb-4 tracking-wider">Areas We Serve</div>
+      <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        {serveLinks.map((t) => (
           <li><a href={t.href} class="text-gray-300 hover:text-white transition-colors">{t.label}</a></li>
         ))}
       </ul>

@@ -1,7 +1,7 @@
 ---
-title: "BJJ vs Muay Thai vs MMA — Which Should You Start With? (Honest Answer)"
+title: "BJJ vs Muay Thai vs MMA — Which Should You Start With?"
 category: adult-bjj
-meta_description: "Stuck between BJJ, Muay Thai, and MMA? Here's how to pick — based on goals, age, fitness, and self-defense priority. Direct answers from a Renzo Gracie black belt."
+meta_description: "Stuck between BJJ, Muay Thai, and MMA? Here's how to pick based on goals, age, fitness, and self-defense. Straight answers from a Renzo Gracie black belt."
 hero_image: muay-thai-head-kick-allstar-union.jpg
 ---
 

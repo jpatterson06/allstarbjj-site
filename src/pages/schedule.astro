@@ -113,6 +113,23 @@ import PageLayout from '../layouts/PageLayout.astro';
     layout: 'month_view',
   });
 
+  // Analytics: schedule page view + confirmed booking (Cal.com embed event).
+  try {
+    if (typeof gtag === 'function') {
+      gtag('event', 'schedule_view', { program: program, page_path: window.location.pathname });
+    }
+    Cal('on', {
+      action: 'bookingSuccessful',
+      callback: function () {
+        try {
+          if (typeof gtag === 'function') {
+            gtag('event', 'book_trial', { program: program, page_path: window.location.pathname });
+          }
+        } catch (e) { /* ignore */ }
+      },
+    });
+  } catch (e) { /* analytics must never break booking */ }
+
   Cal('ui', {
     styles: { branding: { brandColor: '#cc0000' } },
     hideEventTypeDetails: false,
