@@ -32,7 +32,8 @@ cd ~/allstarbjj-site
 netlify env:set SUPABASE_URL "$SUPABASE_URL"
 netlify env:set SUPABASE_SERVICE_KEY "$SUPABASE_KEY"
 netlify env:set COMMAND_CENTER_URL "https://jovial-crostata-5c5080.netlify.app"
-netlify env:set INTERNAL_API_SECRET "allstar2026"
+# Edit the placeholder below to the real secret BEFORE running (must match the command center).
+netlify env:set INTERNAL_API_SECRET "PUT-A-NEW-LONG-RANDOM-SECRET-HERE"
 
 echo ""
 echo "All env vars set. Deploying to production..."

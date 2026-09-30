@@ -10,12 +10,13 @@
     "preview": "astro preview",
     "astro": "astro",
     "sync-kb": "node scripts/sync-chat-kb.mjs",
-    "test:chat": "node test/chat-function.test.mjs"
+    "test:chat": "node test/chat-function.test.mjs && node test/chat-budget.test.mjs && node test/chat-links.test.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/tailwind": "^5.1.4",
+    "@netlify/blobs": "^11.1.1",
     "astro": "^4.16.18",
     "tailwindcss": "^3.4.16"
   },

@@ -7,8 +7,8 @@
 //   first_name, last_name, email, phone, program_of_interest, sms_consent,
 //   source_town?, utm_source?, utm_medium?, utm_campaign?, utm_content?, utm_term?
 
-const CC_URL    = process.env.COMMAND_CENTER_URL || 'https://jovial-crostata-5c5080.netlify.app';
-const CC_SECRET = process.env.INTERNAL_API_SECRET || 'allstar2026';
+// COMMAND_CENTER_URL and INTERNAL_API_SECRET are REQUIRED env vars (no hardcoded fallbacks).
+// If either is missing the function fails closed with a 503 (see below).
 
 // The command center went multi-tenant (Andre Gusmao Academy onboarded onto
 // JFive alongside All Star), so it now refuses any lead that doesn't say
@@ -23,6 +23,17 @@ export default async (request) => {
   }
   if (request.method !== 'POST') {
     return respond(405, { error: 'POST required' });
+  }
+
+  // ── Fail closed if not configured (log variable NAMES only, never values) ─────
+  const CC_URL = process.env.COMMAND_CENTER_URL || '';
+  const CC_SECRET = process.env.INTERNAL_API_SECRET || '';
+  const missing = [];
+  if (!CC_URL) missing.push('COMMAND_CENTER_URL');
+  if (!CC_SECRET) missing.push('INTERNAL_API_SECRET');
+  if (missing.length) {
+    console.error('Lead capture not configured, missing env: ' + missing.join(', '));
+    return respond(503, { error: 'Lead capture is not configured. Call (908) 341-1131.' });
   }
 
   // ── Parse body ────────────────────────────────────────────────────────────────
@@ -59,17 +70,17 @@ export default async (request) => {
       body: JSON.stringify({ ...fields, gym_id: GYM_ID }),
     });
 
-    const result = await ccResp.json();
+    const result = await ccResp.json().catch(() => ({}));
 
     if (!ccResp.ok || result.error) {
-      console.error('Command center error:', result);
-      return respond(ccResp.status || 500, { error: result.error || 'Command center error' });
+      console.error('Command center error status:', ccResp.status); // never log or forward upstream text
+      return respond(502, { error: 'Could not save your info. Please call (908) 341-1131.' });
     }
 
     return respond(200, result);
 
   } catch (err) {
-    console.error('Proxy fetch failed:', err.message);
+    console.error('Proxy fetch failed:', err && err.name);
     return respond(502, { error: 'Could not reach command center. Try again.' });
   }
 };
