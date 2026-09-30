@@ -83,7 +83,7 @@ Once a week is too few. You'll forget what you learned between classes.
 
 ## What It Costs
 
-Pricing varies by program tier. We discuss specifics in person — not because we hide anything, but because the right tier depends on your schedule and goals. Compared to other Union County fitness commitments, BJJ is competitive and includes far more instruction per dollar.
+Memberships run $179 to $249 a month, depending on the program and your schedule. We walk you through the exact options in person after your free trial, because the right fit depends on your goals. Compared to other Union County fitness commitments, BJJ is competitive and includes far more instruction per dollar.
 
 ## Why Lineage Matters at AllStar
 
