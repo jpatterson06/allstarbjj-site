@@ -5,8 +5,6 @@ meta_description: "Is BJJ good for self-defense? Honest answer from a Renzo Grac
 hero_image: bjj-rolling-female-brown-belt-allstar.jpg
 ---
 
-# BJJ for Self-Defense — What Actually Works on the Street (And What Doesn't)
-
 Most BJJ "self-defense" content online is exaggerated. Some of it's wrong. A lot of it sells you a fantasy where you triangle-choke an attacker in three seconds.
 
 Let me give you a more honest read. I'm Jamal Patterson — Renzo Gracie black belt, 6-3 in pro MMA with five wins by submission, UWC light heavyweight champion. I've used jiu-jitsu in real fights with money on the line. I've also seen what happens when people overestimate what their training can do.
@@ -134,9 +132,4 @@ Standing escape from a bear hug or rear hug. Most attacks start with a grab. Mos
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 4 ✓ • Hook pattern #3 (counterintuitive — most online content is wrong) ✓ • Direct/no-hedging tone (voice rule) ✓ • Closing CTA in voice ✓
-**Length**: ~1500 words
+- [Beginner jiu-jitsu classes in Union, NJ](/adult-bjj/)

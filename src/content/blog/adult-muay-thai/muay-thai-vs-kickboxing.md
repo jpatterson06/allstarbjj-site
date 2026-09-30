@@ -5,8 +5,6 @@ meta_description: "Muay Thai vs kickboxing — actual differences, not the basic
 hero_image: muay-thai-head-kick-allstar-union.jpg
 ---
 
-# Muay Thai vs Kickboxing — What's the Real Difference?
-
 Most articles on this topic give you a list of strikes that each art uses and call it done. That's surface-level. The real difference between Muay Thai and kickboxing affects how you train, who'll be in class with you, and what you'll get out of it.
 
 I'm Jamal Patterson — pro MMA fighter (6-3, IFL/Bellator/UWC), Renzo Gracie black belt, head instructor at AllStar Martial Arts in Union, NJ. I've trained both. I know fighters who specialize in one and others who specialize in the other. Here's the actual difference.
@@ -131,10 +129,4 @@ A hybrid style developed in Holland that combines elements of Muay Thai with Eur
 - [Muay Thai for Fat Loss — What Actually Works](/blog/adult-muay-thai/muay-thai-for-fat-loss/)
 - [What to Expect in Your First Muay Thai Class](/blog/adult-muay-thai/first-muay-thai-class-what-to-expect/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Adult Muay Thai Classes](/adult-muay-thai-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 4 ✓ • Hook pattern #3 (counterintuitive — most articles miss the real difference) ✓ • Closing CTA in voice ✓
-**Length**: ~1400 words
+- [Adult Muay Thai Classes](/adult-muay-thai/)

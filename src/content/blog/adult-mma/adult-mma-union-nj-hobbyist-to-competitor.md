@@ -5,8 +5,6 @@ meta_description: "Starting MMA training in Union, NJ as an adult? What it reall
 hero_image: jamal-patterson-coaching-bjj-renzo-gracie-lineage-union-nj.jpg
 ---
 
-# Adult MMA in Union, NJ — From Hobbyist to Competitor
-
 Most adults thinking about MMA training fall into two camps. They either think it's too hardcore — they'll get hurt or beat up. Or they think it's nothing serious — just a glorified fitness class. Both are wrong.
 
 Real MMA training is harder than the fitness camp version, more accessible than the highlight-reel version, and one of the most engaging things an adult can pursue. Whether you want to fight or just want to be a complete martial artist, it works.
@@ -166,11 +164,4 @@ With good coaching and controlled sparring: low risk. With reckless training: hi
 - [What MMA Actually Looks Like — Training vs Fighting](/blog/adult-mma/mma-training-vs-fighting/)
 - [How Long Until My First Amateur MMA Fight?](/blog/adult-mma/how-long-until-amateur-mma-fight/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Adult MMA Classes](/adult-mma-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 5 in ~1500 words ✓ • Hook pattern #3 (counterintuitive — both common views are wrong) ✓ • Closing CTA in voice ✓
-**Authority**: 6-3 pro / IFL / Bellator / UWC / Antwain Britt / UFC coaching — anchored
-**Length**: ~1500 words (pillar depth)
+- [Adult MMA Classes](/adult-mma/)

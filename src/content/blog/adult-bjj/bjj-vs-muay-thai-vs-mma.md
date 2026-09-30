@@ -5,8 +5,6 @@ meta_description: "Stuck between BJJ, Muay Thai, and MMA? Here's how to pick —
 hero_image: muay-thai-head-kick-allstar-union.jpg
 ---
 
-# BJJ vs Muay Thai vs MMA — Which Should You Start With? (Honest Answer)
-
 This question lands in my inbox every week. Some version of: *"I want to start training martial arts. Should I do BJJ, Muay Thai, or MMA?"*
 
 Most articles online answer this badly. They list pros and cons of each art and tell you to "decide what's right for you" — which is useless if you don't already know what you want.
@@ -132,11 +130,6 @@ Yes — but you're missing 50% of what's likely to happen if you ever face a rea
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [BJJ for Self-Defense — What Actually Works](/blog/adult-bjj/bjj-self-defense-what-works/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
-- [Adult Muay Thai Classes](/adult-muay-thai-classes-union/)
-- [Adult MMA Classes](/adult-mma-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 5 ✓ • Hook pattern #1 (specific moment — "this question lands in my inbox every week") ✓ • Direct opinion (per voice rule "no corporate softening") ✓ • Closing CTA in voice ✓
-**Length**: ~1500 words
+- [Adult Brazilian Jiu-Jitsu Classes](/adult-bjj/)
+- [Adult Muay Thai Classes](/adult-muay-thai/)
+- [Adult MMA Classes](/adult-mma/)

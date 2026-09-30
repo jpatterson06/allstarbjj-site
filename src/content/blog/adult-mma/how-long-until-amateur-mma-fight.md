@@ -5,8 +5,6 @@ meta_description: "How long until you can have your first amateur MMA fight? Rea
 hero_image: jamal-patterson-coaching-bjj-renzo-gracie-lineage-union-nj.jpg
 ---
 
-# How Long Until My First Amateur MMA Fight? (Honest Timeline)
-
 Every adult who walks into MMA training thinking about competing eventually asks: *how long until I can have a fight?*
 
 The honest answer most coaches won't give you: it depends on what you started with, but expect 18-36 months for most adults to be ready for a real amateur fight.
@@ -142,10 +140,4 @@ Most fighters lose at some point. Losses don't end careers — they shape them. 
 - [Adult MMA in Union NJ — From Hobbyist to Competitor](/blog/adult-mma/adult-mma-union-nj-hobbyist-to-competitor/)
 - [What MMA Actually Looks Like — Training vs Fighting](/blog/adult-mma/mma-training-vs-fighting/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Adult MMA Classes](/adult-mma-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 4 ✓ • Hook pattern #2 (direct address with stakes — every student asks this) ✓ • Closing CTA in voice ✓
-**Length**: ~1500 words
+- [Adult MMA Classes](/adult-mma/)

@@ -5,8 +5,6 @@ meta_description: "How long to BJJ blue belt, purple, brown, black? What each be
 hero_image: bjj-rolling-female-brown-belt-allstar.jpg
 ---
 
-# The BJJ Belt System Explained — For Adults Considering Starting
-
 A common question from prospects: *how long until I get a black belt?*
 
 The honest answer is somewhere between 8 and 15 years of consistent training. That sounds like a long time. It is. But it's also why the belt actually means something.
@@ -161,10 +159,4 @@ No formal test. Promotions happen based on instructor evaluation and consistent 
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Adult BJJ Classes](/adult-bjj-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 3 ✓ • Hook pattern #2 (direct address with stakes) ✓ • Closing CTA in voice ✓
-**Length**: ~1500 words
+- [Adult BJJ classes in Union, NJ](/adult-bjj/)

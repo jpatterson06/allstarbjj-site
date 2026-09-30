@@ -5,8 +5,6 @@ meta_description: "Starting Brazilian Jiu-Jitsu as an adult in Union, NJ? Everyt
 hero_image: bjj-rolling-gi-allstar-union.jpg
 ---
 
-# Adult BJJ in Union, NJ — A Beginner's Complete Guide
-
 Most people thinking about starting BJJ don't start. They wait. They Google. They watch a hundred YouTube videos. They wait some more. A year goes by. Then another.
 
 If you're reading this and you live in Union County or one of the surrounding towns, this guide is the one I wish my future students had read a year before they showed up. It covers the question you actually have — *should I do this, what does it cost me, what do I get?* — without the typical fluff.
@@ -145,12 +143,4 @@ Yes. Walk in any time. We don't hide what we do.
 - [Gi vs No-Gi BJJ for Beginners](/blog/adult-bjj/gi-vs-no-gi-beginners/)
 - [BJJ for Self-Defense — What Actually Works](/blog/adult-bjj/bjj-self-defense-what-works/)
 - [BJJ Belt System Explained](/blog/adult-bjj/bjj-belt-system-adults/)
-- [Adult BJJ Classes in Union](/adult-bjj-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 5 in ~1500 words ✓ • Hook pattern #3 (counterintuitive — "most people don't start") ✓ • Closing CTA in voice ✓
-**Authority**: Renzo, 6-3 pro, IFL/Bellator implicit, UWC, since 2011 — dropped naturally
-**SEO**: Meta 159 chars ✓ • H1 keyword ✓ • Internal links 7 (5 sister blog posts + lineage + service page) ✓ • FAQ ready for schema ✓
-**Length**: ~1500 words (pillar depth)
+- [Brazilian Jiu-Jitsu classes in Union, NJ](/adult-bjj/)

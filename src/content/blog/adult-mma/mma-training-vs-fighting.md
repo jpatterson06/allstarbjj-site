@@ -5,8 +5,6 @@ meta_description: "MMA training and MMA fighting are two different things. Here'
 hero_image: jamal-patterson-coaching-bjj-renzo-gracie-lineage-union-nj.jpg
 ---
 
-# What MMA Actually Looks Like — Training vs Fighting
-
 Two adults walk into a gym to start MMA. Different goals.
 
 The first wants to be a complete martial artist — to handle himself, get in shape, have a skill that compounds. Doesn't plan to fight.
@@ -173,10 +171,4 @@ BJJ tournaments have very low injury risk and offer the competitive testing with
 - [Adult MMA in Union NJ — From Hobbyist to Competitor](/blog/adult-mma/adult-mma-union-nj-hobbyist-to-competitor/)
 - [How Long Until My First Amateur MMA Fight?](/blog/adult-mma/how-long-until-amateur-mma-fight/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Adult MMA Classes](/adult-mma-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 4 ✓ • Hook pattern #1 (specific moment — two adults walking in) ✓ • Closing CTA in voice ✓
-**Length**: ~1500 words
+- [Adult MMA Classes](/adult-mma/)

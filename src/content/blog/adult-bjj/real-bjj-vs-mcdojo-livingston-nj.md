@@ -50,4 +50,4 @@ With Livingston Rec registration already open and the after-Labor-Day rush about
 
 Come roll with us instead. I've been teaching out of All Star Martial Arts in Union since 2011, Renzo Gracie black belt, pro record built in IFL, Bellator, and as UWC light heavyweight champion. We're a short drive from Livingston, easy from Cranford, Westfield, Springfield, Kenilworth, Millburn, and Summit too.
 
-Book a free trial class and see the room for yourself. Call or text (908) 341-1131. Come train, not tour.
+Book a [free trial BJJ class](/adult-bjj/) and see the room for yourself. Call or text (908) 341-1131. Come train, not tour.

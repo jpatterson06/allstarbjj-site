@@ -5,8 +5,6 @@ meta_description: "Muay Thai for fat loss — actual results, real timelines, wh
 hero_image: muay-thai-class-action-allstar-union.jpg
 ---
 
-# Muay Thai for Fat Loss — What Actually Works (And What Doesn't)
-
 If you came here hoping to read that Muay Thai will torch fat with no diet changes, I have to disappoint you. Sort of.
 
 Here's the actual math, with no fluff. Muay Thai will absolutely change your body composition faster than most other forms of exercise. But how much, how fast, and how visibly depends on a few specific things. Let me walk through them.
@@ -156,10 +154,4 @@ Most students notice changes by week 4-6. Major changes by month 3.
 - [Adult Muay Thai in Union NJ — Beginner's Guide](/blog/adult-muay-thai/adult-muay-thai-union-nj-beginners-guide/)
 - [Muay Thai vs Kickboxing — What's the Difference?](/blog/adult-muay-thai/muay-thai-vs-kickboxing/)
 - [What to Expect in Your First Muay Thai Class](/blog/adult-muay-thai/first-muay-thai-class-what-to-expect/)
-- [Adult Muay Thai Classes](/adult-muay-thai-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 3 ✓ • Hook pattern #3 (counterintuitive — won't sell you the fantasy) ✓ • Closing CTA in voice ✓
-**Length**: ~1500 words
+- [Adult Muay Thai Classes](/adult-muay-thai/)

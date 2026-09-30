@@ -5,8 +5,6 @@ meta_description: "Nervous about your first Muay Thai class? Here's exactly what
 hero_image: muay-thai-head-kick-allstar-union.jpg
 ---
 
-# What to Expect in Your First Muay Thai Class — A Real Walkthrough
-
 The drive to your first Muay Thai class feels weird. You're picturing yourself getting kicked in the face. You're worried you'll throw a punch wrong and embarrass yourself. You're wondering if this was a stupid idea.
 
 It wasn't. Most adults feel exactly this way. None of them get kicked in the face on day one. Here's what actually happens.
@@ -174,10 +172,4 @@ More than you expect. Plan for a low-key evening after class.
 - [Adult Muay Thai in Union NJ — Beginner's Guide](/blog/adult-muay-thai/adult-muay-thai-union-nj-beginners-guide/)
 - [Muay Thai vs Kickboxing — What's the Difference?](/blog/adult-muay-thai/muay-thai-vs-kickboxing/)
 - [Muay Thai for Fat Loss — What Actually Works](/blog/adult-muay-thai/muay-thai-for-fat-loss/)
-- [Adult Muay Thai Classes](/adult-muay-thai-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 3 ✓ • Hook pattern #1 (specific moment — the drive over) ✓ • Closing CTA in voice ✓
-**Length**: ~1500 words
+- [Adult Muay Thai Classes](/adult-muay-thai/)

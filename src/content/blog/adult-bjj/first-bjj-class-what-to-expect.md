@@ -5,8 +5,6 @@ meta_description: "Nervous about your first Brazilian Jiu-Jitsu class? Here's ex
 hero_image: bjj-rolling-gi-allstar-union.jpg
 ---
 
-# What to Expect in Your First BJJ Class — A Real Walkthrough
-
 Almost every new adult student feels the same thing on the drive over: a quiet kind of dread.
 
 You're picturing yourself getting smashed by someone half your age. You're worried you'll embarrass yourself. You're second-guessing why you signed up. You're wondering if you should turn around.
@@ -147,9 +145,4 @@ Tell the coach before class. We'll work around it.
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
 - [Gi vs No-Gi BJJ for Beginners](/blog/adult-bjj/gi-vs-no-gi-beginners/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 4 ✓ • Hook pattern #1 (specific moment — "the drive over") ✓ • Closing CTA in voice ✓
-**Length**: ~1450 words
+- [BJJ classes in Union, NJ (free two-week trial)](/adult-bjj/)

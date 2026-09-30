@@ -5,8 +5,6 @@ meta_description: "Looking for kids martial arts in Maplewood, NJ? Brazilian Jiu
 hero_image: kids-martial-arts.jpg
 ---
 
-# Maplewood Kids Martial Arts: Build Confidence & Discipline
-
 If you're a parent in Maplewood, you've probably thought about signing your kid up for something — soccer, piano, robotics. But have you considered martial arts? Not the movie version. The real thing.
 
 I'm Jamal Patterson, a Renzo Gracie black belt and founder of AllStar Martial Arts in Union (just 15 minutes from Maplewood Middle School). I've been teaching kids martial arts since 2011 — watching shy 6-year-olds turn into confident young people. Watching kids who got bullied find their voice. Watching families stick together in an activity that actually builds character instead of just entertaining.
@@ -160,55 +158,6 @@ Life happens. Tell us. We'll hold the spot or pick back up whenever you're ready
 ---
 
 ## Related Reading
-- [Brazilian Jiu-Jitsu vs Karate: Which Should Your Kid Learn?](/blog/kids-martial-arts/bjj-vs-karate-kids/)
-- [Self-Defense for Kids: What Actually Works](/blog/kids-martial-arts/self-defense-kids-real-skills/)
-- [How Martial Arts Helps Kids with Confidence & Bullying](/blog/kids-martial-arts/martial-arts-kids-confidence-bullying/)
-
----
-
-## Self-Audit
-**Voice**: Warmth + directness ✓ • Parental concerns addressed ✓ • Credibility established early ✓ • Local anchors (Maplewood Middle School, Maplewood train station) ✓ • Real testimonials ✓ • No fluff, practical info ✓ • CTA clear and specific ✓
-**Length**: ~1800 words
-**Keywords**: Brazilian Jiu-Jitsu Maplewood NJ ✓ • kids karate Maplewood ✓ • self-defense Maplewood ✓ • Maplewood kids martial arts ✓
-
----
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Maplewood Kids Martial Arts: Build Confidence & Discipline",
-  "description": "Looking for kids martial arts in Maplewood, NJ? Brazilian Jiu-Jitsu, karate & self-defense for ages 4-13. Build confidence, discipline, and real skills. Free trial.",
-  "image": "kids-martial-arts.jpg",
-  "author": {
-    "@type": "Person",
-    "name": "Jamal Patterson",
-    "jobTitle": "Founder & Head Coach",
-    "affiliation": {
-      "@type": "LocalBusiness",
-      "name": "AllStar Martial Arts",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1234 Evergreen Ave",
-        "addressLocality": "Union",
-        "addressRegion": "NJ",
-        "postalCode": "07083"
-      }
-    }
-  },
-  "publisher": {
-    "@type": "LocalBusiness",
-    "name": "AllStar Martial Arts",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1234 Evergreen Ave",
-      "addressLocality": "Union",
-      "addressRegion": "NJ",
-      "postalCode": "07083"
-    }
-  },
-  "datePublished": "2026-07-14",
-  "dateModified": "2026-07-14",
-  "articleBody": "If you're a parent in Maplewood, you've probably thought about signing your kid up for something. But have you considered martial arts? This guide covers why martial arts matters for kids ages 4-13, what to expect in classes, local scheduling in Maplewood, and real parent testimonials."
-}
-</script>
+- [Kids Martial Arts Classes in Union, NJ](/kids/)
+- [Kids Brazilian Jiu-Jitsu](/kids-bjj/)
+- [Bully Prevention for Kids](/bully-prevention/)

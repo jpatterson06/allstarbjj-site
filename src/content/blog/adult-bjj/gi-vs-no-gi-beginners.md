@@ -5,8 +5,6 @@ meta_description: "Gi or no-gi BJJ — what's the difference, which is better fo
 hero_image: bjj-rolling-gi-allstar-union.jpg
 ---
 
-# Gi vs No-Gi BJJ — Which Should Beginners Start With?
-
 If you've Googled "should I start BJJ in a gi or no-gi" you've gotten the same answer a dozen times: *"It depends on your goals!"*
 
 That's not actually an answer. Let me give you a real one.
@@ -101,7 +99,7 @@ If you're certain about no-gi only, we'll work with you. But I'll be upfront: I'
 
 ## What If I Hate Both?
 
-Then BJJ might not be for you. Try [Muay Thai](/adult-muay-thai-classes-union/) instead. Different art, different vibe. Striking-based, no grappling. Some people just don't like being on the ground in close contact, and that's okay.
+Then BJJ might not be for you. Try [Muay Thai](/adult-muay-thai/) instead. Different art, different vibe. Striking-based, no grappling. Some people just don't like being on the ground in close contact, and that's okay.
 
 But give BJJ at least a month before deciding. The first three classes feel weird for everyone. The fourth class is when most people start getting it.
 
@@ -139,9 +137,4 @@ Yes. There are tournaments in both formats. IBJJF (gi-focused) and ADCC (no-gi) 
 - [Adult BJJ in Union NJ — Beginner's Complete Guide](/blog/adult-bjj/adult-bjj-union-nj-beginners-complete-guide/)
 - [What to Expect in Your First BJJ Class](/blog/adult-bjj/first-bjj-class-what-to-expect/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 3 ✓ • Hook pattern #3 (counterintuitive — direct answer vs vague online content) ✓ • Closing CTA in voice ✓
-**Length**: ~1300 words
+- [Gi and no-gi BJJ classes in Union](/adult-bjj/)

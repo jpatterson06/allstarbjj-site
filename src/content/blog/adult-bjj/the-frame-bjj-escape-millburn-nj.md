@@ -46,4 +46,4 @@ I've had guys from Millburn, Springfield, Kenilworth drive fifteen minutes to tr
 
 ## Come Try It This Week
 
-No experience needed. No gi required for your first class. Mats are open right now, before the fall rush hits. Call (908) 341-1131 and grab a free trial Adult BJJ class at All Star Martial Arts in Union — fifteen minutes from Millburn, easy parking, real coaching from day one.
+No experience needed. No gi required for your first class. Mats are open right now, before the fall rush hits. Call (908) 341-1131 and grab a free trial [Adult BJJ class](/adult-bjj/) at All Star Martial Arts in Union — fifteen minutes from Millburn, easy parking, real coaching from day one.

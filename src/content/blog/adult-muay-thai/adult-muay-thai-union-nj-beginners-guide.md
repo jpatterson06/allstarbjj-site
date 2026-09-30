@@ -5,8 +5,6 @@ meta_description: "Starting Muay Thai in Union, NJ? What it is, what to expect, 
 hero_image: muay-thai-class-action-allstar-union.jpg
 ---
 
-# Adult Muay Thai in Union, NJ — A Beginner's Guide
-
 Most adults considering Muay Thai picture themselves throwing flying knees from the start. That's not what the first three months look like.
 
 Here's the real version. I'm Jamal Patterson — I run AllStar Martial Arts in Union, NJ. Renzo Gracie black belt, 6-3 in pro MMA with fights in the IFL, Bellator, and a UWC light heavyweight title. I've thrown a lot of strikes in front of paying audiences. I know what works in Muay Thai and what doesn't.
@@ -157,11 +155,4 @@ Yes, with respectful partners. We pair carefully.
 - [Muay Thai for Fat Loss — What Actually Works](/blog/adult-muay-thai/muay-thai-for-fat-loss/)
 - [What to Expect in Your First Muay Thai Class](/blog/adult-muay-thai/first-muay-thai-class-what-to-expect/)
 - [BJJ vs Muay Thai vs MMA — Which Should You Start With?](/blog/adult-bjj/bjj-vs-muay-thai-vs-mma/)
-- [Adult Muay Thai Classes](/adult-muay-thai-classes-union/)
-
----
-
-## Self-Audit
-**Voice**: Burstiness ✓ • Banned words none ✓ • Em-dashes 5 in ~1500 words ✓ • Hook pattern #3 (counterintuitive — most picture flying knees) ✓ • Closing CTA in voice ✓
-**Authority**: Renzo Gracie + IFL/Bellator/UWC + 6-3 pro — anchored honestly (Muay Thai credibility flows from MMA fighting experience, not Muay Thai-specific lineage)
-**Length**: ~1500 words (pillar depth)
+- [Adult Muay Thai Classes](/adult-muay-thai/)
