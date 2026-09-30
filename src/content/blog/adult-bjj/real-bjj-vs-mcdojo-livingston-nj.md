@@ -18,7 +18,7 @@ Here's how you actually check.
 
 This is the first filter, and most people skip it because it feels rude to ask. It's not rude. It's the single most important question you can ask a jiu-jitsu instructor.
 
-I'm a black belt under Renzo Gracie. That's not a marketing line — it's a lineage you can trace. Renzo comes from Carlos Gracie Sr. through Helio Gracie's line, decades of documented promotion, real competition, real accountability. When I promote one of my guys to blue, purple, brown, or black at All Star in Union, that belt means something because my belt means something.
+I'm a black belt under Renzo Gracie. That's not a marketing line — it's a lineage you can trace. Renzo comes from Carlos Gracie Sr.'s line, decades of documented promotion, real competition, real accountability. When I promote one of my guys to blue, purple, brown, or black at All Star in Union, that belt means something because my belt means something.
 
 A McDojo instructor will get vague here. "I trained under a few different guys." "I have a 5th degree black belt in mixed martial arts." That's not a lineage, that's a resume with no references. Ask the follow-up: how many years did you train under that black belt before you got promoted? If the answer is under six or seven years, or they can't name a specific instructor and specific gym, keep walking.
 

@@ -89,7 +89,7 @@ Pricing varies by program tier. We discuss specifics in person — not because w
 
 A lot of schools claim they teach BJJ. Few have a clean line back to the source.
 
-I trained directly under Renzo Gracie at his academy in New York. The wall in our gym shows the line: Helio Gracie. Carlos. Rolls. Renzo. Me. The teaching methodology is the same one Renzo learned and passed forward — not a franchise template.
+I trained directly under Renzo Gracie at his academy in New York. The wall in our gym shows the line: Carlos Gracie. Robson Gracie. Renzo Gracie. Me. The teaching methodology is the same one Renzo learned and passed forward — not a franchise template.
 
 For a beginner, this means cleaner instruction. The way I show you a guard pass is the way Renzo showed me, which is closer to what works in real competition than what most schools teach.
 

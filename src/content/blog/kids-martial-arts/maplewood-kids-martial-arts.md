@@ -95,7 +95,7 @@ Total investment to get started: under $150. Compared to soccer or piano lessons
 
 You can find martial arts classes anywhere. What you want is *good* martial arts instruction.
 
-I trained directly under Renzo Gracie. The wall in our gym shows the lineage: Helio Gracie → Carlos → Rolls → Renzo → me → your child. That's not a franchise template. That's a direct line of teaching methodology.
+I trained directly under Renzo Gracie. The wall in our gym shows the lineage: Carlos Gracie → Robson Gracie → Renzo Gracie → me → your child. That's not a franchise template. That's a direct line of teaching methodology.
 
 For your kid, this means:
 - Clear, proven instruction (not made-up techniques that don't work)

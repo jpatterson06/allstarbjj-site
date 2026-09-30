@@ -118,7 +118,7 @@ When I tell you I'm a Renzo Gracie black belt, here's what that signifies:
 
 - I trained at the Renzo Gracie Academy in NYC
 - I was awarded my black belt directly by Renzo Gracie
-- That belt traces back through the Gracie family to Helio Gracie
+- That belt traces back through the Gracie family to Carlos Gracie
 - My students who I promote inherit this lineage
 
 This is verifiable. The wall in our gym shows the line of instruction.
