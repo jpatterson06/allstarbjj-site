@@ -58,6 +58,10 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
         <button type="submit" class="as-chat-send" id="as-chat-send">Send</button>
       </form>
       <a class="as-chat-call" href="tel:+19083411131">Call (908) 341-1131</a>
+      <a class="as-chat-powered" href="https://jfive.io" target="_blank" rel="noopener noreferrer">
+        <img src="/images/jfive-mark.png" alt="" width="14" height="14" loading="lazy" />
+        <span>Powered by JFIVE</span>
+      </a>
     </div>
   </div>
 )}
@@ -87,6 +91,9 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
   .as-chat-send{background:#dc2626;color:#fff;border:0;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer}
   .as-chat-send:disabled{opacity:.6;cursor:default}
   .as-chat-call{display:block;text-align:center;padding:8px;font-weight:700;color:#002D4D;background:#F8F8F8;border-top:1px solid #EAEAEA;text-decoration:underline}
+  .as-chat-powered{display:flex;align-items:center;justify-content:center;gap:5px;padding:5px 8px;font-size:10px;font-weight:600;letter-spacing:.02em;color:#8A8F94;background:#F8F8F8;text-decoration:none}
+  .as-chat-powered:hover{color:#0B4269}
+  .as-chat-powered img{border-radius:3px;display:block}
   .as-chat-lead{padding:10px 12px;border-top:1px solid #EAEAEA;overflow-y:auto;max-height:46%;flex-shrink:0;background:#fff;display:flex;flex-direction:column;gap:6px}
   .as-chat-lead[hidden]{display:none}
   .as-chat-lead-collapsed > *:not(.as-chat-lead-head){display:none}
