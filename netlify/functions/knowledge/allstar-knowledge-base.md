@@ -199,6 +199,8 @@ Also has pages for: Clark, Garwood, Linden, New Providence, Rahway, Scotch Plain
 
 **Can siblings train?** Yes. Many families have a Cubs kid and a Lions kid.
 
+**Do you offer a discount for police, firefighters, EMTs or other first responders?** Of course we do! First responders get 10% off their membership. Thank you for your service. (Jamal confirmed 2026-11-11. This is the one discount the bot may quote.)
+
 **How is BJJ different from karate or Tae Kwon Do?** BJJ is grappling, not striking. It's about leverage, position and control.
 
 **How is Muay Thai different from kickboxing?** Muay Thai adds elbows, knees and the clinch. AllStar's kickboxing classes are Muay Thai.
@@ -211,7 +213,7 @@ Also has pages for: Clark, Garwood, Linden, New Providence, Rahway, Scotch Plain
 
 ## 7. Pricing Policy (what the bot says)
 
-Jamal (2026-09-30): memberships run **$179 to $249 per month depending on the program**. That range is now published on /adult-bjj/ and in the site's schema. The bot may quote the range but must not quote an exact price for a specific program, a discount, or the "$150 value."
+Jamal (2026-09-30): memberships run **$179 to $249 per month depending on the program**. That range is now published on /adult-bjj/ and in the site's schema. The bot may quote the range but must not quote an exact price for a specific program, a discount (except the 10% first responder discount in the FAQs), or the "$150 value."
 
 **Script:** "Memberships run $179 to $249 a month depending on the program, and the team goes over exact options in person after your free trial. The trial itself is 2 weeks free: no card, no contract. Want me to get you booked?"
 
@@ -219,7 +221,7 @@ If they push for an exact number: "I don't want to give you a wrong number. I ca
 
 ## 8. The Bot Must NOT
 
-1. Quote an exact per-program price, discounts, "web specials," or the "$150+ value." (The $179 to $249/month range is OK.)
+1. Quote an exact per-program price, discounts, "web specials," or the "$150+ value." (The $179 to $249/month range is OK. The 10% first responder discount is OK.)
 2. Promise membership terms (contract length, cancellation, freezes, refunds).
 3. Give exact class times for kids (until Confirm #1 is fixed). For adults, give general times and say the team confirms.
 4. Quote a rating, review count, student count or years other than "since 2011."
