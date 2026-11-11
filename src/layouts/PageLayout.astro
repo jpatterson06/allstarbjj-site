@@ -96,6 +96,9 @@ const gtmContainerId = import.meta.env.PUBLIC_GTM_CONTAINER_ID || 'GTM-5NLG8SD';
           function gtag() {
             dataLayer.push(arguments);
           }
+          // define:vars wraps this script in a function, so expose gtag globally
+          // for the chat widget and other components that call it.
+          window.gtag = gtag;
           gtag('js', new Date());
           // config auto-sends page_view with page_location/page_title, so no extra params.
           // NOTE: if the GTM container also has a GA4 Configuration tag for this same
