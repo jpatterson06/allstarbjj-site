@@ -7,12 +7,27 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 ---
 {enabled && (
   <div id="as-chat" data-as-chat data-turnstile-key={turnstileKey} hidden>
+    <div id="as-chat-teaser" class="as-chat-teaser" hidden>
+      <button type="button" id="as-chat-teaser-x" class="as-chat-teaser-x" aria-label="Dismiss">&times;</button>
+      <button type="button" id="as-chat-teaser-body" class="as-chat-teaser-body">
+        <img src="/images/logo.png" alt="" width="32" height="32" />
+        <span id="as-chat-teaser-text">Got questions? Ask me anything about classes or the <strong>free 2-week trial</strong> 👊</span>
+      </button>
+    </div>
     <button type="button" id="as-chat-btn" class="as-chat-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="as-chat-panel">
-      Chat with AllStar
+      <svg class="as-chat-ico" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.9 2 11.7c0 2.4 1.1 4.6 3 6.2L4 22l4.4-2.3c1.1.3 2.3.5 3.6.5 5.5 0 10-3.9 10-8.6S17.5 3 12 3zm-4 9.9a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6zm4 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6zm4 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6z"/></svg>
+      <span class="as-chat-btn-label">Questions? Chat now</span>
+      <span class="as-chat-dot" aria-hidden="true"></span>
     </button>
     <div id="as-chat-panel" class="as-chat-panel" role="dialog" aria-label="Chat with AllStar" aria-modal="false" hidden>
       <div class="as-chat-head">
-        <strong>AllStar Martial Arts</strong>
+        <div class="as-chat-who">
+          <img src="/images/logo.png" alt="" width="36" height="36" />
+          <div>
+            <strong>AllStar Martial Arts</strong>
+            <span class="as-chat-status"><span class="as-chat-dot-sm"></span>Online now &middot; replies instantly</span>
+          </div>
+        </div>
         <button type="button" id="as-chat-close" class="as-chat-x" aria-label="Close chat">&times;</button>
       </div>
       <div id="as-chat-log" class="as-chat-log" role="log" aria-live="polite"></div>
@@ -52,6 +67,7 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
         <div id="as-chat-lead-err" class="as-chat-err" role="alert" hidden></div>
         <button type="submit" class="as-chat-send" id="as-chat-lead-btn">Book my free trial</button>
       </form>
+      <div id="as-chat-chips" class="as-chat-chips" hidden></div>
       <form id="as-chat-form" class="as-chat-form" autocomplete="off">
         <label for="as-chat-input" class="sr-only">Your message</label>
         <input id="as-chat-input" type="text" maxlength="1000" placeholder="Ask about classes, kids, the free trial..." />
@@ -71,8 +87,30 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
   #as-chat{position:fixed;right:16px;bottom:16px;z-index:9999;font-family:Roboto,Arial,sans-serif;font-size:15px;color:#1B1D1B}
   #as-chat .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   #as-chat .hp{position:absolute;left:-9999px}
-  .as-chat-btn{background:#002D4D;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
-  .as-chat-btn:hover{background:#0B4269}
+  .as-chat-btn{position:relative;display:flex;align-items:center;gap:8px;background:#dc2626;color:#fff;border:3px solid #fff;border-radius:999px;padding:13px 20px 13px 16px;font-weight:800;font-size:16px;cursor:pointer;box-shadow:0 6px 20px rgba(220,38,38,.45),0 2px 6px rgba(0,0,0,.25);transition:transform .15s ease}
+  .as-chat-btn:hover{background:#b91c1c;transform:translateY(-2px)}
+  .as-chat-ico{flex:none}
+  .as-chat-dot{position:absolute;top:-2px;right:-2px;width:14px;height:14px;border-radius:50%;background:#22c55e;border:2px solid #fff}
+  .as-chat-btn[aria-expanded="true"] .as-chat-dot{display:none}
+  .as-chat-teaser{position:absolute;right:0;bottom:70px;width:270px;max-width:calc(100vw - 32px)}
+  .as-chat-teaser[hidden]{display:none}
+  .as-chat-teaser-body{display:flex;gap:10px;align-items:flex-start;text-align:left;background:#fff;color:#1B1D1B;border:0;border-radius:14px;padding:14px 16px;font:inherit;font-size:14.5px;line-height:1.4;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,.25);width:100%}
+  .as-chat-teaser-body img{border-radius:50%;flex:none;background:#002D4D;object-fit:contain}
+  .as-chat-teaser-body::after{content:"";position:absolute;right:28px;bottom:-8px;border:8px solid transparent;border-bottom:0;border-top-color:#fff}
+  .as-chat-teaser-x{position:absolute;top:-10px;left:-10px;width:26px;height:26px;border-radius:50%;border:0;background:#1B1D1B;color:#fff;font-size:16px;line-height:1;cursor:pointer;z-index:1}
+  .as-chat-who{display:flex;align-items:center;gap:10px}
+  .as-chat-who img{border-radius:50%;background:#fff;object-fit:contain;flex:none}
+  .as-chat-who strong{display:block;font-size:15px}
+  .as-chat-status{display:flex;align-items:center;gap:5px;font-size:12px;opacity:.85}
+  .as-chat-dot-sm{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
+  .as-chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px 2px;background:#F8F8F8}
+  .as-chat-chips[hidden]{display:none}
+  .as-chat-chip{background:#fff;color:#002D4D;border:1.5px solid #002D4D;border-radius:999px;padding:7px 12px;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}
+  .as-chat-chip:hover{background:#002D4D;color:#fff}
+  .as-typing{display:inline-flex;gap:4px;padding:4px 0}
+  .as-typing i{width:7px;height:7px;border-radius:50%;background:#9ca3af;display:block;animation:asDot 1s infinite ease-in-out}
+  .as-typing i:nth-child(2){animation-delay:.15s}.as-typing i:nth-child(3){animation-delay:.3s}
+  @keyframes asDot{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
   .as-chat-btn:focus-visible,.as-chat-send:focus-visible,.as-chat-x:focus-visible,#as-chat input:focus-visible,#as-chat select:focus-visible,.as-chat-call:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
   .as-chat-panel{position:absolute;right:0;bottom:56px;width:360px;max-width:calc(100vw - 32px);height:600px;max-height:calc(100vh - 100px);background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.35);display:flex;flex-direction:column;overflow:hidden}
   .as-chat-panel[hidden]{display:none}
@@ -107,9 +145,11 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
   .as-chat-consent a{text-decoration:underline}
   .as-chat-err{color:#b91c1c;font-weight:700;font-size:13px}
   @media (max-width:480px){
+    .as-chat-btn{padding:12px 16px 12px 13px;font-size:15px}
     .as-chat-panel{position:fixed;right:8px;left:8px;bottom:8px;width:auto;max-width:none;height:calc(100vh - 16px);max-height:none}
     .as-chat-lead{max-height:50%}
   }
+  @media (prefers-reduced-motion:no-preference){.as-chat-btn.as-wiggle{animation:asWiggle .9s ease-in-out 2}@keyframes asWiggle{0%,100%{transform:none}20%{transform:rotate(-6deg) scale(1.05)}40%{transform:rotate(6deg) scale(1.05)}60%{transform:rotate(-3deg)}80%{transform:rotate(3deg)}}.as-chat-teaser:not([hidden]){animation:asIn .3s ease-out}}
   @media (prefers-reduced-motion:no-preference){.as-chat-panel{animation:asIn .15s ease-out}@keyframes asIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}
 </style>
 )}
@@ -144,6 +184,55 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
   var started = false;
   var leadDone = false;
   var MAX_TURNS = 12;
+  var chipsEl = document.getElementById('as-chat-chips');
+  var teaser = document.getElementById('as-chat-teaser');
+  var teaserText = document.getElementById('as-chat-teaser-text');
+
+  // Page-aware hooks: kids pages talk to parents, adult pages talk to adults.
+  var path = location.pathname;
+  var isKids = /kids|preschool|bully|lions|cubs|summer-camp/.test(path);
+  var isStriking = /muay-thai|kickboxing/.test(path);
+  var TEASER = isKids
+    ? 'Questions about classes for your kid? Ask me, I answer in seconds. <strong>First 2 weeks are free.</strong>'
+    : isStriking
+    ? 'Never thrown a kick before? Perfect. Ask me anything, <strong>first 2 weeks are free</strong> 👊'
+    : 'Got questions? Ask me anything about classes or the <strong>free 2-week trial</strong> 👊';
+  var CHIPS = isKids
+    ? ['What age can my kid start?', 'Will it help with confidence?', 'How much is it?', 'Book a free trial']
+    : ["I'm a total beginner", 'How much is it?', "What's the schedule?", 'Kids classes', 'Book a free trial'];
+
+  function renderChips() {
+    chipsEl.innerHTML = '';
+    CHIPS.forEach(function (c) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'as-chat-chip'; b.textContent = c;
+      b.addEventListener('click', function () {
+        track('chat_chip', { chip: c });
+        chipsEl.hidden = true;
+        input.value = c;
+        form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event('submit', { cancelable: true }));
+      });
+      chipsEl.appendChild(b);
+    });
+    chipsEl.hidden = false;
+  }
+
+  // Teaser bubble: pops once per visit after a few seconds, never if already dismissed/opened.
+  var SEEN_KEY = 'as_chat_teaser_done';
+  function teaserDone() { try { return sessionStorage.getItem(SEEN_KEY) === '1'; } catch (e) { return false; } }
+  function markTeaserDone() { try { sessionStorage.setItem(SEEN_KEY, '1'); } catch (e) {} }
+  function hideTeaser() { teaser.hidden = true; markTeaserDone(); }
+  teaserText.innerHTML = TEASER;
+  if (!teaserDone()) {
+    setTimeout(function () {
+      if (started || teaserDone()) return;
+      teaser.hidden = false;
+      btn.classList.add('as-wiggle');
+      track('chat_teaser_shown');
+    }, 6000);
+  }
+  document.getElementById('as-chat-teaser-x').addEventListener('click', function () { hideTeaser(); track('chat_teaser_dismiss'); });
+  document.getElementById('as-chat-teaser-body').addEventListener('click', function () { track('chat_teaser_click'); openPanel(); });
 
   function track(name, params) {
     try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {}
@@ -243,9 +332,14 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
   function openPanel() {
     panel.hidden = false;
     btn.setAttribute('aria-expanded', 'true');
+    if (!teaser.hidden || !teaserDone()) hideTeaser();
+    btn.classList.remove('as-wiggle');
     if (!started) {
       started = true;
-      add('bot', "Hi, I'm AllStar's AI assistant. I can answer questions about classes, kids programs and our free 2-week trial. What would you like to know?");
+      add('bot', isKids
+        ? "Hey! 👋 I'm AllStar's assistant. Ask me anything about our kids programs, or tap a question below. Your child's first 2 weeks are free."
+        : "Hey! 👋 I'm AllStar's assistant. Ask me anything, or tap a question below. Your first 2 weeks are free, no experience needed.");
+      renderChips();
       track('chat_open');
     }
     input.focus();
@@ -277,11 +371,13 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
       return;
     }
     input.value = '';
+    chipsEl.hidden = true;
     add('user', text);
     history.push({ role: 'user', content: text });
     track('chat_message');
     busy = true; sendBtn.disabled = true;
-    var typing = add('bot', '...');
+    var typing = add('bot', '');
+    typing.innerHTML = '<span class="as-typing" aria-label="Typing"><i></i><i></i><i></i></span>';
     fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
