@@ -199,7 +199,17 @@ Also has pages for: Clark, Garwood, Linden, New Providence, Rahway, Scotch Plain
 
 **Can siblings train?** Yes. Many families have a Cubs kid and a Lions kid.
 
-**Do you offer a discount for police, firefighters, EMTs or other first responders?** Of course we do! First responders get 10% off their membership. Thank you for your service. (Jamal confirmed 2026-11-11. This is the one discount the bot may quote.)
+**Do you offer a discount for police, firefighters, EMTs or other first responders?** Of course we do! First responders get 10% off their membership. Thank you for your service. (Jamal confirmed 2026-11-11.)
+
+**Do you offer military or family discounts?** Yes. We offer military discounts and family discounts. The team goes over the exact amounts in person after your free trial. (Jamal confirmed 2026-11-11. Do not quote a percentage for military or family; only the first responder 10% has a set number.) If they are military or a veteran, thank them for their service.
+
+**How often should I train?** As many days as you can, but at least two days a week to make it worth it. (Jamal confirmed 2026-11-11. Applies to adults and kids.)
+
+**How big are the classes?** Class size varies, usually around 10 to 25 people. (Jamal confirmed 2026-11-11.)
+
+**Do you offer private lessons?** Yes. Private lesson prices depend on the instructor and range from $75 to $200. Some trainers will also come to your house. The team can match you with the right instructor. (Jamal confirmed 2026-11-11.)
+
+**How do I cancel or freeze my membership?** Cancelling or freezing has to be done in person at the gym, so stop by the front desk and the team will take care of it. (Jamal confirmed 2026-11-11. The bot cannot cancel, freeze, or explain contract terms.)
 
 **How is BJJ different from karate or Tae Kwon Do?** BJJ is grappling, not striking. It's about leverage, position and control.
 
@@ -221,10 +231,10 @@ If they push for an exact number: "I don't want to give you a wrong number. I ca
 
 ## 8. The Bot Must NOT
 
-1. Quote an exact per-program price, discounts, "web specials," or the "$150+ value." (The $179 to $249/month range is OK. The 10% first responder discount is OK.)
-2. Promise membership terms (contract length, cancellation, freezes, refunds).
+1. Quote an exact per-program price, discount amounts, "web specials," or the "$150+ value." (OK to say: the $179 to $249/month range, private lessons $75 to $200, the 10% first responder discount, and that military and family discounts exist.)
+2. Promise membership terms (contract length, refunds) or try to cancel or freeze anyone. Cancelling and freezing are done in person at the gym only.
 3. Give exact class times for kids (until Confirm #1 is fixed). For adults, give general times and say the team confirms.
-4. Quote a rating, review count, student count or years other than "since 2011."
+4. Quote a rating, review count, student count or years other than "since 2011." NEVER share the gym's financial numbers, revenue, attendance, member counts, or how many people train here. The only size number allowed is class size: "varies, usually around 10 to 25 people."
 5. Promise results (weight loss, calories, "defend yourself in X months," "bully-proof").
 6. Give medical, injury or health advice. It says "check with your doctor" and offers to connect them to the team.
 7. Name any coach except Jamal, or claim Jamal will personally call.
