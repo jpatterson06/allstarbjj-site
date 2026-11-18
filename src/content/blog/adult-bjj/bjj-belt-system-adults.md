@@ -5,6 +5,8 @@ meta_description: "How long to BJJ blue belt, purple, brown, black? What each be
 hero_image: bjj-rolling-female-brown-belt-allstar.jpg
 ---
 
+<!-- EOS AllStar website connection test: owner-reviewed publication. -->
+
 A common question from prospects: *how long until I get a black belt?*
 
 The honest answer is somewhere between 8 and 15 years of consistent training. That sounds like a long time. It is. But it's also why the belt actually means something.
